@@ -54,14 +54,198 @@
 		2BF5FE0C2AC6E6C1009BCBD9 /* Tempi */ = {
 			isa = PBXGroup;
 			children = (
-				2BF5FE0D2AC6E6C1009BCBD9 /* AppDelegate.swift */,
-				2BF5FE0F2AC6E6C1009BCBD9 /* SceneDelegate.swift */,
-				2BF5FE112AC6E6C1009BCBD9 /* ViewController.swift */,
-				2BF5FE162AC6E6C2009BCBD9 /* Assets.xcassets */,
-				2BF5FE182AC6E6C2009BCBD9 /* LaunchScreen.storyboard */,
 				2BF5FE1B2AC6E6C2009BCBD9 /* Info.plist */,
+				2BF5FE472AC6F7B8009BCBD9 /* Application */,
+				2BF5FE342AC6F3D0009BCBD9 /* Source */,
+				2BF5FE3A2AC6F411009BCBD9 /* Resource */,
+				2BF5FE4F2AC6FD46009BCBD9 /* Localization */,
 			);
 			path = Tempi;
+			sourceTree = "<group>";
+		};
+		2BF5FE342AC6F3D0009BCBD9 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				2BF5FE382AC6F3FB009BCBD9 /* Data */,
+				2BF5FE432AC6F686009BCBD9 /* Domain */,
+				2BF5FE392AC6F406009BCBD9 /* Utility */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		2BF5FE382AC6F3FB009BCBD9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2BF5FE422AC6F666009BCBD9 /* Network */,
+				2BF5FE412AC6F59C009BCBD9 /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		2BF5FE392AC6F406009BCBD9 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				2BF5FE3D2AC6F49C009BCBD9 /* DesignSystem */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		2BF5FE3A2AC6F411009BCBD9 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				2BF5FE3B2AC6F46A009BCBD9 /* Fonts */,
+				2BF5FE162AC6E6C2009BCBD9 /* Assets.xcassets */,
+				2BF5FE182AC6E6C2009BCBD9 /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		2BF5FE3B2AC6F46A009BCBD9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2BF5FE3C2AC6F475009BCBD9 /* Pretendard */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		2BF5FE3C2AC6F475009BCBD9 /* Pretendard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pretendard;
+			sourceTree = "<group>";
+		};
+		2BF5FE3D2AC6F49C009BCBD9 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				2BF5FE3E2AC6F4B1009BCBD9 /* Component */,
+				2BF5FE3F2AC6F4FA009BCBD9 /* Constant */,
+				2BF5FE402AC6F50D009BCBD9 /* Extension */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		2BF5FE3E2AC6F4B1009BCBD9 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		2BF5FE3F2AC6F4FA009BCBD9 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		2BF5FE402AC6F50D009BCBD9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		2BF5FE412AC6F59C009BCBD9 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		2BF5FE422AC6F666009BCBD9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		2BF5FE432AC6F686009BCBD9 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				2BF5FE4D2AC6FA29009BCBD9 /* Base */,
+				2BF5FE492AC6F9A6009BCBD9 /* Cell */,
+				2BF5FE462AC6F6A0009BCBD9 /* Model */,
+				2BF5FE452AC6F699009BCBD9 /* ViewModel */,
+				2BF5FE442AC6F691009BCBD9 /* View */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		2BF5FE442AC6F691009BCBD9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2BF5FE4C2AC6F9DC009BCBD9 /* Home */,
+				2BF5FE4B2AC6F9C5009BCBD9 /* My */,
+				2BF5FE4A2AC6F9B8009BCBD9 /* Calendar */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2BF5FE452AC6F699009BCBD9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2BF5FE462AC6F6A0009BCBD9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2BF5FE472AC6F7B8009BCBD9 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				2BF5FE0D2AC6E6C1009BCBD9 /* AppDelegate.swift */,
+				2BF5FE0F2AC6E6C1009BCBD9 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		2BF5FE492AC6F9A6009BCBD9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		2BF5FE4A2AC6F9B8009BCBD9 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		2BF5FE4B2AC6F9C5009BCBD9 /* My */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = My;
+			sourceTree = "<group>";
+		};
+		2BF5FE4C2AC6F9DC009BCBD9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2BF5FE112AC6E6C1009BCBD9 /* ViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2BF5FE4D2AC6FA29009BCBD9 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		2BF5FE4F2AC6FD46009BCBD9 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
