@@ -11,10 +11,26 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        view.backgroundColor = .red
+        
+        for family in UIFont.familyNames {
+            print(family)
+            
+            for names in UIFont.fontNames(forFamilyName: family) {
+                print("== \(names)")
+            }
+        }
+        
     }
 
 
 }
+
+/*
+ Pretendard
+ == Pretendard-Regular
+ == Pretendard-Medium
+ == Pretendard-SemiBold
+ == Pretendard-Bold
+ == Pretendard-Black
+ */
 
