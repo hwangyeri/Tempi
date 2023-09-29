@@ -12,13 +12,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for family in UIFont.familyNames {
-            print(family)
-            
-            for names in UIFont.fontNames(forFamilyName: family) {
-                print("== \(names)")
-            }
-        }
+        view.backgroundColor = .white
+        navigationItem.title = "temp".localized
         
     }
 
