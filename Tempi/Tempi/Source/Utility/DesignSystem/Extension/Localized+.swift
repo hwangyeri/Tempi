@@ -1,5 +1,5 @@
 //
-//  String+.swift
+//  Localized+.swift
 //  Tempi
 //
 //  Created by Yeri Hwang on 2023/09/29.
@@ -8,8 +8,6 @@
 import Foundation
 
 extension String {
-    
-    // MARK: - localized
     
     var localized: String {
         return NSLocalizedString(self, comment: "")
