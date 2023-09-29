@@ -24,6 +24,10 @@ class ViewController: UIViewController {
         }
         mainLabel.text = "안녕하세요"
         mainLabel.font = .customFont(.pretendardSemiBoldL)
+        
+        presentDeleteAlert(title: "ddd", message: "ddd") {
+            print(#function)
+        }
     }
 
 
