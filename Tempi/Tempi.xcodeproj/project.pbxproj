@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		2BC72B7A2AC717240014420F /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC72B792AC717240014420F /* Font+.swift */; };
 		2BC72B7D2AC71FD50014420F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2BC72B7C2AC71FD50014420F /* SnapKit */; };
+		2BC72B7F2AC7207D0014420F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC72B7E2AC7207D0014420F /* BaseView.swift */; };
+		2BC72B812AC720B30014420F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC72B802AC720B30014420F /* BaseViewController.swift */; };
+		2BC72B852AC723160014420F /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC72B842AC723160014420F /* BaseCollectionViewCell.swift */; };
 		2BF5FE0E2AC6E6C1009BCBD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF5FE0D2AC6E6C1009BCBD9 /* AppDelegate.swift */; };
 		2BF5FE102AC6E6C1009BCBD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF5FE0F2AC6E6C1009BCBD9 /* SceneDelegate.swift */; };
 		2BF5FE122AC6E6C1009BCBD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF5FE112AC6E6C1009BCBD9 /* ViewController.swift */; };
@@ -26,6 +29,9 @@
 
 /* Begin PBXFileReference section */
 		2BC72B792AC717240014420F /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
+		2BC72B7E2AC7207D0014420F /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		2BC72B802AC720B30014420F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		2BC72B842AC723160014420F /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		2BF5FE0A2AC6E6C1009BCBD9 /* Tempi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tempi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BF5FE0D2AC6E6C1009BCBD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BF5FE0F2AC6E6C1009BCBD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -267,6 +273,9 @@
 		2BF5FE4D2AC6FA29009BCBD9 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				2BC72B7E2AC7207D0014420F /* BaseView.swift */,
+				2BC72B802AC720B30014420F /* BaseViewController.swift */,
+				2BC72B842AC723160014420F /* BaseCollectionViewCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -364,8 +373,11 @@
 			files = (
 				2BC72B7A2AC717240014420F /* Font+.swift in Sources */,
 				2BF5FE122AC6E6C1009BCBD9 /* ViewController.swift in Sources */,
+				2BC72B852AC723160014420F /* BaseCollectionViewCell.swift in Sources */,
 				2BF5FE672AC70B51009BCBD9 /* Color+.swift in Sources */,
 				2BF5FE0E2AC6E6C1009BCBD9 /* AppDelegate.swift in Sources */,
+				2BC72B7F2AC7207D0014420F /* BaseView.swift in Sources */,
+				2BC72B812AC720B30014420F /* BaseViewController.swift in Sources */,
 				2BF5FE652AC7079B009BCBD9 /* String+.swift in Sources */,
 				2BF5FE102AC6E6C1009BCBD9 /* SceneDelegate.swift in Sources */,
 			);
