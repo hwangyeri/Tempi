@@ -17,12 +17,10 @@ extension String {
     
     func localized(with:Int) ->  String {
         return StringLiteralType(format: self, with)
-        
     }
     
     func localized(number:Int) ->  String {
         return StringLiteralType(format: self, number)
-        
     }
     
 }
