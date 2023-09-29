@@ -11,6 +11,7 @@ import SnapKit
 class ViewController: UIViewController {
     
     let mainLabel = UILabel()
+    let datePicker = UIDatePicker()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,11 @@ class ViewController: UIViewController {
         presentDeleteAlert(title: "ddd", message: "ddd") {
             print(#function)
         }
+        
+        datePicker.date = Date()
+
+        let formattedDate = datePicker.formatDate()
+        print(formattedDate)
     }
 
 
