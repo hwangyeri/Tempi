@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  Tempi
 //
 //  Created by Yeri Hwang on 2023/09/29.
@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
     
     let mainLabel = UILabel()
     let datePicker = UIDatePicker()

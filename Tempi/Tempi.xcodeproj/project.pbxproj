@@ -15,11 +15,11 @@
 		2BC72B872AC727640014420F /* Alert+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC72B862AC727640014420F /* Alert+.swift */; };
 		2BC72B8B2AC72C1C0014420F /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC72B8A2AC72C1C0014420F /* Date+.swift */; };
 		2BC72B8D2AC731D70014420F /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC72B8C2AC731D60014420F /* Constant.swift */; };
-		2BC72B8F2AC84AD10014420F /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC72B8E2AC84AD10014420F /* MyViewController.swift */; };
+		2BC72B8F2AC84AD10014420F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC72B8E2AC84AD10014420F /* SearchViewController.swift */; };
 		2BC72B912AC84AE40014420F /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC72B902AC84AE40014420F /* CalendarViewController.swift */; };
 		2BF5FE0E2AC6E6C1009BCBD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF5FE0D2AC6E6C1009BCBD9 /* AppDelegate.swift */; };
 		2BF5FE102AC6E6C1009BCBD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF5FE0F2AC6E6C1009BCBD9 /* SceneDelegate.swift */; };
-		2BF5FE122AC6E6C1009BCBD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF5FE112AC6E6C1009BCBD9 /* ViewController.swift */; };
+		2BF5FE122AC6E6C1009BCBD9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF5FE112AC6E6C1009BCBD9 /* HomeViewController.swift */; };
 		2BF5FE172AC6E6C2009BCBD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BF5FE162AC6E6C2009BCBD9 /* Assets.xcassets */; };
 		2BF5FE1A2AC6E6C2009BCBD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BF5FE182AC6E6C2009BCBD9 /* LaunchScreen.storyboard */; };
 		2BF5FE572AC703F1009BCBD9 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2BF5FE522AC703F0009BCBD9 /* Pretendard-Medium.otf */; };
@@ -40,12 +40,12 @@
 		2BC72B862AC727640014420F /* Alert+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+.swift"; sourceTree = "<group>"; };
 		2BC72B8A2AC72C1C0014420F /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		2BC72B8C2AC731D60014420F /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		2BC72B8E2AC84AD10014420F /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		2BC72B8E2AC84AD10014420F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		2BC72B902AC84AE40014420F /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		2BF5FE0A2AC6E6C1009BCBD9 /* Tempi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tempi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BF5FE0D2AC6E6C1009BCBD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BF5FE0F2AC6E6C1009BCBD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2BF5FE112AC6E6C1009BCBD9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2BF5FE112AC6E6C1009BCBD9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2BF5FE162AC6E6C2009BCBD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BF5FE192AC6E6C2009BCBD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2BF5FE1B2AC6E6C2009BCBD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -216,8 +216,8 @@
 		2BF5FE442AC6F691009BCBD9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2BF5FE4B2AC6F9C5009BCBD9 /* Search */,
 				2BF5FE4C2AC6F9DC009BCBD9 /* Home */,
-				2BF5FE4B2AC6F9C5009BCBD9 /* My */,
 				2BF5FE4A2AC6F9B8009BCBD9 /* Calendar */,
 			);
 			path = View;
@@ -261,18 +261,18 @@
 			path = Calendar;
 			sourceTree = "<group>";
 		};
-		2BF5FE4B2AC6F9C5009BCBD9 /* My */ = {
+		2BF5FE4B2AC6F9C5009BCBD9 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				2BC72B8E2AC84AD10014420F /* MyViewController.swift */,
+				2BC72B8E2AC84AD10014420F /* SearchViewController.swift */,
 			);
-			path = My;
+			path = Search;
 			sourceTree = "<group>";
 		};
 		2BF5FE4C2AC6F9DC009BCBD9 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				2BF5FE112AC6E6C1009BCBD9 /* ViewController.swift */,
+				2BF5FE112AC6E6C1009BCBD9 /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -380,7 +380,7 @@
 			files = (
 				2BC72B8B2AC72C1C0014420F /* Date+.swift in Sources */,
 				2BC72B7A2AC717240014420F /* Font+.swift in Sources */,
-				2BF5FE122AC6E6C1009BCBD9 /* ViewController.swift in Sources */,
+				2BF5FE122AC6E6C1009BCBD9 /* HomeViewController.swift in Sources */,
 				2BC72B852AC723160014420F /* BaseCollectionViewCell.swift in Sources */,
 				2BF5FE672AC70B51009BCBD9 /* Color+.swift in Sources */,
 				2BF5FE0E2AC6E6C1009BCBD9 /* AppDelegate.swift in Sources */,
@@ -388,7 +388,7 @@
 				2BC72B872AC727640014420F /* Alert+.swift in Sources */,
 				2BC72B812AC720B30014420F /* BaseViewController.swift in Sources */,
 				2BF5FE652AC7079B009BCBD9 /* Localized+.swift in Sources */,
-				2BC72B8F2AC84AD10014420F /* MyViewController.swift in Sources */,
+				2BC72B8F2AC84AD10014420F /* SearchViewController.swift in Sources */,
 				2BF5FE102AC6E6C1009BCBD9 /* SceneDelegate.swift in Sources */,
 				2BC72B912AC84AE40014420F /* CalendarViewController.swift in Sources */,
 				2BC72B8D2AC731D70014420F /* Constant.swift in Sources */,
