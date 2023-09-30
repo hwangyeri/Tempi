@@ -13,9 +13,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+       
+        // MARK: - Navigation Controller
         
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
@@ -23,6 +22,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = UINavigationController(rootViewController: vc)
         window?.makeKeyAndVisible()
         
+        // MARK: - TabBar Controller
+        
+        let tabBar = UITabBarController()
+        
+        let firstVC = UINavigationController(rootViewController: ViewController())
+        firstVC.tabBarItem = UITabBarItem(title: .none, image: UIImage(systemName: Constant.SFSymbol.firstTabBarIcon),selectedImage: UIImage(systemName: Constant.SFSymbol.firstTabBarIcon))
+
+        let secondVC = UINavigationController(rootViewController: MyViewController())
+        secondVC.tabBarItem = UITabBarItem(title: .none, image: UIImage(systemName: Constant.SFSymbol.secondTabBarIcon),selectedImage: UIImage(systemName: Constant.SFSymbol.secondTabBarIcon))
+        
+        let thirdVC = UINavigationController(rootViewController: CalendarViewController())
+        thirdVC.tabBarItem = UITabBarItem(title: .none, image: UIImage(systemName: Constant.SFSymbol.thirdTabBarIcon),selectedImage: UIImage(systemName: Constant.SFSymbol.thirdTabBarIcon))
+        
+        tabBar.viewControllers = [firstVC, secondVC, thirdVC]
+        tabBar.tabBar.backgroundColor = UIColor.sColor(.background)
+        tabBar.tabBar.tintColor = UIColor.sColor(.label)
+        
+        window?.rootViewController = tabBar
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
