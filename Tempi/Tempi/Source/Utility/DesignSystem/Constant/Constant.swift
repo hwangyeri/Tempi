@@ -46,6 +46,11 @@ enum Constant {
         static let alarmCheckBoxIcon: String = "alarm"
         static let bookmarkCheckBoxIcon: String = "star"
         static let deletemarkCheckBoxIcon: String = "trash"
+        
+        /// TabBar Icon
+        static let firstTabBarIcon: String = "doc.text.magnifyingglass"
+        static let secondTabBarIcon: String = "house"
+        static let thirdTabBarIcon: String = "calendar"
     }
     
 }
