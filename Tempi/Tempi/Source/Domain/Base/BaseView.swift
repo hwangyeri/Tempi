@@ -11,17 +11,17 @@ class BaseView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        configureView()
-        setConstraints()
+        configureHierarchy()
+        configureLayout()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureView() { }
+    func configureHierarchy() { }
     
-    func setConstraints() { }
+    func configureLayout() { }
     
 }
 
