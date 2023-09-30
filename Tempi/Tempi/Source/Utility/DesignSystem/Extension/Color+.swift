@@ -13,42 +13,56 @@ extension UIColor {
 
     enum AssetsColor {
         case point
-        case tpGray100
-        case tpGray200
-        case tpGray300
-        case tpGray400
-        case tpGray500
-        case tpGray600
-        case tpGray700
-        case tpGray800
-        case tpGray900
-        case tpGray1000
+        case tGray100
+        case tGray200
+        case tGray300
+        case tGray400
+        case tGray500
+        case tGray600
+        case tGray700
+        case tGray800
+        case tGray900
+        case tGray1000
     }
 
-    static func tpColor(_ name: AssetsColor) -> UIColor? {
+    static func tColor(_ name: AssetsColor) -> UIColor? {
         switch name {
         case .point:
             return UIColor(named: "point")
-        case .tpGray100:
-            return UIColor(named: "tpGray100")
-        case .tpGray200:
-            return UIColor(named: "tpGray200")
-        case .tpGray300:
-            return UIColor(named: "tpGray300")
-        case .tpGray400:
-            return UIColor(named: "tpGray400")
-        case .tpGray500:
-            return UIColor(named: "tpGray500")
-        case .tpGray600:
-            return UIColor(named: "tpGray600")
-        case .tpGray700:
-            return UIColor(named: "tpGray700")
-        case .tpGray800:
-            return UIColor(named: "tpGray800")
-        case .tpGray900:
-            return UIColor(named: "tpGray900")
-        case .tpGray1000:
-            return UIColor(named: "tpGray1000")
+        case .tGray100:
+            return UIColor(named: "tGray100")
+        case .tGray200:
+            return UIColor(named: "tGray200")
+        case .tGray300:
+            return UIColor(named: "tGray300")
+        case .tGray400:
+            return UIColor(named: "tGray400")
+        case .tGray500:
+            return UIColor(named: "tGray500")
+        case .tGray600:
+            return UIColor(named: "tGray600")
+        case .tGray700:
+            return UIColor(named: "tGray700")
+        case .tGray800:
+            return UIColor(named: "tGray800")
+        case .tGray900:
+            return UIColor(named: "tGray900")
+        case .tGray1000:
+            return UIColor(named: "tGray1000")
+        }
+    }
+    
+    enum SystemColor {
+        case background
+        case label
+    }
+    
+    static func sColor(_ name: SystemColor) -> UIColor? {
+        switch name {
+        case .background:
+            return UIColor.systemBackground
+        case .label:
+            return UIColor.label
         }
     }
 

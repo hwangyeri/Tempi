@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .tpColor(.point)
+        view.backgroundColor = .tColor(.point)
         navigationItem.title = "temp".localized
         view.addSubview(mainLabel)
         mainLabel.snp.makeConstraints { make in
