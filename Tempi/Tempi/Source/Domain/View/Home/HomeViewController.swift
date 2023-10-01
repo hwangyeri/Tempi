@@ -26,9 +26,9 @@ class HomeViewController: UIViewController {
         mainLabel.text = "안녕하세요"
         mainLabel.font = .customFont(.pretendardSemiBoldL)
         
-        presentDeleteAlert(title: "ddd", message: "ddd") {
-            print(#function)
-        }
+//        presentDeleteAlert(title: "ddd", message: "ddd") {
+//            print(#function)
+//        }
         
         datePicker.date = Date()
 
