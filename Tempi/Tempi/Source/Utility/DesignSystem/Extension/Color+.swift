@@ -9,7 +9,7 @@ import UIKit
 
 extension UIColor {
     
-    // FIXME: tempColor 적용중... Color 확정 후, Assets Color 변경하기
+    // FIXME: Dark mode Color 변경하기
 
     enum AssetsColor {
         case point
@@ -30,39 +30,25 @@ extension UIColor {
         case .point:
             return UIColor(named: "point")
         case .tGray100:
-            return UIColor(named: "tGray100")
+            return UIColor(named: "tGray100") // FFFFFF - 000000
         case .tGray200:
-            return UIColor(named: "tGray200")
+            return UIColor(named: "tGray200") // F3F3F3 -
         case .tGray300:
-            return UIColor(named: "tGray300")
+            return UIColor(named: "tGray300") // EFEFEF -
         case .tGray400:
-            return UIColor(named: "tGray400")
+            return UIColor(named: "tGray400") // D9D9D9 -
         case .tGray500:
-            return UIColor(named: "tGray500")
+            return UIColor(named: "tGray500") // CCCCCC -
         case .tGray600:
-            return UIColor(named: "tGray600")
+            return UIColor(named: "tGray600") // B7B7B7 -
         case .tGray700:
-            return UIColor(named: "tGray700")
+            return UIColor(named: "tGray700") // 999999 -
         case .tGray800:
-            return UIColor(named: "tGray800")
+            return UIColor(named: "tGray800") // 666666 -
         case .tGray900:
-            return UIColor(named: "tGray900")
+            return UIColor(named: "tGray900") // 434343 -
         case .tGray1000:
-            return UIColor(named: "tGray1000")
-        }
-    }
-    
-    enum SystemColor {
-        case background
-        case label
-    }
-    
-    static func sColor(_ name: SystemColor) -> UIColor? {
-        switch name {
-        case .background:
-            return UIColor.systemBackground
-        case .label:
-            return UIColor.label
+            return UIColor(named: "tGray1000") // 000000 - FFFFFF
         }
     }
 

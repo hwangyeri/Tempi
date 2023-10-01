@@ -14,6 +14,15 @@ import UIKit
  == Pretendard-SemiBold
  == Pretendard-Bold
  == Pretendard-Black
+ 
+ Font Size
+ == XXS: 12
+ == XS: 13
+ == S: 14
+ == M: 15
+ == L: 16
+ == XL: 20
+ == XXL: 24
  */
 
 extension UIFont {
