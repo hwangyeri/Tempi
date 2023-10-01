@@ -13,6 +13,7 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
         configureHierarchy()
         configureLayout()
+        hideKeyboardWhenTappedBackground()
         view.backgroundColor = UIColor.systemBackground
     }
     
