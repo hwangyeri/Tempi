@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        let vc = HomeViewController()
+        let vc = MyListViewController()
         window?.rootViewController = UINavigationController(rootViewController: vc)
         window?.makeKeyAndVisible()
         
@@ -26,18 +26,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let tabBar = UITabBarController()
         
-        let firstVC = UINavigationController(rootViewController: SearchViewController())
+        let firstVC = UINavigationController(rootViewController: CategoryViewController())
         firstVC.tabBarItem = UITabBarItem(title: .none, image: UIImage(systemName: Constant.SFSymbol.firstTabBarIcon),selectedImage: UIImage(systemName: Constant.SFSymbol.firstTabBarIcon))
 
-        let secondVC = UINavigationController(rootViewController: HomeViewController())
+        let secondVC = UINavigationController(rootViewController: MyListViewController())
         secondVC.tabBarItem = UITabBarItem(title: .none, image: UIImage(systemName: Constant.SFSymbol.secondTabBarIcon),selectedImage: UIImage(systemName: Constant.SFSymbol.secondTabBarIcon))
         
         let thirdVC = UINavigationController(rootViewController: CalendarViewController())
         thirdVC.tabBarItem = UITabBarItem(title: .none, image: UIImage(systemName: Constant.SFSymbol.thirdTabBarIcon),selectedImage: UIImage(systemName: Constant.SFSymbol.thirdTabBarIcon))
         
         tabBar.viewControllers = [firstVC, secondVC, thirdVC]
-        tabBar.tabBar.backgroundColor = UIColor.sColor(.background)
-        tabBar.tabBar.tintColor = UIColor.sColor(.label)
+        tabBar.tabBar.backgroundColor = UIColor.tGray100
+        tabBar.tabBar.tintColor = UIColor.tGray1000
         
         window?.rootViewController = tabBar
     }
