@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  MyViewController.swift
 //  Tempi
 //
 //  Created by Yeri Hwang on 2023/09/29.
@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class HomeViewController: UIViewController {
+class MyListViewController: UIViewController {
     
     let mainLabel = UILabel()
     let datePicker = UIDatePicker()
@@ -17,7 +17,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .tColor(.point)
-        navigationItem.title = "temp".localized
+//        navigationItem.title = "temp".localized
         view.addSubview(mainLabel)
         mainLabel.snp.makeConstraints { make in
             make.center.equalTo(view)
