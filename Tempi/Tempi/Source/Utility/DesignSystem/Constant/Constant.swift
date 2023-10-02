@@ -13,6 +13,11 @@ enum Constant {
         static let cornerRadius: CGFloat = 100
     }
     
+    enum TKeywordLabel {
+        static let cornerRadius: CGFloat = 100
+        static let borderWidth: CGFloat = 1
+    }
+    
     enum SFSymbol {
         /// Display Icon
         static let searchBarIcon: String = "magnifyingglass"
@@ -36,9 +41,11 @@ enum Constant {
         static let travelCategoryIcon: String = "airplane.departure"
         static let shoppingCategoryIcon: String = "cart.fill"
         static let wishListCategoryIcon: String = "sparkles"
-        static let studyCategoryIcon: String = "text.book.closed.fill"
-        static let removalCategoryIcon: String = "box.truck.fill"
-        static let exerciseCategoryIcon: String = "dumbbell.fill"
+        static let bucketListCategoryIcon: String = "text.book.closed.fill"
+        static let cleaningCategoryIcon: String = "text.book.closed.fill"
+        static let healthCategoryIcon: String = "text.book.closed.fill"
+        static let beforeGoingOutCategoryIcon: String = "text.book.closed.fill"
+        static let moveCategoryIcon: String = "text.book.closed.fill"
         
         /// CheckBox Drop-down Menu Icon
         static let editCheckBoxIcon: String = "pencil"
