@@ -1,5 +1,5 @@
 //
-//  MyViewController.swift
+//  MyListViewController.swift
 //  Tempi
 //
 //  Created by Yeri Hwang on 2023/09/29.
