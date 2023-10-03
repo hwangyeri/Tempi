@@ -15,6 +15,7 @@ class CategoryHomeViewController: BaseViewController {
     let mainView = CategoryHomeView()
     
     private var keywordDataSource: UICollectionViewDiffableDataSource<Int, String>!
+    private var categoryDataSource: UICollectionViewDiffableDataSource<Int, CategoryType>!
     
     override func loadView() {
         self.view = mainView
@@ -23,15 +24,15 @@ class CategoryHomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureDataSource()
+        configureKeywordDataSource()
+        configureCategoryDataSource()
     }
     
     override func configureHierarchy() {
         mainView.searchBar.delegate = self
     }
     
-    private func configureDataSource() {
-       
+    private func configureKeywordDataSource() {
         let cellRegistration = UICollectionView.CellRegistration<KeywordCollectionViewCell, String> { cell, indexPath, itemIdentifier in
             cell.keywordLabel.text = itemIdentifier
         }
@@ -43,14 +44,29 @@ class CategoryHomeViewController: BaseViewController {
             cell.keywordLabel.text = listItem
             return cell
         })
-        configureSnapshot()
-    }
-    
-    private func configureSnapshot() {
+        
         var snapshot = NSDiffableDataSourceSnapshot<Int, String>()
         snapshot.appendSections([0])
         snapshot.appendItems(list)
         keywordDataSource.apply(snapshot)
+    }
+    
+    private func configureCategoryDataSource() {
+        let cellRegistration = UICollectionView.CellRegistration<CategoryCollectionViewCell, CategoryType> { cell, indexPath, itemIdentifier in
+            cell.imageView.image = itemIdentifier.image
+            cell.textLabel.text = itemIdentifier.text
+        }
+        
+        categoryDataSource = UICollectionViewDiffableDataSource(collectionView: mainView.categoryCollectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
+            let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: itemIdentifier)
+            return cell
+        })
+        
+        let categories: [CategoryType] = CategoryType.categories
+        var snapshot = NSDiffableDataSourceSnapshot<Int, CategoryType>()
+        snapshot.appendSections([0])
+        snapshot.appendItems(categories)
+        categoryDataSource.apply(snapshot)
     }
 
 }
