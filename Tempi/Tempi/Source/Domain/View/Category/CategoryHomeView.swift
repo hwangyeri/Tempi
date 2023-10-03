@@ -26,7 +26,7 @@ class CategoryHomeView: BaseView {
         return view
     }()
     
-    lazy var keywordCollectionView = UICollectionView(frame: .zero, collectionViewLayout: configureTagLayout())
+    lazy var keywordCollectionView = UICollectionView(frame: .zero, collectionViewLayout: configureKeywordCollectionLayout())
     
     let divider = {
         let view = UIView()
@@ -55,7 +55,7 @@ class CategoryHomeView: BaseView {
             text: "category_sub_label".localized,
             custFont: .pretendardSemiBoldS,
             textColor: .tGray600)
-        view.numberOfLines = 2
+        view.numberOfLines = 0
         view.textAlignment = .center
         return view
     }()
@@ -95,7 +95,7 @@ class CategoryHomeView: BaseView {
             make.height.equalTo(30)
         }
         
-        keywordCollectionView.backgroundColor = .lightGray
+//        keywordCollectionView.backgroundColor = .lightGray
         
         divider.snp.makeConstraints { make in
             make.top.equalTo(keywordCollectionView.snp.bottom).offset(10)
@@ -119,9 +119,9 @@ class CategoryHomeView: BaseView {
         }
         
         categoryCollectionView.snp.makeConstraints { make in
-            make.top.equalTo(categorySubLabel.snp.bottom).offset(20)
+            make.top.equalTo(categorySubLabel.snp.bottom).offset(30)
             make.horizontalEdges.equalTo(self.safeAreaLayoutGuide).inset(20)
-            make.height.equalTo(200)
+            make.height.equalTo(180)
         }
         
 //        categoryCollectionView.backgroundColor = .lightGray
@@ -132,15 +132,12 @@ class CategoryHomeView: BaseView {
         }
     }
     
-    private func configureTagLayout() -> UICollectionViewLayout {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .estimated(80), heightDimension: .fractionalHeight(1.0))
-        
+    private func configureKeywordCollectionLayout() -> UICollectionViewLayout {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .estimated(100), heightDimension: .absolute(30))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .estimated(80), heightDimension: .fractionalHeight(1.0))
-        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 5)
-        
         group.interItemSpacing = .fixed(10)
         
         let section = NSCollectionLayoutSection(group: group)
@@ -157,8 +154,23 @@ class CategoryHomeView: BaseView {
     }
     
     private func configureCategoryCollectionLayout() -> UICollectionViewLayout {
-        let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 60, height: 60)
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.25), heightDimension: .fractionalHeight(1.0))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.4))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 4)
+        group.interItemSpacing = .fixed(10)
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20)
+        section.interGroupSpacing = 30
+        
+        let configuration = UICollectionViewCompositionalLayoutConfiguration()
+        configuration.scrollDirection = .vertical
+        
+        let layout = UICollectionViewCompositionalLayout(section: section)
+        layout.configuration = configuration
+        
         return layout
     }
     
