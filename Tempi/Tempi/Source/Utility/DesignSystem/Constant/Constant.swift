@@ -41,11 +41,11 @@ enum Constant {
         static let travelCategoryIcon: String = "airplane.departure"
         static let shoppingCategoryIcon: String = "cart.fill"
         static let wishListCategoryIcon: String = "sparkles"
-        static let bucketListCategoryIcon: String = "text.book.closed.fill"
-        static let cleaningCategoryIcon: String = "text.book.closed.fill"
-        static let healthCategoryIcon: String = "text.book.closed.fill"
-        static let beforeGoingOutCategoryIcon: String = "text.book.closed.fill"
-        static let moveCategoryIcon: String = "text.book.closed.fill"
+        static let bucketListCategoryIcon: String = "list.bullet.clipboard.fill"
+        static let cleaningCategoryIcon: String = "bubbles.and.sparkles"
+        static let healthCategoryIcon: String = "figure.run"
+        static let beforeGoingOutCategoryIcon: String = "car.fill"
+        static let moveCategoryIcon: String = "box.truck.fill"
         
         /// CheckBox Drop-down Menu Icon
         static let editCheckBoxIcon: String = "pencil"
