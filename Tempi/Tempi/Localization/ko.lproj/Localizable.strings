@@ -12,3 +12,13 @@
 "category_title_label" = "Category";
 "category_main_label" = "이런 카테고리는 어때요?";
 "category_sub_label" = "관심 있는 카테고리를 선택하면\n상황에 맞는 체크 리스트를 추천 받을 수 있어요!";
+
+// Category CollectionView
+"category_travel" = "여행";
+"category_shopping" = "쇼핑";
+"category_wishList" = "위시 리스트";
+"category_bucketList" = "버킷 리스트";
+"category_cleaning" = "청소";
+"category_beforeGoingOut" = "외출";
+"category_health" = "건강";
+"category_move" = "이사";

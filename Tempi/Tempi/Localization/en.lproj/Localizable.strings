@@ -11,4 +11,14 @@
 "searchBar_placeholder" = "Search for various templates.";
 "category_title_label" = "Category";
 "category_main_label" = "How about this category?";
-"category_sub_label" = "If you choose a category you're interested in,\nyou can get recommendations for a context-appropriate checklist!";
+"category_sub_label" = "If you choose a category you're interested in,\nyou can get recommendations\n for a context-appropriate checklist!";
+
+// Category CollectionView
+"category_travel" = "Travel";
+"category_shopping" = "Shopping";
+"category_wishList" = "Wish List";
+"category_bucketList" = "Bucket List";
+"category_cleaning" = "Cleaning";
+"category_beforeGoingOut" = "Go out";
+"category_health" = "Health";
+"category_move" = "Move";
