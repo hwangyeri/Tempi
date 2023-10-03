@@ -10,14 +10,12 @@ import SnapKit
 
 class KeywordCollectionViewCell: BaseCollectionViewCell {
     
-    // FIXME: Border 가 안보임... Color 변경해야 함
-    
     let borderView = {
         let view = UIView()
-        view.layer.cornerRadius = Constant.TKeywordLabel.cornerRadius
-        view.layer.borderWidth = Constant.TKeywordLabel.borderWidth
-        view.layer.borderColor = UIColor.red.cgColor
-        view.backgroundColor = .yellow
+        view.layer.borderWidth = Constant.TKeywordBorder.borderWidth
+        view.layer.borderColor = UIColor.tGray400.cgColor
+        view.layer.cornerRadius = Constant.TKeywordBorder.cornerRadius
+        view.backgroundColor = UIColor.tGray100
         return view
     }()
 
@@ -26,11 +24,7 @@ class KeywordCollectionViewCell: BaseCollectionViewCell {
             text: "테스트",
             custFont: .pretendardSemiBoldXS,
             textColor: .tGray1000)
-//        view.layer.cornerRadius = Constant.TKeywordLabel.cornerRadius
-//        view.layer.borderColor = UIColor.yellow.cgColor
-//        view.layer.borderWidth = Constant.TKeywordLabel.borderWidth
-//        view.backgroundColor = UIColor.lightGray
-        view.numberOfLines = 0
+        view.numberOfLines = 1
         view.backgroundColor = .clear
         return view
     }()
@@ -45,9 +39,9 @@ class KeywordCollectionViewCell: BaseCollectionViewCell {
             make.edges.equalTo(contentView)
         }
         
-//        keywordLabel.snp.makeConstraints { make in
-//            make.edges.equalTo(borderView)
-//        }
+        keywordLabel.snp.makeConstraints { make in
+            make.edges.equalTo(borderView).inset(10)
+        }
     }
     
 }

@@ -33,15 +33,13 @@ class CategoryHomeViewController: BaseViewController {
     }
     
     private func configureKeywordDataSource() {
-        let cellRegistration = UICollectionView.CellRegistration<KeywordCollectionViewCell, String> { cell, indexPath, itemIdentifier in
+        let cellRegistration = UICollectionView.CellRegistration<KeywordCollectionViewCell, String> {
+            cell, indexPath, itemIdentifier in
             cell.keywordLabel.text = itemIdentifier
         }
         
         keywordDataSource = UICollectionViewDiffableDataSource(collectionView: mainView.keywordCollectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
-            let listItem = self.list[indexPath.item]
-            
             let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: itemIdentifier)
-            cell.keywordLabel.text = listItem
             return cell
         })
         

@@ -22,7 +22,7 @@ class CategoryHomeView: BaseView {
         let view = UISearchBar()
         view.searchBarStyle = .minimal // 테두리 없앰
         view.placeholder = "searchBar_placeholder".localized
-        view.searchTextField.font = .customFont(.pretendardSemiBoldM)
+        view.searchTextField.font = .customFont(.pretendardRegularM)
         return view
     }()
     
@@ -30,7 +30,13 @@ class CategoryHomeView: BaseView {
     
     let divider = {
         let view = UIView()
-        view.backgroundColor = UIColor.tGray400
+        view.backgroundColor = UIColor.tGray200
+        return view
+    }()
+    
+    let categoryDivider = {
+        let view = UIView()
+        view.backgroundColor = UIColor.tGray1000
         return view
     }()
     
@@ -53,8 +59,8 @@ class CategoryHomeView: BaseView {
     let categorySubLabel = {
         let view = TLabel(
             text: "category_sub_label".localized,
-            custFont: .pretendardSemiBoldS,
-            textColor: .tGray600)
+            custFont: .pretendardRegularS,
+            textColor: .tGray800)
         view.numberOfLines = 0
         view.textAlignment = .center
         return view
@@ -73,7 +79,7 @@ class CategoryHomeView: BaseView {
     
     override func configureHierarchy() {
         [searchMainLabel, searchBar, keywordCollectionView, divider,
-         categoryTitleLabel, categoryMainLabel, categorySubLabel, categoryCollectionView, plusButton].forEach {
+         categoryDivider, categoryTitleLabel, categoryMainLabel, categorySubLabel, categoryCollectionView, plusButton].forEach {
             addSubview($0)
         }
     }
@@ -91,8 +97,9 @@ class CategoryHomeView: BaseView {
         
         keywordCollectionView.snp.makeConstraints { make in
             make.top.equalTo(searchBar.snp.bottom)
-            make.horizontalEdges.equalTo(searchBar).inset(10)
-            make.height.equalTo(30)
+            make.leading.equalTo(searchBar).inset(10)
+            make.trailing.equalTo(self.safeAreaLayoutGuide)
+            make.height.equalTo(35)
         }
         
 //        keywordCollectionView.backgroundColor = .lightGray
@@ -103,9 +110,16 @@ class CategoryHomeView: BaseView {
             make.height.equalTo(0.5)
         }
         
-        categoryTitleLabel.snp.makeConstraints { make in
+        categoryDivider.snp.makeConstraints { make in
             make.top.equalTo(divider.snp.bottom).offset(20)
-            make.leading.equalTo(searchMainLabel)
+            make.leading.equalTo(divider)
+            make.width.equalTo(3)
+            make.height.equalTo(categoryTitleLabel)
+        }
+        
+        categoryTitleLabel.snp.makeConstraints { make in
+            make.top.equalTo(categoryDivider)
+            make.leading.equalTo(categoryDivider).offset(10)
         }
         
         categoryMainLabel.snp.makeConstraints { make in
@@ -133,7 +147,7 @@ class CategoryHomeView: BaseView {
     }
     
     private func configureKeywordCollectionLayout() -> UICollectionViewLayout {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .estimated(100), heightDimension: .absolute(30))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .estimated(100), heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
