@@ -13,7 +13,7 @@ class CategoryDetailView: BaseView {
     let mainLabel = {
        let view = TLabel(
         text: "category_detail_main_label".localized,
-        custFont: .pretendardSemiBoldXXL,
+        custFont: .pretendardSemiBoldXL,
         textColor: .tGray1000)
         return view
     }()
@@ -21,7 +21,7 @@ class CategoryDetailView: BaseView {
     let subLabel = {
        let view = TLabel(
         text: "category_detail_sub_label".localized,
-        custFont: .pretendardRegularXL,
+        custFont: .pretendardRegularM,
         textColor: .tGray900)
         return view
     }()
@@ -54,11 +54,11 @@ class CategoryDetailView: BaseView {
         subCategoryCollectionView.snp.makeConstraints { make in
             make.top.equalTo(subLabel.snp.bottom).offset(30)
             make.leading.equalTo(mainLabel)
-            make.trailing.equalTo(self.safeAreaLayoutGuide).inset(10)
-            make.bottom.equalTo(self.safeAreaLayoutGuide).inset(100)
+            make.trailing.equalTo(self.safeAreaLayoutGuide)
+            make.bottom.equalTo(self.safeAreaLayoutGuide).inset(200)
         }
         
-        subCategoryCollectionView.backgroundColor = .lightGray
+//        subCategoryCollectionView.backgroundColor = .lightGray
         
         nextButton.snp.makeConstraints { make in
             make.bottom.horizontalEdges.equalTo(self.safeAreaLayoutGuide).inset(20)
@@ -67,15 +67,15 @@ class CategoryDetailView: BaseView {
     }
     
     private func configureSubCategoryCollectionLayout() -> UICollectionViewLayout {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.3), heightDimension: .fractionalHeight(1.0))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .estimated(100), heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .estimated(100), heightDimension: .absolute(40))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 3)
         group.interItemSpacing = .fixed(10)
         
         let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10)
         section.interGroupSpacing = 10
         
         let configuration = UICollectionViewCompositionalLayoutConfiguration()
