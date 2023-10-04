@@ -43,7 +43,7 @@ class CategoryHomeView: BaseView {
     let categoryTitleLabel = {
         let view = TLabel(
             text: "category_title_label".localized,
-            custFont: .pretendardBlackL,
+            custFont: .pretendardBlackXL,
             textColor: .tGray1000)
         return view
     }()
