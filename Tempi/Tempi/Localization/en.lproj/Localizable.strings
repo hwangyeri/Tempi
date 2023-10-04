@@ -6,9 +6,17 @@
   
 */
 
+/*
+ %@ -> String
+ %% -> Character
+ %d -> Int
+ %u -> Unsigned Int (UInt)
+ %f -> Double
+ */
+
 // Category Home View
 "search_main_label" = "What kind of checklist are you curious about?";
-"searchBar_placeholder" = "Search for various templates.";
+"searchBar_placeholder" = " Search for various templates.";
 "category_title_label" = "Category";
 "category_main_label" = "How about this category?";
 "category_sub_label" = "If you choose a category you're interested in,\nyou can get recommendations\n for a context-appropriate checklist!";
@@ -22,3 +30,7 @@
 "category_beforeGoingOut" = "Go out";
 "category_health" = "Health";
 "category_move" = "Move";
+
+// Category Detail View
+"category_detail_main_label" = "What kind of %@ are you planning?";
+"category_detail_sub_label" = "Please choose one of the most necessary situations.";

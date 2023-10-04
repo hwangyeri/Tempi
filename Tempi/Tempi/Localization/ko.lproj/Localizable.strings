@@ -6,9 +6,17 @@
   
 */
 
+/*
+ %@ -> String
+ %% -> Character
+ %d -> Int
+ %u -> Unsigned Int (UInt)
+ %f -> Double
+ */
+
 // Category Home View
 "search_main_label" = "어떤 체크리스트가 궁금하신가요?";
-"searchBar_placeholder" = "다양한 템플릿을 검색해 보세요.";
+"searchBar_placeholder" = " 다양한 템플릿을 검색해 보세요.";
 "category_title_label" = "Category";
 "category_main_label" = "이런 카테고리는 어때요?";
 "category_sub_label" = "관심 있는 카테고리를 선택하면\n상황에 맞는 체크 리스트를 추천 받을 수 있어요!";
@@ -22,3 +30,7 @@
 "category_beforeGoingOut" = "외출";
 "category_health" = "건강";
 "category_move" = "이사";
+
+// Category Detail View
+"category_detail_main_label" = "어떤 %@을 계획 중이신가요?";
+"category_detail_sub_label" = "가장 필요한 상황을 1개 골라 주세요.";
