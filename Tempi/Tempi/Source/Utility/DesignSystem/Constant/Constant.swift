@@ -9,6 +9,10 @@ import Foundation
 
 enum Constant {
     
+    enum TButton {
+        static let cornerRadius: CGFloat = 27
+    }
+    
     enum TKeywordBorder {
         static let cornerRadius: CGFloat = 18
         static let borderWidth: CGFloat = 1
