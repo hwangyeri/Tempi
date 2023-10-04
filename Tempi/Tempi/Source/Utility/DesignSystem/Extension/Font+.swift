@@ -21,8 +21,9 @@ import UIKit
  == S: 14
  == M: 15
  == L: 16
- == XL: 20
- == XXL: 24
+ == XL: 18
+ == XXL: 20
+ == XXXL: 24
  */
 
 extension UIFont {
@@ -37,6 +38,7 @@ extension UIFont {
         case pretendardRegularL
         case pretendardRegularXL
         case pretendardRegularXXL
+        case pretendardRegularXXXL
         
         /// Medium
         case pretendardMediumXXS
@@ -46,6 +48,7 @@ extension UIFont {
         case pretendardMediumL
         case pretendardMediumXL
         case pretendardMediumXXL
+        case pretendardMediumXXXL
         
         /// SemiBold
         case pretendardSemiBoldXXS
@@ -55,6 +58,7 @@ extension UIFont {
         case pretendardSemiBoldL
         case pretendardSemiBoldXL
         case pretendardSemiBoldXXL
+        case pretendardSemiBoldXXXL
         
         /// Bold
         case pretendardBoldXXS
@@ -64,6 +68,7 @@ extension UIFont {
         case pretendardBoldL
         case pretendardBoldXL
         case pretendardBoldXXL
+        case pretendardBoldXXXL
         
         /// Black
         case pretendardBlackXXS
@@ -73,6 +78,7 @@ extension UIFont {
         case pretendardBlackL
         case pretendardBlackXL
         case pretendardBlackXXL
+        case pretendardBlackXXXL
     }
     
     static func customFont(_ name: CustomFont) -> UIFont? {
@@ -88,8 +94,10 @@ extension UIFont {
         case .pretendardRegularL:
             return UIFont(name: "Pretendard-Regular", size: 16)
         case .pretendardRegularXL:
-            return UIFont(name: "Pretendard-Regular", size: 20)
+            return UIFont(name: "Pretendard-Regular", size: 18)
         case .pretendardRegularXXL:
+            return UIFont(name: "Pretendard-Regular", size: 20)
+        case.pretendardRegularXXXL:
             return UIFont(name: "Pretendard-Regular", size: 24)
             
         case .pretendardMediumXXS:
@@ -103,9 +111,11 @@ extension UIFont {
         case .pretendardMediumL:
             return UIFont(name: "Pretendard-Medium", size: 16)
         case .pretendardMediumXL:
-            return UIFont(name: "Pretendard-Medium", size: 20)
+            return UIFont(name: "Pretendard-Medium", size: 18)
         case .pretendardMediumXXL:
-            return UIFont(name: "Pretendard-Medium", size: 24)
+            return UIFont(name: "Pretendard-Medium", size: 20)
+        case.pretendardMediumXXXL:
+            return UIFont(name: "Pretendard-Regular", size: 24)
             
         case .pretendardSemiBoldXXS:
             return UIFont(name: "Pretendard-SemiBold", size: 12)
@@ -118,8 +128,10 @@ extension UIFont {
         case .pretendardSemiBoldL:
             return UIFont(name: "Pretendard-SemiBold", size: 16)
         case .pretendardSemiBoldXL:
-            return UIFont(name: "Pretendard-SemiBold", size: 20)
+            return UIFont(name: "Pretendard-SemiBold", size: 18)
         case .pretendardSemiBoldXXL:
+            return UIFont(name: "Pretendard-SemiBold", size: 20)
+        case .pretendardSemiBoldXXXL:
             return UIFont(name: "Pretendard-SemiBold", size: 24)
             
         case .pretendardBoldXXS:
@@ -133,8 +145,10 @@ extension UIFont {
         case .pretendardBoldL:
             return UIFont(name: "Pretendard-Bold", size: 16)
         case .pretendardBoldXL:
-            return UIFont(name: "Pretendard-Bold", size: 20)
+            return UIFont(name: "Pretendard-Bold", size: 18)
         case .pretendardBoldXXL:
+            return UIFont(name: "Pretendard-Bold", size: 20)
+        case .pretendardBoldXXXL:
             return UIFont(name: "Pretendard-Bold", size: 24)
             
         case .pretendardBlackXXS:
@@ -148,8 +162,10 @@ extension UIFont {
         case .pretendardBlackL:
             return UIFont(name: "Pretendard-Black", size: 16)
         case .pretendardBlackXL:
-            return UIFont(name: "Pretendard-Black", size: 20)
+            return UIFont(name: "Pretendard-Black", size: 18)
         case .pretendardBlackXXL:
+            return UIFont(name: "Pretendard-Black", size: 20)
+        case .pretendardBlackXXXL:
             return UIFont(name: "Pretendard-Black", size: 24)
         }
     }
