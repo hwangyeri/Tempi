@@ -18,6 +18,10 @@ enum Constant {
         static let borderWidth: CGFloat = 1
     }
     
+    enum TSubCategory {
+        static let cornerRadius: CGFloat = 10
+    }
+    
     enum SFSymbol {
         /// Display Icon
         static let searchBarIcon: String = "magnifyingglass"
