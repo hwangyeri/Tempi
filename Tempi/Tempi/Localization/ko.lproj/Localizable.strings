@@ -43,3 +43,9 @@
 "category_checklist_item_count_label" = "6 / 20 개 %d";
 "category_checklist_select_all_label" = "전체 선택";
 "category_checklist_tButton_text" = "내 리스트에 추가하기";
+
+// FIXME: Checklist View
+"checklist_name_label" = "한강 수영장 %@";
+"checklist_date_label" = "2023년 10월 5일 %@";
+"checklist_bookmark_list_text" = "즐겨찾기";
+

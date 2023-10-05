@@ -43,3 +43,8 @@
 "category_checklist_item_count_label" = "%d / %d 개";
 "category_checklist_select_all_label" = "Select All";
 "category_checklist_tButton_text" = "Add to My List";
+
+// FIXME: Checklist View
+"checklist_name_label" = "temp checklist name %@";
+"checklist_date_label" = "2023년 10월 5일 %@ Eng + DateFormatter";
+"checklist_bookmark_list_text" = "Bookmark";
