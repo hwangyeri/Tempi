@@ -29,8 +29,7 @@ class CategoryHomeView: BaseView {
     lazy var keywordCollectionView = UICollectionView(frame: .zero, collectionViewLayout: configureKeywordCollectionLayout())
     
     let divider = {
-        let view = UIView()
-        view.backgroundColor = UIColor.tGray200
+        let view = TDivider()
         return view
     }()
     
