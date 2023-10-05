@@ -22,6 +22,11 @@ enum Constant {
         static let cornerRadius: CGFloat = 10
     }
     
+    enum TBlankCheckBox {
+        static let cornerRadius: CGFloat = 6
+        static let borderWidth: CGFloat = 1
+    }
+    
     enum SFSymbol {
         /// Display Icon
         static let searchBarIcon: String = "magnifyingglass"
