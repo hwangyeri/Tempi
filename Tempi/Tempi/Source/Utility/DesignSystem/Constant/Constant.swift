@@ -27,6 +27,12 @@ enum Constant {
         static let borderWidth: CGFloat = 1
     }
     
+    enum TBookmarkListButton {
+        static let cornerRadius: CGFloat = 20
+        static let borderWidth: CGFloat = 1
+        static let imagePadding: CGFloat = 8
+    }
+    
     enum SFSymbol {
         /// Display Icon
         static let searchBarIcon: String = "magnifyingglass"
