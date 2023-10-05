@@ -26,7 +26,7 @@ class CategoryHomeView: BaseView {
         return view
     }()
     
-    lazy var keywordCollectionView = UICollectionView(frame: .zero, collectionViewLayout: configureKeywordCollectionLayout())
+    lazy var recommendSearchWordsCollectionView = UICollectionView(frame: .zero, collectionViewLayout: configureRecommendSearchWordsCollectionLayout())
     
     let divider = {
         let view = TDivider()
@@ -76,7 +76,7 @@ class CategoryHomeView: BaseView {
     }()
     
     override func configureHierarchy() {
-        [searchMainLabel, searchBar, keywordCollectionView, divider,
+        [searchMainLabel, searchBar, recommendSearchWordsCollectionView, divider,
          categoryDivider, categoryTitleLabel, categoryMainLabel, categorySubLabel, categoryCollectionView, plusButton].forEach {
             addSubview($0)
         }
@@ -93,7 +93,7 @@ class CategoryHomeView: BaseView {
             make.horizontalEdges.equalTo(self.safeAreaLayoutGuide).inset(10)
         }
         
-        keywordCollectionView.snp.makeConstraints { make in
+        recommendSearchWordsCollectionView.snp.makeConstraints { make in
             make.top.equalTo(searchBar.snp.bottom)
             make.leading.equalTo(searchBar).inset(10)
             make.trailing.equalTo(self.safeAreaLayoutGuide)
@@ -103,7 +103,7 @@ class CategoryHomeView: BaseView {
 //        keywordCollectionView.backgroundColor = .lightGray
         
         divider.snp.makeConstraints { make in
-            make.top.equalTo(keywordCollectionView.snp.bottom).offset(10)
+            make.top.equalTo(recommendSearchWordsCollectionView.snp.bottom).offset(10)
             make.horizontalEdges.equalTo(searchBar).inset(10)
             make.height.equalTo(0.5)
         }
@@ -144,13 +144,13 @@ class CategoryHomeView: BaseView {
         }
     }
     
-    private func configureKeywordCollectionLayout() -> UICollectionViewLayout {
+    private func configureRecommendSearchWordsCollectionLayout() -> UICollectionViewLayout {
         let itemSize = NSCollectionLayoutSize(widthDimension: .estimated(100), heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 5)
-        group.interItemSpacing = .fixed(10)
+        group.interItemSpacing = .fixed(8)
         
         let section = NSCollectionLayoutSection(group: group)
         section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)

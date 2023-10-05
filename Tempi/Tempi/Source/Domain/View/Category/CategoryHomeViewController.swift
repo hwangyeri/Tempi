@@ -14,7 +14,7 @@ class CategoryHomeViewController: BaseViewController {
     
     let mainView = CategoryHomeView()
     
-    private var keywordDataSource: UICollectionViewDiffableDataSource<Int, String>!
+    private var recommendSearchWordsDataSource: UICollectionViewDiffableDataSource<Int, String>!
     private var categoryDataSource: UICollectionViewDiffableDataSource<Int, CategoryType>!
     
     override func loadView() {
@@ -24,7 +24,7 @@ class CategoryHomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureKeywordDataSource()
+        configureRecommendSearchWordsDataSource()
         configureCategoryDataSource()
     }
     
@@ -32,13 +32,13 @@ class CategoryHomeViewController: BaseViewController {
         mainView.searchBar.delegate = self
     }
     
-    private func configureKeywordDataSource() {
-        let cellRegistration = UICollectionView.CellRegistration<KeywordCollectionViewCell, String> {
+    private func configureRecommendSearchWordsDataSource() {
+        let cellRegistration = UICollectionView.CellRegistration<ReuseSearchWordsCollectionViewCell, String> {
             cell, indexPath, itemIdentifier in
-            cell.keywordLabel.text = itemIdentifier
+            cell.searchWordsLabel.text = itemIdentifier
         }
         
-        keywordDataSource = UICollectionViewDiffableDataSource(collectionView: mainView.keywordCollectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
+        recommendSearchWordsDataSource = UICollectionViewDiffableDataSource(collectionView: mainView.recommendSearchWordsCollectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
             let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: itemIdentifier)
             return cell
         })
@@ -46,7 +46,7 @@ class CategoryHomeViewController: BaseViewController {
         var snapshot = NSDiffableDataSourceSnapshot<Int, String>()
         snapshot.appendSections([0])
         snapshot.appendItems(list)
-        keywordDataSource.apply(snapshot)
+        recommendSearchWordsDataSource.apply(snapshot)
     }
     
     private func configureCategoryDataSource() {

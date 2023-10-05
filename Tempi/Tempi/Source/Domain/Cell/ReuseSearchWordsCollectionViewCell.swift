@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class KeywordCollectionViewCell: BaseCollectionViewCell {
+class ReuseSearchWordsCollectionViewCell: BaseCollectionViewCell {
     
     let borderView = {
         let view = UIView()
@@ -19,9 +19,9 @@ class KeywordCollectionViewCell: BaseCollectionViewCell {
         return view
     }()
 
-    let keywordLabel = {
+    let searchWordsLabel = {
         let view = TLabel(
-            text: "테스트",
+            text: "test",
             custFont: .pretendardSemiBoldXS,
             textColor: .tGray1000)
         view.numberOfLines = 1
@@ -31,7 +31,7 @@ class KeywordCollectionViewCell: BaseCollectionViewCell {
     
     override func configureHierarchy() {
         contentView.addSubview(borderView)
-        borderView.addSubview(keywordLabel)
+        borderView.addSubview(searchWordsLabel)
     }
     
     override func configureLayout() {
@@ -39,7 +39,7 @@ class KeywordCollectionViewCell: BaseCollectionViewCell {
             make.edges.equalTo(contentView)
         }
         
-        keywordLabel.snp.makeConstraints { make in
+        searchWordsLabel.snp.makeConstraints { make in
             make.edges.equalTo(borderView).inset(10)
         }
     }
