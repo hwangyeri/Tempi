@@ -11,6 +11,7 @@ final class TButton: UIButton {
     
     init(text: String) {
         super.init(frame: .zero)
+        
         self.setTitle(text, for: .normal)
         self.setTitleColor(UIColor.tGray100, for: .normal)
         self.backgroundColor = UIColor.tGray1000
