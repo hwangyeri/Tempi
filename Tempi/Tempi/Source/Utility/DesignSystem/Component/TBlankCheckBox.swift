@@ -11,8 +11,9 @@ final class TBlankCheckBox: UIButton {
     
     init() {
         super.init(frame: .zero)
-        layer.cornerRadius = 6
-        layer.borderWidth = 1
+        layer.cornerRadius = Constant.TBlankCheckBox
+            .cornerRadius
+        layer.borderWidth = Constant.TBlankCheckBox.borderWidth
         layer.borderColor = UIColor.tGray1000.cgColor
         backgroundColor = UIColor.tGray100
     }
