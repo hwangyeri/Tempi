@@ -48,3 +48,8 @@
 "checklist_name_label" = "temp checklist name %@";
 "checklist_date_label" = "2023년 10월 5일 %@ Eng + DateFormatter";
 "checklist_bookmark_list_text" = "Bookmark";
+
+// Search View
+"search_searchBar_placeholder" = " Search for various templates.";
+"search_recent_search_words_label" = "Recent Search Words";
+"search_recommend_search_words_label" = "Recommended search terms";
