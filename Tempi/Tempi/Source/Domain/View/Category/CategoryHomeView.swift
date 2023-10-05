@@ -60,7 +60,6 @@ class CategoryHomeView: BaseView {
             text: "category_sub_label".localized,
             custFont: .pretendardRegularS,
             textColor: .tGray800)
-        view.numberOfLines = 0
         view.textAlignment = .center
         return view
     }()

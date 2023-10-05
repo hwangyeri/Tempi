@@ -30,7 +30,7 @@ class CategoryChecklistViewController: BaseViewController {
             cell.checkBoxLabel.text = itemIdentifier
         }
         
-        categoryChecklistDataSource = UICollectionViewDiffableDataSource(collectionView: mainView.categoryCheckBoxCollectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
+        categoryChecklistDataSource = UICollectionViewDiffableDataSource(collectionView: mainView.categoryChecklistCollectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
             let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: itemIdentifier)
             return cell
         })

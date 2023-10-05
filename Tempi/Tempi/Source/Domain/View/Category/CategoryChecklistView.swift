@@ -23,7 +23,6 @@ class CategoryChecklistView: BaseView {
         text: "category_checklist_sub_label".localized,
         custFont: .pretendardRegularM,
         textColor: .tGray900)
-        view.numberOfLines = 0
         return view
     }()
     
@@ -68,12 +67,12 @@ class CategoryChecklistView: BaseView {
         return view
     }()
     
-    lazy var categoryCheckBoxCollectionView = UICollectionView(frame: .zero, collectionViewLayout: configureCategoryCheckBoxCollectionLayout())
+    lazy var categoryChecklistCollectionView = UICollectionView(frame: .zero, collectionViewLayout: configureCategoryCheckBoxCollectionLayout())
     
     override func configureHierarchy() {
         [mainLabel, subLabel,
          checklistNameLabel, itemCountLabel, blankCheckBox, selectAllLabel, divider,
-         tButton, categoryCheckBoxCollectionView].forEach {
+         tButton, categoryChecklistCollectionView].forEach {
             addSubview($0)
         }
     }
@@ -115,16 +114,15 @@ class CategoryChecklistView: BaseView {
             make.height.equalTo(1)
         }
         
-        categoryCheckBoxCollectionView.snp.makeConstraints { make in
+        categoryChecklistCollectionView.snp.makeConstraints { make in
             make.top.equalTo(divider.snp.bottom).offset(25)
             make.horizontalEdges.equalTo(self.safeAreaLayoutGuide).inset(40)
             make.height.equalTo(self.safeAreaLayoutGuide).multipliedBy(0.45)
         }
         
-//        categoryCheckBoxCollectionView.backgroundColor = .lightGray
+//        categoryChecklistCollectionView.backgroundColor = .lightGray
         
         tButton.snp.makeConstraints { make in
-//            make.top.equalTo(categoryCheckBoxCollectionView.snp.bottom)
             make.bottom.horizontalEdges.equalTo(self.safeAreaLayoutGuide).inset(20)
             make.height.equalTo(55)
         }

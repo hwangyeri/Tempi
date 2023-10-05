@@ -20,7 +20,6 @@ class CategoryChecklistCollectionViewCell: BaseCollectionViewCell {
             text: "test",
             custFont: .pretendardRegularL,
             textColor: .tGray1000)
-        view.numberOfLines = 0
         return view
     }()
     

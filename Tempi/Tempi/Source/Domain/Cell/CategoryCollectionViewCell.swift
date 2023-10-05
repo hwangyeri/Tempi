@@ -23,7 +23,6 @@ class CategoryCollectionViewCell: BaseCollectionViewCell {
             text: "test",
             custFont: .pretendardSemiBoldS,
             textColor: .tGray900)
-        view.numberOfLines = 0
 //        view.backgroundColor = .red
         view.textAlignment = .center
         return view
