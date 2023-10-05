@@ -34,10 +34,12 @@
 // Category Detail View
 "category_detail_main_label" = "What kind of %@ are you planning?";
 "category_detail_sub_label" = "Please choose one of the most necessary situations.";
+"category_detail_tButton_text" = "Next";
 
-// Category Checklist View
+// FIXME: Category Checklist View
 "category_checklist_main_label" = "Please select the item you want.";
 "category_checklist_sub_label" = "temp temp temp";
 "category_checklist_name_label" = "%@";
 "category_checklist_item_count_label" = "%d / %d 개";
 "category_checklist_select_all_label" = "Select All";
+"category_checklist_tButton_text" = "Add to My List";

@@ -34,10 +34,12 @@
 // Category Detail View
 "category_detail_main_label" = "어떤 %@을 계획 중이신가요?";
 "category_detail_sub_label" = "가장 필요한 상황을 1개 골라 주세요.";
+"category_detail_tButton_text" = "다음";
 
-// Category Checklist View
+// FIXME: Category Checklist View
 "category_checklist_main_label" = "원하는 항목을 선택해 주세요.";
-"category_checklist_sub_label" = "임시 텍스트 입니다.";
+"category_checklist_sub_label" = "임시 텍스트 입니다.\n임시 텍스트 입니다.";
 "category_checklist_name_label" = "수영장 %@";
 "category_checklist_item_count_label" = "6 / 20 개 %d";
 "category_checklist_select_all_label" = "전체 선택";
+"category_checklist_tButton_text" = "내 리스트에 추가하기";
