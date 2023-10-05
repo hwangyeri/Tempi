@@ -28,15 +28,15 @@ class CategoryDetailView: BaseView {
     
     lazy var subCategoryCollectionView = UICollectionView(frame: .zero, collectionViewLayout: configureSubCategoryCollectionLayout())
     
-    let nextButton = {
+    let tButton = {
         let view = TButton(
-            text: "다음"
+            text: "category_detail_tButton_text".localized
         )
         return view
     }()
 
     override func configureHierarchy() {
-        [mainLabel, subLabel, subCategoryCollectionView, nextButton].forEach {
+        [mainLabel, subLabel, subCategoryCollectionView, tButton].forEach {
             addSubview($0)
         }
     }
@@ -60,7 +60,7 @@ class CategoryDetailView: BaseView {
         
 //        subCategoryCollectionView.backgroundColor = .lightGray
         
-        nextButton.snp.makeConstraints { make in
+        tButton.snp.makeConstraints { make in
             make.bottom.horizontalEdges.equalTo(self.safeAreaLayoutGuide).inset(20)
             make.height.equalTo(55)
         }
