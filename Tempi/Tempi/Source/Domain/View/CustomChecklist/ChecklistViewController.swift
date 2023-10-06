@@ -29,7 +29,7 @@ class ChecklistViewController: BaseViewController {
             cell, indexPath, itemIdentifier in
             cell.checkBoxLabel.text = itemIdentifier
             cell.checkBoxMemoLabel.text = itemIdentifier
-            cell.checkBoxAlarmLabel.text = itemIdentifier
+//            cell.checkBoxAlarmLabel.text = itemIdentifier
 //            cell.backgroundColor = .link
         }
         

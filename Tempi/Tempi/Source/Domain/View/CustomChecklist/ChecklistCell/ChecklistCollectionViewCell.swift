@@ -32,21 +32,21 @@ class ChecklistCollectionViewCell: BaseCollectionViewCell {
         return view
     }()
     
-    let checkBoxAlarmImageView = {
-        let view = UIImageView()
-        view.image = UIImage(systemName: Constant.SFSymbol.alarmIcon)
-        view.tintColor = UIColor.point
-        return view
-    }()
-    
-    let checkBoxAlarmLabel = {
-        let view = TLabel(
-            text: "test",
-            custFont: .pretendardBoldXXS,
-            textColor: .point)
-        view.numberOfLines = 1
-        return view
-    }()
+//    let checkBoxAlarmImageView = {
+//        let view = UIImageView()
+//        view.image = UIImage(systemName: Constant.SFSymbol.alarmIcon)
+//        view.tintColor = UIColor.point
+//        return view
+//    }()
+//    
+//    let checkBoxAlarmLabel = {
+//        let view = TLabel(
+//            text: "test",
+//            custFont: .pretendardBoldXXS,
+//            textColor: .point)
+//        view.numberOfLines = 1
+//        return view
+//    }()
     
     let checkBoxMenuButton = {
         let view = TImageButton(
@@ -57,7 +57,7 @@ class ChecklistCollectionViewCell: BaseCollectionViewCell {
     }()
     
     override func configureHierarchy() {
-        [checkBoxButton, checkBoxLabel, checkBoxMemoLabel, checkBoxAlarmImageView, checkBoxAlarmLabel, checkBoxMenuButton].forEach {
+        [checkBoxButton, checkBoxLabel, checkBoxMemoLabel, checkBoxMenuButton].forEach {
             contentView.addSubview($0)
         }
     }
@@ -79,19 +79,19 @@ class ChecklistCollectionViewCell: BaseCollectionViewCell {
             make.trailing.equalTo(checkBoxLabel)
         }
         
-        checkBoxAlarmImageView.snp.makeConstraints { make in
-            make.top.equalTo(checkBoxMemoLabel.snp.bottom).offset(5)
-            make.leading.equalTo(checkBoxMemoLabel)
-            make.height.equalTo(15)
-            make.width.equalTo(14)
-        }
+//        checkBoxAlarmImageView.snp.makeConstraints { make in
+//            make.top.equalTo(checkBoxMemoLabel.snp.bottom).offset(5)
+//            make.leading.equalTo(checkBoxMemoLabel)
+//            make.height.equalTo(15)
+//            make.width.equalTo(14)
+//        }
 //        checkBoxAlarmImageView.backgroundColor = .yellow
-        
-        checkBoxAlarmLabel.snp.makeConstraints { make in
-            make.top.equalTo(checkBoxAlarmImageView)
-            make.leading.equalTo(checkBoxAlarmImageView.snp.trailing).offset(3)
-            make.trailing.equalTo(checkBoxLabel)
-        }
+//        
+//        checkBoxAlarmLabel.snp.makeConstraints { make in
+//            make.top.equalTo(checkBoxAlarmImageView)
+//            make.leading.equalTo(checkBoxAlarmImageView.snp.trailing).offset(3)
+//            make.trailing.equalTo(checkBoxLabel)
+//        }
 //        checkBoxAlarmLabel.backgroundColor = .red
         
         checkBoxMenuButton.snp.makeConstraints { make in

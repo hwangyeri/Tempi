@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let tabBar = UITabBarController()
         
-        let firstVC = UINavigationController(rootViewController: SearchViewController())
+        let firstVC = UINavigationController(rootViewController: ChecklistViewController())
         firstVC.tabBarItem = UITabBarItem(title: .none, image: UIImage(systemName: Constant.SFSymbol.firstTabBarIcon),selectedImage: UIImage(systemName: Constant.SFSymbol.firstTabBarIcon))
 
         let secondVC = UINavigationController(rootViewController: MyListViewController())
