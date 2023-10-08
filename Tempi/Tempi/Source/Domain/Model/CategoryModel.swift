@@ -1,5 +1,5 @@
 //
-//  Category.swift
+//  CategoryType.swift
 //  Tempi
 //
 //  Created by Yeri Hwang on 2023/10/02.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum CategoryType: String {
+enum CategoryModel: String {
     case travel
     case shopping
     case wishList
@@ -17,7 +17,7 @@ enum CategoryType: String {
     case beforeGoingOut
     case health
     
-    static let categories: [CategoryType] = [.travel, .shopping, .wishList, .bucketList, .cleaning, .move, .beforeGoingOut, .health]
+    static let categories: [CategoryModel] = [.travel, .shopping, .wishList, .beforeGoingOut, .bucketList, .health, .cleaning, .move]
     
     var image: UIImage? {
         switch self {
