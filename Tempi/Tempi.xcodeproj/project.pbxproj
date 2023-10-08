@@ -16,6 +16,10 @@
 		2B8105522AD02D0600B50223 /* ChecklistTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8105512AD02D0600B50223 /* ChecklistTable.swift */; };
 		2B8105542AD02DA400B50223 /* CheckItemTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8105532AD02DA400B50223 /* CheckItemTable.swift */; };
 		2B8105562AD02F7600B50223 /* BookmarkTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8105552AD02F7600B50223 /* BookmarkTable.swift */; };
+		2B8105582AD0FE4600B50223 /* TempiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8105572AD0FE4600B50223 /* TempiModel.swift */; };
+		2B81055C2AD1000200B50223 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81055B2AD1000200B50223 /* APIService.swift */; };
+		2B81055E2AD135AF00B50223 /* APIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81055D2AD135AF00B50223 /* APIErrors.swift */; };
+		2B8105612AD1381300B50223 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2B8105602AD1381300B50223 /* Alamofire */; };
 		2B9529CD2ACC41BC0074D4F2 /* CategoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9529CC2ACC41BC0074D4F2 /* CategoryDetailViewController.swift */; };
 		2B9529CF2ACC41E40074D4F2 /* CategoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9529CE2ACC41E40074D4F2 /* CategoryDetailView.swift */; };
 		2B9529D12ACCE6760074D4F2 /* TButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9529D02ACCE6760074D4F2 /* TButton.swift */; };
@@ -41,7 +45,7 @@
 		2BC72B912AC84AE40014420F /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC72B902AC84AE40014420F /* CalendarViewController.swift */; };
 		2BDE84D02AC95CF90018C759 /* TLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDE84CF2AC95CF90018C759 /* TLabel.swift */; };
 		2BDE84D32ACAB7EC0018C759 /* ReuseSearchWordsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDE84D22ACAB7EC0018C759 /* ReuseSearchWordsCollectionViewCell.swift */; };
-		2BDE84D52ACAEBF10018C759 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDE84D42ACAEBF10018C759 /* Category.swift */; };
+		2BDE84D52ACAEBF10018C759 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDE84D42ACAEBF10018C759 /* CategoryModel.swift */; };
 		2BDE84D72ACAFDCD0018C759 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDE84D62ACAFDCD0018C759 /* CategoryCollectionViewCell.swift */; };
 		2BF5FE0E2AC6E6C1009BCBD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF5FE0D2AC6E6C1009BCBD9 /* AppDelegate.swift */; };
 		2BF5FE102AC6E6C1009BCBD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF5FE0F2AC6E6C1009BCBD9 /* SceneDelegate.swift */; };
@@ -66,6 +70,9 @@
 		2B8105512AD02D0600B50223 /* ChecklistTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistTable.swift; sourceTree = "<group>"; };
 		2B8105532AD02DA400B50223 /* CheckItemTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckItemTable.swift; sourceTree = "<group>"; };
 		2B8105552AD02F7600B50223 /* BookmarkTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTable.swift; sourceTree = "<group>"; };
+		2B8105572AD0FE4600B50223 /* TempiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempiModel.swift; sourceTree = "<group>"; };
+		2B81055B2AD1000200B50223 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		2B81055D2AD135AF00B50223 /* APIErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrors.swift; sourceTree = "<group>"; };
 		2B9529CC2ACC41BC0074D4F2 /* CategoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailViewController.swift; sourceTree = "<group>"; };
 		2B9529CE2ACC41E40074D4F2 /* CategoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailView.swift; sourceTree = "<group>"; };
 		2B9529D02ACCE6760074D4F2 /* TButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TButton.swift; sourceTree = "<group>"; };
@@ -90,7 +97,7 @@
 		2BC72B902AC84AE40014420F /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		2BDE84CF2AC95CF90018C759 /* TLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLabel.swift; sourceTree = "<group>"; };
 		2BDE84D22ACAB7EC0018C759 /* ReuseSearchWordsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseSearchWordsCollectionViewCell.swift; sourceTree = "<group>"; };
-		2BDE84D42ACAEBF10018C759 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		2BDE84D42ACAEBF10018C759 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		2BDE84D62ACAFDCD0018C759 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		2BF5FE0A2AC6E6C1009BCBD9 /* Tempi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tempi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BF5FE0D2AC6E6C1009BCBD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B81054B2AD02A0C00B50223 /* RealmSwift in Frameworks */,
+				2B8105612AD1381300B50223 /* Alamofire in Frameworks */,
 				2B8105492AD02A0C00B50223 /* Realm in Frameworks */,
 				2BC72B7D2AC71FD50014420F /* SnapKit in Frameworks */,
 			);
@@ -311,6 +319,8 @@
 		2BF5FE422AC6F666009BCBD9 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				2B81055B2AD1000200B50223 /* APIService.swift */,
+				2B81055D2AD135AF00B50223 /* APIErrors.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -349,7 +359,8 @@
 		2BF5FE462AC6F6A0009BCBD9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2BDE84D42ACAEBF10018C759 /* Category.swift */,
+				2BDE84D42ACAEBF10018C759 /* CategoryModel.swift */,
+				2B8105572AD0FE4600B50223 /* TempiModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -439,6 +450,7 @@
 				2BC72B7C2AC71FD50014420F /* SnapKit */,
 				2B8105482AD02A0C00B50223 /* Realm */,
 				2B81054A2AD02A0C00B50223 /* RealmSwift */,
+				2B8105602AD1381300B50223 /* Alamofire */,
 			);
 			productName = Tempi;
 			productReference = 2BF5FE0A2AC6E6C1009BCBD9 /* Tempi.app */;
@@ -472,6 +484,7 @@
 			packageReferences = (
 				2BC72B7B2AC71FD40014420F /* XCRemoteSwiftPackageReference "SnapKit" */,
 				2B8105472AD02A0C00B50223 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				2B81055F2AD1381300B50223 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 2BF5FE0B2AC6E6C1009BCBD9 /* Products */;
 			projectDirPath = "";
@@ -511,12 +524,13 @@
 				2BF5FE122AC6E6C1009BCBD9 /* MyListViewController.swift in Sources */,
 				2BC72B852AC723160014420F /* BaseCollectionViewCell.swift in Sources */,
 				2BF5FE672AC70B51009BCBD9 /* Color+.swift in Sources */,
+				2B81055C2AD1000200B50223 /* APIService.swift in Sources */,
 				2B81053E2ACEFD3F00B50223 /* SearchView.swift in Sources */,
 				2B952A082ACD7E9A0074D4F2 /* CategoryChecklistView.swift in Sources */,
 				2B952A042ACD67790074D4F2 /* SubCategoryCollectionViewCell.swift in Sources */,
 				2B9529CF2ACC41E40074D4F2 /* CategoryDetailView.swift in Sources */,
 				2B952A0A2ACD88D10074D4F2 /* TDivider.swift in Sources */,
-				2BDE84D52ACAEBF10018C759 /* Category.swift in Sources */,
+				2BDE84D52ACAEBF10018C759 /* CategoryModel.swift in Sources */,
 				2BF5FE0E2AC6E6C1009BCBD9 /* AppDelegate.swift in Sources */,
 				2B8105522AD02D0600B50223 /* ChecklistTable.swift in Sources */,
 				2B81053C2ACEFD3700B50223 /* SearchViewController.swift in Sources */,
@@ -530,6 +544,7 @@
 				2BF5FE652AC7079B009BCBD9 /* Localized+.swift in Sources */,
 				2B952A0E2ACE7B1B0074D4F2 /* CategoryChecklistCollectionViewCell.swift in Sources */,
 				2B8105502AD02B8F00B50223 /* CategoryTable.swift in Sources */,
+				2B81055E2AD135AF00B50223 /* APIErrors.swift in Sources */,
 				2B952A132ACE835F0074D4F2 /* ChecklistView.swift in Sources */,
 				2BDE84D32ACAB7EC0018C759 /* ReuseSearchWordsCollectionViewCell.swift in Sources */,
 				2B952A172ACEB1DC0074D4F2 /* ChecklistCollectionViewCell.swift in Sources */,
@@ -540,6 +555,7 @@
 				2B8105562AD02F7600B50223 /* BookmarkTable.swift in Sources */,
 				2B952A152ACEA5960074D4F2 /* TImageButton.swift in Sources */,
 				2B8105542AD02DA400B50223 /* CheckItemTable.swift in Sources */,
+				2B8105582AD0FE4600B50223 /* TempiModel.swift in Sources */,
 				2BC72B912AC84AE40014420F /* CalendarViewController.swift in Sources */,
 				2BC72B8D2AC731D70014420F /* Constant.swift in Sources */,
 				2B952A062ACD7E480074D4F2 /* CategoryChecklistViewController.swift in Sources */,
@@ -785,6 +801,14 @@
 				minimumVersion = 10.42.1;
 			};
 		};
+		2B81055F2AD1381300B50223 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.0;
+			};
+		};
 		2BC72B7B2AC71FD40014420F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -805,6 +829,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2B8105472AD02A0C00B50223 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		2B8105602AD1381300B50223 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B81055F2AD1381300B50223 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 		2BC72B7C2AC71FD50014420F /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
