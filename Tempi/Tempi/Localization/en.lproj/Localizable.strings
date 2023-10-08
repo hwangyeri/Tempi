@@ -53,3 +53,13 @@
 "search_searchBar_placeholder" = " Search for various templates.";
 "search_recent_search_words_label" = "Recent Search Words";
 "search_recommend_search_words_label" = "Recommended search terms";
+
+// Error Description
+"error_description_commonErrors_invalidURL" = "Invalid URL.";
+"error_description_commonErrors_notVerifiedStatusCode" = "Status code that cannot be verified.";
+"error_description_statusCodeErrors_invalidRequest" = "Invalid request.";
+"error_description_statusCodeErrors_unauthorized" = "Unauthenticated user.";
+"error_description_statusCodeErrors_forbidden" = "You do not have permission for the request.";
+"error_description_statusCodeErrors_notFound" = "The requested resource could not be found.";
+"error_description_statusCodeErrors_conflict" = "Request caused resource conflict.";
+"error_description_statusCodeErrors_internalServerError" = "The server encountered an error.";
