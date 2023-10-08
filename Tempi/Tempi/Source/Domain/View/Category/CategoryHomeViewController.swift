@@ -12,10 +12,12 @@ class CategoryHomeViewController: BaseViewController {
     
     let list = ["이모티콘", "새싹", "추석", "햄버거", "컬렉션뷰 레이아웃"]
     
+    var categoryList: Category = Category()
+    
     let mainView = CategoryHomeView()
     
     private var recommendSearchWordsDataSource: UICollectionViewDiffableDataSource<Int, String>!
-    private var categoryDataSource: UICollectionViewDiffableDataSource<Int, CategoryType>!
+    private var categoryDataSource: UICollectionViewDiffableDataSource<Int, CategoryModel>!
     
     override func loadView() {
         self.view = mainView
@@ -26,6 +28,21 @@ class CategoryHomeViewController: BaseViewController {
         
         configureRecommendSearchWordsDataSource()
         configureCategoryDataSource()
+        
+        APIService.shared.fetchDataFromGoogleSheet { result in
+            switch result {
+            case .success(let data):
+                self.categoryList = data
+            case .failure(let error):
+                if let commonError = error as? CommonErrors {
+                    print(commonError.errorDescription)
+                } else if let statusCodeError = error as? StatusCodeErrors {
+                    print(statusCodeError.errorDescription)
+                } else {
+                    print("Unknown error")
+                }
+            }
+        }
     }
     
     override func configureHierarchy() {
@@ -50,7 +67,7 @@ class CategoryHomeViewController: BaseViewController {
     }
     
     private func configureCategoryDataSource() {
-        let cellRegistration = UICollectionView.CellRegistration<CategoryCollectionViewCell, CategoryType> { cell, indexPath, itemIdentifier in
+        let cellRegistration = UICollectionView.CellRegistration<CategoryCollectionViewCell, CategoryModel> { cell, indexPath, itemIdentifier in
             cell.imageView.image = itemIdentifier.image
             cell.textLabel.text = itemIdentifier.text
         }
@@ -60,8 +77,8 @@ class CategoryHomeViewController: BaseViewController {
             return cell
         })
         
-        let categories: [CategoryType] = CategoryType.categories
-        var snapshot = NSDiffableDataSourceSnapshot<Int, CategoryType>()
+        let categories: [CategoryModel] = CategoryModel.categories
+        var snapshot = NSDiffableDataSourceSnapshot<Int, CategoryModel>()
         snapshot.appendSections([0])
         snapshot.appendItems(categories)
         categoryDataSource.apply(snapshot)
