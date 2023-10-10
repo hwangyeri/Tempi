@@ -29,6 +29,8 @@ class APIService {
             case .failure(_):
                 if let statusCode = response.response?.statusCode {
                     let statusCodeError = StatusCodeErrors(rawValue: statusCode)
+                    print("HTTP Status Code: \(statusCode)")
+                    print("Error: \(statusCodeError?.errorDescription)")
                     completion(.failure(statusCodeError ?? CommonErrors.notVerifiedStatusCode))
                 } else {
                     completion(.failure(CommonErrors.notVerifiedStatusCode))
