@@ -50,7 +50,7 @@ class CategoryChecklistView: BaseView {
         return view
     }()
     
-    let blankCheckBox = {
+    let selectAllCheckBox = {
         let view = TBlankCheckBox()
         return view
     }()
@@ -71,8 +71,8 @@ class CategoryChecklistView: BaseView {
     
     override func configureHierarchy() {
         [mainLabel, subLabel,
-         checklistNameLabel, itemCountLabel, blankCheckBox, selectAllLabel, divider,
-         tButton, categoryChecklistCollectionView].forEach {
+         checklistNameLabel, itemCountLabel, selectAllCheckBox, selectAllLabel, divider,
+         categoryChecklistCollectionView, tButton].forEach {
             addSubview($0)
         }
     }
@@ -97,19 +97,19 @@ class CategoryChecklistView: BaseView {
             make.leading.equalTo(mainLabel)
         }
         
-        blankCheckBox.snp.makeConstraints { make in
+        selectAllCheckBox.snp.makeConstraints { make in
             make.bottom.equalTo(itemCountLabel.snp.bottom)
-            make.leading.equalTo(selectAllLabel.snp.trailing).offset(8)
-            make.size.equalTo(35)
+            make.trailing.equalTo(self.safeAreaInsets).inset(20)
+            make.size.equalTo(32)
         }
         
         selectAllLabel.snp.makeConstraints { make in
-            make.centerY.equalTo(blankCheckBox)
-            make.leading.equalTo(self.safeAreaLayoutGuide.snp.centerX).offset(80)
+            make.centerY.equalTo(selectAllCheckBox)
+            make.trailing.equalTo(selectAllCheckBox.snp.leading).offset(-8)
         }
         
         divider.snp.makeConstraints { make in
-            make.top.equalTo(blankCheckBox.snp.bottom).offset(10)
+            make.top.equalTo(selectAllCheckBox.snp.bottom).offset(10)
             make.horizontalEdges.equalTo(self.safeAreaLayoutGuide)
             make.height.equalTo(1)
         }

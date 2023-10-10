@@ -26,13 +26,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let tabBar = UITabBarController()
         
-        let firstVC = UINavigationController(rootViewController: ChecklistViewController())
+        let firstVC = UINavigationController(rootViewController: CategoryHomeViewController())
         firstVC.tabBarItem = UITabBarItem(title: .none, image: UIImage(systemName: Constant.SFSymbol.firstTabBarIcon),selectedImage: UIImage(systemName: Constant.SFSymbol.firstTabBarIcon))
 
         let secondVC = UINavigationController(rootViewController: MyListViewController())
         secondVC.tabBarItem = UITabBarItem(title: .none, image: UIImage(systemName: Constant.SFSymbol.secondTabBarIcon),selectedImage: UIImage(systemName: Constant.SFSymbol.secondTabBarIcon))
         
-        let thirdVC = UINavigationController(rootViewController: CalendarViewController())
+        let thirdVC = UINavigationController(rootViewController: ChecklistViewController())
         thirdVC.tabBarItem = UITabBarItem(title: .none, image: UIImage(systemName: Constant.SFSymbol.thirdTabBarIcon),selectedImage: UIImage(systemName: Constant.SFSymbol.thirdTabBarIcon))
         
         tabBar.viewControllers = [firstVC, secondVC, thirdVC]
