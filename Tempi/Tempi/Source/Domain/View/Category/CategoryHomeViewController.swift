@@ -8,16 +8,21 @@
 import UIKit
 import SnapKit
 
+enum CollectionViewType {
+    case category
+    case recommendSearchWords
+}
+
 class CategoryHomeViewController: BaseViewController {
     
     let list = ["이모티콘", "새싹", "추석", "햄버거", "컬렉션뷰 레이아웃"]
     
-    var categoryList: Category = Category()
+    var recommendSearchWordsList: [String] = []
     
     let mainView = CategoryHomeView()
     
     private var recommendSearchWordsDataSource: UICollectionViewDiffableDataSource<Int, String>!
-    private var categoryDataSource: UICollectionViewDiffableDataSource<Int, CategoryModel>!
+    private var categoryDataSource: UICollectionViewDiffableDataSource<Int, CategoryDisplayModel>!
     
     override func loadView() {
         self.view = mainView
@@ -26,27 +31,33 @@ class CategoryHomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let randomSubCategories = getRandomSubCategories()
+        recommendSearchWordsList = randomSubCategories
+        print("randomSubCategories ----->", randomSubCategories)
+        print("recommendSearchWordsList ----->", recommendSearchWordsList)
+        
         configureRecommendSearchWordsDataSource()
         configureCategoryDataSource()
-        
-        APIService.shared.fetchDataFromGoogleSheet { result in
-            switch result {
-            case .success(let data):
-                self.categoryList = data
-            case .failure(let error):
-                if let commonError = error as? CommonErrors {
-                    print(commonError.errorDescription)
-                } else if let statusCodeError = error as? StatusCodeErrors {
-                    print(statusCodeError.errorDescription)
-                } else {
-                    print("Unknown error")
-                }
+    }
+    
+    private func getRandomSubCategories() -> [String] {
+        // 중복 없이 5개의 subCategoryName 추출
+        let data = DataManager.shared.categoryList
+        var randomSubCategories: Set<String> = []
+        while randomSubCategories.count < 5 {
+            let randomCategory = data.randomElement()
+            if let randomSubCategory = randomCategory?.subCategoryName {
+                randomSubCategories.insert(randomSubCategory)
             }
         }
+        
+        return Array(randomSubCategories)
     }
     
     override func configureHierarchy() {
         mainView.searchBar.delegate = self
+        mainView.categoryCollectionView.delegate = self
+        mainView.recommendSearchWordsCollectionView.delegate = self
     }
     
     private func configureRecommendSearchWordsDataSource() {
@@ -62,12 +73,12 @@ class CategoryHomeViewController: BaseViewController {
         
         var snapshot = NSDiffableDataSourceSnapshot<Int, String>()
         snapshot.appendSections([0])
-        snapshot.appendItems(list)
+        snapshot.appendItems(recommendSearchWordsList)
         recommendSearchWordsDataSource.apply(snapshot)
     }
     
     private func configureCategoryDataSource() {
-        let cellRegistration = UICollectionView.CellRegistration<CategoryCollectionViewCell, CategoryModel> { cell, indexPath, itemIdentifier in
+        let cellRegistration = UICollectionView.CellRegistration<CategoryCollectionViewCell, CategoryDisplayModel> { cell, indexPath, itemIdentifier in
             cell.imageView.image = itemIdentifier.image
             cell.textLabel.text = itemIdentifier.text
         }
@@ -77,13 +88,63 @@ class CategoryHomeViewController: BaseViewController {
             return cell
         })
         
-        let categories: [CategoryModel] = CategoryModel.categories
-        var snapshot = NSDiffableDataSourceSnapshot<Int, CategoryModel>()
+        let categories: [CategoryDisplayModel] = CategoryDisplayModel.categories
+        var snapshot = NSDiffableDataSourceSnapshot<Int, CategoryDisplayModel>()
         snapshot.appendSections([0])
         snapshot.appendItems(categories)
         categoryDataSource.apply(snapshot)
     }
+    
+}
 
+// MARK: - CollectionView Delegate
+
+extension CategoryHomeViewController: UICollectionViewDelegate {
+    
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        if collectionView == mainView.categoryCollectionView {
+//            let selectedCategory = categoryDataSource.itemIdentifier(for: indexPath)
+//            let categoryDetailVC = CategoryDetailViewController()
+//            categoryDetailVC.categoryName = selectedCategory?.text
+//            navigationController?.pushViewController(categoryDetailVC, animated: true)
+//        } else if collectionView == mainView.recommendSearchWordsCollectionView {
+//            let selectedItem = recommendSearchWordsList[indexPath.item]
+//            let categoryChecklistVC = CategoryChecklistViewController()
+//            print(selectedItem)
+//            navigationController?.pushViewController(categoryChecklistVC, animated: true)
+//        }
+//    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        var collectionViewType: CollectionViewType?
+        
+        switch collectionView {
+        case mainView.categoryCollectionView:
+            collectionViewType = .category
+        case mainView.recommendSearchWordsCollectionView:
+            collectionViewType = .recommendSearchWords
+        default:
+            break
+        }
+        
+        guard let type = collectionViewType else {
+            return // collectionViewType이 nil인 경우, 함수 종료
+        }
+        
+        switch type {
+        case .category:
+            let selectedCategory = categoryDataSource.itemIdentifier(for: indexPath)
+            let categoryDetailVC = CategoryDetailViewController()
+            categoryDetailVC.categoryName = selectedCategory?.text
+            navigationController?.pushViewController(categoryDetailVC, animated: true)
+        case .recommendSearchWords:
+            let selectedItem = recommendSearchWordsList[indexPath.item]
+            let categoryChecklistVC = CategoryChecklistViewController()
+            print(selectedItem)
+            navigationController?.pushViewController(categoryChecklistVC, animated: true)
+        }
+    }
+    
 }
 
 // MARK: - SearchBar
