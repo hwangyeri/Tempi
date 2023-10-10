@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum CategoryModel: String {
+enum CategoryDisplayModel: String {
     case travel
     case shopping
     case wishList
@@ -17,7 +17,7 @@ enum CategoryModel: String {
     case beforeGoingOut
     case health
     
-    static let categories: [CategoryModel] = [.travel, .shopping, .wishList, .beforeGoingOut, .bucketList, .health, .cleaning, .move]
+    static let categories: [CategoryDisplayModel] = [.travel, .shopping, .wishList, .beforeGoingOut, .bucketList, .health, .cleaning, .move]
     
     var image: UIImage? {
         switch self {
