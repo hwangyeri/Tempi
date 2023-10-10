@@ -15,11 +15,9 @@ enum CollectionViewType {
 
 class CategoryHomeViewController: BaseViewController {
     
-    let list = ["이모티콘", "새싹", "추석", "햄버거", "컬렉션뷰 레이아웃"]
+    private var recommendSearchWordsList: [String] = []
     
-    var recommendSearchWordsList: [String] = []
-    
-    let mainView = CategoryHomeView()
+    private let mainView = CategoryHomeView()
     
     private var recommendSearchWordsDataSource: UICollectionViewDiffableDataSource<Int, String>!
     private var categoryDataSource: UICollectionViewDiffableDataSource<Int, CategoryDisplayModel>!
@@ -101,20 +99,6 @@ class CategoryHomeViewController: BaseViewController {
 
 extension CategoryHomeViewController: UICollectionViewDelegate {
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        if collectionView == mainView.categoryCollectionView {
-//            let selectedCategory = categoryDataSource.itemIdentifier(for: indexPath)
-//            let categoryDetailVC = CategoryDetailViewController()
-//            categoryDetailVC.categoryName = selectedCategory?.text
-//            navigationController?.pushViewController(categoryDetailVC, animated: true)
-//        } else if collectionView == mainView.recommendSearchWordsCollectionView {
-//            let selectedItem = recommendSearchWordsList[indexPath.item]
-//            let categoryChecklistVC = CategoryChecklistViewController()
-//            print(selectedItem)
-//            navigationController?.pushViewController(categoryChecklistVC, animated: true)
-//        }
-//    }
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         var collectionViewType: CollectionViewType?
         
@@ -150,5 +134,10 @@ extension CategoryHomeViewController: UICollectionViewDelegate {
 // MARK: - SearchBar
 
 extension CategoryHomeViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let searchVC = SearchViewController()
+        navigationController?.pushViewController(searchVC, animated: true)
+    }
     
 }
