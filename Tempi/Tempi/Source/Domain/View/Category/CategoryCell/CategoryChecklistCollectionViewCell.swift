@@ -31,12 +31,12 @@ class CategoryChecklistCollectionViewCell: BaseCollectionViewCell {
     override func configureLayout() {
         checkBoxButton.snp.makeConstraints { make in
             make.top.leading.equalTo(contentView)
-            make.size.equalTo(35)
+            make.size.equalTo(30)
         }
         
         checkBoxLabel.snp.makeConstraints { make in
             make.centerY.equalTo(checkBoxButton)
-            make.leading.equalTo(checkBoxButton.snp.trailing).offset(10)
+            make.leading.equalTo(checkBoxButton.snp.trailing).offset(12)
         }
     }
     
