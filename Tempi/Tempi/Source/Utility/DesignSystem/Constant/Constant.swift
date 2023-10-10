@@ -38,8 +38,8 @@ enum Constant {
         static let searchBarIcon: String = "magnifyingglass"
         static let plusCircleIcon: String = "plus.circle.fill"
         static let plusSquareIcon: String = "plus.square.fill" // plus.app.fill
-        static let checkBoxIcon: String = "checkmark.square.fill"
-        static let emptyBoxIcon: String = "square"
+        static let checkIcon: String = "checkmark"
+//        static let emptyBoxIcon: String = "square"
         static let checklistNameEditIcon: String = "pencil.line"
         static let checklistDeleteIcon: String = "trash"
         static let checklistBookmarkFixedIcon: String = "pin.fill"
@@ -49,7 +49,7 @@ enum Constant {
         static let checkboxMenuIcon: String = "ellipsis"
         static let alarmIcon: String = "alarm"
         static let alarmMessageIcon: String = "message"
-        static let alarmCheckIcon: String = "checkmark"
+//        static let alarmCheckIcon: String = "checkmark"
         static let infoIcon: String = "info.circle"
         
         /// Category Icon
