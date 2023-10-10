@@ -1,0 +1,264 @@
+{
+  "categoryDefaultData": [
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "여권"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "치약, 칫솔"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "스킨, 로션"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "수분크림"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "선크림"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "지갑"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "모자"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "반팔티"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "긴팔티"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "반바지"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "긴바지"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "양말"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "속옷"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "인공눈물"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "클렌징 오일"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "클렌징 폼"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "클렌징 티슈"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "보조 배터리"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "핸드폰 충전기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "돼지코"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "카메라"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "상비약"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "동전 지갑"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "비닐 봉지"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "포켓 와이파이"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "현금"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "환전하기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "캐리어 짐싸기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "에코백"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "마스크팩"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "마스크"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "비타민"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "면봉"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "여드름 패치"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "안경"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "선글라스"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "가방"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "손거울"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "일본 여행",
+      "checkItem": "화장품"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "국내 여행",
+      "checkItem": "충전기"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "이마트 트레이더스",
+      "checkItem": "새우강정"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "코스트코",
+      "checkItem": "연어"
+    },
+    {
+      "categoryName": "위시리스트",
+      "subCategoryName": "생일 선물",
+      "checkItem": "가방"
+    },
+    {
+      "categoryName": "위시리스트",
+      "subCategoryName": "생일 선물",
+      "checkItem": "폰케이스"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "필수템",
+      "checkItem": "마스크"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "필수템",
+      "checkItem": "지갑"
+    },
+    {
+      "categoryName": "버킷리스트",
+      "subCategoryName": "Top 100",
+      "checkItem": "번지점프"
+    },
+    {
+      "categoryName": "버킷리스트",
+      "subCategoryName": "Top 100",
+      "checkItem": "불짬뽕 먹기"
+    },
+    {
+      "categoryName": "건강",
+      "subCategoryName": "다이어트",
+      "checkItem": "줄넘기"
+    },
+    {
+      "categoryName": "건강",
+      "subCategoryName": "다이어트",
+      "checkItem": "닭가슴살 사기"
+    },
+    {
+      "categoryName": "청소",
+      "subCategoryName": "화장실 청소",
+      "checkItem": "세면대 청소"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "새 집 체크리스트",
+      "checkItem": "수압 확인"
+    }
+  ]
+}
