@@ -37,12 +37,14 @@
 "category_detail_tButton_text" = "다음";
 
 // FIXME: Category Checklist View
-"category_checklist_main_label" = "원하는 항목을 선택해 주세요.";
-"category_checklist_sub_label" = "임시 텍스트 입니다.\n임시 텍스트 입니다.";
-"category_checklist_name_label" = "수영장 %@";
-"category_checklist_item_count_label" = "6 / 20 개 %d";
-"category_checklist_select_all_label" = "전체 선택";
-"category_checklist_tButton_text" = "내 리스트에 추가하기";
+"category_checklist_mainLabel" = "원하는 항목을 선택해 주세요.";
+"category_checklist_subLabel" = "임시 텍스트 입니다.\n임시 텍스트 입니다.";
+"category_checklist_checklistNameLabel" = "%@";
+"category_checklist_itemCountLabel" = "%d / ";
+"category_checklist_totalCountLabel" = "%d";
+"category_checklist_selectAllLabel_selectAll" = "전체 선택";
+"category_checklist_selectAllLabel_unSelectAll" = "전체 해제";
+"category_checklist_tButton" = "내 리스트에 추가하기";
 
 // FIXME: Checklist View
 "checklist_name_label" = "한강 수영장 %@";
@@ -54,7 +56,7 @@
 "search_recent_search_words_label" = "최근 검색어";
 "search_recommend_search_words_label" = "추천 검색어";
 
-// Error Description
+// Error Description // FIXME: 안 쓰는 코드
 "error_description_commonErrors_invalidURL" = "유효하지 않은 URL입니다.";
 "error_description_commonErrors_notVerifiedStatusCode" = "확인할 수 없는 상태 코드입니다.";
 "error_description_statusCodeErrors_invalidRequest" = "잘못된 요청입니다.";
@@ -63,3 +65,10 @@
 "error_description_statusCodeErrors_notFound" = "요청한 리소스를 찾을 수 없습니다.";
 "error_description_statusCodeErrors_conflict" = "요청이 리소스 충돌을 발생시켰습니다.";
 "error_description_statusCodeErrors_internalServerError" = "서버에서 오류가 발생하였습니다.";
+
+// Add Checklist View
+"add_checklist_mainLabel" = "어떤 체크리스트에 추가하실 건가요?";
+"add_checklist_subLabel" = "추가하고 싶은 체크리스트를 1개 골라 주세요.";
+"add_checklist_addToNewListButton_text" = "새로운 리스트에 추가하기";
+"add_checklist_cancelButton_text" = "취소";
+"add_checklist_addButton_text" = "추가";
