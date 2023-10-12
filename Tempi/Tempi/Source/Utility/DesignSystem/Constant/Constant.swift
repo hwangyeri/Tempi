@@ -11,6 +11,7 @@ enum Constant {
     
     enum TButton {
         static let cornerRadius: CGFloat = 27
+        static let borderWidth: CGFloat = 1
     }
     
     enum TKeywordBorder {
