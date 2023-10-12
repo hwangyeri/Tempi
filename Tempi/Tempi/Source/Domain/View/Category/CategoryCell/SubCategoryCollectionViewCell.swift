@@ -13,7 +13,7 @@ class SubCategoryCollectionViewCell: BaseCollectionViewCell {
     let backView = {
         let view = UIView()
         view.layer.cornerRadius = Constant.TSubCategory.cornerRadius
-        view.backgroundColor = UIColor.tGray200
+        view.backgroundColor = UIColor.tGray300
         return view
     }()
     
@@ -21,7 +21,7 @@ class SubCategoryCollectionViewCell: BaseCollectionViewCell {
         let view = TLabel(
             text: "test",
             custFont: .pretendardRegularL,
-            textColor: .tGray600)
+            textColor: .tGray700)
         view.backgroundColor = UIColor.clear
         view.textAlignment = .center
         return view
