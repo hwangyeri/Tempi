@@ -11,6 +11,9 @@ class ChecklistViewController: BaseViewController {
     
     let dummyList = ["수영복", "수경", "djdjdjdjdjdjdjddmfksdfknsdkfndsklnfnjdndjfd dnjdjd", "워터프루프 선크림"]
     
+    var subCategoryName: String?
+    var checkItemList: [String]?
+    
     let mainView = ChecklistView()
     
     private var checklistDataSource: UICollectionViewDiffableDataSource<Int, String>!
@@ -22,6 +25,9 @@ class ChecklistViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureChecklistDataSource()
+        
+//        print("커스텀 체크리스트 서브카테고리: ", subCategoryName)
+//        print("커스텀 체크리스트 체크아이템 리스트: ", checkItemList)
     }
     
     private func configureChecklistDataSource() {
