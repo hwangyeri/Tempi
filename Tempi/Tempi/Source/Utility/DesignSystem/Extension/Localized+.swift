@@ -13,12 +13,12 @@ extension String {
         return NSLocalizedString(self, comment: "")
     }
     
-    func localized(with:Int) ->  String {
-        return StringLiteralType(format: self, with)
+    func localized(comment: String = "") -> String {
+        return NSLocalizedString(self, comment: comment)
     }
     
-    func localized(number:Int) ->  String {
-        return StringLiteralType(format: self, number)
+    func localized(with argument: CVarArg = [], comment: String = "") -> String {
+        return String(format: self.localized(comment: comment), argument)
     }
-    
+
 }
