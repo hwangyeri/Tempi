@@ -34,6 +34,13 @@ enum Constant {
         static let imagePadding: CGFloat = 8
     }
     
+    enum TChecklist {
+        static let cornerRadius: CGFloat = 30
+        static let borderWidth: CGFloat = 1
+        static let imagePadding: CGFloat = 10
+        static let symbolPointSize: CGFloat = 15
+    }
+    
     enum SFSymbol {
         /// Display Icon
         static let searchBarIcon: String = "magnifyingglass"
