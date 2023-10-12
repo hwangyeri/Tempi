@@ -32,6 +32,7 @@ class CategoryDetailViewController: BaseViewController {
         super.viewDidLoad()
         
         configureSubCategoryDataSource()
+        setLocalized()
         
         //        print("---- DetailView", categoryName)
         //        print(subCategoryList)
@@ -40,6 +41,13 @@ class CategoryDetailViewController: BaseViewController {
     override func configureHierarchy() {
         mainView.subCategoryCollectionView.delegate = self
         mainView.tButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
+    }
+    
+    private func setLocalized() {
+        guard let categoryName = categoryName else {
+            return
+        }
+        mainView.mainLabel.text = "category_detail_main_label".localized(with: categoryName)
     }
     
     private func configureSubCategoryDataSource() {
