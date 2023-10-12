@@ -12,7 +12,7 @@ class CategoryChecklistView: BaseView {
     
     let mainLabel = {
        let view = TLabel(
-        text: "category_checklist_main_label".localized,
+        text: "category_checklist_mainLabel".localized,
         custFont: .pretendardSemiBoldXL,
         textColor: .tGray1000)
         return view
@@ -20,7 +20,7 @@ class CategoryChecklistView: BaseView {
     
     let subLabel = {
        let view = TLabel(
-        text: "category_checklist_sub_label".localized,
+        text: "category_checklist_subLabel".localized,
         custFont: .pretendardRegularM,
         textColor: .tGray900)
         return view
@@ -28,23 +28,31 @@ class CategoryChecklistView: BaseView {
     
     let checklistNameLabel = {
        let view = TLabel(
-        text: "category_checklist_name_label".localized,
+        text: "category_checklist_checklistNameLabel".localized,
         custFont: .pretendardBoldXXL,
         textColor: .tGray1000)
         return view
     }()
     
-    let itemCountLabel = {
+    let selectedItemCountLabel = {
        let view = TLabel(
-        text: "category_checklist_item_count_label".localized,
+        text: "category_checklist_itemCountLabel".localized,
         custFont: .pretendardBoldS,
-        textColor: .tGray600)
+        textColor: .tGray700)
+        return view
+    }()
+    
+    let totalCountLabel = {
+       let view = TLabel(
+        text: "category_checklist_totalCountLabel".localized,
+        custFont: .pretendardBoldS,
+        textColor: .tGray700)
         return view
     }()
     
     let selectAllLabel = {
        let view = TLabel(
-        text: "category_checklist_select_all_label".localized,
+        text: "category_checklist_selectAllLabel_selectAll".localized,
         custFont: .pretendardRegularXS,
         textColor: .tGray1000)
         return view
@@ -62,7 +70,7 @@ class CategoryChecklistView: BaseView {
     
     let tButton = {
         let view = TButton(
-            text: "category_checklist_tButton_text".localized
+            text: "category_checklist_tButton".localized
         )
         return view
     }()
@@ -71,7 +79,7 @@ class CategoryChecklistView: BaseView {
     
     override func configureHierarchy() {
         [mainLabel, subLabel,
-         checklistNameLabel, itemCountLabel, selectAllCheckBox, selectAllLabel, divider,
+         checklistNameLabel, selectedItemCountLabel, totalCountLabel, selectAllCheckBox, selectAllLabel, divider,
          categoryChecklistCollectionView, tButton].forEach {
             addSubview($0)
         }
@@ -79,7 +87,7 @@ class CategoryChecklistView: BaseView {
     
     override func configureLayout() {
         mainLabel.snp.makeConstraints { make in
-            make.top.horizontalEdges.equalTo(self.safeAreaLayoutGuide).inset(30)
+            make.top.horizontalEdges.equalTo(self.safeAreaLayoutGuide).inset(20)
         }
         
         subLabel.snp.makeConstraints { make in
@@ -88,18 +96,23 @@ class CategoryChecklistView: BaseView {
         }
         
         checklistNameLabel.snp.makeConstraints { make in
-            make.top.equalTo(subLabel.snp.bottom).offset(50)
-            make.leading.equalTo(mainLabel)
+            make.top.equalTo(subLabel.snp.bottom).offset(40)
+            make.leading.equalTo(self.safeAreaLayoutGuide).inset(30)
         }
         
-        itemCountLabel.snp.makeConstraints { make in
+        selectedItemCountLabel.snp.makeConstraints { make in
             make.top.equalTo(checklistNameLabel.snp.bottom).offset(10)
-            make.leading.equalTo(mainLabel)
+            make.leading.equalTo(checklistNameLabel).offset(2)
+        }
+        
+        totalCountLabel.snp.makeConstraints { make in
+            make.top.equalTo(checklistNameLabel.snp.bottom).offset(10)
+            make.leading.equalTo(selectedItemCountLabel.snp.trailing)
         }
         
         selectAllCheckBox.snp.makeConstraints { make in
-            make.bottom.equalTo(itemCountLabel.snp.bottom)
-            make.trailing.equalTo(self.safeAreaInsets).inset(20)
+            make.bottom.equalTo(selectedItemCountLabel.snp.bottom)
+            make.trailing.equalTo(self.safeAreaInsets).inset(25)
             make.size.equalTo(32)
         }
         
@@ -116,7 +129,8 @@ class CategoryChecklistView: BaseView {
         
         categoryChecklistCollectionView.snp.makeConstraints { make in
             make.top.equalTo(divider.snp.bottom).offset(25)
-            make.horizontalEdges.equalTo(self.safeAreaLayoutGuide).inset(40)
+            make.leading.equalTo(self.safeAreaLayoutGuide).inset(40)
+            make.trailing.equalTo(self.safeAreaLayoutGuide).inset(20)
             make.height.equalTo(self.safeAreaLayoutGuide).multipliedBy(0.45)
         }
         
