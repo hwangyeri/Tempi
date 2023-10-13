@@ -35,15 +35,17 @@ class AddChecklistView: BaseView {
         view.layer.cornerRadius = Constant.TChecklist.cornerRadius
         view.layer.borderWidth = Constant.TChecklist.borderWidth
         view.layer.borderColor = UIColor.tGray400.cgColor
-        view.backgroundColor = UIColor.tGray100
+        view.clipsToBounds = true
         view.setTitleColor(.tGray1000, for: .normal)
         view.tintColor = UIColor.tGray1000
+        
         let title = "add_checklist_addToNewListButton_text".localized
         var config = UIButton.Configuration.plain()
         config.imagePadding = Constant.TChecklist.imagePadding
         config.image = UIImage(systemName: Constant.SFSymbol.plusSquareIcon)
         config.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(pointSize: Constant.TChecklist.symbolPointSize)
         config.attributedTitle = AttributedString(title, attributes: AttributeContainer([NSAttributedString.Key.font : UIFont.customFont(.pretendardSemiBoldM)!]))
+        config.baseBackgroundColor = UIColor.tGray100
         view.configuration = config
         return view
     }()
