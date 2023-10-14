@@ -12,6 +12,7 @@ class CategoryChecklistCollectionViewCell: BaseCollectionViewCell {
     
     let checkBoxButton = {
         let view = TBlankCheckBox()
+        view.isUserInteractionEnabled = false
         return view
     }()
     
