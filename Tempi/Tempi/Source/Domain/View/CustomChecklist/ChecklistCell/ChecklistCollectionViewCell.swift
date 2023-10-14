@@ -12,6 +12,7 @@ class ChecklistCollectionViewCell: BaseCollectionViewCell {
     
     let checkBoxButton = {
         let view = TBlankCheckBox()
+        view.isUserInteractionEnabled = false
         return view
     }()
     
@@ -53,6 +54,7 @@ class ChecklistCollectionViewCell: BaseCollectionViewCell {
             imageSize: 25,
             imageName: Constant.SFSymbol.checkboxMenuIcon,
             imageColor: .tGray1000)
+        view.showsMenuAsPrimaryAction = true // long press 없이 한 번의 탭으로 메뉴 나오게 설정
         return view
     }()
     
@@ -65,7 +67,7 @@ class ChecklistCollectionViewCell: BaseCollectionViewCell {
     override func configureLayout() {
         checkBoxButton.snp.makeConstraints { make in
             make.top.leading.equalToSuperview()
-            make.size.equalTo(35)
+            make.size.equalTo(30)
         }
         
         checkBoxLabel.snp.makeConstraints { make in
