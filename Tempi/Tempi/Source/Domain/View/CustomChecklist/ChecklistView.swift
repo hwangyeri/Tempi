@@ -10,10 +10,22 @@ import SnapKit
 
 class ChecklistView: BaseView {
     
+    let exitButton = {
+        let view = TImageButton(
+            imageSize: 23,
+            imageName: Constant.SFSymbol.xmarkIcon,
+            imageColor: .tGray1000
+        )
+//        let imageConfig = UIImage.SymbolConfiguration(pointSize: 23, weight: .semibold)
+//        let image = UIImage(systemName: Constant.SFSymbol.xmarkIcon, withConfiguration: imageConfig)
+//        view.setImage(image, for: .normal)
+        return view
+    }()
+    
     let checklistNameLabel = {
        let view = TLabel(
-        text: "checklist_name_label".localized,
-        custFont: .pretendardBoldXXXL,
+        text: "checklist_checklistNameLabel".localized,
+        custFont: .pretendardBoldXXL,
         textColor: .tGray1000
        )
         return view
@@ -21,7 +33,7 @@ class ChecklistView: BaseView {
     
     let checklistDateLabel = {
        let view = TLabel(
-        text: "checklist_date_label".localized,
+        text: "checklist_checklistDateLabel".localized,
         custFont: .pretendardMediumS,
         textColor: .tGray600
        )
@@ -30,7 +42,7 @@ class ChecklistView: BaseView {
     
     let checklistNameEditButton = {
         let view = TImageButton(
-            imageSize: 25,
+            imageSize: 23,
             imageName: Constant.SFSymbol.checklistNameEditIcon,
             imageColor: .tGray1000
         )
@@ -71,7 +83,7 @@ class ChecklistView: BaseView {
         view.layer.borderColor = UIColor.tGray1000.cgColor
         view.layer.borderWidth = Constant.TBookmarkListButton.borderWidth
         var config = UIButton.Configuration.plain()
-        let title = "checklist_bookmark_list_text".localized
+        let title = "checklist_bookmarkListButton".localized
         config.imagePadding = Constant.TBookmarkListButton.imagePadding
         config.imagePlacement = .trailing
         config.attributedTitle = AttributedString(title, attributes: AttributeContainer([NSAttributedString.Key.font : UIFont.customFont(.pretendardSemiBoldL)!]))
@@ -80,15 +92,20 @@ class ChecklistView: BaseView {
     }()
     
     override func configureHierarchy() {
-        [checklistNameLabel, checklistDateLabel, checklistNameEditButton,
+        [exitButton, checklistNameLabel, checklistDateLabel, checklistNameEditButton,
          checklistBookmarkButton, checklistDeleteButton, divider, checklistCollectionView, bookmarkListButton].forEach {
             addSubview($0)
         }
     }
     
     override func configureLayout() {
+        exitButton.snp.makeConstraints { make in
+            make.top.equalTo(self.safeAreaLayoutGuide).inset(20)
+            make.trailing.equalTo(self.safeAreaLayoutGuide).inset(30)
+        }
+        
         checklistNameLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.safeAreaLayoutGuide).inset(10)
+            make.top.equalTo(self.safeAreaLayoutGuide).inset(50)
             make.leading.equalTo(self.safeAreaLayoutGuide).inset(30)
         }
         
@@ -104,12 +121,14 @@ class ChecklistView: BaseView {
         
         checklistBookmarkButton.snp.makeConstraints { make in
             make.top.equalTo(checklistDateLabel.snp.bottom).offset(10)
-            make.leading.equalTo(checklistNameEditButton.snp.trailing).offset(65)
+//            make.leading.equalTo(checklistNameEditButton.snp.trailing).offset(65)
+            make.trailing.equalTo(checklistDeleteButton.snp.leading).offset(-8)
         }
         
         checklistDeleteButton.snp.makeConstraints { make in
             make.top.equalTo(checklistBookmarkButton).offset(-1)
-            make.leading.equalTo(checklistBookmarkButton.snp.trailing).offset(8)
+//            make.leading.equalTo(checklistBookmarkButton.snp.trailing).offset(8)
+            make.trailing.equalTo(exitButton.snp.trailing)
         }
         
         divider.snp.makeConstraints { make in
@@ -136,7 +155,7 @@ class ChecklistView: BaseView {
     }
     
     private func configureChecklistCollectionLayout() -> UICollectionViewLayout {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(80))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.5))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(100))
@@ -144,7 +163,7 @@ class ChecklistView: BaseView {
         group.interItemSpacing = .fixed(10)
         
         let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 10)
         section.interGroupSpacing = 10
         
         let configuration = UICollectionViewCompositionalLayoutConfiguration()
