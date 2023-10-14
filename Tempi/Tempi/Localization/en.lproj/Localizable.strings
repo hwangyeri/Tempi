@@ -14,14 +14,16 @@
  %f -> Double
  */
 
-// Category Home View
+// Localizable KEY : viewName(view 제외)_constantName
+
+// CategoryHomeView
 "search_main_label" = "What kind of checklist are you curious about?";
 "searchBar_placeholder" = " Search for various templates.";
 "category_title_label" = "Category";
 "category_main_label" = "How about this category?";
 "category_sub_label" = "If you choose a category you're interested in,\nyou can get recommendations\n for a context-appropriate checklist!";
 
-// Category CollectionView
+// CategoryCollectionView
 "category_travel" = "Travel";
 "category_shopping" = "Shopping";
 "category_wishList" = "Wish List";
@@ -31,12 +33,12 @@
 "category_health" = "Health";
 "category_move" = "Move";
 
-// Category Detail View
+// CategoryDetailView
 "category_detail_main_label" = "What kind of %@ are you planning?";
 "category_detail_sub_label" = "Please choose one of the most necessary situations.";
 "category_detail_tButton_text" = "Next";
 
-// FIXME: Category Checklist View
+// FIXME: CategoryChecklist View
 "category_checklist_mainLabel" = "Please select the item you want.";
 "category_checklist_subLabel" = "temp temp temp";
 "category_checklist_checklistNameLabel" = "%@";
@@ -46,12 +48,15 @@
 "category_checklist_selectAllLabel_unSelectAll" = "Unselect All";
 "category_checklist_tButton" = "Add to My List";
 
-// FIXME: Checklist View
-"checklist_name_label" = "temp checklist name %@";
-"checklist_date_label" = "2023년 10월 5일 %@ Eng + DateFormatter";
-"checklist_bookmark_list_text" = "Bookmark";
+// ChecklistView // FIXME: checklist_checklistDateLabel
+"checklist_checklistNameLabel" = "%@";
+"checklist_checklistDateLabel" = "2023년 10월 5일 %@ Eng + DateFormatter";
+"checklist_bookmarkListButton" = "Bookmark";
+"checklist_checkBoxMenuButton_firstMenu" = "Edit";
+"checklist_checkBoxMenuButton_secondMenu" = "Add a note";
+"checklist_checkBoxMenuButton_thirdMenu" = "Delete";
 
-// Search View
+// SearchView
 "search_searchBar_placeholder" = " Search for various templates.";
 "search_recent_search_words_label" = "Recent Search Words";
 "search_recommend_search_words_label" = "Recommended search terms";
@@ -66,9 +71,18 @@
 "error_description_statusCodeErrors_conflict" = "Request caused resource conflict.";
 "error_description_statusCodeErrors_internalServerError" = "The server encountered an error.";
 
-// Add Checklist View
+// AddChecklistView
 "add_checklist_mainLabel" = "Which checklist do you want to add to?";
-"add_checklist_subLabel" = "Please choose one checklist you want to add.";
+"add_checklist_subLabel" = "Please select one checklist you want to add.";
 "add_checklist_addToNewListButton_text" = "Adding to a New List";
 "add_checklist_cancelButton_text" = "Cancel";
 "add_checklist_addButton_text" = "Add";
+
+// BookmarkListView
+"bookmarkList_mainLabel" = "Please select a favorite item to recall.";
+"bookmarkList_subLabel" = "You can store up to 10 favorites.\nRegister your favorite items and try them easily.";
+"bookmarkList_selectedItemCountLabel" = "%d / ";
+"bookmarkList_selectAllLabel_selectAll" = "Select All";
+"bookmarkList_selectAllLabel_unSelectAll" = "Unselect All";
+"bookmarkList_addBookmarkLabel" = "Register a Favorite";
+"bookmarkList_tButton" = "Add to List";

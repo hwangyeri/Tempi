@@ -14,14 +14,16 @@
  %f -> Double
  */
 
-// Category Home View
+// Localizable KEY : viewName(view 제외)_constantName
+
+// CategoryHomeView
 "search_main_label" = "어떤 체크리스트가 궁금하신가요?";
 "searchBar_placeholder" = " 다양한 템플릿을 검색해 보세요.";
 "category_title_label" = "Category";
 "category_main_label" = "이런 카테고리는 어때요?";
 "category_sub_label" = "관심 있는 카테고리를 선택하면\n상황에 맞는 체크 리스트를 추천 받을 수 있어요!";
 
-// Category CollectionView
+// CategoryCollectionView
 "category_travel" = "여행";
 "category_shopping" = "쇼핑";
 "category_wishList" = "위시 리스트";
@@ -31,12 +33,12 @@
 "category_health" = "건강";
 "category_move" = "이사";
 
-// Category Detail View
+// CategoryDetailView
 "category_detail_main_label" = "어떤 %@을 계획 중이신가요?";
 "category_detail_sub_label" = "가장 필요한 상황을 1개 골라 주세요.";
 "category_detail_tButton_text" = "다음";
 
-// FIXME: Category Checklist View
+// FIXME: CategoryChecklistView
 "category_checklist_mainLabel" = "원하는 항목을 선택해 주세요.";
 "category_checklist_subLabel" = "임시 텍스트 입니다.\n임시 텍스트 입니다.";
 "category_checklist_checklistNameLabel" = "%@";
@@ -46,12 +48,15 @@
 "category_checklist_selectAllLabel_unSelectAll" = "전체 해제";
 "category_checklist_tButton" = "내 리스트에 추가하기";
 
-// FIXME: Checklist View
-"checklist_name_label" = "한강 수영장 %@";
-"checklist_date_label" = "2023년 10월 5일 %@";
-"checklist_bookmark_list_text" = "즐겨찾기";
+// ChecklistView // FIXME: checklist_checklistDateLabel
+"checklist_checklistNameLabel" = "%@";
+"checklist_checklistDateLabel" = "2023년 10월 5일 %@";
+"checklist_bookmarkListButton" = "즐겨찾기";
+"checklist_checkBoxMenuButton_firstMenu" = "수정";
+"checklist_checkBoxMenuButton_secondMenu" = "메모 추가";
+"checklist_checkBoxMenuButton_thirdMenu" = "삭제";
 
-// Search View
+// SearchView
 "search_searchBar_placeholder" = " 다양한 템플릿을 검색해 보세요.";
 "search_recent_search_words_label" = "최근 검색어";
 "search_recommend_search_words_label" = "추천 검색어";
@@ -66,9 +71,18 @@
 "error_description_statusCodeErrors_conflict" = "요청이 리소스 충돌을 발생시켰습니다.";
 "error_description_statusCodeErrors_internalServerError" = "서버에서 오류가 발생하였습니다.";
 
-// Add Checklist View
+// AddChecklistView
 "add_checklist_mainLabel" = "어떤 체크리스트에 추가하실 건가요?";
-"add_checklist_subLabel" = "추가하고 싶은 체크리스트를 1개 골라 주세요.";
+"add_checklist_subLabel" = "추가하고 싶은 체크리스트를 1개 선택해 주세요.";
 "add_checklist_addToNewListButton_text" = "새로운 리스트에 추가하기";
 "add_checklist_cancelButton_text" = "취소";
 "add_checklist_addButton_text" = "추가";
+
+// BookmarkListView
+"bookmarkList_mainLabel" = "불러올 즐겨찾기 항목을 선택해 주세요.";
+"bookmarkList_subLabel" = "즐겨찾기는 최대 10개까지 저장할 수 있어요.\n자주 쓰는 항목을 등록해 간편하게 사용해 보세요.";
+"bookmarkList_selectedItemCountLabel" = "%d / ";
+"bookmarkList_selectAllLabel_selectAll" = "전체 선택";
+"bookmarkList_selectAllLabel_unSelectAll" = "전체 해제";
+"bookmarkList_addBookmarkLabel" = "즐겨찾기 등록";
+"bookmarkList_tButton" = "리스트에 추가하기";
