@@ -14,6 +14,14 @@ class AddChecklistViewController: BaseViewController {
     var subCategoryName: String?
     var checkItemList: [String]?
     
+    private var selectedIndex: IndexPath?
+    
+    private var isAnyButtonSelected: Bool = false {
+        didSet {
+            updateAddButtonState()
+        }
+    }
+    
     let mainView = AddChecklistView()
     
     private var addChecklistDataSource: UICollectionViewDiffableDataSource<Int, String>!
@@ -30,7 +38,6 @@ class AddChecklistViewController: BaseViewController {
     override func configureLayout() {
         mainView.addChecklistCollectionView.delegate = self
         mainView.addToNewListButton.addTarget(self, action: #selector(addToNewListButtonTapped), for: .touchUpInside)
-//        mainView.cancelButton.addTarget(self, action: #selector(cancelButtonTapped), for: .touchUpInside)
         mainView.addButton.addTarget(self, action: #selector(addButtonTapped), for: .touchUpInside)
     }
     
@@ -51,54 +58,76 @@ class AddChecklistViewController: BaseViewController {
         addChecklistDataSource.apply(snapshot)
     }
     
+    private func updateAddButtonState() {
+        print(#function)
+        if isAnyButtonSelected {
+            mainView.addButton.isEnabled = true
+            mainView.addButton.backgroundColor = UIColor.tGray1000
+        } else {
+            mainView.addButton.isEnabled = false
+            mainView.addButton.backgroundColor = UIColor.tGray400
+        }
+    }
+    
+    // MARK: 새로운 리스트에 추가하기 버튼
+    
     @objc private func addToNewListButtonTapped() {
         print(#function)
         
-        // FIXME: 선택 했을때 셀 전체 하이라이트 컬러? 적용됨
+        mainView.addToNewListButton.isSelected = true
+        isAnyButtonSelected = true
+        mainView.addToNewListButton.layer.borderColor = UIColor.tGray1000.cgColor
+        mainView.addToNewListButton.layer.borderWidth = Constant.TChecklist.selectedBorderWidth
         
-        mainView.addToNewListButton.isSelected = !mainView.addToNewListButton.isSelected
-        
-        if mainView.addToNewListButton.isSelected {
-            mainView.addToNewListButton.layer.borderColor = UIColor.tGray1000.cgColor
-        } else {
-            mainView.addToNewListButton.layer.borderColor = UIColor.tGray400.cgColor
+        if let selectedIndex = selectedIndex,
+           let selectedCell = mainView.addChecklistCollectionView.cellForItem(at: selectedIndex) as? AddChecklistCollectionViewCell {
+            selectedCell.checklistButton.layer.borderColor = UIColor.tGray400.cgColor
+            selectedCell.checklistButton.layer.borderWidth = Constant.TChecklist.borderWidth
         }
         
+        selectedIndex = nil
     }
     
-//    @objc private func cancelButtonTapped() {
-//        print(#function)
-//        self.dismiss(animated: true)
-//    }
+    // MARK: 추가 버튼
     
     @objc private func addButtonTapped() {
         print(#function)
-        let ChecklistVC = ChecklistViewController()
-        ChecklistVC.subCategoryName = subCategoryName
-        ChecklistVC.checkItemList = checkItemList
-        navigationController?.pushViewController(ChecklistVC, animated: true)
+        print(isAnyButtonSelected)
+        let checklistVC = ChecklistViewController()
+        checklistVC.subCategoryName = subCategoryName
+        checklistVC.checkItemList = checkItemList
+        checklistVC.modalPresentationStyle = .fullScreen
+        present(checklistVC, animated: true)
     }
-    
+
 }
 
 // MARK: - CollectionView Delegate
 
 extension AddChecklistViewController: UICollectionViewDelegate {
     
-    // FIXME: 컬렉션 셀 클릭이 안됨...
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(#function)
-        if let cell = collectionView.cellForItem(at: indexPath) as? AddChecklistCollectionViewCell {
-            cell.checklistButton.layer.borderColor = UIColor.tGray1000.cgColor
+        
+        mainView.addToNewListButton.isSelected = false
+        isAnyButtonSelected = false
+        mainView.addToNewListButton.layer.borderColor = UIColor.tGray400.cgColor
+        mainView.addToNewListButton.layer.borderWidth = Constant.TChecklist.borderWidth
+        
+        // 이전에 선택된 셀이 있는 경우, 선택 해제 및 UI 업데이트
+        if let selectedIndex = selectedIndex,
+           let selectedCell = collectionView.cellForItem(at: selectedIndex) as? AddChecklistCollectionViewCell {
+            selectedCell.checklistButton.layer.borderColor = UIColor.tGray400.cgColor
+            selectedCell.checklistButton.layer.borderWidth = Constant.TChecklist.borderWidth
         }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        print(#function)
-        if let cell = collectionView.cellForItem(at: indexPath) as? AddChecklistCollectionViewCell {
-            cell.checklistButton.layer.borderColor = UIColor.tGray400.cgColor
-        }
+        
+        // 현재 선택된 셀 UI 업데이트
+        let selectedCell = collectionView.cellForItem(at: indexPath) as? AddChecklistCollectionViewCell
+        selectedCell?.checklistButton.layer.borderColor = UIColor.tGray1000.cgColor
+        selectedCell?.checklistButton.layer.borderWidth = Constant.TChecklist.selectedBorderWidth
+        
+        selectedIndex = indexPath
+        isAnyButtonSelected = true
     }
     
 }
