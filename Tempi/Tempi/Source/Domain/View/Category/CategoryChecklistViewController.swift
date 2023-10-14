@@ -118,12 +118,11 @@ class CategoryChecklistViewController: BaseViewController {
     @objc private func addToMyListButtonTapped() {
         print(#function)
         
-        let AddChecklistVC = AddChecklistViewController()
-        AddChecklistVC.subCategoryName = subCategoryName
-        AddChecklistVC.checkItemList = selectedItems
-//        AddChecklistVC.modalPresentationStyle = .pageSheet
+        let addChecklistVC = AddChecklistViewController()
+        addChecklistVC.subCategoryName = subCategoryName
+        addChecklistVC.checkItemList = selectedItems
         
-        if let sheet = AddChecklistVC.sheetPresentationController {
+        if let sheet = addChecklistVC.sheetPresentationController {
             // sheet size 지정
             sheet.detents = [.medium(), .large()]
             // sheet size 변화 감지
@@ -132,7 +131,7 @@ class CategoryChecklistViewController: BaseViewController {
             sheet.prefersGrabberVisible = true
         }
         
-        self.present(AddChecklistVC, animated: true)
+        self.present(addChecklistVC, animated: true)
     }
 
     private func configureSubCategoryDataSource() {
