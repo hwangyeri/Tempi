@@ -31,6 +31,8 @@ class AddChecklistCollectionViewCell: BaseCollectionViewCell {
         checklistButton.snp.makeConstraints { make in
             make.edges.equalTo(contentView)
         }
+        
+        contentView.backgroundColor = .tGray200
     }
     
 }
