@@ -37,16 +37,16 @@ class CategoryChecklistView: BaseView {
     let selectedItemCountLabel = {
        let view = TLabel(
         text: "category_checklist_itemCountLabel".localized,
-        custFont: .pretendardBoldS,
-        textColor: .tGray700)
+        custFont: .pretendardSemiBoldS,
+        textColor: .tGray900)
         return view
     }()
     
     let totalCountLabel = {
        let view = TLabel(
         text: "category_checklist_totalCountLabel".localized,
-        custFont: .pretendardBoldS,
-        textColor: .tGray700)
+        custFont: .pretendardSemiBoldS,
+        textColor: .tGray900)
         return view
     }()
     
