@@ -22,8 +22,8 @@ class AddChecklistView: BaseView {
     let subLabel = {
         let view = TLabel(
          text: "add_checklist_subLabel".localized,
-         custFont: .pretendardRegularM,
-         textColor: .tGray1000)
+         custFont: .pretendardRegularS,
+         textColor: .tGray800)
          view.textAlignment = .center
          return view
     }()
@@ -49,19 +49,7 @@ class AddChecklistView: BaseView {
         view.configuration = config
         return view
     }()
-    
-//    let cancelButton = {
-//        let view = TButton(
-//            text: "add_checklist_cancelButton_text".localized
-//        )
-//        view.backgroundColor = UIColor.tGray100
-//        view.setTitleColor(.tGray1000, for: .normal)
-//        view.layer.borderColor = UIColor.tGray200.cgColor
-//        view.layer.borderWidth = Constant.TButton.borderWidth
-//        view.titleLabel?.font = .customFont(.pretendardSemiBoldL)
-//        return view
-//    }()
-    
+
     let addButton = {
         let view = TButton(
             text: "add_checklist_addButton_text".localized
@@ -89,10 +77,10 @@ class AddChecklistView: BaseView {
         }
         
         addChecklistCollectionView.snp.makeConstraints { make in
-            make.top.equalTo(subLabel.snp.bottom)
+            make.top.equalTo(subLabel.snp.bottom).offset(20)
             make.horizontalEdges.equalTo(self.safeAreaLayoutGuide)
         }
-//        addChecklistCollectionView.backgroundColor = .tGray200
+        addChecklistCollectionView.backgroundColor = .tGray200
         
         addToNewListButton.snp.makeConstraints { make in
             make.top.equalTo(addChecklistCollectionView.snp.bottom).offset(20)
@@ -101,17 +89,7 @@ class AddChecklistView: BaseView {
             make.height.equalTo(60)
         }
         
-//        cancelButton.snp.makeConstraints { make in
-//            make.bottom.equalTo(self.safeAreaLayoutGuide).inset(10)
-//            make.leading.equalTo(self.safeAreaLayoutGuide).inset(20)
-//            make.trailing.equalTo(addButton.snp.leading).offset(-10)
-//            make.height.equalTo(55)
-//            make.width.equalTo(self.safeAreaLayoutGuide).multipliedBy(0.4)
-//        }
-        
         addButton.snp.makeConstraints { make in
-//            make.verticalEdges.height.equalTo(cancelButton)
-//            make.trailing.equalTo(self.safeAreaLayoutGuide).inset(20)
             make.bottom.equalTo(self.safeAreaLayoutGuide).inset(10)
             make.horizontalEdges.equalTo(addToNewListButton)
             make.height.equalTo(60)
