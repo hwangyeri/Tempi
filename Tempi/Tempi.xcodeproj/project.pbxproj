@@ -19,7 +19,6 @@
 		2B8105582AD0FE4600B50223 /* TempiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8105572AD0FE4600B50223 /* TempiModel.swift */; };
 		2B81055C2AD1000200B50223 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81055B2AD1000200B50223 /* APIService.swift */; };
 		2B81055E2AD135AF00B50223 /* APIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81055D2AD135AF00B50223 /* APIErrors.swift */; };
-		2B8105612AD1381300B50223 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2B8105602AD1381300B50223 /* Alamofire */; };
 		2B8105652AD2C22100B50223 /* CategoryData.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B8105642AD2C22100B50223 /* CategoryData.json */; };
 		2B8105692AD2C66B00B50223 /* CategoryDefaultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8105682AD2C66B00B50223 /* CategoryDefaultModel.swift */; };
 		2B81056D2AD5141700B50223 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81056C2AD5141700B50223 /* DataManager.swift */; };
@@ -140,7 +139,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B81054B2AD02A0C00B50223 /* RealmSwift in Frameworks */,
-				2B8105612AD1381300B50223 /* Alamofire in Frameworks */,
 				2B8105492AD02A0C00B50223 /* Realm in Frameworks */,
 				2BC72B7D2AC71FD50014420F /* SnapKit in Frameworks */,
 			);
@@ -474,7 +472,6 @@
 				2BC72B7C2AC71FD50014420F /* SnapKit */,
 				2B8105482AD02A0C00B50223 /* Realm */,
 				2B81054A2AD02A0C00B50223 /* RealmSwift */,
-				2B8105602AD1381300B50223 /* Alamofire */,
 			);
 			productName = Tempi;
 			productReference = 2BF5FE0A2AC6E6C1009BCBD9 /* Tempi.app */;
@@ -508,7 +505,6 @@
 			packageReferences = (
 				2BC72B7B2AC71FD40014420F /* XCRemoteSwiftPackageReference "SnapKit" */,
 				2B8105472AD02A0C00B50223 /* XCRemoteSwiftPackageReference "realm-swift" */,
-				2B81055F2AD1381300B50223 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 2BF5FE0B2AC6E6C1009BCBD9 /* Products */;
 			projectDirPath = "";
@@ -833,14 +829,6 @@
 				minimumVersion = 10.42.1;
 			};
 		};
-		2B81055F2AD1381300B50223 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.8.0;
-			};
-		};
 		2BC72B7B2AC71FD40014420F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -861,11 +849,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2B8105472AD02A0C00B50223 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
-		};
-		2B8105602AD1381300B50223 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2B81055F2AD1381300B50223 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
 		};
 		2BC72B7C2AC71FD50014420F /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
