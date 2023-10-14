@@ -30,13 +30,14 @@ enum Constant {
     
     enum TBookmarkListButton {
         static let cornerRadius: CGFloat = 20
-        static let borderWidth: CGFloat = 1
+        static let borderWidth: CGFloat = 1.5
         static let imagePadding: CGFloat = 8
     }
     
     enum TChecklist {
         static let cornerRadius: CGFloat = 30
         static let borderWidth: CGFloat = 1
+        static let selectedBorderWidth: CGFloat = 2
         static let imagePadding: CGFloat = 10
         static let symbolPointSize: CGFloat = 15
     }
@@ -46,7 +47,9 @@ enum Constant {
         static let searchBarIcon: String = "magnifyingglass"
         static let plusCircleIcon: String = "plus.circle.fill"
         static let plusSquareIcon: String = "plus.square.fill" // plus.app.fill
+        static let plusIcon: String = "plus"
         static let checkIcon: String = "checkmark"
+        static let xmarkIcon: String = "xmark"
 //        static let emptyBoxIcon: String = "square"
         static let checklistNameEditIcon: String = "pencil.line"
         static let checklistDeleteIcon: String = "trash"
@@ -70,12 +73,12 @@ enum Constant {
         static let beforeGoingOutCategoryIcon: String = "car.fill"
         static let moveCategoryIcon: String = "box.truck.fill"
         
-        /// CheckBox Drop-down Menu Icon
-        static let editCheckBoxIcon: String = "pencil"
-        static let memoCheckBoxIcon: String = "note.text"
-        static let alarmCheckBoxIcon: String = "alarm"
+        /// Checklist Menu Icon
+        static let editMenuItemIcon: String = "pencil"
+        static let addMemoMenuItemIcon: String = "note.text"
+//        static let alarmCheckBoxIcon: String = "alarm"
 //        static let bookmarkCheckBoxIcon: String = "star"
-        static let deletemarkCheckBoxIcon: String = "trash"
+        static let deleteMemuItemIcon: String = "trash"
         
         /// TabBar Icon
         static let firstTabBarIcon: String = "doc.text.magnifyingglass"
