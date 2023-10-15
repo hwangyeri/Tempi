@@ -49,7 +49,7 @@
 "category_checklist_tButton" = "Add to My List";
 
 // ChecklistView // FIXME: checklist_checklistDateLabel
-"checklist_checklistNameLabel" = "%@";
+//"checklist_checklistNameLabel" = "%@";
 "checklist_checklistDateLabel" = "2023년 10월 5일 %@ Eng + DateFormatter";
 "checklist_bookmarkListButton" = "Bookmark";
 "checklist_checkBoxMenuButton_firstMenu" = "Edit";
