@@ -29,7 +29,8 @@ class AddChecklistCollectionViewCell: BaseCollectionViewCell {
     
     override func configureLayout() {
         checklistButton.snp.makeConstraints { make in
-            make.edges.equalTo(contentView)
+            make.verticalEdges.equalTo(contentView)
+            make.horizontalEdges.equalTo(contentView).inset(10)
         }
         
         contentView.backgroundColor = .tGray200

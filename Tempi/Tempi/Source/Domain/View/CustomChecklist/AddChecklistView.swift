@@ -67,7 +67,7 @@ class AddChecklistView: BaseView {
     
     override func configureLayout() {
         mainLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.safeAreaLayoutGuide).inset(35)
+            make.top.equalTo(self.safeAreaLayoutGuide).inset(10)
             make.leading.equalTo(self.safeAreaLayoutGuide).inset(30)
         }
         
@@ -84,13 +84,13 @@ class AddChecklistView: BaseView {
         
         addToNewListButton.snp.makeConstraints { make in
             make.top.equalTo(addChecklistCollectionView.snp.bottom).offset(20)
-            make.bottom.equalTo(addButton.snp.top).offset(-10)
-            make.horizontalEdges.equalTo(self.safeAreaLayoutGuide).inset(20)
+            make.bottom.equalTo(addButton.snp.top).offset(-20)
+            make.horizontalEdges.equalTo(self.safeAreaLayoutGuide).inset(25)
             make.height.equalTo(60)
         }
         
         addButton.snp.makeConstraints { make in
-            make.bottom.equalTo(self.safeAreaLayoutGuide).inset(10)
+            make.bottom.equalTo(self.safeAreaLayoutGuide).inset(20)
             make.horizontalEdges.equalTo(addToNewListButton)
             make.height.equalTo(60)
         }
