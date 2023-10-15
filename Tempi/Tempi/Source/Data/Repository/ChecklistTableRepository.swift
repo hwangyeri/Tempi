@@ -38,6 +38,19 @@ class ChecklistTableRepository: ChecklistTableRepositoryType {
         completion(data)
     }
     
+    func getObjectIdForItem(_ item: ChecklistTable) -> ObjectId? {
+        // 새롭게 추가된 체크리스트의 ObjectId 를 추출하는 함수
+        return item.id
+    }
+    
+    func getChecklistName(forId id: ObjectId) -> String? {
+        // ObjectId 으로 해당하는 checklistName 을 추출하는 함수
+        if let item = realm.object(ofType: ChecklistTable.self, forPrimaryKey: id) {
+            return item.checklistName
+        }
+        return nil
+    }
+    
     // Realm Update
 //    func updateItem(id: ObjectId, title: String, contents: String) {
 //        
