@@ -46,7 +46,7 @@ class ChecklistViewController: BaseViewController {
     
     @objc private func exitButtonTapped() {
         print(#function)
-        self.dismiss(animated: true)
+        navigationController?.popToRootViewController(animated: true)
     }
     
     @objc private func checklistNameEditButtonTapped() {

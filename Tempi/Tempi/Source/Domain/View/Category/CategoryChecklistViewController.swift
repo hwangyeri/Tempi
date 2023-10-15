@@ -122,16 +122,17 @@ class CategoryChecklistViewController: BaseViewController {
         addChecklistVC.subCategoryName = subCategoryName
         addChecklistVC.checkItemList = selectedItems
         
-        if let sheet = addChecklistVC.sheetPresentationController {
-            // sheet size 지정
-            sheet.detents = [.medium(), .large()]
-            // sheet size 변화 감지
-            sheet.delegate = self
-            // sheet 상단에 그래버 표시 (기본 값 false)
-            sheet.prefersGrabberVisible = true
-        }
-        
-        self.present(addChecklistVC, animated: true)
+//        if let sheet = addChecklistVC.sheetPresentationController {
+//            // sheet size 지정
+//            sheet.detents = [.medium(), .large()]
+//            // sheet size 변화 감지
+//            sheet.delegate = self
+//            // sheet 상단에 그래버 표시 (기본 값 false)
+//            sheet.prefersGrabberVisible = true
+//        }
+//        
+//        self.present(addChecklistVC, animated: true)
+        navigationController?.pushViewController(addChecklistVC, animated: true)
     }
 
     private func configureSubCategoryDataSource() {
