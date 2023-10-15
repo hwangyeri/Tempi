@@ -6,15 +6,20 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ChecklistViewController: BaseViewController {
     
-    var subCategoryName: String?
-    var checkItemList: [String]?
+    var selectedChecklistName: String?
+    var checkItemTasks: Results<CheckItemTable>!
+    
+    private let checklistRepository = ChecklistTableRepository()
+    private let checkItemRepository = CheckItemTableRepository()
+    
     
     let mainView = ChecklistView()
     
-    private var checklistDataSource: UICollectionViewDiffableDataSource<Int, String>!
+    private var checklistDataSource: UICollectionViewDiffableDataSource<Int, CheckItemTable>!
     
     override func loadView() {
         self.view = mainView
@@ -22,10 +27,9 @@ class ChecklistViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         configureChecklistDataSource()
-        setLocalized()
-//        print("커스텀 체크리스트 서브카테고리: ", subCategoryName)
-//        print("커스텀 체크리스트 체크아이템 리스트: ", checkItemList)
+        setChecklistNameLabelText()
     }
     
     override func configureLayout() {
@@ -37,13 +41,17 @@ class ChecklistViewController: BaseViewController {
         mainView.bookmarkListButton.addTarget(self, action: #selector(bookmarkListButtonTapped), for: .touchUpInside)
     }
     
-    private func setLocalized() {
-        guard let subCategoryName = subCategoryName else {
+    private func setChecklistNameLabelText() {
+        // Checklist Name Setting
+        guard let selectedChecklist = selectedChecklistName else {
+            print(#function, "---- selectedChecklist error")
             return
         }
-        mainView.checklistNameLabel.text = "checklist_checklistNameLabel".localized(with: subCategoryName)
+        
+        mainView.checklistNameLabel.text = selectedChecklist
     }
     
+    // MARK: - 나가기 버튼
     @objc private func exitButtonTapped() {
         print(#function)
         navigationController?.popToRootViewController(animated: true)
@@ -61,6 +69,7 @@ class ChecklistViewController: BaseViewController {
         print(#function)
     }
     
+    // MARK: - 즐겨찾기 버튼
     @objc private func bookmarkListButtonTapped() {
         print(#function)
         let bookmarkListVC = BookmarkListViewController()
@@ -74,12 +83,13 @@ class ChecklistViewController: BaseViewController {
         self.present(bookmarkListVC, animated: true)
     }
     
+    // MARK: - CollectionView DataSource
     private func configureChecklistDataSource() {
-        let cellRegistration = UICollectionView.CellRegistration<ChecklistCollectionViewCell, String> {
+        let cellRegistration = UICollectionView.CellRegistration<ChecklistCollectionViewCell, CheckItemTable> {
             cell, indexPath, itemIdentifier in
             
-            cell.checkBoxLabel.text = itemIdentifier
-            cell.checkBoxMemoLabel.text = itemIdentifier
+            cell.checkBoxLabel.text = itemIdentifier.content
+            cell.checkBoxMemoLabel.text = itemIdentifier.memo
             
             // Menu
             cell.checkBoxMenuButton.menu = UIMenu(preferredElementSize: .medium, children: [
@@ -101,19 +111,16 @@ class ChecklistViewController: BaseViewController {
             return cell
         })
         
-        guard let checkItemList = checkItemList else {
-            return
-        }
-        var snapshot = NSDiffableDataSourceSnapshot<Int, String>()
+        var snapshot = NSDiffableDataSourceSnapshot<Int, CheckItemTable>()
         snapshot.appendSections([0])
-        snapshot.appendItems(checkItemList)
+        let result = Array(checkItemTasks)
+        snapshot.appendItems(result)
         checklistDataSource.apply(snapshot)
     }
 
 }
 
 // MARK: - CollectionView Delegate
-
 extension ChecklistViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
