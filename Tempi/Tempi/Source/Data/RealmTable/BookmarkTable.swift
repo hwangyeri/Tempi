@@ -10,7 +10,7 @@ import RealmSwift
 
 class BookmarkTable: Object {
     
-    @Persisted(primaryKey: true) var _id: ObjectId
+    @Persisted(primaryKey: true) var id: ObjectId
     @Persisted var bookmarkItem: String // 즐겨찾기 항목
     
     convenience init(bookmarkItem: String) {

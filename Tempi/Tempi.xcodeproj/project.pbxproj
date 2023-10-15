@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B49F5A02AC864F100FF903F /* CategoryHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B49F59F2AC864F100FF903F /* CategoryHomeView.swift */; };
+		2B63782B2ADBCCEF00203AFA /* CheckItemTableRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63782A2ADBCCEF00203AFA /* CheckItemTableRepository.swift */; };
 		2B81053C2ACEFD3700B50223 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81053B2ACEFD3700B50223 /* SearchViewController.swift */; };
 		2B81053E2ACEFD3F00B50223 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81053D2ACEFD3F00B50223 /* SearchView.swift */; };
 		2B8105492AD02A0C00B50223 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 2B8105482AD02A0C00B50223 /* Realm */; };
@@ -40,6 +41,7 @@
 		2B952A172ACEB1DC0074D4F2 /* ChecklistCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B952A162ACEB1DC0074D4F2 /* ChecklistCollectionViewCell.swift */; };
 		2B9D8D422AD973F3006F42E0 /* BookmarkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9D8D412AD973F3006F42E0 /* BookmarkListViewController.swift */; };
 		2B9D8D442AD97408006F42E0 /* BookmarkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9D8D432AD97408006F42E0 /* BookmarkListView.swift */; };
+		2B9D8D4A2ADBB3B8006F42E0 /* ChecklistTableRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9D8D492ADBB3B8006F42E0 /* ChecklistTableRepository.swift */; };
 		2BC72B7A2AC717240014420F /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC72B792AC717240014420F /* Font+.swift */; };
 		2BC72B7D2AC71FD50014420F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2BC72B7C2AC71FD50014420F /* SnapKit */; };
 		2BC72B7F2AC7207D0014420F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC72B7E2AC7207D0014420F /* BaseView.swift */; };
@@ -71,6 +73,7 @@
 
 /* Begin PBXFileReference section */
 		2B49F59F2AC864F100FF903F /* CategoryHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHomeView.swift; sourceTree = "<group>"; };
+		2B63782A2ADBCCEF00203AFA /* CheckItemTableRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckItemTableRepository.swift; sourceTree = "<group>"; };
 		2B81053B2ACEFD3700B50223 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		2B81053D2ACEFD3F00B50223 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		2B81054F2AD02B8F00B50223 /* CategoryTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTable.swift; sourceTree = "<group>"; };
@@ -101,6 +104,7 @@
 		2B952A162ACEB1DC0074D4F2 /* ChecklistCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistCollectionViewCell.swift; sourceTree = "<group>"; };
 		2B9D8D412AD973F3006F42E0 /* BookmarkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListViewController.swift; sourceTree = "<group>"; };
 		2B9D8D432AD97408006F42E0 /* BookmarkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListView.swift; sourceTree = "<group>"; };
+		2B9D8D492ADBB3B8006F42E0 /* ChecklistTableRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistTableRepository.swift; sourceTree = "<group>"; };
 		2BC72B792AC717240014420F /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
 		2BC72B7E2AC7207D0014420F /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		2BC72B802AC720B30014420F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -253,8 +257,8 @@
 		2BF5FE382AC6F3FB009BCBD9 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				2B81054C2AD02ABA00B50223 /* RealmTable */,
 				2BF5FE422AC6F666009BCBD9 /* Network */,
+				2B81054C2AD02ABA00B50223 /* RealmTable */,
 				2BF5FE412AC6F59C009BCBD9 /* Repository */,
 			);
 			path = Data;
@@ -332,6 +336,8 @@
 		2BF5FE412AC6F59C009BCBD9 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				2B9D8D492ADBB3B8006F42E0 /* ChecklistTableRepository.swift */,
+				2B63782A2ADBCCEF00203AFA /* CheckItemTableRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -350,7 +356,6 @@
 			isa = PBXGroup;
 			children = (
 				2BF5FE4D2AC6FA29009BCBD9 /* Base */,
-				2BF5FE492AC6F9A6009BCBD9 /* Cell */,
 				2BF5FE462AC6F6A0009BCBD9 /* Model */,
 				2BF5FE452AC6F699009BCBD9 /* ViewModel */,
 				2BF5FE442AC6F691009BCBD9 /* View */,
@@ -361,6 +366,7 @@
 		2BF5FE442AC6F691009BCBD9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2BF5FE492AC6F9A6009BCBD9 /* Cell */,
 				2B81053A2ACEFCF500B50223 /* Search */,
 				2B952A0F2ACE818C0074D4F2 /* CustomChecklist */,
 				2BF5FE4B2AC6F9C5009BCBD9 /* Category */,
@@ -557,6 +563,7 @@
 				2BF5FE0E2AC6E6C1009BCBD9 /* AppDelegate.swift in Sources */,
 				2B8105522AD02D0600B50223 /* ChecklistTable.swift in Sources */,
 				2B81053C2ACEFD3700B50223 /* SearchViewController.swift in Sources */,
+				2B63782B2ADBCCEF00203AFA /* CheckItemTableRepository.swift in Sources */,
 				2B81056D2AD5141700B50223 /* DataManager.swift in Sources */,
 				2B8105692AD2C66B00B50223 /* CategoryDefaultModel.swift in Sources */,
 				2B9529D12ACCE6760074D4F2 /* TButton.swift in Sources */,
@@ -564,6 +571,7 @@
 				2BC72B7F2AC7207D0014420F /* BaseView.swift in Sources */,
 				2B9529CD2ACC41BC0074D4F2 /* CategoryDetailViewController.swift in Sources */,
 				2BC72B872AC727640014420F /* Alert+.swift in Sources */,
+				2B9D8D4A2ADBB3B8006F42E0 /* ChecklistTableRepository.swift in Sources */,
 				2BDE84D72ACAFDCD0018C759 /* CategoryCollectionViewCell.swift in Sources */,
 				2BC72B812AC720B30014420F /* BaseViewController.swift in Sources */,
 				2BF5FE652AC7079B009BCBD9 /* Localized+.swift in Sources */,

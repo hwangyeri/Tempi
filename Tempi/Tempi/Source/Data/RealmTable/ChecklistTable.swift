@@ -10,11 +10,11 @@ import RealmSwift
 
 class ChecklistTable: Object {
     
-    @Persisted(primaryKey: true) var _id: ObjectId
+    @Persisted(primaryKey: true) var id: ObjectId
     @Persisted var checklistName: String
-    @Persisted var createdAt: Data // 생성 날짜
+    @Persisted var createdAt: Date // 생성 날짜
     
-    convenience init(checklistName: String, createdAt: Data) {
+    convenience init(checklistName: String, createdAt: Date) {
         self.init()
         
         self.checklistName = checklistName

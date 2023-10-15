@@ -10,7 +10,7 @@ import RealmSwift
 
 class CategoryTable: Object {
     
-    @Persisted(primaryKey: true) var _id: ObjectId
+    @Persisted(primaryKey: true) var id: ObjectId
     @Persisted var categoryName: String
     @Persisted var subCategoryName: String
     @Persisted var checkItem: String
