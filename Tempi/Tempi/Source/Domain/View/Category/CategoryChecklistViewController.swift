@@ -6,8 +6,13 @@
 //
 
 import UIKit
+import RealmSwift
 
 class CategoryChecklistViewController: BaseViewController {
+    
+//    let realm = try! Realm()
+    
+    private let repository = ChecklistTableRepository()
     
     var categoryName: String?
     var subCategoryName: String?
@@ -21,7 +26,6 @@ class CategoryChecklistViewController: BaseViewController {
     }
     
     private var selectedIndexPaths: [IndexPath] = []
-//    private var selectedItems: [String] = []
     private var selectedItems: [String] = [] {
         didSet {
             mainView.selectedItemCountLabel.text = "category_checklist_itemCountLabel".localized(with: selectedItems.count)
@@ -42,8 +46,7 @@ class CategoryChecklistViewController: BaseViewController {
         configureSubCategoryDataSource()
         setLocalized()
         
-//        print("--- checklist ", categoryName)
-//        print("--- checklist ", subCategoryName)
+//        print(realm.configuration.fileURL)
     }
     
     override func configureLayout() {
@@ -114,24 +117,19 @@ class CategoryChecklistViewController: BaseViewController {
     }
     
     // MARK: - 내 리스트에 추가하기 버튼
-    
     @objc private func addToMyListButtonTapped() {
         print(#function)
         
         let addChecklistVC = AddChecklistViewController()
+        
         addChecklistVC.subCategoryName = subCategoryName
         addChecklistVC.checkItemList = selectedItems
         
-//        if let sheet = addChecklistVC.sheetPresentationController {
-//            // sheet size 지정
-//            sheet.detents = [.medium(), .large()]
-//            // sheet size 변화 감지
-//            sheet.delegate = self
-//            // sheet 상단에 그래버 표시 (기본 값 false)
-//            sheet.prefersGrabberVisible = true
-//        }
-//        
-//        self.present(addChecklistVC, animated: true)
+        repository.fetch { tasks in
+            // addChecklistDataSource 에 쓰이는 데이터 미리 넘겨주기
+            addChecklistVC.checklistTasks = tasks
+        }
+        
         navigationController?.pushViewController(addChecklistVC, animated: true)
     }
 
@@ -156,7 +154,6 @@ class CategoryChecklistViewController: BaseViewController {
 }
 
 // MARK: - CollectionView Delegate
-
 extension CategoryChecklistViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -195,14 +192,4 @@ extension CategoryChecklistViewController: UICollectionViewDelegate {
         print(selectedItems, "-- 선택된 체크 아이템 --")
     }
 
-}
-
-// MARK: - SheetPresentation Delegate
-
-extension CategoryChecklistViewController: UISheetPresentationControllerDelegate {
-    
-    func sheetPresentationControllerDidChangeSelectedDetentIdentifier(_ sheetPresentationController: UISheetPresentationController) {
-        print(sheetPresentationController.selectedDetentIdentifier == .large ? "large" : "medium")
-    }
-    
 }
