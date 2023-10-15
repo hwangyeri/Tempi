@@ -9,13 +9,11 @@ import UIKit
 import RealmSwift
 
 class AddChecklistViewController: BaseViewController {
+        
+    var checklistTasks: Results<ChecklistTable>!
     
-    let dummyList = ["일본 여행 소지품 체크리스트", "이마트 장보기", "check check", "롯데월드 체크리스트"]
-    
-    let realm = try! Realm()
-    
-    private var tasks: Results<ChecklistTable>!
-    private let repository = ChecklistTableRepository()
+    private let checklistRepository = ChecklistTableRepository()
+    private let checkItemRepository = CheckItemTableRepository()
     
     var subCategoryName: String?
     var checkItemList: [String]?
@@ -38,48 +36,14 @@ class AddChecklistViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        print(realm.configuration.fileURL)
         
-        repository.fetch { [weak self] tasks in
-            guard let tasks = tasks else {
-                print("Tasks is nil.")
-                return
-            }
-            self?.tasks = tasks
-            self?.configureAddChecklistDataSource()
-        }
-        
-        print(tasks)
+        configureAddChecklistDataSource()
     }
     
     override func configureLayout() {
         mainView.addChecklistCollectionView.delegate = self
         mainView.addToNewListButton.addTarget(self, action: #selector(addToNewListButtonTapped), for: .touchUpInside)
         mainView.addButton.addTarget(self, action: #selector(addButtonTapped), for: .touchUpInside)
-    }
-    
-    private func configureAddChecklistDataSource() {
-        guard let tasks = tasks else {
-            // tasks 가 nil 인 경우, 핸들링 필요 ??
-            print("tasks == nil 이면 실행되는 프린트")
-            return
-        }
-        
-        let cellRegistration = UICollectionView.CellRegistration<AddChecklistCollectionViewCell, ChecklistTable> {
-            cell, indexPath, itemIdentifier in
-            cell.checklistButton.setTitle(itemIdentifier.checklistName, for: .normal)
-        }
-        
-        addChecklistDataSource = UICollectionViewDiffableDataSource(collectionView: mainView.addChecklistCollectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
-            let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: itemIdentifier)
-            return cell
-        })
-        
-        var snapshot = NSDiffableDataSourceSnapshot<Int, ChecklistTable>()
-        snapshot.appendSections([0])
-        let result = Array(tasks)
-        snapshot.appendItems(result)
-        addChecklistDataSource.apply(snapshot)
     }
     
     private func updateAddButtonState() {
@@ -94,7 +58,6 @@ class AddChecklistViewController: BaseViewController {
     }
     
     // MARK: 새로운 리스트에 추가하기 버튼
-    
     @objc private func addToNewListButtonTapped() {
         print(#function)
         
@@ -113,29 +76,96 @@ class AddChecklistViewController: BaseViewController {
     }
     
     // MARK: 추가 버튼
-    
     @objc private func addButtonTapped() {
-        print(#function)
-        print(isAnyButtonSelected)
+        let checklistVC = ChecklistViewController()
+        let selectedObjectId: ObjectId?
+        let selectedChecklistName: String?
         
-        guard let subCategoryName = subCategoryName else {
+        if mainView.addToNewListButton.isSelected {
+            // 새로운 리스트에 추가하기 버튼이 선택된 경우
+            guard let subCategoryName = subCategoryName else {
+                print(#function, "subCategoryName error")
+                return
+            }
+            
+            let newChecklist = ChecklistTable(checklistName: subCategoryName, createdAt: Date())
+            checklistRepository.createItem(newChecklist)
+            
+            guard let newChecklistID = checklistRepository.getObjectIdForItem(newChecklist) else {
+                print(#function, "newChecklistID error")
+                return
+            }
+            
+            selectedObjectId = newChecklistID
+            selectedChecklistName = newChecklist.checklistName
+            
+            guard let checkItemList = checkItemList else {
+                print(#function, "checkItemList error")
+                return
+            }
+    
+            for item in checkItemList {
+                let checkItemTask = CheckItemTable(checklistPK: newChecklistID, content: item, createdAt: Date(), memo: nil, alarmDate: nil, isChecked: false)
+                checkItemRepository.createItem(checkItemTask)
+            }
+            
+        } else {
+            // 컬렉션 셀이 선택된 경우
+            guard let selectedIndexPath = selectedIndex,
+                  let selectedChecklist = addChecklistDataSource.itemIdentifier(for: selectedIndexPath) else {
+                print("Error getting selected checklist")
+                return
+            }
+            
+            selectedObjectId = selectedChecklist.id
+            selectedChecklistName = selectedChecklist.checklistName
+            
+            guard let checkItemList = checkItemList else {
+                print(#function, "checkItemList error")
+                return
+            }
+            
+            for item in checkItemList {
+                let checkItemTask = CheckItemTable(checklistPK: selectedChecklist.id, content: item, createdAt: Date(), memo: nil, alarmDate: nil, isChecked: false)
+                checkItemRepository.createItem(checkItemTask)
+            }
+        }
+        
+        guard let selectedObjectId = selectedObjectId else {
+            print(#function, "selectedObjectId error")
             return
         }
-        let task = ChecklistTable(checklistName: subCategoryName, createdAt: Date())
-        repository.createItem(task)
         
-        let checklistVC = ChecklistViewController()
-        checklistVC.subCategoryName = subCategoryName
-        checklistVC.checkItemList = checkItemList
-//        checklistVC.modalPresentationStyle = .fullScreen
-//        present(checklistVC, animated: true)
+        checkItemRepository.fetch(for: selectedObjectId) { task in
+            checklistVC.checkItemTasks = task
+        }
+        checklistVC.selectedChecklistName = selectedChecklistName
+
         navigationController?.pushViewController(checklistVC, animated: true)
+    }
+    
+    // MARK: - CollectionView DataSource
+    private func configureAddChecklistDataSource() {
+        let cellRegistration = UICollectionView.CellRegistration<AddChecklistCollectionViewCell, ChecklistTable> {
+            cell, indexPath, itemIdentifier in
+            cell.checklistButton.setTitle(itemIdentifier.checklistName, for: .normal)
+        }
+        
+        addChecklistDataSource = UICollectionViewDiffableDataSource(collectionView: mainView.addChecklistCollectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
+            let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: itemIdentifier)
+            return cell
+        })
+        
+        var snapshot = NSDiffableDataSourceSnapshot<Int, ChecklistTable>()
+        snapshot.appendSections([0])
+        let result = Array(checklistTasks)
+        snapshot.appendItems(result)
+        addChecklistDataSource.apply(snapshot)
     }
 
 }
 
 // MARK: - CollectionView Delegate
-
 extension AddChecklistViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
