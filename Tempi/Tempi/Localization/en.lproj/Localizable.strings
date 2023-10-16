@@ -50,7 +50,7 @@
 
 // ChecklistView // FIXME: checklist_checklistDateLabel
 //"checklist_checklistNameLabel" = "%@";
-"checklist_checklistDateLabel" = "2023년 10월 5일 %@ Eng + DateFormatter";
+"checklist_checklistDateLabel" = "en_US";
 "checklist_bookmarkListButton" = "Bookmark";
 "checklist_checkBoxMenuButton_firstMenu" = "Edit";
 "checklist_checkBoxMenuButton_secondMenu" = "Add a note";
@@ -86,3 +86,6 @@
 "bookmarkList_selectAllLabel_unSelectAll" = "Unselect All";
 "bookmarkList_addBookmarkLabel" = "Register a Favorite";
 "bookmarkList_tButton" = "Add to List";
+
+// MyListView
+"myList_mainLabel" = "My\nChecklist";
