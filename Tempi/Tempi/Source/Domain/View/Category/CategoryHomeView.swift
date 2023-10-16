@@ -68,7 +68,7 @@ class CategoryHomeView: BaseView {
     
     let plusButton = {
         let view = UIButton()
-        let imageConfig = UIImage.SymbolConfiguration(pointSize: 50, weight: .semibold)
+        let imageConfig = UIImage.SymbolConfiguration(pointSize: 50, weight: .light)
         let image = UIImage(systemName: Constant.SFSymbol.plusCircleIcon, withConfiguration: imageConfig)
         view.setImage(image, for: .normal)
         view.tintColor = UIColor.tGray1000
