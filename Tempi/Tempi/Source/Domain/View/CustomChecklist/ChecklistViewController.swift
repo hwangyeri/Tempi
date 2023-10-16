@@ -10,7 +10,7 @@ import RealmSwift
 
 class ChecklistViewController: BaseViewController {
     
-    var selectedChecklistName: String?
+    var selectedChecklistID: ObjectId?
     var checkItemTasks: Results<CheckItemTable>!
     
     private let checklistRepository = ChecklistTableRepository()
@@ -29,30 +29,48 @@ class ChecklistViewController: BaseViewController {
         super.viewDidLoad()
         
         configureChecklistDataSource()
-        setChecklistNameLabelText()
+        setChecklistData()
+        setNavigationBarButton()
     }
     
     override func configureLayout() {
         mainView.checklistCollectionView.delegate = self
-        mainView.exitButton.addTarget(self, action: #selector(exitButtonTapped), for: .touchUpInside)
         mainView.checklistNameEditButton.addTarget(self, action: #selector(checklistNameEditButtonTapped), for: .touchUpInside)
         mainView.checklistBookmarkButton.addTarget(self, action: #selector(checklistBookmarkButtonTapped), for: .touchUpInside)
         mainView.checklistDeleteButton.addTarget(self, action: #selector(checklistDeleteButtonTapped), for: .touchUpInside)
         mainView.bookmarkListButton.addTarget(self, action: #selector(bookmarkListButtonTapped), for: .touchUpInside)
     }
     
-    private func setChecklistNameLabelText() {
-        // Checklist Name Setting
-        guard let selectedChecklist = selectedChecklistName else {
-            print(#function, "---- selectedChecklist error")
+    private func setChecklistData() {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .short
+        dateFormatter.locale = Locale(identifier: "checklist_checklistDateLabel".localized)
+        
+        guard let selectedChecklistID = selectedChecklistID else {
             return
         }
+        let checklistName = checklistRepository.getChecklistName(forId: selectedChecklistID)
         
-        mainView.checklistNameLabel.text = selectedChecklist
+        guard let checklistDate = checklistRepository.getChecklistDate(forId: selectedChecklistID) else {
+            return
+        }
+        let dateString = dateFormatter.string(from: checklistDate)
+        
+        mainView.checklistNameLabel.text = checklistName
+        mainView.checklistDateLabel.text = dateString
     }
     
-    // MARK: - 나가기 버튼
-    @objc private func exitButtonTapped() {
+    private func setNavigationBarButton() {
+        let barButtonIcon = UIImage(systemName: Constant.SFSymbol.xmarkIcon)
+        let rightBarButton = UIBarButtonItem(image: barButtonIcon, style: .plain, target: self, action: #selector(rightBarButtonTapped))
+        rightBarButton.tintColor = .tGray1000
+        self.navigationItem.rightBarButtonItem = rightBarButton
+        self.navigationItem.hidesBackButton = true
+    }
+    
+    // MARK: - 오른쪽 네비 바 버튼
+    @objc private func rightBarButtonTapped() {
         print(#function)
         navigationController?.popToRootViewController(animated: true)
     }
