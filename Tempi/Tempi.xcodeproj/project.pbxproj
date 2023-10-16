@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2B49F5A02AC864F100FF903F /* CategoryHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B49F59F2AC864F100FF903F /* CategoryHomeView.swift */; };
 		2B63782B2ADBCCEF00203AFA /* CheckItemTableRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63782A2ADBCCEF00203AFA /* CheckItemTableRepository.swift */; };
+		2B63782D2ADC578200203AFA /* MyChecklistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63782C2ADC578200203AFA /* MyChecklistView.swift */; };
 		2B81053C2ACEFD3700B50223 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81053B2ACEFD3700B50223 /* SearchViewController.swift */; };
 		2B81053E2ACEFD3F00B50223 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81053D2ACEFD3F00B50223 /* SearchView.swift */; };
 		2B8105492AD02A0C00B50223 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 2B8105482AD02A0C00B50223 /* Realm */; };
@@ -58,7 +59,7 @@
 		2BDE84D72ACAFDCD0018C759 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDE84D62ACAFDCD0018C759 /* CategoryCollectionViewCell.swift */; };
 		2BF5FE0E2AC6E6C1009BCBD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF5FE0D2AC6E6C1009BCBD9 /* AppDelegate.swift */; };
 		2BF5FE102AC6E6C1009BCBD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF5FE0F2AC6E6C1009BCBD9 /* SceneDelegate.swift */; };
-		2BF5FE122AC6E6C1009BCBD9 /* MyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF5FE112AC6E6C1009BCBD9 /* MyListViewController.swift */; };
+		2BF5FE122AC6E6C1009BCBD9 /* MyChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF5FE112AC6E6C1009BCBD9 /* MyChecklistViewController.swift */; };
 		2BF5FE172AC6E6C2009BCBD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BF5FE162AC6E6C2009BCBD9 /* Assets.xcassets */; };
 		2BF5FE1A2AC6E6C2009BCBD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BF5FE182AC6E6C2009BCBD9 /* LaunchScreen.storyboard */; };
 		2BF5FE572AC703F1009BCBD9 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2BF5FE522AC703F0009BCBD9 /* Pretendard-Medium.otf */; };
@@ -74,6 +75,7 @@
 /* Begin PBXFileReference section */
 		2B49F59F2AC864F100FF903F /* CategoryHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHomeView.swift; sourceTree = "<group>"; };
 		2B63782A2ADBCCEF00203AFA /* CheckItemTableRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckItemTableRepository.swift; sourceTree = "<group>"; };
+		2B63782C2ADC578200203AFA /* MyChecklistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChecklistView.swift; sourceTree = "<group>"; };
 		2B81053B2ACEFD3700B50223 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		2B81053D2ACEFD3F00B50223 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		2B81054F2AD02B8F00B50223 /* CategoryTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTable.swift; sourceTree = "<group>"; };
@@ -121,7 +123,7 @@
 		2BF5FE0A2AC6E6C1009BCBD9 /* Tempi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tempi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BF5FE0D2AC6E6C1009BCBD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BF5FE0F2AC6E6C1009BCBD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2BF5FE112AC6E6C1009BCBD9 /* MyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListViewController.swift; sourceTree = "<group>"; };
+		2BF5FE112AC6E6C1009BCBD9 /* MyChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChecklistViewController.swift; sourceTree = "<group>"; };
 		2BF5FE162AC6E6C2009BCBD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BF5FE192AC6E6C2009BCBD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2BF5FE1B2AC6E6C2009BCBD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -435,7 +437,8 @@
 		2BF5FE4C2AC6F9DC009BCBD9 /* MyList */ = {
 			isa = PBXGroup;
 			children = (
-				2BF5FE112AC6E6C1009BCBD9 /* MyListViewController.swift */,
+				2BF5FE112AC6E6C1009BCBD9 /* MyChecklistViewController.swift */,
+				2B63782C2ADC578200203AFA /* MyChecklistView.swift */,
 			);
 			path = MyList;
 			sourceTree = "<group>";
@@ -550,7 +553,7 @@
 				2B952A112ACE83420074D4F2 /* ChecklistViewController.swift in Sources */,
 				2B91AB652AD6977B0078AB39 /* AddChecklistViewController.swift in Sources */,
 				2BC72B7A2AC717240014420F /* Font+.swift in Sources */,
-				2BF5FE122AC6E6C1009BCBD9 /* MyListViewController.swift in Sources */,
+				2BF5FE122AC6E6C1009BCBD9 /* MyChecklistViewController.swift in Sources */,
 				2BC72B852AC723160014420F /* BaseCollectionViewCell.swift in Sources */,
 				2BF5FE672AC70B51009BCBD9 /* Color+.swift in Sources */,
 				2B81055C2AD1000200B50223 /* APIService.swift in Sources */,
@@ -572,6 +575,7 @@
 				2B9529CD2ACC41BC0074D4F2 /* CategoryDetailViewController.swift in Sources */,
 				2BC72B872AC727640014420F /* Alert+.swift in Sources */,
 				2B9D8D4A2ADBB3B8006F42E0 /* ChecklistTableRepository.swift in Sources */,
+				2B63782D2ADC578200203AFA /* MyChecklistView.swift in Sources */,
 				2BDE84D72ACAFDCD0018C759 /* CategoryCollectionViewCell.swift in Sources */,
 				2BC72B812AC720B30014420F /* BaseViewController.swift in Sources */,
 				2BF5FE652AC7079B009BCBD9 /* Localized+.swift in Sources */,
