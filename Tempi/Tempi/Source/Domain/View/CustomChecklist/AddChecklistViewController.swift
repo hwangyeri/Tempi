@@ -79,7 +79,6 @@ class AddChecklistViewController: BaseViewController {
     @objc private func addButtonTapped() {
         let checklistVC = ChecklistViewController()
         let selectedObjectId: ObjectId?
-        let selectedChecklistName: String?
         
         if mainView.addToNewListButton.isSelected {
             // 새로운 리스트에 추가하기 버튼이 선택된 경우
@@ -97,7 +96,6 @@ class AddChecklistViewController: BaseViewController {
             }
             
             selectedObjectId = newChecklistID
-            selectedChecklistName = newChecklist.checklistName
             
             guard let checkItemList = checkItemList else {
                 print(#function, "checkItemList error")
@@ -118,7 +116,6 @@ class AddChecklistViewController: BaseViewController {
             }
             
             selectedObjectId = selectedChecklist.id
-            selectedChecklistName = selectedChecklist.checklistName
             
             guard let checkItemList = checkItemList else {
                 print(#function, "checkItemList error")
@@ -136,10 +133,10 @@ class AddChecklistViewController: BaseViewController {
             return
         }
         
+        checklistVC.selectedChecklistID = selectedObjectId
         checkItemRepository.fetch(for: selectedObjectId) { task in
             checklistVC.checkItemTasks = task
         }
-        checklistVC.selectedChecklistName = selectedChecklistName
 
         navigationController?.pushViewController(checklistVC, animated: true)
     }
