@@ -11,6 +11,9 @@ import RealmSwift
 protocol ChecklistTableRepositoryType: AnyObject {
     func createItem(_ item: ChecklistTable)
     func fetch(completion: @escaping (Results<ChecklistTable>?) -> Void)
+    func getObjectIdForItem(_ item: ChecklistTable) -> ObjectId?
+    func getChecklistName(forId id: ObjectId) -> String?
+    func getChecklistDate(forId id: ObjectId) -> Date?
 }
 
 class ChecklistTableRepository: ChecklistTableRepositoryType {
@@ -44,9 +47,17 @@ class ChecklistTableRepository: ChecklistTableRepositoryType {
     }
     
     func getChecklistName(forId id: ObjectId) -> String? {
-        // ObjectId 으로 해당하는 checklistName 을 추출하는 함수
+        // ObjectId 를 기준으로 checklistName 을 추출하는 함수
         if let item = realm.object(ofType: ChecklistTable.self, forPrimaryKey: id) {
             return item.checklistName
+        }
+        return nil
+    }
+    
+    func getChecklistDate(forId id: ObjectId) -> Date? {
+        // ObjectId 를 기준으로 createdAt 을 추출하는 함수
+        if let item = realm.object(ofType: ChecklistTable.self, forPrimaryKey: id) {
+            return item.createdAt
         }
         return nil
     }
