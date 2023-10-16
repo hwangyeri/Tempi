@@ -10,18 +10,6 @@ import SnapKit
 
 class ChecklistView: BaseView {
     
-    let exitButton = {
-        let view = TImageButton(
-            imageSize: 23,
-            imageName: Constant.SFSymbol.xmarkIcon,
-            imageColor: .tGray1000
-        )
-//        let imageConfig = UIImage.SymbolConfiguration(pointSize: 23, weight: .semibold)
-//        let image = UIImage(systemName: Constant.SFSymbol.xmarkIcon, withConfiguration: imageConfig)
-//        view.setImage(image, for: .normal)
-        return view
-    }()
-    
     let checklistNameLabel = {
        let view = TLabel(
         text: "checklist_checklistNameLabel".localized,
@@ -35,7 +23,7 @@ class ChecklistView: BaseView {
        let view = TLabel(
         text: "checklist_checklistDateLabel".localized,
         custFont: .pretendardMediumS,
-        textColor: .tGray600
+        textColor: .tGray800
        )
         return view
     }()
@@ -92,20 +80,15 @@ class ChecklistView: BaseView {
     }()
     
     override func configureHierarchy() {
-        [exitButton, checklistNameLabel, checklistDateLabel, checklistNameEditButton,
+        [checklistNameLabel, checklistDateLabel, checklistNameEditButton,
          checklistBookmarkButton, checklistDeleteButton, divider, checklistCollectionView, bookmarkListButton].forEach {
             addSubview($0)
         }
     }
     
     override func configureLayout() {
-        exitButton.snp.makeConstraints { make in
-            make.top.equalTo(self.safeAreaLayoutGuide).inset(20)
-            make.trailing.equalTo(self.safeAreaLayoutGuide).inset(30)
-        }
-        
         checklistNameLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.safeAreaLayoutGuide).inset(50)
+            make.top.equalTo(self.safeAreaLayoutGuide).inset(10)
             make.leading.equalTo(self.safeAreaLayoutGuide).inset(30)
         }
         
@@ -121,14 +104,12 @@ class ChecklistView: BaseView {
         
         checklistBookmarkButton.snp.makeConstraints { make in
             make.top.equalTo(checklistDateLabel.snp.bottom).offset(10)
-//            make.leading.equalTo(checklistNameEditButton.snp.trailing).offset(65)
             make.trailing.equalTo(checklistDeleteButton.snp.leading).offset(-8)
         }
         
         checklistDeleteButton.snp.makeConstraints { make in
             make.top.equalTo(checklistBookmarkButton).offset(-1)
-//            make.leading.equalTo(checklistBookmarkButton.snp.trailing).offset(8)
-            make.trailing.equalTo(exitButton.snp.trailing)
+            make.trailing.equalTo(checklistCollectionView.snp.trailing).inset(10)
         }
         
         divider.snp.makeConstraints { make in
