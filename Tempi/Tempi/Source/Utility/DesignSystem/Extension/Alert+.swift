@@ -34,3 +34,6 @@ extension UIViewController {
     
 }
 
+//presentDeleteAlert(title: "ddd", message: "ddd") {
+//    print(#function)
+//}
