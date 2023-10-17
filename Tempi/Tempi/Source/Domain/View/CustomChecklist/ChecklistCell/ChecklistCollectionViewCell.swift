@@ -51,7 +51,7 @@ class ChecklistCollectionViewCell: BaseCollectionViewCell {
     
     let checkBoxMenuButton = {
         let view = TImageButton(
-            imageSize: 25,
+            imageSize: Constant.TImageButton.checklistCollectionCellImageSize,
             imageName: Constant.SFSymbol.checkboxMenuIcon,
             imageColor: .tGray1000)
         view.showsMenuAsPrimaryAction = true // long press 없이 한 번의 탭으로 메뉴 나오게 설정

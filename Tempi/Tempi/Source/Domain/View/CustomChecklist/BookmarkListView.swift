@@ -71,7 +71,7 @@ class BookmarkListView: BaseView {
     
     let addBookmarkButton = {
         let view = TImageButton(
-            imageSize: 20,
+            imageSize: Constant.TImageButton.bookmarkListImageSize,
             imageName: Constant.SFSymbol.plusIcon,
             imageColor: .tGray100
         )
