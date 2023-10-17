@@ -42,6 +42,17 @@ enum Constant {
         static let symbolPointSize: CGFloat = 15
     }
     
+    enum TImageButton {
+        static let checklistImageSize: CGFloat = 23
+        static let bookmarkListImageSize: CGFloat = 20
+        static let checklistCollectionCellImageSize: CGFloat = 25
+    }
+    
+    enum TPopUp {
+        static let viewCornerRadius: CGFloat = 23
+        static let buttonCornerRadius: CGFloat = 23
+    }
+    
     enum SFSymbol {
         /// Display Icon
         static let searchBarIcon: String = "magnifyingglass"
@@ -53,13 +64,13 @@ enum Constant {
 //        static let emptyBoxIcon: String = "square"
         static let checklistNameEditIcon: String = "pencil.line"
         static let checklistDeleteIcon: String = "trash"
-        static let checklistBookmarkFixedIcon: String = "pin.fill"
-        static let checklistBookmarkUnFixedIcon: String = "pin"
+        static let checklistFixedIcon: String = "pin.fill"
+        static let checklistUnFixedIcon: String = "pin"
 //        static let categoryEditIcon: String = "list.bullet"
-        static let bookmarkListIcon: String = "contextualmenu.and.cursorarrow"//"note.text.badge.plus"
+        static let bookmarkListIcon: String = "contextualmenu.and.cursorarrow" //"note.text.badge.plus"
         static let checkboxMenuIcon: String = "ellipsis"
-        static let alarmIcon: String = "alarm"
-        static let alarmMessageIcon: String = "message"
+//        static let alarmIcon: String = "alarm"
+//        static let alarmMessageIcon: String = "message"
 //        static let alarmCheckIcon: String = "checkmark"
         static let infoIcon: String = "info.circle"
         
