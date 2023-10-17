@@ -16,8 +16,7 @@ class ChecklistViewController: BaseViewController {
     private let checklistRepository = ChecklistTableRepository()
     private let checkItemRepository = CheckItemTableRepository()
     
-    
-    let mainView = ChecklistView()
+    private let mainView = ChecklistView()
     
     private var checklistDataSource: UICollectionViewDiffableDataSource<Int, CheckItemTable>!
     
@@ -31,12 +30,14 @@ class ChecklistViewController: BaseViewController {
         configureChecklistDataSource()
         setChecklistData()
         setNavigationBarButton()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(deleteButtonNotificationObserver(notification:)), name: NSNotification.Name.deleteChecklist, object: nil)
     }
     
     override func configureLayout() {
         mainView.checklistCollectionView.delegate = self
         mainView.checklistNameEditButton.addTarget(self, action: #selector(checklistNameEditButtonTapped), for: .touchUpInside)
-        mainView.checklistBookmarkButton.addTarget(self, action: #selector(checklistBookmarkButtonTapped), for: .touchUpInside)
+        mainView.checklistFixedButton.addTarget(self, action: #selector(checklistFixedButtonTapped), for: .touchUpInside)
         mainView.checklistDeleteButton.addTarget(self, action: #selector(checklistDeleteButtonTapped), for: .touchUpInside)
         mainView.bookmarkListButton.addTarget(self, action: #selector(bookmarkListButtonTapped), for: .touchUpInside)
     }
@@ -75,16 +76,53 @@ class ChecklistViewController: BaseViewController {
         navigationController?.popToRootViewController(animated: true)
     }
     
+    // MARK: - 체크리스트 이름 수정 버튼
     @objc private func checklistNameEditButtonTapped() {
         print(#function)
     }
     
-    @objc private func checklistBookmarkButtonTapped() {
+    // MARK: - 체크리스트 고정 버튼
+    @objc private func checklistFixedButtonTapped() {
         print(#function)
+        
+        guard let selectedChecklistID = selectedChecklistID else {
+            print(#function, "selectedChecklistID error")
+            return
+        }
+        
+        guard let isFixed = checklistRepository.getIsFixed(forId: selectedChecklistID) else {
+            return
+        }
+        
+        if isFixed {
+            let imageConfig = UIImage.SymbolConfiguration(pointSize: Constant.TImageButton.checklistImageSize, weight: .regular)
+            let image = UIImage(systemName: Constant.SFSymbol.checklistUnFixedIcon, withConfiguration: imageConfig)
+            mainView.checklistFixedButton.setImage(image, for: .normal)
+            checklistRepository.updateIsFixed(forId: selectedChecklistID, isFixed: false)
+        } else {
+            let imageConfig = UIImage.SymbolConfiguration(pointSize: Constant.TImageButton.checklistImageSize, weight: .regular)
+            let image = UIImage(systemName: Constant.SFSymbol.checklistFixedIcon, withConfiguration: imageConfig)
+            mainView.checklistFixedButton.setImage(image, for: .normal)
+            checklistRepository.updateIsFixed(forId: selectedChecklistID, isFixed: true)
+        }
+        
     }
     
+    // MARK: - 체크리스트 삭제 버튼
     @objc private func checklistDeleteButtonTapped() {
         print(#function)
+        
+        guard let selectedChecklistID = selectedChecklistID else {
+            print(#function, "selectedChecklistID error")
+            return
+        }
+        
+        let popupVC = PopUpViewController()
+        popupVC.modalTransitionStyle = .crossDissolve
+        popupVC.modalPresentationStyle = .overCurrentContext
+        popupVC.selectedChecklistID = selectedChecklistID
+        
+        self.present(popupVC, animated: true)
     }
     
     // MARK: - 즐겨찾기 버튼
@@ -99,6 +137,12 @@ class ChecklistViewController: BaseViewController {
         }
         
         self.present(bookmarkListVC, animated: true)
+    }
+    
+    // MARK: - 삭제 버튼 (노티)
+    @objc func deleteButtonNotificationObserver(notification: NSNotification) {
+        print(#function)
+        navigationController?.popToRootViewController(animated: true)
     }
     
     // MARK: - CollectionView DataSource
@@ -154,7 +198,6 @@ extension ChecklistViewController: UICollectionViewDelegate {
 }
 
 // MARK: - Sheet Delegate
-
 extension ChecklistViewController: UISheetPresentationControllerDelegate {
     
     func sheetPresentationControllerDidChangeSelectedDetentIdentifier(_ sheetPresentationController: UISheetPresentationController) {
