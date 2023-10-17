@@ -11,7 +11,7 @@ import RealmSwift
 class CheckItemTable: Object {
     
     @Persisted(primaryKey: true) var id: ObjectId
-    @Persisted var checklistPK: ObjectId // 속한 체크 리스트 PK
+    @Persisted var checklistPK: ObjectId // 속한 체크리스트 PK
     @Persisted var content: String // 내용
     @Persisted var createdAt: Date // 생성 날짜
     @Persisted var memo: String? // 메모
