@@ -20,9 +20,8 @@ class ChecklistTableRepository: ChecklistTableRepositoryType {
     
     private let realm = try! Realm()
     
-    // Realm Create
+    // MARK: - Realm Create
     func createItem(_ item: ChecklistTable) {
-        
         do {
             try realm.write {
                 realm.add(item)
@@ -31,23 +30,22 @@ class ChecklistTableRepository: ChecklistTableRepositoryType {
         } catch {
             print(error)
         }
-        
     }
     
-    // Realm Read
+    // MARK: - Realm Read
     func fetch(completion: @escaping (Results<ChecklistTable>?) -> Void) {
-        // 생성순으로 내림차순 정렬 (최근 날짜 -> 과거 날짜)
+        /// 생성순으로 내림차순 정렬 (최근 날짜 -> 과거 날짜)
         let data = realm.objects(ChecklistTable.self).sorted(byKeyPath: "createdAt", ascending: false)
         completion(data)
     }
     
     func getObjectIdForItem(_ item: ChecklistTable) -> ObjectId? {
-        // 새롭게 추가된 체크리스트의 ObjectId 를 추출하는 함수
+        /// 새롭게 추가된 Checklist_ObjectId 를 가져오는 함수
         return item.id
     }
     
     func getChecklistName(forId id: ObjectId) -> String? {
-        // ObjectId 를 기준으로 checklistName 을 추출하는 함수
+        /// ObjectId 를 기준으로 Checklist_checklistName 을 가져오는 함수
         if let item = realm.object(ofType: ChecklistTable.self, forPrimaryKey: id) {
             return item.checklistName
         }
@@ -55,40 +53,63 @@ class ChecklistTableRepository: ChecklistTableRepositoryType {
     }
     
     func getChecklistDate(forId id: ObjectId) -> Date? {
-        // ObjectId 를 기준으로 createdAt 을 추출하는 함수
+        /// ObjectId 를 기준으로 Checklist_createdAt 을 가져오는 함수
         if let item = realm.object(ofType: ChecklistTable.self, forPrimaryKey: id) {
             return item.createdAt
         }
         return nil
     }
     
-    // Realm Update
-//    func updateItem(id: ObjectId, title: String, contents: String) {
-//        
-//        do {
-//            try realm.write {
-//                //특정 테이블 값 변경 - 특정이 아닌 전체 수정
-//                realm.create(ChecklistTable.self, value: ["id": id], update: .modified)
-//                print("Realm Update Succeed")
-//            }
-//        } catch {
-//            print(error)
-//        }
-//        
-//    }
+    func getIsFixed(forId id: ObjectId) -> Bool? {
+        /// ObjectId 를 기준으로 Checklist_isFixed 를 가져오는 함수
+        if let item = realm.object(ofType: ChecklistTable.self, forPrimaryKey: id) {
+            return item.isFixed
+        }
+        return nil
+    }
     
-    // Realm Delete
-//    func deleteItem(_ item: ChecklistTable) {
-//        
-//        do {
-//            try realm.write {
-//                realm.delete(item)
-//                print("Realm Delete Succeed")
-//            }
-//        } catch {
-//            print(error)
-//        }
-//        
-//    }
+    // MARK: - Realm Update
+    func updateIsFixed(forId id: ObjectId, isFixed: Bool) {
+        /// ObjectId 를 기준으로 Checklist_isFixed 업데이트 함수
+        if let item = realm.object(ofType: ChecklistTable.self, forPrimaryKey: id) {
+            do {
+                try realm.write {
+                    item.isFixed = isFixed
+                    print("Realm Update isFixed Succeed")
+                }
+            } catch {
+                print(error)
+            }
+        }
+    }
+    
+    func updateChecklistName(forId id: ObjectId, checklistName: String) {
+        /// ObjectId 를 기준으로 Checklist_checklistName 업데이트 함수
+        if let item = realm.object(ofType: ChecklistTable.self, forPrimaryKey: id) {
+            do {
+                try realm.write {
+                    item.checklistName = checklistName
+                    print("Realm Update checklistName Succeed")
+                }
+            } catch {
+                print(error)
+            }
+        }
+    }
+
+    // MARK: - Realm Delete
+    func deleteItem(forId id: ObjectId) {
+        /// ObjectId 를 기준으로 해당하는 Checklist 를 찾아서 삭제하는 함수
+        if let item = realm.object(ofType: ChecklistTable.self, forPrimaryKey: id) {
+            do {
+                try realm.write {
+                    realm.delete(item)
+                    print("Realm Delete Succeed")
+                }
+            } catch {
+                print(error)
+            }
+        }
+    }
     
 }
