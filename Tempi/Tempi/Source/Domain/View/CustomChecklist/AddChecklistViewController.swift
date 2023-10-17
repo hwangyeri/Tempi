@@ -87,7 +87,7 @@ class AddChecklistViewController: BaseViewController {
                 return
             }
             
-            let newChecklist = ChecklistTable(checklistName: subCategoryName, createdAt: Date())
+            let newChecklist = ChecklistTable(checklistName: subCategoryName, createdAt: Date(), isFixed: false)
             checklistRepository.createItem(newChecklist)
             
             guard let newChecklistID = checklistRepository.getObjectIdForItem(newChecklist) else {
