@@ -32,7 +32,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let secondVC = UINavigationController(rootViewController: MyChecklistViewController())
         secondVC.tabBarItem = UITabBarItem(title: .none, image: UIImage(systemName: Constant.SFSymbol.secondTabBarIcon),selectedImage: UIImage(systemName: Constant.SFSymbol.secondTabBarIcon))
         
-        let thirdVC = UINavigationController(rootViewController: PopUpViewController())
+        let thirdVC = UINavigationController(rootViewController: EditChecklistNameViewController())
         thirdVC.tabBarItem = UITabBarItem(title: .none, image: UIImage(systemName: Constant.SFSymbol.thirdTabBarIcon),selectedImage: UIImage(systemName: Constant.SFSymbol.thirdTabBarIcon))
         
         tabBar.viewControllers = [firstVC, secondVC, thirdVC]
