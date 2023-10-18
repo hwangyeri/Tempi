@@ -31,7 +31,13 @@ class ChecklistViewController: BaseViewController {
         setChecklistData()
         setNavigationBarButton()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(deleteButtonNotificationObserver(notification:)), name: NSNotification.Name.deleteChecklist, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(deleteChecklistNotificationObserver(notification:)), name: NSNotification.Name.deleteChecklist, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateChecklistNameNotificationObserver(notification:)), name: NSNotification.Name.updateChecklistName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(deleteCheckItemNotificationObserver(notification:)), name: NSNotification.Name.deleteCheckItem, object: nil)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     override func configureLayout() {
@@ -79,6 +85,12 @@ class ChecklistViewController: BaseViewController {
     // MARK: - 체크리스트 이름 수정 버튼
     @objc private func checklistNameEditButtonTapped() {
         print(#function)
+        let editChecklistNameVC = EditChecklistNameViewController()
+        editChecklistNameVC.modalTransitionStyle = .crossDissolve
+        editChecklistNameVC.modalPresentationStyle = .overCurrentContext
+        editChecklistNameVC.selectedChecklistID = selectedChecklistID
+        editChecklistNameVC.textFieldPlaceholder = mainView.checklistNameLabel.text
+        self.present(editChecklistNameVC, animated: true)
     }
     
     // MARK: - 체크리스트 고정 버튼
@@ -94,18 +106,19 @@ class ChecklistViewController: BaseViewController {
             return
         }
         
-        if isFixed {
-            let imageConfig = UIImage.SymbolConfiguration(pointSize: Constant.TImageButton.checklistImageSize, weight: .regular)
-            let image = UIImage(systemName: Constant.SFSymbol.checklistUnFixedIcon, withConfiguration: imageConfig)
-            mainView.checklistFixedButton.setImage(image, for: .normal)
-            checklistRepository.updateIsFixed(forId: selectedChecklistID, isFixed: false)
-        } else {
-            let imageConfig = UIImage.SymbolConfiguration(pointSize: Constant.TImageButton.checklistImageSize, weight: .regular)
-            let image = UIImage(systemName: Constant.SFSymbol.checklistFixedIcon, withConfiguration: imageConfig)
-            mainView.checklistFixedButton.setImage(image, for: .normal)
-            checklistRepository.updateIsFixed(forId: selectedChecklistID, isFixed: true)
+        DispatchQueue.main.async {
+            if isFixed {
+                let imageConfig = UIImage.SymbolConfiguration(pointSize: Constant.TImageButton.checklistImageSize, weight: .regular)
+                let image = UIImage(systemName: Constant.SFSymbol.checklistUnFixedIcon, withConfiguration: imageConfig)
+                self.mainView.checklistFixedButton.setImage(image, for: .normal)
+                self.checklistRepository.updateIsFixed(forId: selectedChecklistID, isFixed: false)
+            } else {
+                let imageConfig = UIImage.SymbolConfiguration(pointSize: Constant.TImageButton.checklistImageSize, weight: .regular)
+                let image = UIImage(systemName: Constant.SFSymbol.checklistFixedIcon, withConfiguration: imageConfig)
+                self.mainView.checklistFixedButton.setImage(image, for: .normal)
+                self.checklistRepository.updateIsFixed(forId: selectedChecklistID, isFixed: true)
+            }
         }
-        
     }
     
     // MARK: - 체크리스트 삭제 버튼
@@ -121,7 +134,7 @@ class ChecklistViewController: BaseViewController {
         popupVC.modalTransitionStyle = .crossDissolve
         popupVC.modalPresentationStyle = .overCurrentContext
         popupVC.selectedChecklistID = selectedChecklistID
-        
+        popupVC.popUpAction = .deleteChecklist
         self.present(popupVC, animated: true)
     }
     
@@ -139,10 +152,35 @@ class ChecklistViewController: BaseViewController {
         self.present(bookmarkListVC, animated: true)
     }
     
-    // MARK: - 삭제 버튼 (노티)
-    @objc func deleteButtonNotificationObserver(notification: NSNotification) {
+    // MARK: - 체크리스트 삭제 버튼 (노티)
+    @objc func deleteChecklistNotificationObserver(notification: NSNotification) {
         print(#function)
         navigationController?.popToRootViewController(animated: true)
+    }
+    
+    // MARK: - 이름 수정 (노티)
+    @objc func updateChecklistNameNotificationObserver(notification: NSNotification) {
+        print(#function)
+        
+        DispatchQueue.main.async {
+            if let newName = notification.userInfo?["checklistName"] as? String {
+                self.mainView.checklistNameLabel.text = newName
+            } else {
+                print(#function, "newName error")
+            }
+        }
+    }
+    
+    @objc func deleteCheckItemNotificationObserver(notification: NSNotification) {
+        print(#function)
+        
+        // FIXME: 다국어 설정
+        showToast(message: "성공적으로 삭제되었습니다!")
+        
+        // FIXME: 삭제된 CollectionViewCell 만 apply 해주기
+        DispatchQueue.main.async {
+            self.configureChecklistDataSource()
+        }
     }
     
     // MARK: - CollectionView DataSource
@@ -158,14 +196,24 @@ class ChecklistViewController: BaseViewController {
                 UIAction(title: "checklist_checkBoxMenuButton_firstMenu".localized, image: UIImage(systemName: Constant.SFSymbol.editMenuItemIcon), handler: { _ in
                     print("Edit Menu Tapped")
                 }),
+                
                 UIAction(title: "checklist_checkBoxMenuButton_secondMenu".localized, image: UIImage(systemName: Constant.SFSymbol.addMemoMenuItemIcon), handler: { _ in
                     print("Add Memo Menu Tapped")
                 }),
+                
                 UIAction(title: "checklist_checkBoxMenuButton_thirdMenu".localized, image: UIImage(systemName: Constant.SFSymbol.deleteMemuItemIcon), attributes: .destructive, handler: { _ in
                     print("Delete Menu Tapped")
+                    
+                    let checkItemID = itemIdentifier.id
+                    
+                    let popupVC = PopUpViewController()
+                    popupVC.modalTransitionStyle = .crossDissolve
+                    popupVC.modalPresentationStyle = .overCurrentContext
+                    popupVC.selectedCheckItemID = checkItemID
+                    popupVC.popUpAction = .deleteCheckItem
+                    self.present(popupVC, animated: true)
                 })
             ])
-            
         }
         
         checklistDataSource = UICollectionViewDiffableDataSource(collectionView: mainView.checklistCollectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
@@ -188,6 +236,7 @@ extension ChecklistViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(#function)
         
+        // FIXME: 체크박스 클릭시 Realm Data 상호작용 및 UI 업데이트 필요
         if let cell = collectionView.cellForItem(at: indexPath) as? ChecklistCollectionViewCell {
             cell.checkBoxButton.layer.backgroundColor = UIColor.tGray1000.cgColor
             cell.checkBoxButton.setImage(UIImage(systemName: Constant.SFSymbol.checkIcon), for: .normal)
