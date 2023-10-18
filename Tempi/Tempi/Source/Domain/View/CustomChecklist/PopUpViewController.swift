@@ -8,9 +8,16 @@
 import UIKit
 import RealmSwift
 
+enum PopUpAction {
+    case deleteChecklist
+    case deleteCheckItem
+}
+
 class PopUpViewController: BaseViewController {
     
     var selectedChecklistID: ObjectId?
+    var selectedCheckItemID: ObjectId?
+    var popUpAction: PopUpAction?
     
     private let checklistRepository = ChecklistTableRepository()
     private let checkItemRepository = CheckItemTableRepository()
@@ -40,16 +47,43 @@ class PopUpViewController: BaseViewController {
     // MARK: - 삭제 버튼
     @objc private func deleteButtonTapped() {
         print(#function)
-
+        
+        guard let action = popUpAction else {
+            print("PopUp action is not defined")
+            return
+        }
+        
+        switch action {
+        case .deleteChecklist:
+            handleDeleteChecklist()
+        case .deleteCheckItem:
+            handleDeleteCheckItem()
+        }
+    }
+    
+    private func handleDeleteChecklist() {
         guard let selectedChecklistID = selectedChecklistID else {
-            print(#function, "selectedChecklistID error")
+            print("selectedChecklistID error")
             return
         }
         
         checklistRepository.deleteItem(forId: selectedChecklistID)
-        checkItemRepository.deleteItem(forChecklistPK: selectedChecklistID)
-        NotificationCenter.default.post(name: NSNotification.Name.deleteChecklist, object: nil)
-        dismiss(animated: true)
+        checkItemRepository.deleteAllCheckItem(forChecklistPK: selectedChecklistID)
+        dismiss(animated: true) {
+            NotificationCenter.default.post(name: NSNotification.Name.deleteChecklist, object: nil)
+        }
+    }
+    
+    private func handleDeleteCheckItem() {
+        guard let selectedCheckItemID = selectedCheckItemID else {
+            print("selectedCheckItemID error")
+            return
+        }
+        
+        checkItemRepository.deleteCheckItem(withID: selectedCheckItemID)
+        dismiss(animated: true) {
+            NotificationCenter.default.post(name: NSNotification.Name.deleteCheckItem, object: nil)
+        }
     }
     
 }
