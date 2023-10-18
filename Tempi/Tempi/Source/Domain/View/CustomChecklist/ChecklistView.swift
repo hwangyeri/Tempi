@@ -13,7 +13,7 @@ class ChecklistView: BaseView {
     let checklistNameLabel = {
        let view = TLabel(
         text: "checklist_checklistNameLabel".localized,
-        custFont: .pretendardBoldXXL,
+        custFont: .pretendardBoldXXXL,
         textColor: .tGray1000
        )
         return view
@@ -62,6 +62,24 @@ class ChecklistView: BaseView {
     
     lazy var checklistCollectionView = UICollectionView(frame: .zero, collectionViewLayout: configureChecklistCollectionLayout())
     
+    let addCheckItemButton = {
+        let view = TImageButton(
+            imageSize: 35,
+            imageName: Constant.SFSymbol.plusSquareIcon,
+            imageColor: .tGray1000
+        )
+        return view
+    }()
+    
+    let addCheckItemLabel = {
+       let view = TLabel(
+        text: "추가하기",
+        custFont: .pretendardRegularL,
+        textColor: .tGray1000
+       )
+        return view
+    }()
+    
     let bookmarkListButton = {
         let view = UIButton()
         view.setImage(UIImage(systemName: Constant.SFSymbol.bookmarkListIcon), for: .normal)
@@ -81,7 +99,8 @@ class ChecklistView: BaseView {
     
     override func configureHierarchy() {
         [checklistNameLabel, checklistDateLabel, checklistNameEditButton,
-         checklistFixedButton, checklistDeleteButton, divider, checklistCollectionView, bookmarkListButton].forEach {
+         checklistFixedButton, checklistDeleteButton, divider, checklistCollectionView,
+         addCheckItemButton, addCheckItemLabel, bookmarkListButton].forEach {
             addSubview($0)
         }
     }
@@ -121,11 +140,23 @@ class ChecklistView: BaseView {
         checklistCollectionView.snp.makeConstraints { make in
             make.top.equalTo(divider.snp.bottom).offset(30)
             make.leading.equalTo(checklistNameLabel)
-            make.bottom.equalTo(self.safeAreaLayoutGuide).inset(80)
-            make.trailing.equalTo(self.safeAreaLayoutGuide).inset(30)
+            make.trailing.equalToSuperview().inset(20)
+            make.bottom.equalTo(addCheckItemButton.snp.top).offset(-15)
         }
-        
 //        checklistCollectionView.backgroundColor = .lightGray
+//        checklistCollectionView.setContentHuggingPriority(.init(751), for: .vertical)
+        
+        addCheckItemButton.snp.makeConstraints { make in
+            make.leading.equalTo(checklistCollectionView).inset(7)
+            make.bottom.equalTo(bookmarkListButton.snp.top).offset(-50)
+        }
+//        addCheckItemButton.setContentHuggingPriority(.init(750), for: .vertical)
+        
+        addCheckItemLabel.snp.makeConstraints { make in
+            make.centerY.equalTo(addCheckItemButton)
+            make.leading.equalTo(addCheckItemButton.snp.trailing).offset(15)
+            make.width.equalTo(60)
+        }
         
         bookmarkListButton.snp.makeConstraints { make in
             make.bottom.equalTo(self.safeAreaLayoutGuide).inset(25)
@@ -136,7 +167,7 @@ class ChecklistView: BaseView {
     }
     
     private func configureChecklistCollectionLayout() -> UICollectionViewLayout {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.5))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(60))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(100))
