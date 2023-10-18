@@ -53,8 +53,8 @@ class CheckItemTableRepository: CheckItemTableRepositoryType {
 //    }
     
     // MARK: - Realm Delete
-    func deleteItem(forChecklistPK checklistPK: ObjectId) {
-        /// checklistPK 를 기준으로 필터링, 해당하는 Check Item 을 삭제하는 함수
+    func deleteAllCheckItem(forChecklistPK checklistPK: ObjectId) {
+        /// checklistPK 를 기준으로 필터링, 해당하는 모든 Check Item 을 삭제하는 함수
         let itemsToDelete = realm.objects(CheckItemTable.self).filter("checklistPK == %@", checklistPK)
         do {
             try realm.write {
@@ -63,6 +63,23 @@ class CheckItemTableRepository: CheckItemTableRepositoryType {
             }
         } catch {
             print(error)
+        }
+    }
+    
+    func deleteCheckItem(withID id: ObjectId) {
+        /// ObjectId 를 기준으로 해당하는 Check Item 을 삭제하는 함수
+        do {
+            let realm = try Realm()
+            if let itemToDelete = realm.object(ofType: CheckItemTable.self, forPrimaryKey: id) {
+                try realm.write {
+                    realm.delete(itemToDelete)
+                }
+                print("Realm Delete Succeed")
+            } else {
+                print("Error: Item with ID \(id) not found.")
+            }
+        } catch {
+            print("Error deleting check item: \(error)")
         }
     }
     
