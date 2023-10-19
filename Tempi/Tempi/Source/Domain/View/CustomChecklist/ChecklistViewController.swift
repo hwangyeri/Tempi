@@ -197,10 +197,8 @@ class ChecklistViewController: BaseViewController {
     @objc func deleteCheckItemNotificationObserver(notification: NSNotification) {
         print(#function)
         
-        // FIXME: 다국어 설정
-        showToast(message: "성공적으로 삭제되었습니다!")
+        showToast(message: "showToast_delete".localized)
         
-        // FIXME: 삭제된 CollectionViewCell 만 apply 해주기
         DispatchQueue.main.async {
             self.configureChecklistDataSource()
         }
@@ -210,8 +208,7 @@ class ChecklistViewController: BaseViewController {
     @objc func updateCheckItemContentNotificationObserver(notification: NSNotification) {
         print(#function)
         
-        // FIXME: 다국어 설정
-        showToast(message: "성공적으로 수정되었습니다!")
+        showToast(message: "showToast_update".localized)
         
         DispatchQueue.main.async {
             self.configureChecklistDataSource()
@@ -222,8 +219,7 @@ class ChecklistViewController: BaseViewController {
     @objc func updateCheckItemMemoNotificationObserver(notification: NSNotification) {
         print(#function)
         
-        // FIXME: 다국어 설정
-        showToast(message: "성공적으로 수정되었습니다!")
+        showToast(message: "showToast_update".localized)
         
         DispatchQueue.main.async {
             self.configureChecklistDataSource()
