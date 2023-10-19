@@ -101,3 +101,9 @@
 
 "editModal_textField_placeholder" = "%@";
 "editModal_saveButton" = "Save";
+
+// DeleteModalView
+"deleteModal_mainLabel" = "Are you sure you want to delete it?";
+"deleteModal_subLabel" = "Deleted data is difficult to recover...😢";
+"deleteModal_cancelButton" = "Cancel";
+"deleteModal_deleteButton" = "Delete";

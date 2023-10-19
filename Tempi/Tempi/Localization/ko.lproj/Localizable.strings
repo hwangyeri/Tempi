@@ -102,3 +102,8 @@
 "editModal_textField_placeholder" = "%@";
 "editModal_saveButton" = "저장";
 
+// DeleteModalView
+"deleteModal_mainLabel" = "정말로 삭제하실 건가요?";
+"deleteModal_subLabel" = "삭제된 데이터는 복구가 어려워요...😢";
+"deleteModal_cancelButton" = "취소";
+"deleteModal_deleteButton" = "삭제";

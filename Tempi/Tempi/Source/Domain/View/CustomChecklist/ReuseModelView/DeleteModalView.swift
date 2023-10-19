@@ -1,5 +1,5 @@
 //
-//  DeletePopUpView.swift
+//  DeleteModalView.swift
 //  Tempi
 //
 //  Created by Yeri Hwang on 2023/10/16.
@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class DeletePopUpView: BaseView {
+class DeleteModalView: BaseView {
     
     let backView = {
         let view = UIView()
@@ -18,9 +18,8 @@ class DeletePopUpView: BaseView {
     }()
     
     let mainLabel = {
-        // FIXME: 다국어 설정
        let view = TLabel(
-        text: "정말로 삭제하실 건가요?",
+        text: "deleteModal_mainLabel".localized,
         custFont: .pretendardSemiBoldL,
         textColor: .tGray1000)
         view.textAlignment = .center
@@ -28,9 +27,8 @@ class DeletePopUpView: BaseView {
     }()
     
     let subLabel = {
-        // FIXME: 다국어 설정
         let view = TLabel(
-         text: "삭제된 데이터는 복구가 어려워요...😢",
+            text: "deleteModal_subLabel".localized,
          custFont: .pretendardRegularS,
          textColor: .tGray1000)
         view.textAlignment = .center
@@ -38,18 +36,16 @@ class DeletePopUpView: BaseView {
     }()
     
     let cancelButton = {
-        // FIXME: 다국어 설정
         let view = TPopUpButton(
-            text: "취소"
+            text: "deleteModal_cancelButton".localized
         )
         view.backgroundColor = UIColor.tGray700
         return view
     }()
     
     let deleteButton = {
-        // FIXME: 다국어 설정
         let view = TPopUpButton(
-            text: "삭제"
+            text: "deleteModal_deleteButton".localized
         )
         return view
     }()

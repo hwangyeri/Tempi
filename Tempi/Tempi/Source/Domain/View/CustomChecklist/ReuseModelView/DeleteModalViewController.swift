@@ -22,7 +22,7 @@ class DeleteModalViewController: BaseViewController {
     private let checklistRepository = ChecklistTableRepository()
     private let checkItemRepository = CheckItemTableRepository()
     
-    private let mainView = DeletePopUpView()
+    private let mainView = DeleteModalView()
     
     override func loadView() {
         self.view = mainView
