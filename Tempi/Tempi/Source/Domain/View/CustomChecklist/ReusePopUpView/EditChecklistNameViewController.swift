@@ -8,10 +8,16 @@
 import UIKit
 import RealmSwift
 
+enum NameAction {
+    case createChecklist
+    case updateChecklistName
+}
+
 class EditChecklistNameViewController: BaseViewController {
     
     var selectedChecklistID: ObjectId?
     var textFieldPlaceholder: String?
+    var nameAction: NameAction?
     
     private let checklistRepository = ChecklistTableRepository()
     
@@ -54,6 +60,40 @@ class EditChecklistNameViewController: BaseViewController {
     @objc private func editButtonTapped() {
         print(#function)
         
+        guard let action = nameAction else {
+            print("Name action is not defined")
+            return
+        }
+        
+        switch action {
+        case .createChecklist:
+            handleCreateChecklist()
+        case .updateChecklistName:
+            handleUpdateChecklistName()
+        }
+        
+    }
+    
+    private func handleCreateChecklist() {
+        guard let textFieldText = mainView.textField.text else {
+            print("textFieldText error")
+            return
+        }
+        
+        let item = ChecklistTable(checklistName: textFieldText, createdAt: Date(), isFixed: false)
+        checklistRepository.createItem(item)
+        
+        guard let newChecklistID = checklistRepository.getLatestChecklistId() else {
+            print("newChecklistID error")
+            return
+        }
+        
+        dismiss(animated: true) {
+            NotificationCenter.default.post(name: NSNotification.Name.createChecklist, object: nil, userInfo: ["checklistID": newChecklistID])
+        }
+    }
+    
+    private func handleUpdateChecklistName() {
         guard let selectedChecklistID = selectedChecklistID else {
             print("selectedChecklistID error")
             return
@@ -64,8 +104,9 @@ class EditChecklistNameViewController: BaseViewController {
             return
         }
         
-        checklistRepository.updateChecklistName(forId: selectedChecklistID, checklistName: textFieldText)
+        checklistRepository.updateChecklistName(forId: selectedChecklistID, newChecklistName: textFieldText)
         NotificationCenter.default.post(name: NSNotification.Name.updateChecklistName, object: nil, userInfo: ["checklistName": textFieldText])
+        
         self.dismiss(animated: true)
     }
     
@@ -102,7 +143,7 @@ extension EditChecklistNameViewController: UITextFieldDelegate {
         guard let text = mainView.textField.text, !text.isEmpty else {
             DispatchQueue.main.async {
                 self.mainView.editButton.isEnabled = false
-                self.mainView.editButton.backgroundColor = .tGray400
+                self.mainView.editButton.backgroundColor = .tGray500
             }
             return
         }
