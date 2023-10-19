@@ -34,7 +34,7 @@ class AddChecklistView: BaseView {
         let view = UIButton()
         view.layer.cornerRadius = Constant.TChecklist.cornerRadius
         view.layer.borderWidth = Constant.TChecklist.borderWidth
-        view.layer.borderColor = UIColor.tGray400.cgColor
+        view.layer.borderColor = UIColor.tGray500.cgColor
         view.clipsToBounds = true
         view.setTitleColor(.tGray1000, for: .normal)
         view.tintColor = UIColor.tGray1000

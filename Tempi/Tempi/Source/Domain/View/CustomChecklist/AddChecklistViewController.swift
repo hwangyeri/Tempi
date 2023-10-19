@@ -53,7 +53,7 @@ class AddChecklistViewController: BaseViewController {
             mainView.addButton.backgroundColor = UIColor.tGray1000
         } else {
             mainView.addButton.isEnabled = false
-            mainView.addButton.backgroundColor = UIColor.tGray400
+            mainView.addButton.backgroundColor = UIColor.tGray500
         }
     }
     
@@ -68,7 +68,7 @@ class AddChecklistViewController: BaseViewController {
         
         if let selectedIndex = selectedIndex,
            let selectedCell = mainView.addChecklistCollectionView.cellForItem(at: selectedIndex) as? AddChecklistCollectionViewCell {
-            selectedCell.checklistButton.layer.borderColor = UIColor.tGray400.cgColor
+            selectedCell.checklistButton.layer.borderColor = UIColor.tGray500.cgColor
             selectedCell.checklistButton.layer.borderWidth = Constant.TChecklist.borderWidth
         }
         
@@ -170,13 +170,13 @@ extension AddChecklistViewController: UICollectionViewDelegate {
         
         mainView.addToNewListButton.isSelected = false
         isAnyButtonSelected = false
-        mainView.addToNewListButton.layer.borderColor = UIColor.tGray400.cgColor
+        mainView.addToNewListButton.layer.borderColor = UIColor.tGray500.cgColor
         mainView.addToNewListButton.layer.borderWidth = Constant.TChecklist.borderWidth
         
         // 이전에 선택된 셀이 있는 경우, 선택 해제 및 UI 업데이트
         if let selectedIndex = selectedIndex,
            let selectedCell = collectionView.cellForItem(at: selectedIndex) as? AddChecklistCollectionViewCell {
-            selectedCell.checklistButton.layer.borderColor = UIColor.tGray400.cgColor
+            selectedCell.checklistButton.layer.borderColor = UIColor.tGray500.cgColor
             selectedCell.checklistButton.layer.borderWidth = Constant.TChecklist.borderWidth
         }
         

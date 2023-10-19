@@ -14,7 +14,7 @@ final class TButton: UIButton {
         
         self.setTitle(text, for: .normal)
         self.setTitleColor(UIColor.tGray100, for: .normal)
-        self.backgroundColor = UIColor.tGray400
+        self.backgroundColor = UIColor.tGray500
         self.layer.cornerRadius = Constant.TButton.cornerRadius
         self.titleLabel?.font = .customFont(.pretendardSemiBoldXL)
     }
