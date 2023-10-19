@@ -131,16 +131,16 @@ class CategoryHomeView: BaseView {
         }
         
         categoryCollectionView.snp.makeConstraints { make in
-            make.top.equalTo(categorySubLabel.snp.bottom).offset(30)
+            make.top.equalTo(categorySubLabel.snp.bottom).offset(20)
             make.horizontalEdges.equalTo(self.safeAreaLayoutGuide).inset(20)
-            make.height.equalTo(180)
         }
         
 //        categoryCollectionView.backgroundColor = .lightGray
         
         plusButton.snp.makeConstraints { make in
-            make.centerX.equalTo(self.safeAreaLayoutGuide)
-            make.bottom.equalTo(self.safeAreaLayoutGuide).inset(50)
+            make.top.equalTo(categoryCollectionView.snp.bottom).offset(20)
+            make.centerX.equalToSuperview()
+            make.bottom.equalTo(self.safeAreaLayoutGuide).inset(30)
         }
     }
     
@@ -169,7 +169,7 @@ class CategoryHomeView: BaseView {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.25), heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.4))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(60))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 4)
         group.interItemSpacing = .fixed(10)
         

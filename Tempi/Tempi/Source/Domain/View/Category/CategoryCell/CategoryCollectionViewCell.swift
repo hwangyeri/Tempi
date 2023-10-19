@@ -36,13 +36,13 @@ class CategoryCollectionViewCell: BaseCollectionViewCell {
     override func configureLayout() {
         imageView.snp.makeConstraints { make in
             make.top.horizontalEdges.equalTo(contentView)
-            make.height.equalTo(contentView).multipliedBy(0.5)
+            make.centerX.equalToSuperview()
+            make.size.equalTo(30)
         }
         
         textLabel.snp.makeConstraints { make in
-            make.top.equalTo(imageView.snp.bottom).offset(2)
+            make.top.equalTo(imageView.snp.bottom).offset(10)
             make.bottom.horizontalEdges.equalTo(contentView)
-            make.height.equalTo(contentView).multipliedBy(0.3)
         }
     }
     
