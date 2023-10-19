@@ -22,14 +22,14 @@ class EditChecklistNameView: BaseView {
     let mainLabel = {
         // FIXME: 다국어 설정
        let view = TLabel(
-        text: "체크리스트의 이름을 수정해 주세요.",
+        text: "체크리스트의 이름을 입력해 주세요.",
         custFont: .pretendardSemiBoldXXL,
         textColor: .tGray1000)
         return view
     }()
     
     let subLabel = {
-        // FIXME: 다국어 설정
+        // FIXME: 다국어 설정, 텍스트 수정
         let view = TLabel(
          text: "완료 버튼을 눌러야 새로운 이름으로 변경할 수 있어요!",
          custFont: .pretendardRegularM,
@@ -58,7 +58,7 @@ class EditChecklistNameView: BaseView {
     }()
     
     let editButton = {
-        // FIXME: 다국어 설정
+        // FIXME: 다국어 설정, 텍스트 분기처리 (완료/다음)
         let view = TButton(
             text: "완료"
         )
