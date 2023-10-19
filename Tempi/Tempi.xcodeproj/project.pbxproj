@@ -10,12 +10,15 @@
 		2B49F5A02AC864F100FF903F /* CategoryHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B49F59F2AC864F100FF903F /* CategoryHomeView.swift */; };
 		2B63782B2ADBCCEF00203AFA /* CheckItemTableRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63782A2ADBCCEF00203AFA /* CheckItemTableRepository.swift */; };
 		2B63782D2ADC578200203AFA /* MyChecklistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63782C2ADC578200203AFA /* MyChecklistView.swift */; };
-		2B63782F2ADD56B700203AFA /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63782E2ADD56B700203AFA /* PopUpViewController.swift */; };
-		2B6378312ADD56BF00203AFA /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6378302ADD56BF00203AFA /* PopUpView.swift */; };
+		2B63782F2ADD56B700203AFA /* DeletePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63782E2ADD56B700203AFA /* DeletePopUpViewController.swift */; };
+		2B6378312ADD56BF00203AFA /* DeletePopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6378302ADD56BF00203AFA /* DeletePopUpView.swift */; };
 		2B6378332ADD684600203AFA /* TPopUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6378322ADD684600203AFA /* TPopUpButton.swift */; };
 		2B6378352ADD700B00203AFA /* NSNotification+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6378342ADD700B00203AFA /* NSNotification+.swift */; };
 		2B6378372ADD729600203AFA /* EditChecklistNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6378362ADD729600203AFA /* EditChecklistNameView.swift */; };
 		2B6378392ADD72A000203AFA /* EditChecklistNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6378382ADD72A000203AFA /* EditChecklistNameViewController.swift */; };
+		2B6378422ADFCC9200203AFA /* EditModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6378412ADFCC9200203AFA /* EditModalViewController.swift */; };
+		2B6378442ADFCCA100203AFA /* EditModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6378432ADFCCA100203AFA /* EditModalView.swift */; };
+		2B6378462ADFF1E400203AFA /* HideKeyboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6378452ADFF1E400203AFA /* HideKeyboard+.swift */; };
 		2B81053C2ACEFD3700B50223 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81053B2ACEFD3700B50223 /* SearchViewController.swift */; };
 		2B81053E2ACEFD3F00B50223 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81053D2ACEFD3F00B50223 /* SearchView.swift */; };
 		2B8105492AD02A0C00B50223 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 2B8105482AD02A0C00B50223 /* Realm */; };
@@ -82,12 +85,15 @@
 		2B49F59F2AC864F100FF903F /* CategoryHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHomeView.swift; sourceTree = "<group>"; };
 		2B63782A2ADBCCEF00203AFA /* CheckItemTableRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckItemTableRepository.swift; sourceTree = "<group>"; };
 		2B63782C2ADC578200203AFA /* MyChecklistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChecklistView.swift; sourceTree = "<group>"; };
-		2B63782E2ADD56B700203AFA /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
-		2B6378302ADD56BF00203AFA /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
+		2B63782E2ADD56B700203AFA /* DeletePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePopUpViewController.swift; sourceTree = "<group>"; };
+		2B6378302ADD56BF00203AFA /* DeletePopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePopUpView.swift; sourceTree = "<group>"; };
 		2B6378322ADD684600203AFA /* TPopUpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPopUpButton.swift; sourceTree = "<group>"; };
 		2B6378342ADD700B00203AFA /* NSNotification+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotification+.swift"; sourceTree = "<group>"; };
 		2B6378362ADD729600203AFA /* EditChecklistNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditChecklistNameView.swift; sourceTree = "<group>"; };
 		2B6378382ADD72A000203AFA /* EditChecklistNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditChecklistNameViewController.swift; sourceTree = "<group>"; };
+		2B6378412ADFCC9200203AFA /* EditModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditModalViewController.swift; sourceTree = "<group>"; };
+		2B6378432ADFCCA100203AFA /* EditModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditModalView.swift; sourceTree = "<group>"; };
+		2B6378452ADFF1E400203AFA /* HideKeyboard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HideKeyboard+.swift"; sourceTree = "<group>"; };
 		2B81053B2ACEFD3700B50223 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		2B81053D2ACEFD3F00B50223 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		2B81054F2AD02B8F00B50223 /* CategoryTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTable.swift; sourceTree = "<group>"; };
@@ -213,13 +219,23 @@
 				2B952A122ACE835F0074D4F2 /* ChecklistView.swift */,
 				2B9D8D412AD973F3006F42E0 /* BookmarkListViewController.swift */,
 				2B9D8D432AD97408006F42E0 /* BookmarkListView.swift */,
-				2B63782E2ADD56B700203AFA /* PopUpViewController.swift */,
-				2B6378302ADD56BF00203AFA /* PopUpView.swift */,
-				2B6378382ADD72A000203AFA /* EditChecklistNameViewController.swift */,
-				2B6378362ADD729600203AFA /* EditChecklistNameView.swift */,
+				2BAF93FD2AE041AA00F0584A /* ReuseModelView */,
 				2B8105392ACEFCDB00B50223 /* ChecklistCell */,
 			);
 			path = CustomChecklist;
+			sourceTree = "<group>";
+		};
+		2BAF93FD2AE041AA00F0584A /* ReuseModelView */ = {
+			isa = PBXGroup;
+			children = (
+				2B63782E2ADD56B700203AFA /* DeletePopUpViewController.swift */,
+				2B6378302ADD56BF00203AFA /* DeletePopUpView.swift */,
+				2B6378382ADD72A000203AFA /* EditChecklistNameViewController.swift */,
+				2B6378362ADD729600203AFA /* EditChecklistNameView.swift */,
+				2B6378412ADFCC9200203AFA /* EditModalViewController.swift */,
+				2B6378432ADFCCA100203AFA /* EditModalView.swift */,
+			);
+			path = ReuseModelView;
 			sourceTree = "<group>";
 		};
 		2BDE84D12AC95FEB0018C759 /* Component */ = {
@@ -349,6 +365,7 @@
 				2BC72B862AC727640014420F /* Alert+.swift */,
 				2BC72B8A2AC72C1C0014420F /* Date+.swift */,
 				2B6378342ADD700B00203AFA /* NSNotification+.swift */,
+				2B6378452ADFF1E400203AFA /* HideKeyboard+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -566,15 +583,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B6378442ADFCCA100203AFA /* EditModalView.swift in Sources */,
 				2BC72B8B2AC72C1C0014420F /* Date+.swift in Sources */,
 				2B9D8D422AD973F3006F42E0 /* BookmarkListViewController.swift in Sources */,
 				2B952A112ACE83420074D4F2 /* ChecklistViewController.swift in Sources */,
 				2B91AB652AD6977B0078AB39 /* AddChecklistViewController.swift in Sources */,
+				2B6378422ADFCC9200203AFA /* EditModalViewController.swift in Sources */,
 				2BC72B7A2AC717240014420F /* Font+.swift in Sources */,
 				2B6378352ADD700B00203AFA /* NSNotification+.swift in Sources */,
 				2BF5FE122AC6E6C1009BCBD9 /* MyChecklistViewController.swift in Sources */,
 				2BC72B852AC723160014420F /* BaseCollectionViewCell.swift in Sources */,
-				2B63782F2ADD56B700203AFA /* PopUpViewController.swift in Sources */,
+				2B63782F2ADD56B700203AFA /* DeletePopUpViewController.swift in Sources */,
 				2BF5FE672AC70B51009BCBD9 /* Color+.swift in Sources */,
 				2B81055C2AD1000200B50223 /* APIService.swift in Sources */,
 				2B81053E2ACEFD3F00B50223 /* SearchView.swift in Sources */,
@@ -598,7 +617,7 @@
 				2BC72B872AC727640014420F /* Alert+.swift in Sources */,
 				2B9D8D4A2ADBB3B8006F42E0 /* ChecklistTableRepository.swift in Sources */,
 				2B63782D2ADC578200203AFA /* MyChecklistView.swift in Sources */,
-				2B6378312ADD56BF00203AFA /* PopUpView.swift in Sources */,
+				2B6378312ADD56BF00203AFA /* DeletePopUpView.swift in Sources */,
 				2BDE84D72ACAFDCD0018C759 /* CategoryCollectionViewCell.swift in Sources */,
 				2BC72B812AC720B30014420F /* BaseViewController.swift in Sources */,
 				2BF5FE652AC7079B009BCBD9 /* Localized+.swift in Sources */,
@@ -616,6 +635,7 @@
 				2BF5FE102AC6E6C1009BCBD9 /* SceneDelegate.swift in Sources */,
 				2B6378332ADD684600203AFA /* TPopUpButton.swift in Sources */,
 				2B8105562AD02F7600B50223 /* BookmarkTable.swift in Sources */,
+				2B6378462ADFF1E400203AFA /* HideKeyboard+.swift in Sources */,
 				2B952A152ACEA5960074D4F2 /* TImageButton.swift in Sources */,
 				2B8105542AD02DA400B50223 /* CheckItemTable.swift in Sources */,
 				2B8105582AD0FE4600B50223 /* TempiModel.swift in Sources */,
