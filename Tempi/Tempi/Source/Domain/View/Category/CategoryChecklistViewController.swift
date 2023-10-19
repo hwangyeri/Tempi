@@ -9,9 +9,7 @@ import UIKit
 import RealmSwift
 
 class CategoryChecklistViewController: BaseViewController {
-    
-//    let realm = try! Realm()
-    
+        
     private let repository = ChecklistTableRepository()
     
     var categoryName: String?
@@ -45,8 +43,6 @@ class CategoryChecklistViewController: BaseViewController {
         
         configureSubCategoryDataSource()
         setLocalized()
-        
-//        print(realm.configuration.fileURL)
     }
     
     override func configureLayout() {

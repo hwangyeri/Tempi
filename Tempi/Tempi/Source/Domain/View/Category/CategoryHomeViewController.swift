@@ -16,6 +16,8 @@ enum CollectionViewType {
 
 class CategoryHomeViewController: BaseViewController {
     
+//    let realm = try! Realm()
+    
     private var recommendSearchWordsList: [String] = []
     
     private let mainView = CategoryHomeView()
@@ -32,6 +34,8 @@ class CategoryHomeViewController: BaseViewController {
         
         let randomSubCategories = getRandomSubCategories()
         recommendSearchWordsList = randomSubCategories
+        
+//        print(realm.configuration.fileURL)
 //        print("randomSubCategories ----->", randomSubCategories)
 //        print("recommendSearchWordsList ----->", recommendSearchWordsList)
         
