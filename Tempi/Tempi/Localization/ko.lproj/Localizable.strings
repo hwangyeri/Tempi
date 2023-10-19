@@ -48,12 +48,11 @@
 "category_checklist_selectAllLabel_unSelectAll" = "전체 해제";
 "category_checklist_tButton" = "내 리스트에 추가하기";
 
-// ChecklistView // FIXME: checklist_checklistDateLabel
-//"checklist_checklistNameLabel" = "%@";
+// ChecklistView
 "checklist_checklistDateLabel" = "ko_KR";
 "checklist_bookmarkListButton" = "즐겨찾기";
 "checklist_checkBoxMenuButton_firstMenu" = "수정";
-"checklist_checkBoxMenuButton_secondMenu" = "메모 추가";
+"checklist_checkBoxMenuButton_secondMenu" = "메모 설정";
 "checklist_checkBoxMenuButton_thirdMenu" = "삭제";
 
 // SearchView
@@ -89,3 +88,23 @@
 
 // MyListView
 "myList_mainLabel" = "나의\nChecklist";
+
+// EditModalView
+"editModal_updateContent_mainLabel" = "내용 수정";
+"editModal_updateContent_subLabel" = "수정하고 싶은 내용을 입력해 주세요.";
+"editModal_updateContent_currentNumberOfCharactersLabel" = "%d / ";
+"editModal_updateContent_maximumNumberOfCharactersLabel" = "60";
+
+"editModal_updateMemo_mainLabel" = "메모 설정";
+"editModal_updateMemo_subLabel" = "추가로 메모하고 싶은 내용을 입력해 주세요.";
+"editModal_updateMemo_currentNumberOfCharactersLabel" = "%d / ";
+"editModal_updateMemo_maximumNumberOfCharactersLabel" = "20";
+
+"editModal_createCheckItem_mainLabel" = "체크 항목 추가";
+"editModal_createCheckItem_subLabel" = "추가하고 싶은 내용을 입력해 주세요.";
+"editModal_createCheckItem_currentNumberOfCharactersLabel" = "%d / ";
+"editModal_createCheckItem_maximumNumberOfCharactersLabel" = "60";
+
+"editModal_textField_placeholder" = "%@";
+"editModal_saveButton" = "저장";
+

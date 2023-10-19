@@ -14,7 +14,7 @@
  %f -> Double
  */
 
-// Localizable KEY : viewName(view 제외)_constantName
+// Localizable KEY : viewName_constantName
 
 // CategoryHomeView
 "search_main_label" = "What kind of checklist are you curious about?";
@@ -48,12 +48,11 @@
 "category_checklist_selectAllLabel_unSelectAll" = "Unselect All";
 "category_checklist_tButton" = "Add to My List";
 
-// ChecklistView // FIXME: checklist_checklistDateLabel
-//"checklist_checklistNameLabel" = "%@";
+// ChecklistView
 "checklist_checklistDateLabel" = "en_US";
 "checklist_bookmarkListButton" = "Bookmark";
 "checklist_checkBoxMenuButton_firstMenu" = "Edit";
-"checklist_checkBoxMenuButton_secondMenu" = "Add a note";
+"checklist_checkBoxMenuButton_secondMenu" = "Set up a memo";
 "checklist_checkBoxMenuButton_thirdMenu" = "Delete";
 
 // SearchView
@@ -89,3 +88,22 @@
 
 // MyListView
 "myList_mainLabel" = "My\nChecklist";
+
+// EditModalView
+"editModal_updateContent_mainLabel" = "Content Modification";
+"editModal_updateContent_subLabel" = "Please enter what you want to modify.";
+"editModal_updateContent_currentNumberOfCharactersLabel" = "%d / ";
+"editModal_updateContent_maximumNumberOfCharactersLabel" = "100";
+
+"editModal_updateMemo_mainLabel" = "Memo Settings";
+"editModal_updateMemo_subLabel" = "Please enter any additional notes you want to make.";
+"editModal_updateMemo_currentNumberOfCharactersLabel" = "%d / ";
+"editModal_updateMemo_maximumNumberOfCharactersLabel" = "30";
+
+"editModal_createCheckItem_mainLabel" = "Add a check item";
+"editModal_createCheckItem_subLabel" = "Please enter what you want to add.";
+"editModal_createCheckItem_currentNumberOfCharactersLabel" = "%d / ";
+"editModal_createCheckItem_maximumNumberOfCharactersLabel" = "100";
+
+"editModal_textField_placeholder" = "%@";
+"editModal_saveButton" = "Save";
