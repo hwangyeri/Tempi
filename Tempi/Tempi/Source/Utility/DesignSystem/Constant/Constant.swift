@@ -29,9 +29,9 @@ enum Constant {
     }
     
     enum TBookmarkListButton {
-        static let cornerRadius: CGFloat = 20
+        static let cornerRadius: CGFloat = 18
         static let borderWidth: CGFloat = 1.5
-        static let imagePadding: CGFloat = 8
+        static let imagePadding: CGFloat = 7
     }
     
     enum TChecklist {
