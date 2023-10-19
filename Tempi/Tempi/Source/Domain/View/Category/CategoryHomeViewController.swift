@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import RealmSwift
 
 enum CollectionViewType {
     case category
@@ -31,11 +32,42 @@ class CategoryHomeViewController: BaseViewController {
         
         let randomSubCategories = getRandomSubCategories()
         recommendSearchWordsList = randomSubCategories
-        print("randomSubCategories ----->", randomSubCategories)
-        print("recommendSearchWordsList ----->", recommendSearchWordsList)
+//        print("randomSubCategories ----->", randomSubCategories)
+//        print("recommendSearchWordsList ----->", recommendSearchWordsList)
         
         configureRecommendSearchWordsDataSource()
         configureCategoryDataSource()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(createChecklistNameNotificationObserver(notification:)), name: NSNotification.Name.createChecklist, object: nil)
+    }
+    
+    override func configureLayout() {
+        mainView.searchBar.delegate = self
+        mainView.categoryCollectionView.delegate = self
+        mainView.recommendSearchWordsCollectionView.delegate = self
+        mainView.plusButton.addTarget(self, action: #selector(plusButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc private func plusButtonTapped() {
+        print(#function)
+        let editChecklistNameVC = EditChecklistNameViewController()
+        editChecklistNameVC.modalTransitionStyle = .crossDissolve
+        editChecklistNameVC.modalPresentationStyle = .overCurrentContext
+        editChecklistNameVC.nameAction = .createChecklist
+        self.present(editChecklistNameVC, animated: true)
+    }
+    
+    // MARK: - 커스텀 체크리스트 생성 (노티)
+    @objc func createChecklistNameNotificationObserver(notification: NSNotification) {
+        print(#function)
+        
+        if let newChecklistID = notification.userInfo?["checklistID"] as? ObjectId {
+            let checklistVC = ChecklistViewController()
+            checklistVC.selectedChecklistID = newChecklistID
+            self.navigationController?.pushViewController(checklistVC, animated: true)
+        } else {
+            print(#function, "newChecklistID error")
+        }
     }
     
     private func getRandomSubCategories() -> [String] {
@@ -50,12 +82,6 @@ class CategoryHomeViewController: BaseViewController {
         }
         
         return Array(randomSubCategories)
-    }
-    
-    override func configureHierarchy() {
-        mainView.searchBar.delegate = self
-        mainView.categoryCollectionView.delegate = self
-        mainView.recommendSearchWordsCollectionView.delegate = self
     }
     
     private func configureRecommendSearchWordsDataSource() {
