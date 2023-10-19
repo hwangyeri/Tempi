@@ -16,6 +16,10 @@
 
 // Localizable KEY : viewName_constantName
 
+// showToast
+"showToast_delete" = "Deleted successfully!";
+"showToast_update" = "Corrected successfully!";
+
 // CategoryHomeView
 "search_main_label" = "What kind of checklist are you curious about?";
 "searchBar_placeholder" = " Search for various templates.";
