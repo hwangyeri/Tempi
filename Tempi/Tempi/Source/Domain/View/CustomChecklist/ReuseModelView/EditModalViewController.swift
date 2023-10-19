@@ -162,7 +162,10 @@ class EditModalViewController: BaseViewController {
         }
         
         let item = CheckItemTable(checklistPK: selectedChecklistID, content: textFieldText, createdAt: Date(), memo: nil, alarmDate: nil, isChecked: false)
-        
+        checkItemRepository.createItem(item)
+        dismiss(animated: true) {
+            NotificationCenter.default.post(name: NSNotification.Name.createCheckItem, object: nil)
+        }
     }
     
     /// Check Item 내용 액션 - 다국어
@@ -205,7 +208,7 @@ class EditModalViewController: BaseViewController {
         DispatchQueue.main.async {
             self.mainView.mainLabel.text = "editModal_createCheckItem_mainLabel".localized
             self.mainView.subLabel.text = "editModal_createCheckItem_subLabel".localized
-            self.mainView.textField.placeholder = "editModal_createCheckItem_currentNumberOfCharactersLabel".localized(with: placeholder)
+            self.mainView.textField.placeholder = "editModal_textField_placeholder".localized(with: placeholder)
             self.mainView.maximumNumberOfCharactersLabel.text = "editModal_createCheckItem_maximumNumberOfCharactersLabel".localized
         }
     }
@@ -214,6 +217,8 @@ class EditModalViewController: BaseViewController {
 
 // MARK: TextField Delegate
 extension EditModalViewController: UITextFieldDelegate {
+    
+    // FIXME: 적었다가 지우면 현재 글자수 0 인데 버튼 활성화 됨...
    
     func textFieldDidChangeSelection(_ textField: UITextField) {
         updateButtonState()
@@ -274,7 +279,7 @@ extension EditModalViewController: UITextFieldDelegate {
             }
             
             DispatchQueue.main.async {
-                self.mainView.currentNumberOfCharactersLabel.text = "editModal_createCheckItem_maximumNumberOfCharactersLabel".localized(with: currentCount)
+                self.mainView.currentNumberOfCharactersLabel.text = "editModal_createCheckItem_currentNumberOfCharactersLabel".localized(with: currentCount)
                 
                 if currentCount > maximumCount {
                     self.mainView.saveButton.isEnabled = false

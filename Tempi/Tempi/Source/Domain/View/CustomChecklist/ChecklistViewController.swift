@@ -36,6 +36,7 @@ class ChecklistViewController: BaseViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(deleteCheckItemNotificationObserver(notification:)), name: NSNotification.Name.deleteCheckItem, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(updateCheckItemContentNotificationObserver(notification:)), name: NSNotification.Name.updateCheckItemContent, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(updateCheckItemMemoNotificationObserver(notification:)), name: NSNotification.Name.updateCheckItemMemo, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(createCheckItemNotificationObserver(notification:)), name: NSNotification.Name.createCheckItem, object: nil)
     }
     
     deinit {
@@ -170,6 +171,7 @@ class ChecklistViewController: BaseViewController {
         editModalVC.modalTransitionStyle = .crossDissolve
         editModalVC.modalPresentationStyle = .overCurrentContext
         editModalVC.selectedChecklistID = selectedChecklistID
+        editModalVC.textFieldPlaceholder = "placeholder"
         editModalVC.editAction = .createCheckItem
         self.present(editModalVC, animated: true)
     }
@@ -220,6 +222,17 @@ class ChecklistViewController: BaseViewController {
         print(#function)
         
         showToast(message: "showToast_update".localized)
+        
+        DispatchQueue.main.async {
+            self.configureChecklistDataSource()
+        }
+    }
+    
+    // MARK: - 체크아이템 추가 apply (노티)
+    @objc func createCheckItemNotificationObserver(notification: NSNotification) {
+        print(#function)
+        
+        showToast(message: "showToast_create".localized)
         
         DispatchQueue.main.async {
             self.configureChecklistDataSource()
