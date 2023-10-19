@@ -37,24 +37,68 @@ class CheckItemTableRepository: CheckItemTableRepositoryType {
         completion(filteredData)
     }
     
+    func getCheckItemIsChecked(forId id: ObjectId) -> Bool? {
+        /// ObjectId 를 기준으로 Check Item_isChecked 반환
+        if let item = realm.object(ofType: CheckItemTable.self, forPrimaryKey: id) {
+            return item.isChecked
+        } else {
+            return nil
+        }
+    }
+    
+    func getCheckItemContent(forId id: ObjectId) -> String? {
+        /// ObjectId 를 기준으로 Check Item_content 반환
+        if let item = realm.object(ofType: CheckItemTable.self, forPrimaryKey: id) {
+            return item.content
+        } else {
+            return nil
+        }
+    }
+    
+    func getCheckItemMemo(forId id: ObjectId) -> String? {
+        /// ObjectId 를 기준으로 Check Item_memo 반환
+        if let item = realm.object(ofType: CheckItemTable.self, forPrimaryKey: id) {
+            return item.memo
+        } else {
+            return nil
+        }
+    }
+    
     // MARK: - Realm Update
-//    func updateItem(id: ObjectId, title: String, contents: String) {
-//
-//        do {
-//            try realm.write {
-//                //특정 테이블 값 변경 - 특정이 아닌 전체 수정
-//                realm.create(ChecklistTable.self, value: ["id": id], update: .modified)
-//                print("Realm Update Succeed")
-//            }
-//        } catch {
-//            print(error)
-//        }
-//
-//    }
+    func updateCheckItemContent(forId id: ObjectId, newContent: String) {
+        /// ObjectId 를 기준으로 Check Item_content 업데이트
+        if let item = realm.object(ofType: CheckItemTable.self, forPrimaryKey: id) {
+            try? realm.write {
+                item.content = newContent
+            }
+        }
+    }
+
+    func updateCheckItemMemo(forId id: ObjectId, newMemo: String) {
+        /// ObjectId 를 기준으로 Check Item_memo 업데이트
+        if let item = realm.object(ofType: CheckItemTable.self, forPrimaryKey: id) {
+            try? realm.write {
+                item.memo = newMemo
+            }
+        }
+    }
+    
+    func updateCheckItemIsChecked(forId id: ObjectId, newIsChecked: Bool) {
+        /// ObjectId 를 기준으로 Check Item_isChecked 업데이트
+        if let item = realm.object(ofType: CheckItemTable.self, forPrimaryKey: id) {
+            do {
+                try realm.write {
+                    item.isChecked = newIsChecked
+                }
+            } catch {
+                print("Error updating isChecked for check item: \(error)")
+            }
+        }
+    }
     
     // MARK: - Realm Delete
     func deleteAllCheckItem(forChecklistPK checklistPK: ObjectId) {
-        /// checklistPK 를 기준으로 필터링, 해당하는 모든 Check Item 을 삭제하는 함수
+        /// checklistPK 를 기준으로 필터링, 해당하는 모든 Check Item 삭제
         let itemsToDelete = realm.objects(CheckItemTable.self).filter("checklistPK == %@", checklistPK)
         do {
             try realm.write {
@@ -67,7 +111,7 @@ class CheckItemTableRepository: CheckItemTableRepositoryType {
     }
     
     func deleteCheckItem(withID id: ObjectId) {
-        /// ObjectId 를 기준으로 해당하는 Check Item 을 삭제하는 함수
+        /// ObjectId 를 기준으로 해당하는 Check Item 삭제
         do {
             let realm = try Realm()
             if let itemToDelete = realm.object(ofType: CheckItemTable.self, forPrimaryKey: id) {
