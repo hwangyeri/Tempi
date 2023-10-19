@@ -71,7 +71,7 @@ class ChecklistCollectionViewCell: BaseCollectionViewCell {
         }
         
         checkBoxLabel.snp.makeConstraints { make in
-            make.centerY.equalTo(checkBoxButton).offset(-2)
+            make.top.equalTo(checkBoxButton.snp.top).inset(5)
             make.leading.equalTo(checkBoxButton.snp.trailing).offset(20)
         }
         
@@ -79,6 +79,7 @@ class ChecklistCollectionViewCell: BaseCollectionViewCell {
             make.top.equalTo(checkBoxLabel.snp.bottom).offset(3)
             make.leading.equalTo(checkBoxLabel).offset(1)
             make.trailing.equalTo(checkBoxLabel)
+            make.bottom.equalToSuperview()
         }
         
 //        checkBoxAlarmImageView.snp.makeConstraints { make in
