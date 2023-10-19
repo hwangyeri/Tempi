@@ -43,6 +43,17 @@ class CategoryDetailViewController: BaseViewController {
         mainView.tButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
     }
     
+    // MARK: - 다음 버튼
+    @objc private func nextButtonTapped() {
+        if let selectedIndexPath = selectedIndexPath, let selectedSubCategory = subCategoryDataSource.itemIdentifier(for: selectedIndexPath) {
+            let categoryChecklistVC = CategoryChecklistViewController()
+            categoryChecklistVC.categoryName = categoryName
+            categoryChecklistVC.subCategoryName = selectedSubCategory
+            navigationController?.pushViewController(categoryChecklistVC, animated: true)
+        }
+    }
+    
+    // MARK: - 다국어 설정
     private func setLocalized() {
         guard let categoryName = categoryName else {
             return
@@ -66,15 +77,6 @@ class CategoryDetailViewController: BaseViewController {
         let uniqueItems = Set(subCategoryList) // 중복 제거
         snapshot.appendItems(Array(uniqueItems))
         subCategoryDataSource.apply(snapshot)
-    }
-    
-    @objc private func nextButtonTapped() {
-        if let selectedIndexPath = selectedIndexPath, let selectedSubCategory = subCategoryDataSource.itemIdentifier(for: selectedIndexPath) {
-            let categoryChecklistVC = CategoryChecklistViewController()
-            categoryChecklistVC.categoryName = categoryName
-            categoryChecklistVC.subCategoryName = selectedSubCategory
-            navigationController?.pushViewController(categoryChecklistVC, animated: true)
-        }
     }
     
 }
