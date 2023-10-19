@@ -18,6 +18,7 @@ class BookmarkListViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        mainView.selectedItemCountLabel.text = "bookmarkList_selectedItemCountLabel".localized(with: 30)
     }
     
 }
