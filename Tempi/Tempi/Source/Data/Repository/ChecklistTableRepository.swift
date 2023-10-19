@@ -40,12 +40,12 @@ class ChecklistTableRepository: ChecklistTableRepositoryType {
     }
     
     func getObjectIdForItem(_ item: ChecklistTable) -> ObjectId? {
-        /// 새롭게 추가된 Checklist_ObjectId 를 가져오는 함수
+        /// 새롭게 추가된 Checklist_ObjectId 반환
         return item.id
     }
     
     func getChecklistName(forId id: ObjectId) -> String? {
-        /// ObjectId 를 기준으로 Checklist_checklistName 을 가져오는 함수
+        /// ObjectId 를 기준으로 Checklist_checklistName 반환
         if let item = realm.object(ofType: ChecklistTable.self, forPrimaryKey: id) {
             return item.checklistName
         }
@@ -53,7 +53,7 @@ class ChecklistTableRepository: ChecklistTableRepositoryType {
     }
     
     func getChecklistDate(forId id: ObjectId) -> Date? {
-        /// ObjectId 를 기준으로 Checklist_createdAt 을 가져오는 함수
+        /// ObjectId 를 기준으로 Checklist_createdAt 반환
         if let item = realm.object(ofType: ChecklistTable.self, forPrimaryKey: id) {
             return item.createdAt
         }
@@ -61,20 +61,27 @@ class ChecklistTableRepository: ChecklistTableRepositoryType {
     }
     
     func getIsFixed(forId id: ObjectId) -> Bool? {
-        /// ObjectId 를 기준으로 Checklist_isFixed 를 가져오는 함수
+        /// ObjectId 를 기준으로 Checklist_isFixed 반환
         if let item = realm.object(ofType: ChecklistTable.self, forPrimaryKey: id) {
             return item.isFixed
         }
         return nil
     }
     
+    func getLatestChecklistId() -> ObjectId? {
+        /// createdAt 를 기준으로 내림차순 정렬
+        /// 가장 최근에 생성된 Checklist_id 반환
+        let latestChecklist = realm.objects(ChecklistTable.self).sorted(byKeyPath: "createdAt", ascending: false).first
+        return latestChecklist?.id
+    }
+    
     // MARK: - Realm Update
-    func updateIsFixed(forId id: ObjectId, isFixed: Bool) {
-        /// ObjectId 를 기준으로 Checklist_isFixed 업데이트 함수
+    func updateIsFixed(forId id: ObjectId, newIsFixed: Bool) {
+        /// ObjectId 를 기준으로 Checklist_isFixed 업데이트
         if let item = realm.object(ofType: ChecklistTable.self, forPrimaryKey: id) {
             do {
                 try realm.write {
-                    item.isFixed = isFixed
+                    item.isFixed = newIsFixed
                     print("Realm Update isFixed Succeed")
                 }
             } catch {
@@ -83,12 +90,12 @@ class ChecklistTableRepository: ChecklistTableRepositoryType {
         }
     }
     
-    func updateChecklistName(forId id: ObjectId, checklistName: String) {
-        /// ObjectId 를 기준으로 Checklist_checklistName 업데이트 함수
+    func updateChecklistName(forId id: ObjectId, newChecklistName: String) {
+        /// ObjectId 를 기준으로 Checklist_checklistName 업데이트
         if let item = realm.object(ofType: ChecklistTable.self, forPrimaryKey: id) {
             do {
                 try realm.write {
-                    item.checklistName = checklistName
+                    item.checklistName = newChecklistName
                     print("Realm Update checklistName Succeed")
                 }
             } catch {
@@ -99,7 +106,7 @@ class ChecklistTableRepository: ChecklistTableRepositoryType {
 
     // MARK: - Realm Delete
     func deleteItem(forId id: ObjectId) {
-        /// ObjectId 를 기준으로 해당하는 Checklist 를 찾아서 삭제하는 함수
+        /// ObjectId 를 기준으로 해당하는 Checklist 삭제
         if let item = realm.object(ofType: ChecklistTable.self, forPrimaryKey: id) {
             do {
                 try realm.write {
