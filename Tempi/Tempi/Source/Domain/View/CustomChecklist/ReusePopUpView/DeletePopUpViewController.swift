@@ -1,5 +1,5 @@
 //
-//  PopUpViewController.swift
+//  DeletePopUpViewController.swift
 //  Tempi
 //
 //  Created by Yeri Hwang on 2023/10/16.
@@ -8,21 +8,21 @@
 import UIKit
 import RealmSwift
 
-enum PopUpAction {
+enum DeleteAction {
     case deleteChecklist
     case deleteCheckItem
 }
 
-class PopUpViewController: BaseViewController {
+class DeletePopUpViewController: BaseViewController {
     
     var selectedChecklistID: ObjectId?
     var selectedCheckItemID: ObjectId?
-    var popUpAction: PopUpAction?
+    var deleteAction: DeleteAction?
     
     private let checklistRepository = ChecklistTableRepository()
     private let checkItemRepository = CheckItemTableRepository()
     
-    private let mainView = PopUpView()
+    private let mainView = DeletePopUpView()
     
     override func loadView() {
         self.view = mainView
@@ -48,8 +48,8 @@ class PopUpViewController: BaseViewController {
     @objc private func deleteButtonTapped() {
         print(#function)
         
-        guard let action = popUpAction else {
-            print("PopUp action is not defined")
+        guard let action = deleteAction else {
+            print("Delete action is not defined")
             return
         }
         

@@ -1,5 +1,5 @@
 //
-//  PopUpView.swift
+//  DeletePopUpView.swift
 //  Tempi
 //
 //  Created by Yeri Hwang on 2023/10/16.
@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class PopUpView: BaseView {
+class DeletePopUpView: BaseView {
     
     let backView = {
         let view = UIView()
