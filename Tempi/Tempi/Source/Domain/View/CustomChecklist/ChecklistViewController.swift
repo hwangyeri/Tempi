@@ -141,12 +141,12 @@ class ChecklistViewController: BaseViewController {
             return
         }
         
-        let popupVC = DeletePopUpViewController()
-        popupVC.modalTransitionStyle = .crossDissolve
-        popupVC.modalPresentationStyle = .overCurrentContext
-        popupVC.selectedChecklistID = selectedChecklistID
-        popupVC.deleteAction = .deleteChecklist
-        self.present(popupVC, animated: true)
+        let modalVC = DeleteModalViewController()
+        modalVC.modalTransitionStyle = .crossDissolve
+        modalVC.modalPresentationStyle = .overCurrentContext
+        modalVC.selectedChecklistID = selectedChecklistID
+        modalVC.deleteAction = .deleteChecklist
+        self.present(modalVC, animated: true)
     }
     
     // MARK: - 즐겨찾기 버튼
@@ -284,14 +284,14 @@ class ChecklistViewController: BaseViewController {
                 UIAction(title: "checklist_checkBoxMenuButton_thirdMenu".localized, image: UIImage(systemName: Constant.SFSymbol.deleteMemuItemIcon), attributes: .destructive, handler: { _ in
                     print("Delete Menu Tapped")
                 
-                    let popupVC = DeletePopUpViewController()
+                    let modalVC = DeleteModalViewController()
                     
-                    popupVC.modalTransitionStyle = .crossDissolve
-                    popupVC.modalPresentationStyle = .overCurrentContext
-                    popupVC.selectedCheckItemID = checkItemID
-                    popupVC.deleteAction = .deleteCheckItem
+                    modalVC.modalTransitionStyle = .crossDissolve
+                    modalVC.modalPresentationStyle = .overCurrentContext
+                    modalVC.selectedCheckItemID = checkItemID
+                    modalVC.deleteAction = .deleteCheckItem
                     
-                    self.present(popupVC, animated: true)
+                    self.present(modalVC, animated: true)
                 })
             ])
         }
