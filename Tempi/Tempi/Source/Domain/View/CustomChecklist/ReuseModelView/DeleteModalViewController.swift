@@ -1,5 +1,5 @@
 //
-//  DeletePopUpViewController.swift
+//  DeleteModalViewController.swift
 //  Tempi
 //
 //  Created by Yeri Hwang on 2023/10/16.
@@ -13,7 +13,7 @@ enum DeleteAction {
     case deleteCheckItem
 }
 
-class DeletePopUpViewController: BaseViewController {
+class DeleteModalViewController: BaseViewController {
     
     var selectedChecklistID: ObjectId?
     var selectedCheckItemID: ObjectId?
