@@ -14,4 +14,5 @@ extension NSNotification.Name {
     static let updateCheckItemContent = NSNotification.Name("UpdateCheckItemContent")
     static let updateCheckItemMemo = NSNotification.Name("UpdateCheckItemMemo")
     static let createChecklist = NSNotification.Name("CreateChecklist")
+    static let createCheckItem = NSNotification.Name("CreateCheckItem")
 }
