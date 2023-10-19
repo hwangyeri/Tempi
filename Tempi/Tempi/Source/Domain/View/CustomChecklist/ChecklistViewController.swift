@@ -145,7 +145,7 @@ class ChecklistViewController: BaseViewController {
         popupVC.modalTransitionStyle = .crossDissolve
         popupVC.modalPresentationStyle = .overCurrentContext
         popupVC.selectedChecklistID = selectedChecklistID
-        popupVC.popUpAction = .deleteChecklist
+        popupVC.deleteAction = .deleteChecklist
         self.present(popupVC, animated: true)
     }
     
@@ -289,7 +289,7 @@ class ChecklistViewController: BaseViewController {
                     popupVC.modalTransitionStyle = .crossDissolve
                     popupVC.modalPresentationStyle = .overCurrentContext
                     popupVC.selectedCheckItemID = checkItemID
-                    popupVC.popUpAction = .deleteCheckItem
+                    popupVC.deleteAction = .deleteCheckItem
                     
                     self.present(popupVC, animated: true)
                 })
