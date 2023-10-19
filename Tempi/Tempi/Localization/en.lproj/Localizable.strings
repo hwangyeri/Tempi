@@ -19,6 +19,7 @@
 // showToast
 "showToast_delete" = "Deleted successfully!";
 "showToast_update" = "Corrected successfully!";
+"showToast_create" = "Created successfully!";
 
 // CategoryHomeView
 "search_main_label" = "What kind of checklist are you curious about?";

@@ -19,6 +19,7 @@
 // showToast
 "showToast_delete" = "성공적으로 삭제되었습니다!";
 "showToast_update" = "성공적으로 수정되었습니다!";
+"showToast_create" = "성공적으로 셍성되었습니다!";
 
 // CategoryHomeView
 "search_main_label" = "어떤 체크리스트가 궁금하신가요?";
