@@ -78,6 +78,7 @@
 		2BF5FE5F2AC7062E009BCBD9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BF5FE612AC7062E009BCBD9 /* Localizable.strings */; };
 		2BF5FE652AC7079B009BCBD9 /* Localized+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF5FE642AC7079B009BCBD9 /* Localized+.swift */; };
 		2BF5FE672AC70B51009BCBD9 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF5FE662AC70B51009BCBD9 /* Color+.swift */; };
+		2BFC74BF2AE2A70E00AD757D /* TempiLaunchScreen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BFC74BE2AE2A70E00AD757D /* TempiLaunchScreen.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -153,6 +154,7 @@
 		2BF5FE622AC70630009BCBD9 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2BF5FE642AC7079B009BCBD9 /* Localized+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Localized+.swift"; sourceTree = "<group>"; };
 		2BF5FE662AC70B51009BCBD9 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
+		2BFC74BE2AE2A70E00AD757D /* TempiLaunchScreen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TempiLaunchScreen.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,6 +310,7 @@
 		2BF5FE3A2AC6F411009BCBD9 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				2BFC74C02AE2A78900AD757D /* LaunchScreen */,
 				2BF5FE3B2AC6F46A009BCBD9 /* Fonts */,
 				2BF5FE162AC6E6C2009BCBD9 /* Assets.xcassets */,
 				2B8105642AD2C22100B50223 /* CategoryData.json */,
@@ -493,6 +496,14 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
+		2BFC74C02AE2A78900AD757D /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				2BFC74BE2AE2A70E00AD757D /* TempiLaunchScreen.jpg */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -563,6 +574,7 @@
 			files = (
 				2BF5FE1A2AC6E6C2009BCBD9 /* LaunchScreen.storyboard in Resources */,
 				2BF5FE5A2AC703F1009BCBD9 /* Pretendard-Bold.otf in Resources */,
+				2BFC74BF2AE2A70E00AD757D /* TempiLaunchScreen.jpg in Resources */,
 				2B8105652AD2C22100B50223 /* CategoryData.json in Resources */,
 				2BF5FE172AC6E6C2009BCBD9 /* Assets.xcassets in Resources */,
 				2BF5FE572AC703F1009BCBD9 /* Pretendard-Medium.otf in Resources */,
@@ -792,6 +804,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7T88N7TX7W;
@@ -823,6 +836,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7T88N7TX7W;
