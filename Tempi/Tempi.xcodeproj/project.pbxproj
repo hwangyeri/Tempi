@@ -217,13 +217,13 @@
 				2B952A122ACE835F0074D4F2 /* ChecklistView.swift */,
 				2B9D8D412AD973F3006F42E0 /* BookmarkListViewController.swift */,
 				2B9D8D432AD97408006F42E0 /* BookmarkListView.swift */,
-				2BAF93FD2AE041AA00F0584A /* ReuseModelView */,
+				2BAF93FD2AE041AA00F0584A /* ReuseModel */,
 				2B8105392ACEFCDB00B50223 /* ChecklistCell */,
 			);
 			path = CustomChecklist;
 			sourceTree = "<group>";
 		};
-		2BAF93FD2AE041AA00F0584A /* ReuseModelView */ = {
+		2BAF93FD2AE041AA00F0584A /* ReuseModel */ = {
 			isa = PBXGroup;
 			children = (
 				2B63782E2ADD56B700203AFA /* DeleteModalViewController.swift */,
@@ -233,7 +233,7 @@
 				2B6378412ADFCC9200203AFA /* EditModalViewController.swift */,
 				2B6378432ADFCCA100203AFA /* EditModalView.swift */,
 			);
-			path = ReuseModelView;
+			path = ReuseModel;
 			sourceTree = "<group>";
 		};
 		2BDE84D12AC95FEB0018C759 /* Component */ = {
