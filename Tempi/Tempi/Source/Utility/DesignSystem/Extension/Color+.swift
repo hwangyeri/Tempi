@@ -32,21 +32,21 @@ extension UIColor {
         case .tGray100:
             return UIColor(named: "tGray100") // FFFFFF - 000000
         case .tGray200:
-            return UIColor(named: "tGray200") // F3F3F3 -
+            return UIColor(named: "tGray200") // F3F3F3 - 434343
         case .tGray300:
-            return UIColor(named: "tGray300") // EFEFEF -
+            return UIColor(named: "tGray300") // EFEFEF - 666666
         case .tGray400:
-            return UIColor(named: "tGray400") // D9D9D9 -
+            return UIColor(named: "tGray400") // D9D9D9 - 999999
         case .tGray500:
-            return UIColor(named: "tGray500") // CCCCCC -
+            return UIColor(named: "tGray500") // CCCCCC - B7B7B7
         case .tGray600:
-            return UIColor(named: "tGray600") // B7B7B7 -
+            return UIColor(named: "tGray600") // B7B7B7 - CCCCCC
         case .tGray700:
-            return UIColor(named: "tGray700") // 999999 -
+            return UIColor(named: "tGray700") // 999999 - D9D9D9
         case .tGray800:
-            return UIColor(named: "tGray800") // 666666 -
+            return UIColor(named: "tGray800") // 666666 - EFEFEF
         case .tGray900:
-            return UIColor(named: "tGray900") // 434343 -
+            return UIColor(named: "tGray900") // 434343 - F3F3F3
         case .tGray1000:
             return UIColor(named: "tGray1000") // 000000 - FFFFFF
         }
