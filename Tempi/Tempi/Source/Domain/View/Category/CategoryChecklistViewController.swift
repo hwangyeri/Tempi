@@ -107,7 +107,7 @@ class CategoryChecklistViewController: BaseViewController {
             mainView.selectAllCheckBox.setImage(nil, for: .normal)
             mainView.selectAllCheckBox.backgroundColor = .clear
             mainView.tButton.isEnabled = false
-            mainView.tButton.backgroundColor = .tGray200
+            mainView.tButton.backgroundColor = .tGray500
         }
     
     }
@@ -184,7 +184,7 @@ extension CategoryChecklistViewController: UICollectionViewDelegate {
         
         // tButton 활성화/비활성화
         mainView.tButton.isEnabled = !selectedItems.isEmpty
-        mainView.tButton.backgroundColor = selectedItems.isEmpty ? .tGray200 : .tGray1000
+        mainView.tButton.backgroundColor = selectedItems.isEmpty ? .tGray500 : .tGray1000
         print(selectedItems, "-- 선택된 체크 아이템 --")
     }
 
