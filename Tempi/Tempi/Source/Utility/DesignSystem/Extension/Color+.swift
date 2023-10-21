@@ -8,8 +8,6 @@
 import UIKit
 
 extension UIColor {
-    
-    // FIXME: Dark mode Color 변경하기
 
     enum AssetsColor {
         case point
