@@ -83,6 +83,11 @@
 
 // MyListView
 "myList_mainLabel" = "나의\nChecklist";
+"myList_checklistDateLabel" = "ko_KR";
+"myList_sectionTitle_0" = "고정된 리스트";
+"myList_sectionTitle_1" = "오늘";
+"myList_sectionTitle_2" = "어제";
+"myList_sectionTitle_3" = "이전";
 
 // EditModalView
 "editModal_updateContent_mainLabel" = "내용 수정";

@@ -83,6 +83,11 @@
 
 // MyListView
 "myList_mainLabel" = "My\nChecklist";
+"myList_checklistDateLabel" = "en_US";
+"myList_sectionTitle_0" = "Fixed checklist";
+"myList_sectionTitle_1" = "Today";
+"myList_sectionTitle_2" = "Yesterday";
+"myList_sectionTitle_3" = "Last";
 
 // EditModalView
 "editModal_updateContent_mainLabel" = "Content Modification";
