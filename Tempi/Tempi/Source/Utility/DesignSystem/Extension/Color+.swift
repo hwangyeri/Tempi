@@ -10,6 +10,7 @@ import UIKit
 extension UIColor {
 
     enum AssetsColor {
+        case mainBack
         case point
         case tGray100
         case tGray200
@@ -25,8 +26,10 @@ extension UIColor {
 
     static func tColor(_ name: AssetsColor) -> UIColor? {
         switch name {
+        case .mainBack:
+            return UIColor(named: "mainBack") // 000000 - 434343
         case .point:
-            return UIColor(named: "point")
+            return UIColor(named: "point") // FF7676 - FF7676
         case .tGray100:
             return UIColor(named: "tGray100") // FFFFFF - 000000
         case .tGray200:
