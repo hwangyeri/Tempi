@@ -23,24 +23,14 @@ class ChecklistViewController: BaseViewController {
     override func loadView() {
         self.view = mainView
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureChecklistDataSource()
         setChecklistData()
         setNavigationBarButton()
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(deleteChecklistNotificationObserver(notification:)), name: NSNotification.Name.deleteChecklist, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(updateChecklistNameNotificationObserver(notification:)), name: NSNotification.Name.updateChecklistName, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(deleteCheckItemNotificationObserver(notification:)), name: NSNotification.Name.deleteCheckItem, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(updateCheckItemContentNotificationObserver(notification:)), name: NSNotification.Name.updateCheckItemContent, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(updateCheckItemMemoNotificationObserver(notification:)), name: NSNotification.Name.updateCheckItemMemo, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(createCheckItemNotificationObserver(notification:)), name: NSNotification.Name.createCheckItem, object: nil)
-    }
-    
-    deinit {
-        NotificationCenter.default.removeObserver(self)
+        setNotificationCenter()
     }
     
     override func configureLayout() {
@@ -87,7 +77,17 @@ class ChecklistViewController: BaseViewController {
         self.navigationItem.hidesBackButton = true
     }
     
-    // MARK: - 오른쪽 네비 바 버튼
+    // MARK: - NotificationCenter 설정
+    private func setNotificationCenter() {
+        NotificationCenter.default.addObserver(self, selector: #selector(deleteChecklistNotificationObserver(notification:)), name: .deleteChecklist, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateChecklistNameNotificationObserver(notification:)), name: .updateChecklistName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(deleteCheckItemNotificationObserver(notification:)), name: .deleteCheckItem, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateCheckItemContentNotificationObserver(notification:)), name: .updateCheckItemContent, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateCheckItemMemoNotificationObserver(notification:)), name: .updateCheckItemMemo, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(createCheckItemNotificationObserver(notification:)), name: .createCheckItem, object: nil)
+    }
+    
+    // MARK: - 나가기 버튼 (Navi BarButton)
     @objc private func rightBarButtonTapped() {
         print(#function)
         navigationController?.popToRootViewController(animated: true)
@@ -292,7 +292,7 @@ class ChecklistViewController: BaseViewController {
                 /// 삭제
                 UIAction(title: "checklist_checkBoxMenuButton_thirdMenu".localized, image: UIImage(systemName: Constant.SFSymbol.deleteMemuItemIcon), attributes: .destructive, handler: { _ in
                     print("Delete Menu Tapped")
-                
+                    
                     let modalVC = DeleteModalViewController()
                     
                     modalVC.modalTransitionStyle = .crossDissolve
@@ -316,26 +316,35 @@ class ChecklistViewController: BaseViewController {
         snapshot.appendItems(result)
         checklistDataSource.apply(snapshot)
     }
-
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: .deleteChecklist, object: nil)
+        NotificationCenter.default.removeObserver(self, name: .updateChecklistName, object: nil)
+        NotificationCenter.default.removeObserver(self, name: .deleteCheckItem, object: nil)
+        NotificationCenter.default.removeObserver(self, name: .updateCheckItemContent, object: nil)
+        NotificationCenter.default.removeObserver(self, name: .updateCheckItemMemo, object: nil)
+        NotificationCenter.default.removeObserver(self, name: .createCheckItem, object: nil)
+    }
+    
 }
 
 // MARK: - CollectionView Delegate
 extension ChecklistViewController: UICollectionViewDelegate {
-
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(#function)
-
+        
         guard let selectedItem = checklistDataSource.itemIdentifier(for: indexPath) else {
             return
         }
-
+        
         let isCheckedOfSelectedCell = checkItemRepository.getCheckItemIsChecked(forId: selectedItem.id)
         
         guard let isChecked = isCheckedOfSelectedCell else {
             print("isChecked error")
             return
         }
-
+        
         if let cell = collectionView.cellForItem(at: indexPath) as? ChecklistCollectionViewCell {
             if !isChecked {
                 // False -> True
@@ -355,7 +364,7 @@ extension ChecklistViewController: UICollectionViewDelegate {
             }
         }
     }
-
+    
 }
 
 
