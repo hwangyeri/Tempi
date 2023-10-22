@@ -70,7 +70,7 @@ class DeleteModalViewController: BaseViewController {
         checklistRepository.deleteItem(forId: selectedChecklistID)
         checkItemRepository.deleteAllCheckItem(forChecklistPK: selectedChecklistID)
         dismiss(animated: true) {
-            NotificationCenter.default.post(name: NSNotification.Name.deleteChecklist, object: nil)
+            NotificationCenter.default.post(name: .deleteChecklist, object: nil)
         }
     }
     
@@ -82,7 +82,7 @@ class DeleteModalViewController: BaseViewController {
         
         checkItemRepository.deleteCheckItem(withID: selectedCheckItemID)
         dismiss(animated: true) {
-            NotificationCenter.default.post(name: NSNotification.Name.deleteCheckItem, object: nil)
+            NotificationCenter.default.post(name: .deleteCheckItem, object: nil)
         }
     }
     

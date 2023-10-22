@@ -123,7 +123,7 @@ class EditModalViewController: BaseViewController {
         
         checkItemRepository.updateCheckItemContent(forId: selectedCheckItemID, newContent: textFieldText)
         dismiss(animated: true) {
-            NotificationCenter.default.post(name: NSNotification.Name.updateCheckItemContent, object: nil)
+            NotificationCenter.default.post(name: .updateCheckItemContent, object: nil)
         }
     }
     
@@ -143,7 +143,7 @@ class EditModalViewController: BaseViewController {
         
         checkItemRepository.updateCheckItemMemo(forId: selectedCheckItemID, newMemo: textFieldText)
         dismiss(animated: true) {
-            NotificationCenter.default.post(name: NSNotification.Name.updateCheckItemMemo, object: nil)
+            NotificationCenter.default.post(name: .updateCheckItemMemo, object: nil)
         }
     }
     
@@ -164,7 +164,7 @@ class EditModalViewController: BaseViewController {
         let item = CheckItemTable(checklistPK: selectedChecklistID, content: textFieldText, createdAt: Date(), memo: nil, alarmDate: nil, isChecked: false)
         checkItemRepository.createItem(item)
         dismiss(animated: true) {
-            NotificationCenter.default.post(name: NSNotification.Name.createCheckItem, object: nil)
+            NotificationCenter.default.post(name: .createCheckItem, object: nil)
         }
     }
     

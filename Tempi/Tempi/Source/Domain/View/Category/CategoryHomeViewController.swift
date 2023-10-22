@@ -25,12 +25,11 @@ class CategoryHomeViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
 //        print(realm.configuration.fileURL)
         
         configureCategoryDataSource()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(createChecklistNameFromHomeNotificationObserver(notification:)), name: NSNotification.Name.createChecklistFromHome, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(createChecklistNameFromHomeNotificationObserver(notification:)), name: .createChecklistFromHome, object: nil)
     }
     
     override func configureLayout() {
@@ -59,16 +58,12 @@ class CategoryHomeViewController: BaseViewController {
     // MARK: - 커스텀 체크리스트 생성 (노티)
     @objc func createChecklistNameFromHomeNotificationObserver(notification: NSNotification) {
         print(#function)
-        
         if let newChecklistID = notification.userInfo?["newChecklistID"] as? ObjectId {
             let checklistVC = ChecklistViewController()
             checklistVC.selectedChecklistID = newChecklistID
-            
             checkItemRepository.fetch(for: newChecklistID) { result in
                 checklistVC.checkItemTasks = result
-                print(result)
             }
-            
             self.navigationController?.pushViewController(checklistVC, animated: true)
         } else {
             print(#function, "newChecklistID error")
