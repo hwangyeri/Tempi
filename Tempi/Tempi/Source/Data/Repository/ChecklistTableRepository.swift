@@ -69,7 +69,7 @@ class ChecklistTableRepository: ChecklistTableRepositoryType {
     }
     
     func getLatestChecklistId() -> ObjectId? {
-        /// createdAt 를 기준으로 내림차순 정렬
+        /// createdAt 을 기준으로 내림차순 정렬
         /// 가장 최근에 생성된 Checklist_id 반환
         let latestChecklist = realm.objects(ChecklistTable.self).sorted(byKeyPath: "createdAt", ascending: false).first
         return latestChecklist?.id
