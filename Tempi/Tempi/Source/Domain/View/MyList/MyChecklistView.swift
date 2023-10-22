@@ -10,6 +10,12 @@ import SnapKit
 
 class MyChecklistView: BaseView {
     
+    let emptyView = {
+        let view = UIView()
+        view.backgroundColor = .red
+        return view
+    }()
+    
     let mainLabel = {
        let view = TLabel(
         text: "myList_mainLabel".localized,
@@ -38,6 +44,7 @@ class MyChecklistView: BaseView {
         [mainLabel, plusButton, myListCollectionView].forEach {
             addSubview($0)
         }
+//        addSubview(emptyView)
     }
     
     override func configureLayout() {
@@ -56,19 +63,27 @@ class MyChecklistView: BaseView {
             make.bottom.equalTo(self.safeAreaLayoutGuide).inset(20)
         }
         myListCollectionView.backgroundColor = .tGray200
+        
+//        emptyView.snp.makeConstraints { make in
+//            make.edges.equalTo(myListCollectionView)
+//        }
     }
     
     private func configureMyListCollectionLayout() -> UICollectionViewLayout {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(60))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(75))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 1)
         group.interItemSpacing = .fixed(10)
         
         let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20)
         section.interGroupSpacing = 10
+        
+        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(40))
+        let header = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+        section.boundarySupplementaryItems = [header]
         
         let configuration = UICollectionViewCompositionalLayoutConfiguration()
         configuration.scrollDirection = .vertical
