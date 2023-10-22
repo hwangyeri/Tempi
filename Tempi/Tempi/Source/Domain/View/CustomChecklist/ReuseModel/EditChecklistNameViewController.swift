@@ -9,7 +9,8 @@ import UIKit
 import RealmSwift
 
 enum NameAction {
-    case createChecklist
+    case createChecklistFromHome
+    case createChecklistFromMy
     case updateChecklistName
 }
 
@@ -26,16 +27,11 @@ class EditChecklistNameViewController: BaseViewController {
     override func loadView() {
         self.view = mainView
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-    
-    deinit {
-        NotificationCenter.default.removeObserver(self)
     }
     
     override func configureLayout() {
@@ -66,12 +62,24 @@ class EditChecklistNameViewController: BaseViewController {
         }
         
         switch action {
-        case .createChecklist:
+        case .createChecklistFromHome:
+            handleCreateChecklist()
+        case .createChecklistFromMy:
             handleCreateChecklist()
         case .updateChecklistName:
             handleUpdateChecklistName()
         }
-        
+    }
+    
+    // MARK: - 키보드 나타날 때 (노티)
+    @objc func keyboardWillShow(notification: NSNotification) {
+        print(#function)
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            let keyboardHeight = keyboardSize.height
+            DispatchQueue.main.async {
+                self.mainView.updateButtonConstraints(keyboardHeight: keyboardHeight)
+            }
+        }
     }
     
     private func handleCreateChecklist() {
@@ -88,8 +96,21 @@ class EditChecklistNameViewController: BaseViewController {
             return
         }
         
-        dismiss(animated: true) {
-            NotificationCenter.default.post(name: NSNotification.Name.createChecklist, object: nil, userInfo: ["checklistID": newChecklistID])
+        var notificationName: NSNotification.Name?
+        
+        switch nameAction {
+        case .createChecklistFromHome:
+            notificationName = .createChecklistFromHome
+        case .createChecklistFromMy:
+            notificationName = .createChecklistFromMy
+        default:
+            return
+        }
+        
+        if let name = notificationName {
+            dismiss(animated: true) {
+                NotificationCenter.default.post(name: name, object: nil, userInfo: ["newChecklistID": newChecklistID])
+            }
         }
     }
     
@@ -105,29 +126,9 @@ class EditChecklistNameViewController: BaseViewController {
         }
         
         checklistRepository.updateChecklistName(forId: selectedChecklistID, newChecklistName: textFieldText)
-        NotificationCenter.default.post(name: NSNotification.Name.updateChecklistName, object: nil, userInfo: ["checklistName": textFieldText])
+        NotificationCenter.default.post(name: .updateChecklistName, object: nil, userInfo: ["checklistName": textFieldText])
         
         self.dismiss(animated: true)
-    }
-    
-    // MARK: - 키보드 나타날 때 (노티)
-    @objc func keyboardWillShow(notification: NSNotification) {
-        print(#function)
-        
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            let keyboardHeight = keyboardSize.height
-            DispatchQueue.main.async {
-                self.mainView.updateButtonConstraints(keyboardHeight: keyboardHeight)
-            }
-        }
-    }
-    
-    // MARK: - 키보드 사라질 때 (노티)
-    @objc func keyboardWillHide(notification: NSNotification) {
-        print(#function)
-        DispatchQueue.main.async {
-            self.mainView.setButtonConstraints()
-        }
     }
     
 }
