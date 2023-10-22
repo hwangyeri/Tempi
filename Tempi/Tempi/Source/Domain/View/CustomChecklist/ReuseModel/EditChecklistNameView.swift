@@ -112,14 +112,6 @@ class EditChecklistNameView: BaseView {
         }
     }
     
-    func setButtonConstraints() {
-        editButton.snp.remakeConstraints { make in
-            make.bottom.equalTo(self.safeAreaLayoutGuide).inset(30)
-            make.horizontalEdges.equalToSuperview().inset(20)
-            make.height.equalTo(55)
-        }
-    }
-    
     func updateButtonConstraints(keyboardHeight: CGFloat) {
         editButton.snp.remakeConstraints { make in
             make.bottom.equalToSuperview().inset(keyboardHeight + 15)
