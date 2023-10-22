@@ -107,6 +107,7 @@ class ChecklistView: BaseView {
         checklistNameLabel.snp.makeConstraints { make in
             make.top.equalTo(self.safeAreaLayoutGuide).inset(10)
             make.leading.equalTo(self.safeAreaLayoutGuide).inset(30)
+            make.trailing.equalToSuperview().inset(10)
         }
         
         checklistDateLabel.snp.makeConstraints { make in
