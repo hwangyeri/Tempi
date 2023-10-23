@@ -114,20 +114,8 @@ class MyChecklistViewController: BaseViewController {
 
     // MARK: - CollectionView DataSource
     private func configureMyListDataSource(with sections: [[ChecklistTable]]) {
-        // 셀 설정
-        let cellRegistration = UICollectionView.CellRegistration<MyListCollectionViewCell, ChecklistTable> { cell, indexPath, itemIdentifier in
-            cell.checklistNameLabel.text = itemIdentifier.checklistName
-            
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateStyle = .medium
-            dateFormatter.timeStyle = .short
-            dateFormatter.locale = Locale(identifier: "myList_checklistDateLabel".localized)
-            let dateString = dateFormatter.string(from: itemIdentifier.createdAt)
-            cell.checklistDateLabel.text = dateString
-        }
-
         // 헤더 설정
-        let headerRegistration = UICollectionView.SupplementaryRegistration<HeaderCollectionReusableView>(elementKind: UICollectionView.elementKindSectionHeader) { [weak self] headerView, elementKind, indexPath in
+        let headerRegistration = UICollectionView.SupplementaryRegistration<MyListHeaderView>(elementKind: UICollectionView.elementKindSectionHeader) { [weak self] headerView, elementKind, indexPath in
             if let sections = self?.sections {
                 if sections.indices.contains(indexPath.section) {
                     let currentSection = sections[indexPath.section]
@@ -157,6 +145,18 @@ class MyChecklistViewController: BaseViewController {
                     }
                 }
             }
+        }
+        
+        // 셀 설정
+        let cellRegistration = UICollectionView.CellRegistration<MyListCollectionViewCell, ChecklistTable> { cell, indexPath, itemIdentifier in
+            cell.checklistNameLabel.text = itemIdentifier.checklistName
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .medium
+            dateFormatter.timeStyle = .short
+            dateFormatter.locale = Locale(identifier: "myList_checklistDateLabel".localized)
+            let dateString = dateFormatter.string(from: itemIdentifier.createdAt)
+            cell.checklistDateLabel.text = dateString
         }
         
         myListDataSource = UICollectionViewDiffableDataSource(collectionView: mainView.myListCollectionView) { collectionView, indexPath, item in
