@@ -40,7 +40,7 @@ class MyListCollectionViewCell: BaseCollectionViewCell {
     
     let chevronImageView = {
         let view = UIImageView()
-        view.image = UIImage(systemName: "chevron.right")
+        view.image = UIImage(systemName: Constant.SFSymbol.chevronRightIcon)
         view.contentMode = .scaleAspectFit
         view.tintColor = UIColor.tGray1000
         return view
@@ -64,11 +64,12 @@ class MyListCollectionViewCell: BaseCollectionViewCell {
         checklistNameLabel.snp.makeConstraints { make in
             make.bottom.equalTo(checklistBackgroundButton.snp.centerY).inset(6)
             make.leading.equalToSuperview().inset(30)
+            make.trailing.equalTo(chevronImageView.snp.leading)
         }
         
         checklistDateLabel.snp.makeConstraints { make in
             make.top.equalTo(checklistNameLabel.snp.bottom)
-            make.leading.equalTo(checklistNameLabel)
+            make.horizontalEdges.equalTo(checklistNameLabel)
             make.bottom.equalToSuperview().inset(10)
         }
         
