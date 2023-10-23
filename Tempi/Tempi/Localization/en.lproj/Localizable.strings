@@ -61,9 +61,9 @@
 "checklist_checkBoxMenuButton_thirdMenu" = "Delete";
 
 // SearchView
-"search_searchBar_placeholder" = " Search for various templates.";
-"search_recent_search_words_label" = "Recent Search Words";
-"search_recommend_search_words_label" = "Recommended search terms";
+"search_searchBar" = " Search for various templates.";
+"search_recommendSearchWords_header" = "Recommended search keyword";
+"search_searchResults_header" = "Search Results";
 
 // AddChecklistView
 "add_checklist_mainLabel" = "Which checklist do you want to add to?";

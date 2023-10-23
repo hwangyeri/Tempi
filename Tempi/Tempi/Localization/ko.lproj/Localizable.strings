@@ -61,9 +61,9 @@
 "checklist_checkBoxMenuButton_thirdMenu" = "삭제";
 
 // SearchView
-"search_searchBar_placeholder" = " 다양한 템플릿을 검색해 보세요.";
-"search_recent_search_words_label" = "최근 검색어";
-"search_recommend_search_words_label" = "추천 검색어";
+"search_searchBar" = " 다양한 템플릿을 검색해 보세요.";
+"search_recommendSearchWords_header" = "추천 검색어";
+"search_searchResults_header" = "검색 결과";
 
 // AddChecklistView
 "add_checklist_mainLabel" = "어떤 체크리스트에 추가하실 건가요?";
