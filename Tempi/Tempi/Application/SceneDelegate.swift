@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        let vc = MyChecklistViewController()
+        let vc = MyListViewController()
         window?.rootViewController = UINavigationController(rootViewController: vc)
         window?.makeKeyAndVisible()
         
@@ -29,7 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let firstVC = UINavigationController(rootViewController: CategoryHomeViewController())
         firstVC.tabBarItem = UITabBarItem(title: "탐색", image: UIImage(systemName: Constant.SFSymbol.firstTabBarIcon),selectedImage: UIImage(systemName: Constant.SFSymbol.firstTabBarIcon))
 
-        let secondVC = UINavigationController(rootViewController: MyChecklistViewController())
+        let secondVC = UINavigationController(rootViewController: MyListViewController())
         secondVC.tabBarItem = UITabBarItem(title: "홈", image: UIImage(systemName: Constant.SFSymbol.secondTabBarIcon),selectedImage: UIImage(systemName: Constant.SFSymbol.secondTabBarIcon))
         
 //        let thirdVC = UINavigationController(rootViewController: SearchViewController())
