@@ -21,11 +21,7 @@ class CategoryHomeView: BaseView {
         text: "search_main_label".localized,
         custFont: .pretendardBoldXL,
         textColor: .white)
-        let attrString = NSMutableAttributedString(string: "search_main_label".localized)
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = 8
-        attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attrString.length))
-        view.attributedText = attrString
+        view.setAttributedTextWithLineSpacing("search_main_label".localized, lineSpacing: 8)
         return view
     }()
     
@@ -82,6 +78,7 @@ class CategoryHomeView: BaseView {
             text: "category_sub_label".localized,
             custFont: .pretendardRegularXS,
             textColor: .tGray800)
+        view.setAttributedTextWithLineSpacing("category_sub_label".localized, lineSpacing: 3)
         view.textAlignment = .center
         return view
     }()
@@ -159,20 +156,21 @@ class CategoryHomeView: BaseView {
         }
         
         categorySubLabel.snp.makeConstraints { make in
-            make.top.equalTo(categoryMainLabel.snp.bottom).offset(8)
+            make.top.equalTo(categoryMainLabel.snp.bottom).offset(10)
             make.centerX.equalTo(self.safeAreaLayoutGuide)
         }
         
         categoryCollectionView.snp.makeConstraints { make in
             make.top.equalTo(categorySubLabel.snp.bottom).offset(30)
-            make.horizontalEdges.equalTo(self.safeAreaLayoutGuide).inset(20)
+            make.horizontalEdges.equalTo(self.safeAreaLayoutGuide).inset(30)
         }
-//        categoryCollectionView.backgroundColor = .lightGray
+        
+        categoryCollectionView.backgroundColor = .lightGray
         
         plusButton.snp.makeConstraints { make in
-            make.top.equalTo(categoryCollectionView.snp.bottom).offset(20)
+            make.top.equalTo(categoryCollectionView.snp.bottom).offset(10)
             make.centerX.equalToSuperview()
-            make.bottom.equalTo(self.safeAreaLayoutGuide).inset(25)
+            make.bottom.equalTo(self.safeAreaLayoutGuide).inset(20)
         }
     }
     
@@ -182,11 +180,11 @@ class CategoryHomeView: BaseView {
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(60))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 4)
-        group.interItemSpacing = .fixed(10)
+        group.interItemSpacing = .fixed(5)
         
         let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20)
-        section.interGroupSpacing = 30
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0)
+        section.interGroupSpacing = 20
         
         let configuration = UICollectionViewCompositionalLayoutConfiguration()
         configuration.scrollDirection = .vertical

@@ -14,7 +14,6 @@ class CategoryCollectionViewCell: BaseCollectionViewCell {
         let view = UIImageView()
         view.tintColor = UIColor.tGray900
         view.contentMode = .scaleAspectFit
-//        view.backgroundColor = .green
         return view
     }()
     
@@ -23,7 +22,6 @@ class CategoryCollectionViewCell: BaseCollectionViewCell {
             text: "test",
             custFont: .pretendardSemiBoldS,
             textColor: .tGray900)
-//        view.backgroundColor = .red
         view.textAlignment = .center
         return view
     }()
@@ -35,14 +33,14 @@ class CategoryCollectionViewCell: BaseCollectionViewCell {
     
     override func configureLayout() {
         imageView.snp.makeConstraints { make in
-            make.top.horizontalEdges.equalTo(contentView)
+            make.top.horizontalEdges.equalToSuperview()
             make.centerX.equalToSuperview()
             make.size.equalTo(30)
         }
         
         textLabel.snp.makeConstraints { make in
             make.top.equalTo(imageView.snp.bottom).offset(10)
-            make.bottom.horizontalEdges.equalTo(contentView)
+            make.horizontalEdges.bottom.equalToSuperview()
         }
     }
     
