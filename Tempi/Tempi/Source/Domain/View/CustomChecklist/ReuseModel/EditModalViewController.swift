@@ -35,33 +35,32 @@ class EditModalViewController: BaseViewController {
         
         mainView.backgroundColor = .tGray400.withAlphaComponent(0.7)
         setLocalized()
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        setNotificationCenter()
     }
     
     override func configureLayout() {
         mainView.textField.delegate = self
         mainView.textField.becomeFirstResponder()
+        mainView.saveButton.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(mainViewTapped))
         mainView.addGestureRecognizer(tapGesture)
-        mainView.saveButton.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
     }
     
     // MARK: - 메인 뷰 클릭시 Dismiss
     @objc private func mainViewTapped(_ sender: UITapGestureRecognizer) {
         let location = sender.location(in: mainView)
-        
-        // backView 제외한 영역을 탭 했는지 확인
-        if !mainView.backView.frame.contains(location) {
-            dismiss(animated: true, completion: nil)
+        DispatchQueue.main.async {
+            // backView 제외한 영역을 탭 했는지 확인
+            if !self.mainView.backView.frame.contains(location) {
+                self.dismiss(animated: true, completion: nil)
+            }
         }
     }
     
     // MARK: - 저장 버튼
     @objc private func saveButtonTapped() {
         print(#function)
-        
         guard let action = editAction else {
             print("Edit action is not defined")
             return
@@ -81,7 +80,6 @@ class EditModalViewController: BaseViewController {
     // MARK: - 키보드 나타날 때 (노티)
     @objc func keyboardWillShow(notification: NSNotification) {
         print(#function)
-        
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             let keyboardHeight = keyboardSize.height
             DispatchQueue.main.async {
@@ -90,7 +88,12 @@ class EditModalViewController: BaseViewController {
         }
     }
     
-    // MARK: - 다국어 분기처리
+    // MARK: - 노티 설정
+    private func setNotificationCenter() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+    }
+    
+    // MARK: - 다국어 설정 분기처리
     private func setLocalized() {
         guard let action = editAction else {
             print("Edit action is not defined")
@@ -105,12 +108,20 @@ class EditModalViewController: BaseViewController {
         case .createCheckItem:
             createCheckItemActionSetLocalized()
         }
+        
+        guard let placeholder = textFieldPlaceholder else {
+            print("TextField placeholder Error")
+            return
+        }
+        
+        DispatchQueue.main.async {
+            self.mainView.textField.placeholder = "editModal_textField_placeholder".localized(with: placeholder)
+        }
     }
     
     /// Check Item 내용 - 저장 버튼 핸들러
     private func handleUpdateCheckItemContent() {
         print(#function)
-
         guard let selectedCheckItemID = selectedCheckItemID else {
             print("selectedCheckItemID error")
             return
@@ -130,7 +141,6 @@ class EditModalViewController: BaseViewController {
     /// Check Item 메모 - 저장 버튼 핸들러
     private func handleUpdateCheckItemMemo() {
         print(#function)
-        
         guard let selectedCheckItemID = selectedCheckItemID else {
             print("selectedCheckItemID error")
             return
@@ -150,7 +160,6 @@ class EditModalViewController: BaseViewController {
     /// Check Item 생성 - 저장 버튼 핸들러
     private func handleCreateCheckItem() {
         print(#function)
-        
         guard let selectedChecklistID = selectedChecklistID else {
             print("selectedChecklistID error")
             return
@@ -168,47 +177,29 @@ class EditModalViewController: BaseViewController {
         }
     }
     
-    /// Check Item 내용 액션 - 다국어
+    /// Check Item 내용 액션 - 다국어 설정
     private func contentActionSetLocalized() {
-        guard let placeholder = textFieldPlaceholder else {
-            print("TextField placeholder Error")
-            return
-        }
-        
         DispatchQueue.main.async {
             self.mainView.mainLabel.text = "editModal_updateContent_mainLabel".localized
             self.mainView.subLabel.text = "editModal_updateContent_subLabel".localized
-            self.mainView.textField.placeholder = "editModal_textField_placeholder".localized(with: placeholder)
             self.mainView.maximumNumberOfCharactersLabel.text = "editModal_updateContent_maximumNumberOfCharactersLabel".localized
         }
     }
     
-    /// Check Item 메모 액션  - 다국어
+    /// Check Item 메모 액션  - 다국어 설정
     private func memoActionSetLocalized() {
-        guard let placeholder = textFieldPlaceholder else {
-            print("TextField placeholder Error")
-            return
-        }
-        
         DispatchQueue.main.async {
             self.mainView.mainLabel.text = "editModal_updateMemo_mainLabel".localized
             self.mainView.subLabel.text = "editModal_updateMemo_subLabel".localized
-            self.mainView.textField.placeholder = "editModal_textField_placeholder".localized(with: placeholder)
             self.mainView.maximumNumberOfCharactersLabel.text = "editModal_updateMemo_maximumNumberOfCharactersLabel".localized
         }
     }
     
-    /// Check Item 생성 액션 - 다국어
+    /// Check Item 생성 액션 - 다국어 설정
     private func createCheckItemActionSetLocalized() {
-        guard let placeholder = textFieldPlaceholder else {
-            print("TextField placeholder Error")
-            return
-        }
-        
         DispatchQueue.main.async {
             self.mainView.mainLabel.text = "editModal_createCheckItem_mainLabel".localized
             self.mainView.subLabel.text = "editModal_createCheckItem_subLabel".localized
-            self.mainView.textField.placeholder = "editModal_textField_placeholder".localized(with: placeholder)
             self.mainView.maximumNumberOfCharactersLabel.text = "editModal_createCheckItem_maximumNumberOfCharactersLabel".localized
         }
     }
@@ -218,78 +209,28 @@ class EditModalViewController: BaseViewController {
 // MARK: TextField Delegate
 extension EditModalViewController: UITextFieldDelegate {
     
-    // FIXME: 적었다가 지우면 현재 글자수 0 인데 버튼 활성화 됨...
-   
     func textFieldDidChangeSelection(_ textField: UITextField) {
         updateButtonState()
     }
     
     private func updateButtonState() {
-        guard let text = mainView.textField.text else {
+        guard let text = mainView.textField.text, !text.isEmpty else {
             print("TextField text Error")
+            DispatchQueue.main.async {
+                self.mainView.saveButton.isEnabled = false
+                self.mainView.saveButton.backgroundColor = .tGray500
+                self.mainView.currentNumberOfCharactersLabel.text = "0"
+            }
             return
         }
+        
         let currentCount = text.count
-        
-        guard let action = editAction else {
-            print("Edit action is not defined")
-            return
-        }
-        
-        switch action {
-        case .updateCheckItemContent:
-            guard let maximumCount = Int("editModal_updateContent_maximumNumberOfCharactersLabel".localized) else {
-                print("maximumCount Error")
-                return
-            }
-            
-            DispatchQueue.main.async {
-                self.mainView.currentNumberOfCharactersLabel.text = "editModal_updateContent_currentNumberOfCharactersLabel".localized(with: currentCount)
-                
-                if currentCount > maximumCount {
-                    self.mainView.saveButton.isEnabled = false
-                    self.mainView.saveButton.backgroundColor = .tGray500
-                } else {
-                    self.mainView.saveButton.isEnabled = true
-                    self.mainView.saveButton.backgroundColor = .tGray1000
-                }
-            }
-            
-        case .updateCheckItemMemo:
-            guard let maximumCount = Int("editModal_updateMemo_maximumNumberOfCharactersLabel".localized) else {
-                print("maximumCount Error")
-                return
-            }
-            
-            DispatchQueue.main.async {
-                self.mainView.currentNumberOfCharactersLabel.text = "editModal_updateMemo_currentNumberOfCharactersLabel".localized(with: currentCount)
-                
-                if currentCount > maximumCount {
-                    self.mainView.saveButton.isEnabled = false
-                    self.mainView.saveButton.backgroundColor = .tGray500
-                } else {
-                    self.mainView.saveButton.isEnabled = true
-                    self.mainView.saveButton.backgroundColor = .tGray1000
-                }
-            }
-        case .createCheckItem:
-            guard let maximumCount = Int("editModal_createCheckItem_maximumNumberOfCharactersLabel".localized) else {
-                print("maximumCount Error")
-                return
-            }
-            
-            DispatchQueue.main.async {
-                self.mainView.currentNumberOfCharactersLabel.text = "editModal_createCheckItem_currentNumberOfCharactersLabel".localized(with: currentCount)
-                
-                if currentCount > maximumCount {
-                    self.mainView.saveButton.isEnabled = false
-                    self.mainView.saveButton.backgroundColor = .tGray500
-                } else {
-                    self.mainView.saveButton.isEnabled = true
-                    self.mainView.saveButton.backgroundColor = .tGray1000
-                }
-            }
+
+        DispatchQueue.main.async {
+            self.mainView.currentNumberOfCharactersLabel.text = "editModal_currentNumberOfCharactersLabel".localized(with: currentCount)
+            self.mainView.saveButton.isEnabled = true
+            self.mainView.saveButton.backgroundColor = .tGray1000
         }
     }
-
+    
 }
