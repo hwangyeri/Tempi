@@ -22,7 +22,7 @@
 "showToast_create" = "Created successfully!";
 
 // CategoryHomeView
-"search_main_label" = "What kind of checklist are you curious about?";
+"search_main_label" = "What kind of Checklist are you looking for?";
 "searchBar_placeholder" = " Search for various templates.";
 "category_title_label" = "Category";
 "category_main_label" = "How about this category?";
@@ -88,6 +88,8 @@
 "myList_sectionTitle_1" = "Today";
 "myList_sectionTitle_2" = "Yesterday";
 "myList_sectionTitle_3" = "Last";
+"myList_emptyMainLabel" = "There is no checklist created yet.";
+"myList_emptySubLabel" = "Press the plus button to make a checklist!\nYou can view the checklist template\non the Explore Tab.";
 
 // EditModalView
 "editModal_updateContent_mainLabel" = "Content Modification";
