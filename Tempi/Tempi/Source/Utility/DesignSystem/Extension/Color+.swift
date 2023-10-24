@@ -29,7 +29,7 @@ extension UIColor {
         case .mainBack:
             return UIColor(named: "mainBack") // 000000 - 434343
         case .point:
-            return UIColor(named: "point") // FF7676 - FF7676
+            return UIColor(named: "point") // FF7B88 - FF7B88
         case .tGray100:
             return UIColor(named: "tGray100") // FFFFFF - 000000
         case .tGray200:
