@@ -18,8 +18,9 @@ class MyChecklistViewController: BaseViewController {
     
     private let checklistRepository = ChecklistTableRepository()
     private let checkItemRepository = CheckItemTableRepository()
-    private var sections: [[ChecklistTable]] = []
-
+    
+    var storeDic: [Int: Int] = [:] // [indexPathSection: headerSection]
+    
     let mainView = MyChecklistView()
     
     private var myListDataSource: UICollectionViewDiffableDataSource<Int, ChecklistTable>!
@@ -27,25 +28,29 @@ class MyChecklistViewController: BaseViewController {
     override func loadView() {
         self.view = mainView
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         fetchAndFilterChecklistData()
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(createChecklistNameFromMyNotificationObserver(notification:)), name: .createChecklistFromMy, object: nil)
+        setNotificationCenter()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        // FIXME: 체크리스트 생성 되는 경우(홈화면, 리스트 화면, 새로운 리스트에 추가하기), 체크리스트 이름 변경되는 경우, 노티 보내서 데이터 리로드 해주는 방식으로 변경하기?
+        // FIXME: 노티 보내서 데이터 리로드 해주는 방식으로 변경하기
+        // 체크리스트 생성(홈화면, 리스트 화면, 새로운 리스트에 추가하기), 체크리스트 이름 변경, 체크리스트 삭제...
         fetchAndFilterChecklistData()
     }
-
+    
     override func configureLayout() {
         mainView.myListCollectionView.delegate = self
         mainView.plusButton.addTarget(self, action: #selector(plusButtonTapped), for: .touchUpInside)
+    }
+    
+    private func setNotificationCenter() {
+        NotificationCenter.default.addObserver(self, selector: #selector(createChecklistNameFromMyNotificationObserver(notification:)), name: .createChecklistFromMy, object: nil)
     }
     
     // MARK: - 플러스 버튼
@@ -75,88 +80,96 @@ class MyChecklistViewController: BaseViewController {
     
     // MARK: - CollectionView Section Filtering Date
     private func fetchAndFilterChecklistData() {
-        DispatchQueue.main.async {
-            self.checklistRepository.fetch { allItems in
-                guard let allItems = allItems else {
-                    print("allItems Error")
-                    return
-                }
-                
-                self.sections = [self.fixedChecklists, self.todayChecklists, self.yesterdayChecklists, self.previousChecklists]
-                self.configureMyListDataSource(with: self.sections)
-                
-                let today = Calendar.current.startOfDay(for: Date())
-                let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: today)!
-                
-                // 고정된 리스트
-                self.fixedChecklists = allItems.filter { $0.isFixed }
-                
-                // 오늘
-                self.todayChecklists = allItems.filter { item in
-                    Calendar.current.isDate(item.createdAt, inSameDayAs: today) && !self.fixedChecklists.contains(item)
-                }
-                
-                // 어제
-                self.yesterdayChecklists = allItems.filter { item in
-                    Calendar.current.isDate(item.createdAt, inSameDayAs: yesterday) && !self.fixedChecklists.contains(item) && !self.todayChecklists.contains(item)
-                }
-                
-                // 이전
-                self.previousChecklists = allItems.filter { item in
-                    !Calendar.current.isDate(item.createdAt, inSameDayAs: today) && !Calendar.current.isDate(item.createdAt, inSameDayAs: yesterday) && !self.fixedChecklists.contains(item) && !self.todayChecklists.contains(item) && !self.yesterdayChecklists.contains(item)
-                }
-                            
-                let allSections = [self.fixedChecklists, self.todayChecklists, self.yesterdayChecklists, self.previousChecklists]
+        self.checklistRepository.fetch { allItems in
+            guard let allItems = allItems else {
+                print("allItems Error")
+                return
+            }
+            
+            if allItems.isEmpty {
+                self.mainView.emptyView.isHidden = false
+            } else {
+                self.mainView.emptyView.isHidden = true
+            }
+            
+            let today = Calendar.current.startOfDay(for: Date())
+            let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: today)!
+            
+            // 고정된 리스트
+            self.fixedChecklists = allItems.filter { $0.isFixed }
+            print("--- fixedChecklists ---", self.fixedChecklists)
+            
+            // 오늘
+            self.todayChecklists = allItems.filter { item in
+                Calendar.current.isDate(item.createdAt, inSameDayAs: today) && !self.fixedChecklists.contains(item)
+            }
+            print("--- todayChecklists ---", self.todayChecklists)
+            
+            // 어제
+            self.yesterdayChecklists = allItems.filter { item in
+                Calendar.current.isDate(item.createdAt, inSameDayAs: yesterday) && !self.fixedChecklists.contains(item) && !self.todayChecklists.contains(item)
+            }
+            print("--- yesterdayChecklists ---", self.yesterdayChecklists)
+            
+            
+            // 이전
+            self.previousChecklists = allItems.filter { item in
+                !Calendar.current.isDate(item.createdAt, inSameDayAs: today) && !Calendar.current.isDate(item.createdAt, inSameDayAs: yesterday) && !self.fixedChecklists.contains(item) && !self.todayChecklists.contains(item) && !self.yesterdayChecklists.contains(item)
+            }
+            print("--- previousChecklists ---", self.previousChecklists)
+            
+            let allSections: [[ChecklistTable]] = [self.fixedChecklists, self.todayChecklists, self.yesterdayChecklists, self.previousChecklists]
+            print("--- allSections ---", allSections)
+            
+            DispatchQueue.main.async {
                 self.configureMyListDataSource(with: allSections)
             }
         }
     }
-
+    
     // MARK: - CollectionView DataSource
-    private func configureMyListDataSource(with sections: [[ChecklistTable]]) {
+    
+    private func configureMyListDataSource(with allSections: [[ChecklistTable]]) {
         // 헤더 설정
         let headerRegistration = UICollectionView.SupplementaryRegistration<MyListHeaderView>(elementKind: UICollectionView.elementKindSectionHeader) { [weak self] headerView, elementKind, indexPath in
-            if let sections = self?.sections {
-                if sections.indices.contains(indexPath.section) {
-                    let currentSection = sections[indexPath.section]
-                    if currentSection.isEmpty {
-                        headerView.isHidden = true
-                    } else {
-                        headerView.isHidden = false
-                        let sectionTitle: String
-                        switch indexPath.section {
-                        case 0:
-                            sectionTitle = "myList_sectionTitle_0".localized // fixedChecklists
-                            headerView.imageView.isHidden = false
-                        case 1:
-                            sectionTitle = "myList_sectionTitle_1".localized // todayChecklists
-                            headerView.imageView.isHidden = true
-                        case 2:
-                            sectionTitle = "myList_sectionTitle_2".localized // yesterdayChecklists
-                            headerView.imageView.isHidden = true
-                        case 3:
-                            sectionTitle = "myList_sectionTitle_3".localized // previousChecklists
-                            headerView.imageView.isHidden = true
-                        default:
-                            sectionTitle = ""
-                        }
-                        headerView.titleLabel.text = sectionTitle
-                        headerView.updateLayoutForHiddenImage(isHidden: headerView.imageView.isHidden)
-                    }
-                }
+            let sectionHeaderTitle: String
+            let indexPathSection = indexPath.section
+            print(indexPathSection)
+            let headerSection = self?.storeDic[indexPathSection]
+            //print("--- indexPathSection, headerSection ---", indexPathSection, headerSection)
+            
+            switch headerSection {
+            case 0: // 고정된 리스트 - fixedChecklists
+                sectionHeaderTitle = "myList_sectionTitle_0".localized
+                headerView.imageView.isHidden = false // header Image 0번 Section 만 적용
+            case 1: // 오늘 - todayChecklists
+                sectionHeaderTitle = "myList_sectionTitle_1".localized
+                headerView.imageView.isHidden = true
+            case 2: // 어제 - yesterdayChecklists
+                sectionHeaderTitle = "myList_sectionTitle_2".localized
+                headerView.imageView.isHidden = true
+            case 3: // 이전 - previousChecklists
+                sectionHeaderTitle = "myList_sectionTitle_3".localized
+                headerView.imageView.isHidden = true
+            default:
+                sectionHeaderTitle = ""
             }
+            
+            headerView.titleLabel.text = sectionHeaderTitle
+            print("--- sectionHeaderTitle ---", sectionHeaderTitle)
+            headerView.updateLayoutForHiddenImage(isHidden: headerView.imageView.isHidden)
         }
         
         // 셀 설정
         let cellRegistration = UICollectionView.CellRegistration<MyListCollectionViewCell, ChecklistTable> { cell, indexPath, itemIdentifier in
-            cell.checklistNameLabel.text = itemIdentifier.checklistName
-            
             let dateFormatter = DateFormatter()
             dateFormatter.dateStyle = .medium
             dateFormatter.timeStyle = .short
             dateFormatter.locale = Locale(identifier: "myList_checklistDateLabel".localized)
+            
             let dateString = dateFormatter.string(from: itemIdentifier.createdAt)
             cell.checklistDateLabel.text = dateString
+            cell.checklistNameLabel.text = itemIdentifier.checklistName
         }
         
         myListDataSource = UICollectionViewDiffableDataSource(collectionView: mainView.myListCollectionView) { collectionView, indexPath, item in
@@ -166,17 +179,42 @@ class MyChecklistViewController: BaseViewController {
         myListDataSource.supplementaryViewProvider = { collectionView, elementKind, indexPath in
             collectionView.dequeueConfiguredReusableSupplementary(using: headerRegistration, for: indexPath)
         }
-
+        
         var snapshot = NSDiffableDataSourceSnapshot<Int, ChecklistTable>()
         var section = 0
-        for checklists in sections {
+        print("--- allSections ---", allSections)
+        
+//        for i in 0..<sections.count {
+//            print(i, sections[i].count)
+////            snapshot.appendSections([i])
+//            if sections[i].isEmpty {
+//                continue
+//            }
+//
+//            snapshot.appendSections([section])
+//            dic[section] = i
+//            print(snapshot.numberOfItems(inSection: i))
+//            snapshot.appendItems(sections[i], toSection: section)
+//            section += 1
+//        }
+        
+        for (index, checklists) in allSections.enumerated() {
+            if checklists.isEmpty {
+                continue
+            }
             snapshot.appendSections([section])
+            storeDic[section] = index // [indexPathSection: headerSection]
             snapshot.appendItems(checklists, toSection: section)
             section += 1
         }
-
-        // FIXME: 헤더만 apply 반응 느림, EmptyView 적용 필요
-        myListDataSource.apply(snapshot, animatingDifferences: true)
+        
+//        print("numberOfSections", snapshot.numberOfSections)
+//        
+//        for i in 0..<snapshot.numberOfSections {
+//            print(snapshot.numberOfItems(inSection: i))
+//        }
+        
+        self.myListDataSource.apply(snapshot, animatingDifferences: true)
     }
     
     deinit {
