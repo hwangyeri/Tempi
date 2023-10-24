@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B2D3E042AE3FF8700476A46 /* MyListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D3E032AE3FF8700476A46 /* MyListCollectionViewCell.swift */; };
-		2B2D3E062AE40E8D00476A46 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D3E052AE40E8D00476A46 /* HeaderCollectionReusableView.swift */; };
+		2B2D3E062AE40E8D00476A46 /* MyListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D3E052AE40E8D00476A46 /* MyListHeaderView.swift */; };
 		2B2D3E082AE4F7E800476A46 /* BaseCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D3E072AE4F7E800476A46 /* BaseCollectionReusableView.swift */; };
 		2B2D3E0A2AE4F8BB00476A46 /* EmptyCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D3E092AE4F8BB00476A46 /* EmptyCollectionReusableView.swift */; };
 		2B49F5A02AC864F100FF903F /* CategoryHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B49F59F2AC864F100FF903F /* CategoryHomeView.swift */; };
@@ -32,8 +32,6 @@
 		2B8105542AD02DA400B50223 /* CheckItemTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8105532AD02DA400B50223 /* CheckItemTable.swift */; };
 		2B8105562AD02F7600B50223 /* BookmarkTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8105552AD02F7600B50223 /* BookmarkTable.swift */; };
 		2B8105582AD0FE4600B50223 /* TempiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8105572AD0FE4600B50223 /* TempiModel.swift */; };
-		2B81055C2AD1000200B50223 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81055B2AD1000200B50223 /* APIService.swift */; };
-		2B81055E2AD135AF00B50223 /* APIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81055D2AD135AF00B50223 /* APIErrors.swift */; };
 		2B8105652AD2C22100B50223 /* CategoryData.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B8105642AD2C22100B50223 /* CategoryData.json */; };
 		2B8105692AD2C66B00B50223 /* CategoryDefaultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8105682AD2C66B00B50223 /* CategoryDefaultModel.swift */; };
 		2B81056D2AD5141700B50223 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81056C2AD5141700B50223 /* DataManager.swift */; };
@@ -69,6 +67,8 @@
 		2BDE84D32ACAB7EC0018C759 /* ReuseSearchWordsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDE84D22ACAB7EC0018C759 /* ReuseSearchWordsCollectionViewCell.swift */; };
 		2BDE84D52ACAEBF10018C759 /* CategoryDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDE84D42ACAEBF10018C759 /* CategoryDisplayModel.swift */; };
 		2BDE84D72ACAFDCD0018C759 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDE84D62ACAFDCD0018C759 /* CategoryCollectionViewCell.swift */; };
+		2BE49C782AE5961D00007EC9 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE49C772AE5961D00007EC9 /* SetupViewController.swift */; };
+		2BE49C7A2AE5964500007EC9 /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE49C792AE5964500007EC9 /* SetupView.swift */; };
 		2BF5FE0E2AC6E6C1009BCBD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF5FE0D2AC6E6C1009BCBD9 /* AppDelegate.swift */; };
 		2BF5FE102AC6E6C1009BCBD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF5FE0F2AC6E6C1009BCBD9 /* SceneDelegate.swift */; };
 		2BF5FE122AC6E6C1009BCBD9 /* MyChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF5FE112AC6E6C1009BCBD9 /* MyChecklistViewController.swift */; };
@@ -83,11 +83,13 @@
 		2BF5FE652AC7079B009BCBD9 /* Localized+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF5FE642AC7079B009BCBD9 /* Localized+.swift */; };
 		2BF5FE672AC70B51009BCBD9 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF5FE662AC70B51009BCBD9 /* Color+.swift */; };
 		2BFC74BF2AE2A70E00AD757D /* TempiLaunchScreen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BFC74BE2AE2A70E00AD757D /* TempiLaunchScreen.jpg */; };
+		2BFE96E52AE553EF007CD4ED /* SearchResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE96E42AE553EF007CD4ED /* SearchResultCollectionViewCell.swift */; };
+		2BFE96E72AE55F9F007CD4ED /* SearchHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE96E62AE55F9F007CD4ED /* SearchHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2B2D3E032AE3FF8700476A46 /* MyListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListCollectionViewCell.swift; sourceTree = "<group>"; };
-		2B2D3E052AE40E8D00476A46 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		2B2D3E052AE40E8D00476A46 /* MyListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListHeaderView.swift; sourceTree = "<group>"; };
 		2B2D3E072AE4F7E800476A46 /* BaseCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionReusableView.swift; sourceTree = "<group>"; };
 		2B2D3E092AE4F8BB00476A46 /* EmptyCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCollectionReusableView.swift; sourceTree = "<group>"; };
 		2B49F59F2AC864F100FF903F /* CategoryHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHomeView.swift; sourceTree = "<group>"; };
@@ -109,8 +111,6 @@
 		2B8105532AD02DA400B50223 /* CheckItemTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckItemTable.swift; sourceTree = "<group>"; };
 		2B8105552AD02F7600B50223 /* BookmarkTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTable.swift; sourceTree = "<group>"; };
 		2B8105572AD0FE4600B50223 /* TempiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempiModel.swift; sourceTree = "<group>"; };
-		2B81055B2AD1000200B50223 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		2B81055D2AD135AF00B50223 /* APIErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrors.swift; sourceTree = "<group>"; };
 		2B8105642AD2C22100B50223 /* CategoryData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CategoryData.json; sourceTree = "<group>"; };
 		2B8105682AD2C66B00B50223 /* CategoryDefaultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDefaultModel.swift; sourceTree = "<group>"; };
 		2B81056C2AD5141700B50223 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -145,6 +145,8 @@
 		2BDE84D22ACAB7EC0018C759 /* ReuseSearchWordsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseSearchWordsCollectionViewCell.swift; sourceTree = "<group>"; };
 		2BDE84D42ACAEBF10018C759 /* CategoryDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDisplayModel.swift; sourceTree = "<group>"; };
 		2BDE84D62ACAFDCD0018C759 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		2BE49C772AE5961D00007EC9 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		2BE49C792AE5964500007EC9 /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
 		2BF5FE0A2AC6E6C1009BCBD9 /* Tempi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tempi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BF5FE0D2AC6E6C1009BCBD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BF5FE0F2AC6E6C1009BCBD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -163,6 +165,8 @@
 		2BF5FE642AC7079B009BCBD9 /* Localized+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Localized+.swift"; sourceTree = "<group>"; };
 		2BF5FE662AC70B51009BCBD9 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		2BFC74BE2AE2A70E00AD757D /* TempiLaunchScreen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TempiLaunchScreen.jpg; sourceTree = "<group>"; };
+		2BFE96E42AE553EF007CD4ED /* SearchResultCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCollectionViewCell.swift; sourceTree = "<group>"; };
+		2BFE96E62AE55F9F007CD4ED /* SearchHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +215,7 @@
 			children = (
 				2B81053B2ACEFD3700B50223 /* SearchViewController.swift */,
 				2B81053D2ACEFD3F00B50223 /* SearchView.swift */,
+				2BFE96E62AE55F9F007CD4ED /* SearchHeaderView.swift */,
 				2BF5FE492AC6F9A6009BCBD9 /* SearchCell */,
 			);
 			path = Search;
@@ -266,6 +271,15 @@
 				2B6378322ADD684600203AFA /* TPopUpButton.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		2BE49C752AE595B200007EC9 /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				2BE49C772AE5961D00007EC9 /* SetupViewController.swift */,
+				2BE49C792AE5964500007EC9 /* SetupView.swift */,
+			);
+			path = Setup;
 			sourceTree = "<group>";
 		};
 		2BF5FE012AC6E6C1009BCBD9 = {
@@ -399,8 +413,6 @@
 		2BF5FE422AC6F666009BCBD9 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				2B81055B2AD1000200B50223 /* APIService.swift */,
-				2B81055D2AD135AF00B50223 /* APIErrors.swift */,
 				2B81056C2AD5141700B50223 /* DataManager.swift */,
 			);
 			path = Network;
@@ -425,6 +437,7 @@
 				2BF5FE4B2AC6F9C5009BCBD9 /* Category */,
 				2BF5FE4C2AC6F9DC009BCBD9 /* MyList */,
 				2BF5FE4A2AC6F9B8009BCBD9 /* Calendar */,
+				2BE49C752AE595B200007EC9 /* Setup */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -459,6 +472,7 @@
 			isa = PBXGroup;
 			children = (
 				2BDE84D22ACAB7EC0018C759 /* ReuseSearchWordsCollectionViewCell.swift */,
+				2BFE96E42AE553EF007CD4ED /* SearchResultCollectionViewCell.swift */,
 			);
 			path = SearchCell;
 			sourceTree = "<group>";
@@ -490,7 +504,7 @@
 			children = (
 				2BF5FE112AC6E6C1009BCBD9 /* MyChecklistViewController.swift */,
 				2B63782C2ADC578200203AFA /* MyChecklistView.swift */,
-				2B2D3E052AE40E8D00476A46 /* HeaderCollectionReusableView.swift */,
+				2B2D3E052AE40E8D00476A46 /* MyListHeaderView.swift */,
 				2B2D3E092AE4F8BB00476A46 /* EmptyCollectionReusableView.swift */,
 				2B2D3E022AE3FF6000476A46 /* MyListCell */,
 			);
@@ -618,14 +632,13 @@
 				2B952A112ACE83420074D4F2 /* ChecklistViewController.swift in Sources */,
 				2B91AB652AD6977B0078AB39 /* AddChecklistViewController.swift in Sources */,
 				2B6378422ADFCC9200203AFA /* EditModalViewController.swift in Sources */,
-				2B2D3E062AE40E8D00476A46 /* HeaderCollectionReusableView.swift in Sources */,
+				2B2D3E062AE40E8D00476A46 /* MyListHeaderView.swift in Sources */,
 				2BC72B7A2AC717240014420F /* Font+.swift in Sources */,
 				2B6378352ADD700B00203AFA /* NSNotification+.swift in Sources */,
 				2BF5FE122AC6E6C1009BCBD9 /* MyChecklistViewController.swift in Sources */,
 				2BC72B852AC723160014420F /* BaseCollectionViewCell.swift in Sources */,
 				2B63782F2ADD56B700203AFA /* DeleteModalViewController.swift in Sources */,
 				2BF5FE672AC70B51009BCBD9 /* Color+.swift in Sources */,
-				2B81055C2AD1000200B50223 /* APIService.swift in Sources */,
 				2B81053E2ACEFD3F00B50223 /* SearchView.swift in Sources */,
 				2B952A082ACD7E9A0074D4F2 /* CategoryChecklistView.swift in Sources */,
 				2B952A042ACD67790074D4F2 /* SubCategoryCollectionViewCell.swift in Sources */,
@@ -648,15 +661,18 @@
 				2BC72B872AC727640014420F /* Alert+.swift in Sources */,
 				2B9D8D4A2ADBB3B8006F42E0 /* ChecklistTableRepository.swift in Sources */,
 				2B63782D2ADC578200203AFA /* MyChecklistView.swift in Sources */,
+				2BFE96E72AE55F9F007CD4ED /* SearchHeaderView.swift in Sources */,
+				2BE49C782AE5961D00007EC9 /* SetupViewController.swift in Sources */,
 				2B6378312ADD56BF00203AFA /* DeleteModalView.swift in Sources */,
 				2BDE84D72ACAFDCD0018C759 /* CategoryCollectionViewCell.swift in Sources */,
+				2BE49C7A2AE5964500007EC9 /* SetupView.swift in Sources */,
 				2BC72B812AC720B30014420F /* BaseViewController.swift in Sources */,
 				2BF5FE652AC7079B009BCBD9 /* Localized+.swift in Sources */,
 				2B952A0E2ACE7B1B0074D4F2 /* CategoryChecklistCollectionViewCell.swift in Sources */,
 				2B2D3E042AE3FF8700476A46 /* MyListCollectionViewCell.swift in Sources */,
+				2BFE96E52AE553EF007CD4ED /* SearchResultCollectionViewCell.swift in Sources */,
 				2B8105502AD02B8F00B50223 /* CategoryTable.swift in Sources */,
 				2B9D8D442AD97408006F42E0 /* BookmarkListView.swift in Sources */,
-				2B81055E2AD135AF00B50223 /* APIErrors.swift in Sources */,
 				2B952A132ACE835F0074D4F2 /* ChecklistView.swift in Sources */,
 				2BDE84D32ACAB7EC0018C759 /* ReuseSearchWordsCollectionViewCell.swift in Sources */,
 				2B91AB692AD697940078AB39 /* AddChecklistView.swift in Sources */,
