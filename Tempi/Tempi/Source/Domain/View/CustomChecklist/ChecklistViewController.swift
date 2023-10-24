@@ -67,6 +67,17 @@ class ChecklistViewController: BaseViewController {
         
         mainView.checklistNameLabel.text = checklistName
         mainView.checklistDateLabel.text = dateString
+        
+        guard let isFixed = checklistRepository.getIsFixed(forId: selectedChecklistID) else {
+            print("isFixed Error")
+            return
+        }
+        
+        if isFixed {
+            let imageConfig = UIImage.SymbolConfiguration(pointSize: Constant.TImageButton.checklistImageSize, weight: .regular)
+            let image = UIImage(systemName: Constant.SFSymbol.checklistFixedIcon, withConfiguration: imageConfig)
+            self.mainView.checklistFixedButton.setImage(image, for: .normal)
+        }
     }
     
     private func setNavigationBarButton() {
@@ -119,12 +130,12 @@ class ChecklistViewController: BaseViewController {
         }
         
         DispatchQueue.main.async {
-            if isFixed {
+            if isFixed { // True -> False
                 let imageConfig = UIImage.SymbolConfiguration(pointSize: Constant.TImageButton.checklistImageSize, weight: .regular)
                 let image = UIImage(systemName: Constant.SFSymbol.checklistUnFixedIcon, withConfiguration: imageConfig)
                 self.mainView.checklistFixedButton.setImage(image, for: .normal)
                 self.checklistRepository.updateIsFixed(forId: selectedChecklistID, newIsFixed: false)
-            } else {
+            } else { // False -> True
                 let imageConfig = UIImage.SymbolConfiguration(pointSize: Constant.TImageButton.checklistImageSize, weight: .regular)
                 let image = UIImage(systemName: Constant.SFSymbol.checklistFixedIcon, withConfiguration: imageConfig)
                 self.mainView.checklistFixedButton.setImage(image, for: .normal)
