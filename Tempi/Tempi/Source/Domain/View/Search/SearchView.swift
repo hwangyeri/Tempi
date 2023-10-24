@@ -13,108 +13,86 @@ class SearchView: BaseView {
     let searchBar = {
         let view = UISearchBar()
         view.searchBarStyle = .minimal
-        view.placeholder = "search_searchBar_placeholder".localized
+        view.placeholder = "search_searchBar".localized
         view.searchTextField.font = .customFont(.pretendardRegularM)
-        return view
-    }()
-    
-    let recentSearchWordsLabel = {
-        let view = TLabel(
-            text: "search_recent_search_words_label".localized,
-            custFont: .pretendardBoldS,
-            textColor: .tGray1000)
-        return view
-    }()
-    
-    lazy var recentSearchWordsCollectionView = UICollectionView(frame: .zero, collectionViewLayout: configureRecentSearchWordsCollectionLayout())
-    
-    let recommendSearchWordsLabel = {
-        let view = TLabel(
-            text: "search_recommend_search_words_label".localized,
-            custFont: .pretendardBoldS,
-            textColor: .tGray1000)
         return view
     }()
     
     lazy var recommendSearchWordsCollectionView = UICollectionView(frame: .zero, collectionViewLayout: configureRecommendSearchWordsCollectionLayout())
     
+    lazy var searchResultCollectionView = UICollectionView(frame: .zero, collectionViewLayout: configureSearchResultCollectionLayout())
+    
     override func configureHierarchy() {
-        [searchBar, recentSearchWordsLabel, recentSearchWordsCollectionView, recommendSearchWordsLabel, recommendSearchWordsCollectionView].forEach {
+        [searchBar, recommendSearchWordsCollectionView, searchResultCollectionView].forEach {
             addSubview($0)
         }
     }
     
     override func configureLayout() {
         searchBar.snp.makeConstraints { make in
-            make.top.equalTo(self.safeAreaLayoutGuide)
+            make.top.equalTo(self.safeAreaLayoutGuide).inset(10)
             make.horizontalEdges.equalTo(self.safeAreaLayoutGuide).inset(10)
         }
         
-        recentSearchWordsLabel.snp.makeConstraints { make in
-            make.top.equalTo(searchBar.snp.bottom).offset(10)
-            make.leading.equalTo(searchBar).inset(10)
-        }
-        
-        recentSearchWordsCollectionView.snp.makeConstraints { make in
-            make.top.equalTo(recentSearchWordsLabel.snp.bottom).offset(10)
-            make.leading.equalTo(recentSearchWordsLabel)
-            make.trailing.equalTo(self.safeAreaLayoutGuide)
-            make.height.equalTo(35)
-        }
-        
-//        recentSearchWordsCollectionView.backgroundColor = .lightGray
-        
-        recommendSearchWordsLabel.snp.makeConstraints { make in
-            make.top.equalTo(recentSearchWordsCollectionView.snp.bottom).offset(20)
-            make.leading.equalTo(recentSearchWordsLabel)
-        }
-        
         recommendSearchWordsCollectionView.snp.makeConstraints { make in
-            make.top.equalTo(recommendSearchWordsLabel.snp.bottom).offset(10)
-            make.leading.equalTo(recentSearchWordsLabel)
-            make.trailing.equalTo(recentSearchWordsCollectionView)
-            make.height.equalTo(recentSearchWordsCollectionView)
+            make.top.equalTo(searchBar.snp.bottom).offset(15)
+            make.leading.equalToSuperview().inset(10)
+            make.trailing.equalToSuperview()
+            make.height.equalTo(65)
         }
         
 //        recommendSearchWordsCollectionView.backgroundColor = .lightGray
         
-    }
-    
-    private func configureRecentSearchWordsCollectionLayout() -> UICollectionViewLayout {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .estimated(100), heightDimension: .fractionalHeight(1.0))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        searchResultCollectionView.snp.makeConstraints { make in
+            make.top.equalTo(searchBar.snp.bottom).offset(15)
+            make.horizontalEdges.equalToSuperview().inset(20)
+            make.bottom.equalTo(self.safeAreaLayoutGuide).inset(20)
+        }
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 5)
-        group.interItemSpacing = .fixed(8)
-        
-        let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
-        section.interGroupSpacing = 0
-        
-        let configuration = UICollectionViewCompositionalLayoutConfiguration()
-        configuration.scrollDirection = .horizontal
-        
-        let layout = UICollectionViewCompositionalLayout(section: section)
-        layout.configuration = configuration
-        
-        return layout
+//        searchResultCollectionView.backgroundColor = .lightGray
     }
     
     private func configureRecommendSearchWordsCollectionLayout() -> UICollectionViewLayout {
         let itemSize = NSCollectionLayoutSize(widthDimension: .estimated(100), heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(35))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 5)
         group.interItemSpacing = .fixed(8)
         
         let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
-        section.interGroupSpacing = 0
+        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 0, trailing: 10)
+        section.interGroupSpacing = 10
+        
+        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(20))
+        let header = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+        section.boundarySupplementaryItems = [header]
+        section.orthogonalScrollingBehavior = .continuous
+        
+        let layout = UICollectionViewCompositionalLayout(section: section)
+        
+        return layout
+        
+    }
+    
+    private func configureSearchResultCollectionLayout() -> UICollectionViewLayout {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(75))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 1)
+        group.interItemSpacing = .fixed(10)
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0)
+        section.interGroupSpacing = 10
+        
+        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(20))
+        let header = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+        section.boundarySupplementaryItems = [header]
         
         let configuration = UICollectionViewCompositionalLayoutConfiguration()
-        configuration.scrollDirection = .horizontal
+        configuration.scrollDirection = .vertical
         
         let layout = UICollectionViewCompositionalLayout(section: section)
         layout.configuration = configuration
@@ -123,3 +101,31 @@ class SearchView: BaseView {
     }
     
 }
+
+
+//    lazy var recentSearchWordsCollectionView = UICollectionView(frame: .zero, collectionViewLayout: configureRecentSearchWordsCollectionLayout())
+
+//    private func configureRecentSearchWordsCollectionLayout() -> UICollectionViewLayout {
+//        let itemSize = NSCollectionLayoutSize(widthDimension: .estimated(100), heightDimension: .absolute(35))
+//        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+//
+//        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+//        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 5)
+//        group.interItemSpacing = .fixed(8)
+//
+//        let section = NSCollectionLayoutSection(group: group)
+//        section.contentInsets = NSDirectionalEdgeInsets(top: 30, leading: 10, bottom: 0, trailing: 10)
+//        section.interGroupSpacing = 10
+//
+//        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(20))
+//        let header = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+//        section.boundarySupplementaryItems = [header]
+//
+//        let configuration = UICollectionViewCompositionalLayoutConfiguration()
+//        configuration.scrollDirection = .horizontal
+//
+//        let layout = UICollectionViewCompositionalLayout(section: section)
+//        layout.configuration = configuration
+//
+//        return layout
+//    }
