@@ -34,11 +34,7 @@ class MyListView: BaseView {
     
     let emptySubLabel = {
         let view = UILabel()
-        let attrString = NSMutableAttributedString(string: "myList_emptySubLabel".localized)
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = 5
-        attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attrString.length))
-        view.attributedText = attrString
+        view.setAttributedTextWithLineSpacing("myList_emptySubLabel".localized, lineSpacing: 5)
         view.font = .customFont(.pretendardRegularS)
         view.textColor = .label
         view.numberOfLines = 0
@@ -51,11 +47,7 @@ class MyListView: BaseView {
         text: "myList_mainLabel".localized,
         custFont: .pretendardBoldXXXL,
         textColor: .tGray1000)
-        let attrString = NSMutableAttributedString(string: "myList_mainLabel".localized)
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = 8
-        attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attrString.length))
-        view.attributedText = attrString
+        view.setAttributedTextWithLineSpacing("myList_mainLabel".localized, lineSpacing: 8)
         return view
     }()
     
