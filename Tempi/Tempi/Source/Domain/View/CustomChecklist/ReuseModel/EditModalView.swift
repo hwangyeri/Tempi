@@ -50,7 +50,7 @@ class EditModalView: BaseView {
     
     let currentNumberOfCharactersLabel = {
        let view = TLabel(
-        text: "0 / ",
+        text: "0",
         custFont: .pretendardRegularXS,
         textColor: .tGray1000)
         return view
