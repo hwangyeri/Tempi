@@ -12,7 +12,37 @@ class MyChecklistView: BaseView {
     
     let emptyView = {
         let view = UIView()
-        view.backgroundColor = .red
+        return view
+    }()
+    
+    let emptySymbolLabel = {
+        let view = UILabel()
+        view.text = "📁"
+        view.font = .systemFont(ofSize: 50)
+        return view
+    }()
+    
+    let emptyMainLabel = {
+        let view = UILabel()
+        view.text = "myList_emptyMainLabel".localized
+        view.font = .customFont(.pretendardSemiBoldL)
+        view.textColor = .label
+        view.numberOfLines = 0
+        view.textAlignment = .center
+        return view
+    }()
+    
+    let emptySubLabel = {
+        let view = UILabel()
+        let attrString = NSMutableAttributedString(string: "myList_emptySubLabel".localized)
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 5
+        attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attrString.length))
+        view.attributedText = attrString
+        view.font = .customFont(.pretendardRegularS)
+        view.textColor = .label
+        view.numberOfLines = 0
+        view.textAlignment = .center
         return view
     }()
     
@@ -41,10 +71,13 @@ class MyChecklistView: BaseView {
     lazy var myListCollectionView = UICollectionView(frame: .zero, collectionViewLayout: configureMyListCollectionLayout())
 
     override func configureHierarchy() {
-        [mainLabel, plusButton, myListCollectionView].forEach {
+        [mainLabel, plusButton, myListCollectionView, emptyView].forEach {
             addSubview($0)
         }
-//        addSubview(emptyView)
+        
+        [emptySymbolLabel, emptyMainLabel, emptySubLabel].forEach {
+            emptyView.addSubview($0)
+        }
     }
     
     override func configureLayout() {
@@ -64,9 +97,24 @@ class MyChecklistView: BaseView {
         }
         myListCollectionView.backgroundColor = .tGray200
         
-//        emptyView.snp.makeConstraints { make in
-//            make.edges.equalTo(myListCollectionView)
-//        }
+        emptyView.snp.makeConstraints { make in
+            make.edges.equalTo(myListCollectionView)
+        }
+        
+        emptySymbolLabel.snp.makeConstraints { make in
+            make.centerY.equalToSuperview().offset(-90)
+            make.centerX.equalToSuperview()
+        }
+        
+        emptyMainLabel.snp.makeConstraints { make in
+            make.top.equalTo(emptySymbolLabel.snp.bottom).offset(25)
+            make.horizontalEdges.equalToSuperview().inset(20)
+        }
+        
+        emptySubLabel.snp.makeConstraints { make in
+            make.top.equalTo(emptyMainLabel.snp.bottom).offset(10)
+            make.horizontalEdges.equalTo(emptyMainLabel)
+        }
     }
     
     private func configureMyListCollectionLayout() -> UICollectionViewLayout {
@@ -81,15 +129,11 @@ class MyChecklistView: BaseView {
         section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20)
         section.interGroupSpacing = 10
         
-        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(40))
+        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(40))
         let header = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
         section.boundarySupplementaryItems = [header]
         
-        let configuration = UICollectionViewCompositionalLayoutConfiguration()
-        configuration.scrollDirection = .vertical
-        
         let layout = UICollectionViewCompositionalLayout(section: section)
-        layout.configuration = configuration
         
         return layout
     }
