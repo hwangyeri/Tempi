@@ -30,13 +30,13 @@ class ReuseSearchWordsCollectionViewCell: BaseCollectionViewCell {
     }()
     
     override func configureHierarchy() {
-        contentView.addSubview(borderView)
+        self.addSubview(borderView)
         borderView.addSubview(searchWordsLabel)
     }
     
     override func configureLayout() {
         borderView.snp.makeConstraints { make in
-            make.edges.equalTo(contentView)
+            make.edges.equalToSuperview()
         }
         
         searchWordsLabel.snp.makeConstraints { make in
