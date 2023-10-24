@@ -94,20 +94,18 @@
 // EditModalView
 "editModal_updateContent_mainLabel" = "Content Modification";
 "editModal_updateContent_subLabel" = "Please enter what you want to modify.";
-"editModal_updateContent_currentNumberOfCharactersLabel" = "%d / ";
-"editModal_updateContent_maximumNumberOfCharactersLabel" = "100";
+"editModal_updateContent_maximumNumberOfCharactersLabel" = " / 100";
 
 "editModal_updateMemo_mainLabel" = "Memo Settings";
 "editModal_updateMemo_subLabel" = "Please enter any additional notes you want to make.";
-"editModal_updateMemo_currentNumberOfCharactersLabel" = "%d / ";
-"editModal_updateMemo_maximumNumberOfCharactersLabel" = "30";
+"editModal_updateMemo_maximumNumberOfCharactersLabel" = " / 30";
 
 "editModal_createCheckItem_mainLabel" = "Add a check item";
 "editModal_createCheckItem_subLabel" = "Please enter what you want to add.";
-"editModal_createCheckItem_currentNumberOfCharactersLabel" = "%d / ";
-"editModal_createCheckItem_maximumNumberOfCharactersLabel" = "100";
+"editModal_createCheckItem_maximumNumberOfCharactersLabel" = " / 100";
 
 "editModal_textField_placeholder" = "%@";
+"editModal_currentNumberOfCharactersLabel" = "%d";
 "editModal_saveButton" = "Save";
 
 // DeleteModalView
