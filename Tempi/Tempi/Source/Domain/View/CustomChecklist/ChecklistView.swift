@@ -88,15 +88,6 @@ class ChecklistView: BaseView {
         return view
     }()
     
-//    let addCheckItemLabel = {
-//       let view = TLabel(
-//        text: "추가하기",
-//        custFont: .pretendardRegularL,
-//        textColor: .tGray1000
-//       )
-//        return view
-//    }()
-    
     override func configureHierarchy() {
         [checklistNameLabel, checklistDateLabel, checklistNameEditButton, bookmarkListButton, checklistFixedButton, checklistDeleteButton, divider, checklistCollectionView, plusButton].forEach {
             addSubview($0)
@@ -107,7 +98,6 @@ class ChecklistView: BaseView {
         checklistNameLabel.snp.makeConstraints { make in
             make.top.equalTo(self.safeAreaLayoutGuide).inset(10)
             make.leading.equalTo(self.safeAreaLayoutGuide).inset(30)
-            make.trailing.equalToSuperview().inset(10)
         }
         
         checklistDateLabel.snp.makeConstraints { make in
@@ -117,7 +107,9 @@ class ChecklistView: BaseView {
         
         checklistNameEditButton.snp.makeConstraints { make in
             make.leading.equalTo(checklistNameLabel.snp.trailing).offset(8)
+            make.trailing.lessThanOrEqualTo(-10)
             make.bottom.equalTo(checklistNameLabel.snp.bottom)
+            make.size.equalTo(25)
         }
         
         bookmarkListButton.snp.makeConstraints { make in
@@ -149,20 +141,12 @@ class ChecklistView: BaseView {
             make.trailing.equalToSuperview().inset(20)
         }
 //        checklistCollectionView.backgroundColor = .lightGray
-//        checklistCollectionView.setContentHuggingPriority(.init(751), for: .vertical)
         
         plusButton.snp.makeConstraints { make in
             make.top.equalTo(checklistCollectionView.snp.bottom).offset(20)
             make.bottom.equalTo(self.safeAreaLayoutGuide).inset(40)
             make.centerX.equalToSuperview()
         }
-//        addCheckItemButton.setContentHuggingPriority(.init(750), for: .vertical)
-        
-//        addCheckItemLabel.snp.makeConstraints { make in
-//            make.centerY.equalTo(addCheckItemButton)
-//            make.leading.equalTo(addCheckItemButton.snp.trailing).offset(15)
-//            make.width.equalTo(60)
-//        }
     }
     
     private func configureChecklistCollectionLayout() -> UICollectionViewLayout {
