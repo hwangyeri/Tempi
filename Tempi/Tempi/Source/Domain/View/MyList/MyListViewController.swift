@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import RealmSwift
 
-class MyChecklistViewController: BaseViewController {
+class MyListViewController: BaseViewController {
     
     private var fixedChecklists: [ChecklistTable] = []
     private var todayChecklists: [ChecklistTable] = []
@@ -21,7 +21,7 @@ class MyChecklistViewController: BaseViewController {
     
     var storeDic: [Int: Int] = [:] // [indexPathSection: headerSection]
     
-    let mainView = MyChecklistView()
+    let mainView = MyListView()
     
     private var myListDataSource: UICollectionViewDiffableDataSource<Int, ChecklistTable>!
     
@@ -223,7 +223,7 @@ class MyChecklistViewController: BaseViewController {
 }
 
 // MARK: - CollectionView Delegate
-extension MyChecklistViewController: UICollectionViewDelegate {
+extension MyListViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(#function)
