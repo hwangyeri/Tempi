@@ -27,15 +27,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let tabBar = UITabBarController()
         
         let firstVC = UINavigationController(rootViewController: CategoryHomeViewController())
-        firstVC.tabBarItem = UITabBarItem(title: .none, image: UIImage(systemName: Constant.SFSymbol.firstTabBarIcon),selectedImage: UIImage(systemName: Constant.SFSymbol.firstTabBarIcon))
+        firstVC.tabBarItem = UITabBarItem(title: "탐색", image: UIImage(systemName: Constant.SFSymbol.firstTabBarIcon),selectedImage: UIImage(systemName: Constant.SFSymbol.firstTabBarIcon))
 
         let secondVC = UINavigationController(rootViewController: MyChecklistViewController())
-        secondVC.tabBarItem = UITabBarItem(title: .none, image: UIImage(systemName: Constant.SFSymbol.secondTabBarIcon),selectedImage: UIImage(systemName: Constant.SFSymbol.secondTabBarIcon))
+        secondVC.tabBarItem = UITabBarItem(title: "홈", image: UIImage(systemName: Constant.SFSymbol.secondTabBarIcon),selectedImage: UIImage(systemName: Constant.SFSymbol.secondTabBarIcon))
         
-        let thirdVC = UINavigationController(rootViewController: SearchViewController())
-        thirdVC.tabBarItem = UITabBarItem(title: .none, image: UIImage(systemName: Constant.SFSymbol.thirdTabBarIcon),selectedImage: UIImage(systemName: Constant.SFSymbol.thirdTabBarIcon))
+//        let thirdVC = UINavigationController(rootViewController: SearchViewController())
+//        thirdVC.tabBarItem = UITabBarItem(title: .none, image: UIImage(systemName: Constant.SFSymbol.thirdTabBarIcon),selectedImage: UIImage(systemName: Constant.SFSymbol.thirdTabBarIcon))
         
-        tabBar.viewControllers = [firstVC, secondVC, thirdVC]
+        tabBar.viewControllers = [firstVC, secondVC]
         tabBar.tabBar.backgroundColor = UIColor.tGray100
         tabBar.tabBar.tintColor = UIColor.tGray1000
         
