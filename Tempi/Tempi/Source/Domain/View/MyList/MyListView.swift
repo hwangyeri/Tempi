@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class MyChecklistView: BaseView {
+class MyListView: BaseView {
     
     let emptyView = {
         let view = UIView()
