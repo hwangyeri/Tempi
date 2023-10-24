@@ -54,6 +54,7 @@
 		2B9D8D422AD973F3006F42E0 /* BookmarkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9D8D412AD973F3006F42E0 /* BookmarkListViewController.swift */; };
 		2B9D8D442AD97408006F42E0 /* BookmarkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9D8D432AD97408006F42E0 /* BookmarkListView.swift */; };
 		2B9D8D4A2ADBB3B8006F42E0 /* ChecklistTableRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9D8D492ADBB3B8006F42E0 /* ChecklistTableRepository.swift */; };
+		2BBFD9772AE83F3D00A00DEB /* LineSpacing+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBFD9762AE83F3D00A00DEB /* LineSpacing+.swift */; };
 		2BC72B7A2AC717240014420F /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC72B792AC717240014420F /* Font+.swift */; };
 		2BC72B7D2AC71FD50014420F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2BC72B7C2AC71FD50014420F /* SnapKit */; };
 		2BC72B7F2AC7207D0014420F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC72B7E2AC7207D0014420F /* BaseView.swift */; };
@@ -133,6 +134,7 @@
 		2B9D8D412AD973F3006F42E0 /* BookmarkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListViewController.swift; sourceTree = "<group>"; };
 		2B9D8D432AD97408006F42E0 /* BookmarkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListView.swift; sourceTree = "<group>"; };
 		2B9D8D492ADBB3B8006F42E0 /* ChecklistTableRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistTableRepository.swift; sourceTree = "<group>"; };
+		2BBFD9762AE83F3D00A00DEB /* LineSpacing+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LineSpacing+.swift"; sourceTree = "<group>"; };
 		2BC72B792AC717240014420F /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
 		2BC72B7E2AC7207D0014420F /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		2BC72B802AC720B30014420F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -397,6 +399,7 @@
 				2BC72B862AC727640014420F /* Alert+.swift */,
 				2B6378342ADD700B00203AFA /* NSNotification+.swift */,
 				2B6378452ADFF1E400203AFA /* HideKeyboard+.swift */,
+				2BBFD9762AE83F3D00A00DEB /* LineSpacing+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -643,6 +646,7 @@
 				2B952A082ACD7E9A0074D4F2 /* CategoryChecklistView.swift in Sources */,
 				2B952A042ACD67790074D4F2 /* SubCategoryCollectionViewCell.swift in Sources */,
 				2B2D3E082AE4F7E800476A46 /* BaseCollectionReusableView.swift in Sources */,
+				2BBFD9772AE83F3D00A00DEB /* LineSpacing+.swift in Sources */,
 				2B9529CF2ACC41E40074D4F2 /* CategoryDetailView.swift in Sources */,
 				2B952A0A2ACD88D10074D4F2 /* TDivider.swift in Sources */,
 				2BDE84D52ACAEBF10018C759 /* CategoryDisplayModel.swift in Sources */,
