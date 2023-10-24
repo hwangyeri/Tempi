@@ -22,11 +22,11 @@
 "showToast_create" = "Created successfully!";
 
 // CategoryHomeView
-"search_main_label" = "What kind of Checklist are you looking for?";
+"search_main_label" = "What kind of Checklist\nare you looking for?\nSearch for various templates.";
 "searchBar_placeholder" = " Search for various templates.";
 "category_title_label" = "Category";
 "category_main_label" = "How about this category?";
-"category_sub_label" = "If you choose a category you're interested in,\nyou can get recommendations\n for a context-appropriate checklist!";
+"category_sub_label" = "If you choose a category you're interested in,\nyou can get recommendations for\na context-appropriate checklist!";
 
 // CategoryCollectionView
 "category_travel" = "Travel";
@@ -43,9 +43,9 @@
 "category_detail_sub_label" = "Please choose one of the most necessary situations.";
 "category_detail_tButton_text" = "Next";
 
-// FIXME: CategoryChecklist View
+// CategoryChecklist View
 "category_checklist_mainLabel" = "Please select the item you want.";
-"category_checklist_subLabel" = "temp temp temp";
+"category_checklist_subLabel" = "You can modify the selected items or write a memo!\nAdd it to my list and complete my own list.";
 "category_checklist_checklistNameLabel" = "%@";
 "category_checklist_itemCountLabel" = "%d / ";
 "category_checklist_totalCountLabel" = "%d";

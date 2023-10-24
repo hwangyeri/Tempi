@@ -22,7 +22,7 @@
 "showToast_create" = "성공적으로 셍성되었습니다!";
 
 // CategoryHomeView
-"search_main_label" = "어떤 체크리스트가 궁금하신가요?";
+"search_main_label" = "어떤 체크리스트가 궁금하신가요?\n다양한 템플릿을 검색해 보세요.";
 "searchBar_placeholder" = " 다양한 템플릿을 검색해 보세요.";
 "category_title_label" = "Category";
 "category_main_label" = "이런 카테고리는 어때요?";
@@ -43,9 +43,9 @@
 "category_detail_sub_label" = "가장 필요한 상황을 1개 골라 주세요.";
 "category_detail_tButton_text" = "다음";
 
-// FIXME: CategoryChecklistView
+// CategoryChecklistView
 "category_checklist_mainLabel" = "원하는 항목을 선택해 주세요.";
-"category_checklist_subLabel" = "임시 텍스트 입니다.\n임시 텍스트 입니다.";
+"category_checklist_subLabel" = "선택된 항목들을 수정하거나 메모도 작성할 수 있어요!\n내 리스트에 추가해서 나만의 리스트를 완성해 보세요.";
 "category_checklist_checklistNameLabel" = "%@";
 "category_checklist_itemCountLabel" = "%d / ";
 "category_checklist_totalCountLabel" = "%d";
