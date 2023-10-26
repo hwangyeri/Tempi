@@ -31,5 +31,11 @@ extension NSNotification.Name {
     
     /// 체크 아이템 생성
     static let createCheckItem = NSNotification.Name("CreateCheckItem")
+    
+    /// 즐겨찾기 항목 생성
+    static let createBookmarkItem = NSNotification.Name("CreateBookmarkItem")
+    
+    /// 즐겨찾기 항목 삭제
+    static let deleteBookmarkItem = NSNotification.Name("DeleteBookmarkItem")
 }
 
