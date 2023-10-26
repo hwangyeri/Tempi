@@ -11,12 +11,14 @@ import RealmSwift
 class BookmarkTable: Object {
     
     @Persisted(primaryKey: true) var id: ObjectId
-    @Persisted var bookmarkItem: String // 즐겨찾기 항목
+    @Persisted var content: String // 내용
+    @Persisted var createdAt: Date // 생성 날짜
     
-    convenience init(bookmarkItem: String) {
+    convenience init(content: String, createdAt: Date) {
         self.init()
         
-        self.bookmarkItem = bookmarkItem
+        self.content = content
+        self.createdAt = createdAt
     }
     
 }
