@@ -55,7 +55,7 @@
 
 // ChecklistView
 "checklist_checklistDateLabel" = "en_US";
-"checklist_bookmarkListButton" = "Bookmark";
+"checklist_bookmarkListButton" = "Favorite";
 "checklist_checkBoxMenuButton_firstMenu" = "Edit";
 "checklist_checkBoxMenuButton_secondMenu" = "Set up a memo";
 "checklist_checkBoxMenuButton_thirdMenu" = "Delete";
@@ -72,13 +72,16 @@
 "add_checklist_cancelButton_text" = "Cancel";
 "add_checklist_addButton_text" = "Add";
 
-// BookmarkListView
+// BookmarkListView  // -> Favorite (Eng)
+"bookmarkList_emptyMainLabel" = "There are currently no registered favorites.";
+"bookmarkList_emptySubLabel" = "Try adding things that you always need, routine that repeats, etc.";
+"bookmarkList_titleLabel" = "Favorite";
 "bookmarkList_mainLabel" = "Please select a favorite item to recall.";
-"bookmarkList_subLabel" = "You can store up to 10 favorites.\nRegister your favorite items and try them easily.";
-"bookmarkList_selectedItemCountLabel" = "%d / ";
+"bookmarkList_subLabel" = "It's easy to use if you register a frequently used item!";
+"bookmarkList_addBookmarkItemLabel" = "Add Item";
+"bookmarkList_selectedItemCountLabel" = "%d";
 "bookmarkList_selectAllLabel_selectAll" = "Select All";
 "bookmarkList_selectAllLabel_unSelectAll" = "Unselect All";
-"bookmarkList_addBookmarkLabel" = "Register a Favorite";
 "bookmarkList_tButton" = "Add to List";
 
 // MyListView
@@ -103,6 +106,10 @@
 "editModal_createCheckItem_mainLabel" = "Add a check item";
 "editModal_createCheckItem_subLabel" = "Please enter what you want to add.";
 "editModal_createCheckItem_maximumNumberOfCharactersLabel" = " / 100";
+
+"editModal_createBookmarkItem_mainLabel" = "Add Favorite Items";
+"editModal_createBookmarkItem_subLabel" = "Please enter what you want to add.";
+"editModal_createBookmarkItem_maximumNumberOfCharactersLabel" = " / 100";
 
 "editModal_textField_placeholder" = "%@";
 "editModal_currentNumberOfCharactersLabel" = "%d";
