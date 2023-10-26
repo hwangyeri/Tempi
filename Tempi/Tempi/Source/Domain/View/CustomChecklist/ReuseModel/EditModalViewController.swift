@@ -9,20 +9,23 @@ import UIKit
 import RealmSwift
 
 enum EditAction {
-    case updateCheckItemContent
-    case updateCheckItemMemo
-    case createCheckItem
+    case updateCheckItemContent // 체크 아이템 내용 수정
+    case updateCheckItemMemo // 체크 아이템 메모 수정
+    case createCheckItem // 체크 아이템 생성
+    case createBookmarkItem // 즐겨찾기 아이템 생성
 }
 
 class EditModalViewController: BaseViewController {
     
-    var selectedChecklistID: ObjectId?
-    var selectedCheckItemID: ObjectId?
+    var selectedItemID: ObjectId?
     var editAction: EditAction?
     var textFieldPlaceholder: String?
     
+    private var maximumCount: Int = 0
+    
     private let checklistRepository = ChecklistTableRepository()
     private let checkItemRepository = CheckItemTableRepository()
+    private let bookmarkRepository = BookmarkTableRepository()
     
     private let mainView = EditModalView()
     
@@ -34,6 +37,7 @@ class EditModalViewController: BaseViewController {
         super.viewDidLoad()
         
         mainView.backgroundColor = .tGray400.withAlphaComponent(0.7)
+        
         setLocalized()
         setNotificationCenter()
     }
@@ -58,25 +62,6 @@ class EditModalViewController: BaseViewController {
         }
     }
     
-    // MARK: - 저장 버튼
-    @objc private func saveButtonTapped() {
-        print(#function)
-        guard let action = editAction else {
-            print("Edit action is not defined")
-            return
-        }
-        
-        switch action {
-        case .updateCheckItemContent:
-            handleUpdateCheckItemContent()
-        case .updateCheckItemMemo:
-            handleUpdateCheckItemMemo()
-        case .createCheckItem:
-            handleCreateCheckItem()
-        }
-        
-    }
-    
     // MARK: - 키보드 나타날 때 (노티)
     @objc func keyboardWillShow(notification: NSNotification) {
         print(#function)
@@ -93,7 +78,100 @@ class EditModalViewController: BaseViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
     }
     
-    // MARK: - 다국어 설정 분기처리
+    // MARK: - 저장 버튼
+    @objc private func saveButtonTapped() {
+        print(#function)
+        guard let action = editAction else {
+            print("Edit action is not defined")
+            return
+        }
+        
+        switch action {
+        case .updateCheckItemContent:
+            handleUpdateCheckItemContent()
+        case .updateCheckItemMemo:
+            handleUpdateCheckItemMemo()
+        case .createCheckItem:
+            handleCreateCheckItem()
+        case .createBookmarkItem:
+            handleCreateBookmarkItem()
+        }
+    }
+    
+    /// Check Item 내용 - 저장 버튼 핸들러
+    private func handleUpdateCheckItemContent() {
+        print(#function)
+        guard let selectedItemID = selectedItemID else {
+            print("selectedItemID error")
+            return
+        }
+        
+        guard let textFieldText = mainView.textField.text else {
+            print("textFieldText error")
+            return
+        }
+        
+        checkItemRepository.updateCheckItemContent(forId: selectedItemID, newContent: textFieldText)
+        dismiss(animated: true) {
+            NotificationCenter.default.post(name: .updateCheckItemContent, object: nil)
+        }
+    }
+    
+    /// Check Item 메모 - 저장 버튼 핸들러
+    private func handleUpdateCheckItemMemo() {
+        print(#function)
+        guard let selectedItemID = selectedItemID else {
+            print("selectedItemID error")
+            return
+        }
+        
+        guard let textFieldText = mainView.textField.text else {
+            print("textFieldText error")
+            return
+        }
+        
+        checkItemRepository.updateCheckItemMemo(forId: selectedItemID, newMemo: textFieldText)
+        dismiss(animated: true) {
+            NotificationCenter.default.post(name: .updateCheckItemMemo, object: nil)
+        }
+    }
+    
+    /// Check Item 생성 - 저장 버튼 핸들러
+    private func handleCreateCheckItem() {
+        print(#function)
+        guard let selectedItemID = selectedItemID else {
+            print("selectedChecklistID error")
+            return
+        }
+        
+        guard let textFieldText = mainView.textField.text else {
+            print("textFieldText error")
+            return
+        }
+        
+        let item = CheckItemTable(checklistPK: selectedItemID, content: textFieldText, createdAt: Date(), memo: nil, alarmDate: nil, isChecked: false)
+        checkItemRepository.createItem(item)
+        dismiss(animated: true) {
+            NotificationCenter.default.post(name: .createCheckItem, object: nil)
+        }
+    }
+    
+    /// Bookmark Item 생성 - 저장 버튼 핸들러
+    private func handleCreateBookmarkItem() {
+        print(#function)
+        guard let textFieldText = mainView.textField.text else {
+            print("textFieldText error")
+            return
+        }
+        
+        let item = BookmarkTable(content: textFieldText, createdAt: Date())
+        bookmarkRepository.createItem(item)
+        dismiss(animated: true) {
+            NotificationCenter.default.post(name: .createBookmarkItem, object: nil)
+        }
+    }
+    
+    // MARK: - 다국어 분기처리
     private func setLocalized() {
         guard let action = editAction else {
             print("Edit action is not defined")
@@ -107,6 +185,8 @@ class EditModalViewController: BaseViewController {
             memoActionSetLocalized()
         case .createCheckItem:
             createCheckItemActionSetLocalized()
+        case .createBookmarkItem:
+            createBookmarkItemActionSetLocalized()
         }
         
         guard let placeholder = textFieldPlaceholder else {
@@ -119,89 +199,42 @@ class EditModalViewController: BaseViewController {
         }
     }
     
-    /// Check Item 내용 - 저장 버튼 핸들러
-    private func handleUpdateCheckItemContent() {
-        print(#function)
-        guard let selectedCheckItemID = selectedCheckItemID else {
-            print("selectedCheckItemID error")
-            return
+    // MARK: - 다국어 설정
+    private func setMaxCharacterCount(for labelKey: String) {
+        DispatchQueue.main.async {
+            self.mainView.mainLabel.text = "\(labelKey)_mainLabel".localized
+            self.mainView.subLabel.text = "\(labelKey)_subLabel".localized
+            self.mainView.maximumNumberOfCharactersLabel.text = "\(labelKey)_maximumNumberOfCharactersLabel".localized
         }
         
-        guard let textFieldText = mainView.textField.text else {
-            print("textFieldText error")
+        let maxStr = "\(labelKey)_maximumNumberOfCharactersLabel".localized.suffix(2)
+        print(maxStr, "--- maxStr ---")
+        guard let maxInt = Int(maxStr) else {
+            print("maxInt Error")
             return
         }
-        
-        checkItemRepository.updateCheckItemContent(forId: selectedCheckItemID, newContent: textFieldText)
-        dismiss(animated: true) {
-            NotificationCenter.default.post(name: .updateCheckItemContent, object: nil)
-        }
+        self.maximumCount = maxInt
+        print(maximumCount, "--- maximumCharacterCount ---")
     }
-    
-    /// Check Item 메모 - 저장 버튼 핸들러
-    private func handleUpdateCheckItemMemo() {
-        print(#function)
-        guard let selectedCheckItemID = selectedCheckItemID else {
-            print("selectedCheckItemID error")
-            return
-        }
-        
-        guard let textFieldText = mainView.textField.text else {
-            print("textFieldText error")
-            return
-        }
-        
-        checkItemRepository.updateCheckItemMemo(forId: selectedCheckItemID, newMemo: textFieldText)
-        dismiss(animated: true) {
-            NotificationCenter.default.post(name: .updateCheckItemMemo, object: nil)
-        }
-    }
-    
-    /// Check Item 생성 - 저장 버튼 핸들러
-    private func handleCreateCheckItem() {
-        print(#function)
-        guard let selectedChecklistID = selectedChecklistID else {
-            print("selectedChecklistID error")
-            return
-        }
-        
-        guard let textFieldText = mainView.textField.text else {
-            print("textFieldText error")
-            return
-        }
-        
-        let item = CheckItemTable(checklistPK: selectedChecklistID, content: textFieldText, createdAt: Date(), memo: nil, alarmDate: nil, isChecked: false)
-        checkItemRepository.createItem(item)
-        dismiss(animated: true) {
-            NotificationCenter.default.post(name: .createCheckItem, object: nil)
-        }
-    }
-    
+
     /// Check Item 내용 액션 - 다국어 설정
     private func contentActionSetLocalized() {
-        DispatchQueue.main.async {
-            self.mainView.mainLabel.text = "editModal_updateContent_mainLabel".localized
-            self.mainView.subLabel.text = "editModal_updateContent_subLabel".localized
-            self.mainView.maximumNumberOfCharactersLabel.text = "editModal_updateContent_maximumNumberOfCharactersLabel".localized
-        }
+        setMaxCharacterCount(for: "editModal_updateContent")
     }
-    
+
     /// Check Item 메모 액션  - 다국어 설정
     private func memoActionSetLocalized() {
-        DispatchQueue.main.async {
-            self.mainView.mainLabel.text = "editModal_updateMemo_mainLabel".localized
-            self.mainView.subLabel.text = "editModal_updateMemo_subLabel".localized
-            self.mainView.maximumNumberOfCharactersLabel.text = "editModal_updateMemo_maximumNumberOfCharactersLabel".localized
-        }
+        setMaxCharacterCount(for: "editModal_updateMemo")
     }
-    
+
     /// Check Item 생성 액션 - 다국어 설정
     private func createCheckItemActionSetLocalized() {
-        DispatchQueue.main.async {
-            self.mainView.mainLabel.text = "editModal_createCheckItem_mainLabel".localized
-            self.mainView.subLabel.text = "editModal_createCheckItem_subLabel".localized
-            self.mainView.maximumNumberOfCharactersLabel.text = "editModal_createCheckItem_maximumNumberOfCharactersLabel".localized
-        }
+        setMaxCharacterCount(for: "editModal_createCheckItem")
+    }
+
+    /// Bookmark Item 생성 액션 - 다국어 설정
+    private func createBookmarkItemActionSetLocalized() {
+        setMaxCharacterCount(for: "editModal_createBookmarkItem")
     }
 
 }
@@ -225,11 +258,23 @@ extension EditModalViewController: UITextFieldDelegate {
         }
         
         let currentCount = text.count
+        print(currentCount, "--- currentCount ---0")
 
         DispatchQueue.main.async {
             self.mainView.currentNumberOfCharactersLabel.text = "editModal_currentNumberOfCharactersLabel".localized(with: currentCount)
             self.mainView.saveButton.isEnabled = true
             self.mainView.saveButton.backgroundColor = .tGray1000
+        }
+        
+        // maximumCharacterCount를 사용하여 버튼 활성화 상태 업데이트 - 최대 글자수 넘으면 버튼 비활성화 처리
+        DispatchQueue.main.async {
+            if currentCount > self.maximumCount {
+                self.mainView.saveButton.isEnabled = false
+                self.mainView.saveButton.backgroundColor = .tGray500
+            } else {
+                self.mainView.saveButton.isEnabled = true
+                self.mainView.saveButton.backgroundColor = .tGray1000
+            }
         }
     }
     
