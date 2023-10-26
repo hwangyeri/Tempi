@@ -12,8 +12,8 @@ class MyListCollectionViewCell: BaseCollectionViewCell {
     
     let checklistBackgroundButton = {
         let view = UIButton()
-        view.layer.cornerRadius = 35
-        view.layer.borderWidth = 0.5
+        view.layer.cornerRadius = Constant.TMyList.cornerRadius
+        view.layer.borderWidth = Constant.TMyList.borderWidth
         view.layer.borderColor = UIColor.tGray400.cgColor
         view.backgroundColor = UIColor.tGray100
         view.isUserInteractionEnabled = false
