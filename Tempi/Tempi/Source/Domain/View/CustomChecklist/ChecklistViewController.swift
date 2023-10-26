@@ -15,6 +15,7 @@ class ChecklistViewController: BaseViewController {
     
     private let checklistRepository = ChecklistTableRepository()
     private let checkItemRepository = CheckItemTableRepository()
+    private let bookmarkRepository = BookmarkTableRepository()
     
     private let mainView = ChecklistView()
     
@@ -42,6 +43,7 @@ class ChecklistViewController: BaseViewController {
         mainView.plusButton.addTarget(self, action: #selector(plusButtonTapped), for: .touchUpInside)
     }
     
+    // MARK: - 초기 데이터 설정
     private func setChecklistData() {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
@@ -80,6 +82,7 @@ class ChecklistViewController: BaseViewController {
         }
     }
     
+    // MARK: - Navi BarButton 설정
     private func setNavigationBarButton() {
         let barButtonIcon = UIImage(systemName: Constant.SFSymbol.xmarkIcon)
         let rightBarButton = UIBarButtonItem(image: barButtonIcon, style: .plain, target: self, action: #selector(rightBarButtonTapped))
@@ -156,7 +159,7 @@ class ChecklistViewController: BaseViewController {
         let modalVC = DeleteModalViewController()
         modalVC.modalTransitionStyle = .crossDissolve
         modalVC.modalPresentationStyle = .overCurrentContext
-        modalVC.selectedChecklistID = selectedChecklistID
+        modalVC.selectedItemID = selectedChecklistID
         modalVC.deleteAction = .deleteChecklist
         self.present(modalVC, animated: true)
     }
@@ -166,10 +169,13 @@ class ChecklistViewController: BaseViewController {
         print(#function)
         let bookmarkListVC = BookmarkListViewController()
         
+        self.bookmarkRepository.fetch { data in
+            bookmarkListVC.bookmarkTasks = data
+        }
+        
         if let sheet = bookmarkListVC.sheetPresentationController {
-            sheet.detents = [.medium(), .large()]
+            sheet.detents = [.large()]
             sheet.delegate = self
-            sheet.prefersGrabberVisible = true
         }
         
         self.present(bookmarkListVC, animated: true)
@@ -181,7 +187,7 @@ class ChecklistViewController: BaseViewController {
         let editModalVC = EditModalViewController()
         editModalVC.modalTransitionStyle = .crossDissolve
         editModalVC.modalPresentationStyle = .overCurrentContext
-        editModalVC.selectedChecklistID = selectedChecklistID
+        editModalVC.selectedItemID = selectedChecklistID
         editModalVC.textFieldPlaceholder = "placeholder"
         editModalVC.editAction = .createCheckItem
         self.present(editModalVC, animated: true)
@@ -276,7 +282,7 @@ class ChecklistViewController: BaseViewController {
                     
                     editModalVC.modalTransitionStyle = .crossDissolve
                     editModalVC.modalPresentationStyle = .overCurrentContext
-                    editModalVC.selectedCheckItemID = checkItemID
+                    editModalVC.selectedItemID = checkItemID
                     editModalVC.editAction = .updateCheckItemContent
                     
                     let placeholder = self.checkItemRepository.getCheckItemContent(forId: checkItemID)
@@ -292,7 +298,7 @@ class ChecklistViewController: BaseViewController {
                     
                     editModalVC.modalTransitionStyle = .crossDissolve
                     editModalVC.modalPresentationStyle = .overCurrentContext
-                    editModalVC.selectedCheckItemID = checkItemID
+                    editModalVC.selectedItemID = checkItemID
                     editModalVC.editAction = .updateCheckItemMemo
                     
                     let placeholder = self.checkItemRepository.getCheckItemMemo(forId: checkItemID) ?? "placeholder"
@@ -308,7 +314,7 @@ class ChecklistViewController: BaseViewController {
                     
                     modalVC.modalTransitionStyle = .crossDissolve
                     modalVC.modalPresentationStyle = .overCurrentContext
-                    modalVC.selectedCheckItemID = checkItemID
+                    modalVC.selectedItemID = checkItemID
                     modalVC.deleteAction = .deleteCheckItem
                     
                     self.present(modalVC, animated: true)
@@ -381,9 +387,5 @@ extension ChecklistViewController: UICollectionViewDelegate {
 
 // MARK: - Sheet Delegate
 extension ChecklistViewController: UISheetPresentationControllerDelegate {
-    
-    func sheetPresentationControllerDidChangeSelectedDetentIdentifier(_ sheetPresentationController: UISheetPresentationController) {
-        print(sheetPresentationController.selectedDetentIdentifier == .large ? "large" : "medium")
-    }
     
 }
