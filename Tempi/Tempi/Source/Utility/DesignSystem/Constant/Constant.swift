@@ -47,6 +47,7 @@ enum Constant {
         static let bookmarkListImageSize: CGFloat = 20
         static let checklistCollectionCellImageSize: CGFloat = 25
         static let editChecklistNameImageSize: CGFloat = 23
+        static let bookmarkDeleteImageSize: CGFloat = 23
     }
     
     enum TPopUp {
