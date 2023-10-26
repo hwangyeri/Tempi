@@ -9,19 +9,20 @@ import UIKit
 import RealmSwift
 
 enum DeleteAction {
-    case deleteChecklist
-    case deleteCheckItem
+    case deleteChecklist // 체크리스트 삭제
+    case deleteCheckItem // 체크 아이템 삭제
+    case deleteBookmarkItem // 즐겨찾기 아이템 삭제
 }
 
 class DeleteModalViewController: BaseViewController {
     
-    var selectedChecklistID: ObjectId?
-    var selectedCheckItemID: ObjectId?
+    var selectedItemID: ObjectId?
     var deleteAction: DeleteAction?
     
     private let checklistRepository = ChecklistTableRepository()
     private let checkItemRepository = CheckItemTableRepository()
-    
+    private let bookmarkRepository = BookmarkTableRepository()
+
     private let mainView = DeleteModalView()
     
     override func loadView() {
@@ -58,11 +59,13 @@ class DeleteModalViewController: BaseViewController {
             handleDeleteChecklist()
         case .deleteCheckItem:
             handleDeleteCheckItem()
+        case .deleteBookmarkItem:
+            handleDeleteBookmarkItem()
         }
     }
     
     private func handleDeleteChecklist() {
-        guard let selectedChecklistID = selectedChecklistID else {
+        guard let selectedChecklistID = selectedItemID else {
             print("selectedChecklistID error")
             return
         }
@@ -75,14 +78,26 @@ class DeleteModalViewController: BaseViewController {
     }
     
     private func handleDeleteCheckItem() {
-        guard let selectedCheckItemID = selectedCheckItemID else {
-            print("selectedCheckItemID error")
+        guard let selectedItemID = selectedItemID else {
+            print("selectedItemID error")
             return
         }
         
-        checkItemRepository.deleteCheckItem(withID: selectedCheckItemID)
+        checkItemRepository.deleteCheckItem(withID: selectedItemID)
         dismiss(animated: true) {
             NotificationCenter.default.post(name: .deleteCheckItem, object: nil)
+        }
+    }
+    
+    private func handleDeleteBookmarkItem() {
+        guard let selectedItemID = selectedItemID else {
+            print("selectedItemID error")
+            return
+        }
+        
+        bookmarkRepository.deleteItem(forId: selectedItemID)
+        dismiss(animated: true) {
+            NotificationCenter.default.post(name: .deleteBookmarkItem, object: nil)
         }
     }
     
