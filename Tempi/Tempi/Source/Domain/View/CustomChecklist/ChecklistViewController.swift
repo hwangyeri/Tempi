@@ -362,6 +362,7 @@ extension ChecklistViewController: UICollectionViewDelegate {
             return
         }
         
+        // FIXME: cellForItem -> UICollectionViewDiffableDataSource 안에서 구현하는 걸로 변경?
         if let cell = collectionView.cellForItem(at: indexPath) as? ChecklistCollectionViewCell {
             if !isChecked {
                 // False -> True
