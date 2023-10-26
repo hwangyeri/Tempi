@@ -49,6 +49,7 @@ class MyListViewController: BaseViewController {
         mainView.plusButton.addTarget(self, action: #selector(plusButtonTapped), for: .touchUpInside)
     }
     
+    // MARK: - NotificationCenter 설정
     private func setNotificationCenter() {
         NotificationCenter.default.addObserver(self, selector: #selector(createChecklistNameFromMyNotificationObserver(notification:)), name: .createChecklistFromMy, object: nil)
     }
