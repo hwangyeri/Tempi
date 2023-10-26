@@ -55,6 +55,11 @@ enum Constant {
         static let buttonCornerRadius: CGFloat = 23
     }
     
+    enum TMyList {
+        static let cornerRadius: CGFloat = 35
+        static let borderWidth: CGFloat = 0.5
+    }
+    
     enum SFSymbol {
         /// Display Icon
         static let searchBarIcon: String = "magnifyingglass"
