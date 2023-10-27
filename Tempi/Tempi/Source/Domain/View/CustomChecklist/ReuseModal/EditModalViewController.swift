@@ -15,6 +15,8 @@ enum EditAction {
     case createBookmarkItem // 즐겨찾기 아이템 생성
 }
 
+// FIXME: 분기처리 저장 핸들러 - 반복되는 코드 리팩토링
+
 class EditModalViewController: BaseViewController {
     
     var selectedItemID: ObjectId?
@@ -40,6 +42,8 @@ class EditModalViewController: BaseViewController {
         
         setLocalized()
         setNotificationCenter()
+        
+        //print("viewDidLoad", mainView.textField.text?.count, mainView.textField.text)
     }
     
     override func configureLayout() {
@@ -106,7 +110,7 @@ class EditModalViewController: BaseViewController {
             return
         }
         
-        guard let textFieldText = mainView.textField.text else {
+        guard let textFieldText = mainView.textField.text, !textFieldText.isEmpty else {
             print("textFieldText error")
             return
         }
@@ -125,7 +129,7 @@ class EditModalViewController: BaseViewController {
             return
         }
         
-        guard let textFieldText = mainView.textField.text else {
+        guard let textFieldText = mainView.textField.text, !textFieldText.isEmpty else {
             print("textFieldText error")
             return
         }
@@ -144,7 +148,7 @@ class EditModalViewController: BaseViewController {
             return
         }
         
-        guard let textFieldText = mainView.textField.text else {
+        guard let textFieldText = mainView.textField.text, !textFieldText.isEmpty else {
             print("textFieldText error")
             return
         }
@@ -159,7 +163,7 @@ class EditModalViewController: BaseViewController {
     /// Bookmark Item 생성 - 저장 버튼 핸들러
     private func handleCreateBookmarkItem() {
         print(#function)
-        guard let textFieldText = mainView.textField.text else {
+        guard let textFieldText = mainView.textField.text, !textFieldText.isEmpty else {
             print("textFieldText error")
             return
         }
