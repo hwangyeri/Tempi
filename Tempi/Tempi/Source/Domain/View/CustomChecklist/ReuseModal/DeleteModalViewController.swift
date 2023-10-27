@@ -90,15 +90,16 @@ class DeleteModalViewController: BaseViewController {
     }
     
     private func handleDeleteBookmarkItem() {
-        guard let selectedItemID = selectedItemID else {
-            print("selectedItemID error")
-            return
-        }
-        
-        bookmarkRepository.deleteItem(forId: selectedItemID)
-        dismiss(animated: true) {
-            NotificationCenter.default.post(name: .deleteBookmarkItem, object: nil)
-        }
+        print(#function)
+//        guard let selectedItemID = selectedItemID else {
+//            print("selectedItemID error")
+//            return
+//        }
+//        
+//        bookmarkRepository.deleteItem(forId: selectedItemID)
+//        dismiss(animated: true) {
+//            NotificationCenter.default.post(name: .deleteBookmarkItem, object: nil)
+//        }
     }
     
 }

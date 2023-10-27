@@ -10,6 +10,8 @@ import SnapKit
 
 class BookmarkListCollectionViewCell: BaseCollectionViewCell {
     
+//    var selectedItemId: ObjectId?
+    
     let checkBoxButton = {
         let view = TBlankCheckBox()
         return view
@@ -28,12 +30,13 @@ class BookmarkListCollectionViewCell: BaseCollectionViewCell {
             imageSize: Constant.TImageButton.bookmarkDeleteImageSize,
             imageName: Constant.SFSymbol.checklistDeleteIcon,
             imageColor: .label)
+//        view.addTarget(BookmarkListCollectionViewCell.self, action: #selector(deleteButtonTapped), for: .touchUpInside)
         return view
     }()
     
     override func configureHierarchy() {
         [checkBoxButton, checkBoxLabel, deleteButton].forEach {
-            contentView.addSubview($0)
+            self.addSubview($0)
         }
     }
     
@@ -56,4 +59,10 @@ class BookmarkListCollectionViewCell: BaseCollectionViewCell {
         }
     }
     
+//    @objc func deleteButtonTapped() {
+//        print(#function)
+//        
+//    }
+    
 }
+

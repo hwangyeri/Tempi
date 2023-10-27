@@ -10,7 +10,6 @@ import RealmSwift
 
 class BookmarkListViewController: BaseViewController {
     
-    var selectedItemID: ObjectId?
     var bookmarkTasks: Results<BookmarkTable>!
     
     private let bookmarkRepository = BookmarkTableRepository()
@@ -27,6 +26,7 @@ class BookmarkListViewController: BaseViewController {
         super.viewDidLoad()
 
         setBookmarkListData()
+        setNotificationCenter()
         configureBookmarkDataSource()
     }
     
@@ -37,6 +37,7 @@ class BookmarkListViewController: BaseViewController {
     
     // MARK: - 초기 데이터 설정
     private func setBookmarkListData() {
+        print(#function)
         // 현재 즐겨찾기 항목 개수 UI 업데이트
         let count = bookmarkRepository.getCountForAllItems()
         DispatchQueue.main.async {
@@ -46,6 +47,7 @@ class BookmarkListViewController: BaseViewController {
     
     // MARK: - NotificationCenter 설정
     private func setNotificationCenter() {
+        print(#function)
         NotificationCenter.default.addObserver(self, selector: #selector(createBookmarkItemNotificationObserver(notification:)), name: .createBookmarkItem, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(deleteBookmarkItemNotificationObserver(notification:)), name: .deleteBookmarkItem, object: nil)
     }
@@ -66,12 +68,12 @@ class BookmarkListViewController: BaseViewController {
     @objc private func deleteBookmarkItemNotificationObserver(notification: NSNotification) {
         print(#function)
         
-        showToast(message: "showToast_delete".localized)
-        
-        DispatchQueue.main.async {
-            self.setBookmarkListData()
-            self.configureBookmarkDataSource()
-        }
+//        showToast(message: "showToast_delete".localized)
+//        
+//        DispatchQueue.main.async {
+//            self.setBookmarkListData()
+//            self.configureBookmarkDataSource()
+//        }
     }
     
     // MARK: - 즐겨찾기 항목 추가 버튼
@@ -86,20 +88,20 @@ class BookmarkListViewController: BaseViewController {
     }
     
     // MARK: - 즐겨찾기 항목 삭제 버튼
-    @objc private func deleteButtonTapped () {
+    @objc private func deleteButtonTapped (_ sender: UIButton) {
         print(#function)
-        guard let selectedItemID = selectedItemID else {
-            print(#function, "selectedItemID error")
-            return
-        }
-        
-        let deleteModalVC = DeleteModalViewController()
-        deleteModalVC.modalTransitionStyle = .crossDissolve
-        deleteModalVC.modalPresentationStyle = .overCurrentContext
-        deleteModalVC.selectedItemID = selectedItemID
-        print(self.selectedItemID, "selectedItemID")
-        deleteModalVC.deleteAction = .deleteBookmarkItem
-        self.present(deleteModalVC, animated: true)
+//        guard let selectedItemID = self.selectedItemID else {
+//            print(#function, "selectedItemID error")
+//            return
+//        }
+//        
+//        let deleteModalVC = DeleteModalViewController()
+//        deleteModalVC.modalTransitionStyle = .crossDissolve
+//        deleteModalVC.modalPresentationStyle = .overCurrentContext
+//        deleteModalVC.selectedItemID = selectedItemID
+//        print(selectedItemID, "selectedItemID")
+//        deleteModalVC.deleteAction = .deleteBookmarkItem
+//        self.present(deleteModalVC, animated: true)
     }
     
     // MARK: - CollectionView DataSource
@@ -113,16 +115,18 @@ class BookmarkListViewController: BaseViewController {
             self.mainView.emptyView.isHidden = true
         }
         
+        // 셀 등록 - 디자인 및 데이터 처리
         let cellRegistration = UICollectionView.CellRegistration<BookmarkListCollectionViewCell, BookmarkTable> {
             cell, indexPath, itemIdentifier in
             cell.checkBoxLabel.text = itemIdentifier.content
-            
-            self.selectedItemID = itemIdentifier.id
-            cell.deleteButton.addTarget(self, action: #selector(self.deleteButtonTapped), for: .touchUpInside)
         }
         
+        // CellForItemAt 대신 사용하는 친구
         bookmarkDataSource = UICollectionViewDiffableDataSource(collectionView: mainView.bookmarkListCollectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
             let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: itemIdentifier)
+            
+//            cell.selectedItemId = itemIdentifier.id
+           
             return cell
         })
         
@@ -131,12 +135,19 @@ class BookmarkListViewController: BaseViewController {
         let result = Array(bookmarkTasks)
         snapshot.appendItems(result)
         bookmarkDataSource.apply(snapshot)
-//        bookmarkDataSource.applySnapshotUsingReloadData(snapshot)
     }
     
 }
 
 // MARK: - CollectionView Delegate
 extension BookmarkListViewController: UICollectionViewDelegate {
+    
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        print(#function)
+//        guard let cell = bookmarkDataSource.itemIdentifier(for: indexPath) else {
+//            print("cell error")
+//            return
+//        }
+//    }
     
 }
