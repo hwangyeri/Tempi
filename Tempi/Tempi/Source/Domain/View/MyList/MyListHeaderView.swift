@@ -40,7 +40,7 @@ class MyListHeaderView: BaseCollectionReusableView {
         }
         
         titleLabel.snp.makeConstraints { make in
-            make.bottom.equalToSuperview()
+            make.bottom.equalToSuperview().inset(2)
             make.leading.equalTo(imageView.snp.trailing).offset(6)
         }
     }
@@ -49,12 +49,12 @@ class MyListHeaderView: BaseCollectionReusableView {
         imageView.isHidden = isHidden
         if isHidden {
             titleLabel.snp.remakeConstraints { make in
-                make.bottom.equalToSuperview()
+                make.bottom.equalToSuperview().inset(2)
                 make.leading.equalToSuperview().inset(20)
             }
         } else {
             titleLabel.snp.remakeConstraints { make in
-                make.bottom.equalToSuperview()
+                make.bottom.equalToSuperview().inset(2)
                 make.leading.equalTo(imageView.snp.trailing).offset(6)
             }
         }
