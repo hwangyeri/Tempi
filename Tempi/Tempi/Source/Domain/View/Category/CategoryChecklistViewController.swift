@@ -80,7 +80,7 @@ class CategoryChecklistViewController: BaseViewController {
             if let cell = mainView.categoryChecklistCollectionView.cellForItem(at: indexPath) as? CategoryChecklistCollectionViewCell {
                 cell.checkBoxButton.layer.backgroundColor = UIColor.label.cgColor
                 cell.checkBoxButton.setImage(UIImage(systemName: Constant.SFSymbol.checkIcon), for: .normal)
-                cell.tintColor = .tGray100
+                cell.tintColor = .systemBackground
             }
         }
         
@@ -88,7 +88,7 @@ class CategoryChecklistViewController: BaseViewController {
         for itemIndex in 0..<checkItemList.count {
             if !selectedIndexPaths.contains(IndexPath(item: itemIndex, section: 0)) {
                 if let cell = mainView.categoryChecklistCollectionView.cellForItem(at: IndexPath(item: itemIndex, section: 0)) as? CategoryChecklistCollectionViewCell {
-                    cell.checkBoxButton.layer.backgroundColor = UIColor.tGray100.cgColor
+                    cell.checkBoxButton.layer.backgroundColor = UIColor.systemBackground.cgColor
                     cell.checkBoxButton.setImage(nil, for: .normal)
                 }
             }
@@ -99,7 +99,7 @@ class CategoryChecklistViewController: BaseViewController {
             mainView.selectAllLabel.text = "category_checklist_selectAllLabel_unSelectAll".localized
             mainView.selectAllCheckBox.setImage(UIImage(systemName: Constant.SFSymbol.checkIcon), for: .normal)
             mainView.selectAllCheckBox.backgroundColor = .label
-            mainView.selectAllCheckBox.tintColor = .tGray100
+            mainView.selectAllCheckBox.tintColor = .systemBackground
             mainView.tButton.isEnabled = true
             mainView.tButton.backgroundColor = .label
         } else {
@@ -165,7 +165,7 @@ extension CategoryChecklistViewController: UICollectionViewDelegate {
             if let selectedIndex = selectedIndexPaths.firstIndex(of: indexPath) {
                 // 체크박스 선택 해제시, 배열에서 삭제 및 UI 업데이트
                 selectedIndexPaths.remove(at: selectedIndex)
-                cell.checkBoxButton.layer.backgroundColor = UIColor.tGray100.cgColor
+                cell.checkBoxButton.layer.backgroundColor = UIColor.systemBackground.cgColor
                 cell.checkBoxButton.setImage(nil, for: .normal)
                 
                 if let itemIndex = selectedItems.firstIndex(of: selectedItem) {
@@ -176,7 +176,7 @@ extension CategoryChecklistViewController: UICollectionViewDelegate {
                 selectedIndexPaths.append(indexPath)
                 cell.checkBoxButton.layer.backgroundColor = UIColor.label.cgColor
                 cell.checkBoxButton.setImage(UIImage(systemName: Constant.SFSymbol.checkIcon), for: .normal)
-                cell.tintColor = .tGray100
+                cell.tintColor = .systemBackground
                 
                 selectedItems.append(selectedItem)
             }

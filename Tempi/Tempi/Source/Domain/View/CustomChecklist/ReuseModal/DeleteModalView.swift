@@ -12,7 +12,7 @@ class DeleteModalView: BaseView {
     
     let backView = {
         let view = UIView()
-        view.backgroundColor = UIColor.tGray100
+        view.backgroundColor = UIColor.systemBackground
         view.layer.cornerRadius = Constant.TPopUp.viewCornerRadius
         return view
     }()

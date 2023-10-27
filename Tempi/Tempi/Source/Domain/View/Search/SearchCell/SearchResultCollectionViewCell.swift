@@ -15,7 +15,7 @@ class SearchResultCollectionViewCell: BaseCollectionViewCell {
         view.layer.cornerRadius = 35
         view.layer.borderWidth = 0.5
         view.layer.borderColor = UIColor.tGray400.cgColor
-        view.backgroundColor = UIColor.tGray100
+        view.backgroundColor = UIColor.systemBackground
         view.isUserInteractionEnabled = false
         return view
     }()

@@ -99,7 +99,7 @@ extension CategoryDetailViewController: UICollectionViewDelegate {
             
             // 현재 선택된 cell UI 변경
             cell.backView.backgroundColor = .label
-            cell.textLabel.textColor = .tGray100
+            cell.textLabel.textColor = .systemBackground
             cell.textLabel.font = .customFont(.pretendardSemiBoldL)
             
             // 현재 선택된 indexPath 저장

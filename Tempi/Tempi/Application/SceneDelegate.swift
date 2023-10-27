@@ -36,8 +36,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        thirdVC.tabBarItem = UITabBarItem(title: .none, image: UIImage(systemName: Constant.SFSymbol.thirdTabBarIcon),selectedImage: UIImage(systemName: Constant.SFSymbol.thirdTabBarIcon))
         
         tabBar.viewControllers = [firstVC, secondVC]
-        tabBar.tabBar.backgroundColor = UIColor.tGray100
-        tabBar.tabBar.tintColor = UIColor.tGray1000
+        tabBar.tabBar.backgroundColor = UIColor.systemBackground
+        tabBar.tabBar.tintColor = UIColor.label
         
         window?.rootViewController = tabBar
     }

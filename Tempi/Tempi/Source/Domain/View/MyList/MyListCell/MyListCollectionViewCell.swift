@@ -15,7 +15,7 @@ class MyListCollectionViewCell: BaseCollectionViewCell {
         view.layer.cornerRadius = Constant.TMyList.cornerRadius
         view.layer.borderWidth = Constant.TMyList.borderWidth
         view.layer.borderColor = UIColor.tGray400.cgColor
-        view.backgroundColor = UIColor.tGray100
+        view.backgroundColor = UIColor.systemBackground
         view.isUserInteractionEnabled = false
         return view
     }()

@@ -369,13 +369,13 @@ extension ChecklistViewController: UICollectionViewDelegate {
                 DispatchQueue.main.async {
                     cell.checkBoxButton.layer.backgroundColor = UIColor.label.cgColor
                     cell.checkBoxButton.setImage(UIImage(systemName: Constant.SFSymbol.checkIcon), for: .normal)
-                    cell.tintColor = .tGray100
+                    cell.tintColor = .systemBackground
                 }
                 checkItemRepository.updateCheckItemIsChecked(forId: selectedItem.id, newIsChecked: true)
             } else {
                 // True -> False
                 DispatchQueue.main.async {
-                    cell.checkBoxButton.layer.backgroundColor = UIColor.tGray100.cgColor
+                    cell.checkBoxButton.layer.backgroundColor = UIColor.systemBackground.cgColor
                     cell.checkBoxButton.setImage(nil, for: .normal)
                 }
                 checkItemRepository.updateCheckItemIsChecked(forId: selectedItem.id, newIsChecked: false)

@@ -18,7 +18,7 @@ class AddChecklistCollectionViewCell: BaseCollectionViewCell {
         view.setTitleColor(.label, for: .normal)
                 view.setTitle("test", for: .normal)
         view.titleLabel?.font = .customFont(.pretendardSemiBoldM)
-        view.backgroundColor = UIColor.tGray100
+        view.backgroundColor = UIColor.systemBackground
         view.isUserInteractionEnabled = false
         return view
     }()

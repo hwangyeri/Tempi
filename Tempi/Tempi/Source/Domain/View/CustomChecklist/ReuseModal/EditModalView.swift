@@ -12,7 +12,7 @@ class EditModalView: BaseView {
     
     let backView = {
         let view = UIView()
-        view.backgroundColor = UIColor.tGray100
+        view.backgroundColor = UIColor.systemBackground
         view.layer.cornerRadius = 50
         return view
     }()

@@ -45,7 +45,7 @@ class AddChecklistView: BaseView {
         config.image = UIImage(systemName: Constant.SFSymbol.plusSquareIcon)
         config.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(pointSize: Constant.TChecklist.symbolPointSize)
         config.attributedTitle = AttributedString(title, attributes: AttributeContainer([NSAttributedString.Key.font : UIFont.customFont(.pretendardSemiBoldM)!]))
-        config.baseBackgroundColor = UIColor.tGray100
+        config.baseBackgroundColor = UIColor.systemBackground
         view.configuration = config
         return view
     }()
