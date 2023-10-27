@@ -89,7 +89,7 @@ class ChecklistView: BaseView {
     }()
     
     override func configureHierarchy() {
-        [checklistNameLabel, checklistDateLabel, checklistNameEditButton, bookmarkListButton, checklistFixedButton, checklistDeleteButton, divider, checklistCollectionView, plusButton].forEach {
+        [checklistNameLabel, checklistDateLabel, checklistNameEditButton, checklistFixedButton, checklistDeleteButton, divider, checklistCollectionView, plusButton].forEach {
             addSubview($0)
         }
     }
@@ -112,21 +112,22 @@ class ChecklistView: BaseView {
             make.size.equalTo(25)
         }
         
-        bookmarkListButton.snp.makeConstraints { make in
-            make.top.equalTo(checklistDateLabel.snp.bottom).offset(20)
-            make.leading.equalTo(checklistDateLabel)
-            make.width.equalTo(110)
-            make.height.equalTo(35)
-        }
+//        bookmarkListButton.snp.makeConstraints { make in
+//            make.top.equalTo(checklistDateLabel.snp.bottom).offset(20)
+//            make.leading.equalTo(checklistDateLabel)
+//            make.width.equalTo(110)
+//            make.height.equalTo(35)
+//        }
         
         checklistFixedButton.snp.makeConstraints { make in
-            make.bottom.equalTo(bookmarkListButton.snp.bottom).offset(10)
+//            make.bottom.equalTo(bookmarkListButton.snp.bottom).offset(10)
+            make.top.equalTo(checklistDateLabel).offset(40)
             make.trailing.equalTo(checklistDeleteButton.snp.leading).offset(-10)
         }
         
         checklistDeleteButton.snp.makeConstraints { make in
             make.top.equalTo(checklistFixedButton).offset(-1)
-            make.trailing.equalTo(checklistCollectionView.snp.trailing).inset(5)
+            make.trailing.equalTo(checklistCollectionView.snp.trailing).inset(10)
         }
         
         divider.snp.makeConstraints { make in
