@@ -14,7 +14,7 @@ class SearchHeaderView: BaseCollectionReusableView {
         let view = TLabel(
             text: "header",
             custFont: .pretendardBoldS,
-            textColor: .tGray1000
+            textColor: .label
         )
         return view
     }()

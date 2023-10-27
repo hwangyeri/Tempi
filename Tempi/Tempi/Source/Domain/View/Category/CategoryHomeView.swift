@@ -53,7 +53,7 @@ class CategoryHomeView: BaseView {
     
     let categoryDivider = {
         let view = UIView()
-        view.backgroundColor = UIColor.tGray1000
+        view.backgroundColor = UIColor.label
         return view
     }()
     
@@ -61,7 +61,7 @@ class CategoryHomeView: BaseView {
         let view = TLabel(
             text: "category_title_label".localized,
             custFont: .pretendardBlackXL,
-            textColor: .tGray1000)
+            textColor: .label)
         return view
     }()
  
@@ -69,7 +69,7 @@ class CategoryHomeView: BaseView {
         let view = TLabel(
             text: "category_main_label".localized,
             custFont: .pretendardBoldL,
-            textColor: .tGray1000)
+            textColor: .label)
         return view
     }()
     
@@ -90,7 +90,7 @@ class CategoryHomeView: BaseView {
         let imageConfig = UIImage.SymbolConfiguration(pointSize: 50, weight: .light)
         let image = UIImage(systemName: Constant.SFSymbol.plusCircleIcon, withConfiguration: imageConfig)
         view.setImage(image, for: .normal)
-        view.tintColor = UIColor.tGray1000
+        view.tintColor = UIColor.label
         return view
     }()
     

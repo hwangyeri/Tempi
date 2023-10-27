@@ -20,7 +20,7 @@ class CategoryChecklistCollectionViewCell: BaseCollectionViewCell {
         let view = TLabel(
             text: "test",
             custFont: .pretendardRegularL,
-            textColor: .tGray1000)
+            textColor: .label)
         return view
     }()
     

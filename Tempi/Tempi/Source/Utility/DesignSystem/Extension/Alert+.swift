@@ -12,7 +12,7 @@ extension UIViewController {
     func showToast(message : String) {
         let toastLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 220, height: 43))
         toastLabel.center = CGPoint(x: self.view.frame.size.width / 2, y: self.view.frame.size.height / 2)
-        toastLabel.backgroundColor = UIColor.tGray1000.withAlphaComponent(0.6)
+        toastLabel.backgroundColor = UIColor.label.withAlphaComponent(0.6)
         toastLabel.textColor = UIColor.tGray100
         toastLabel.font = .customFont(.pretendardRegularM)
         toastLabel.textAlignment = .center;

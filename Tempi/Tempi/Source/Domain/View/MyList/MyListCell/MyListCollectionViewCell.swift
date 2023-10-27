@@ -24,7 +24,7 @@ class MyListCollectionViewCell: BaseCollectionViewCell {
        let view = TLabel(
         text: "test",
         custFont: .pretendardMediumM,
-        textColor: .tGray1000
+        textColor: .label
        )
         return view
     }()
@@ -42,7 +42,7 @@ class MyListCollectionViewCell: BaseCollectionViewCell {
         let view = UIImageView()
         view.image = UIImage(systemName: Constant.SFSymbol.chevronRightIcon)
         view.contentMode = .scaleAspectFit
-        view.tintColor = UIColor.tGray1000
+        view.tintColor = UIColor.label
         return view
     }()
     

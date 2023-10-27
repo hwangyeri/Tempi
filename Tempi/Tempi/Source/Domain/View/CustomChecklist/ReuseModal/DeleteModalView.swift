@@ -21,7 +21,7 @@ class DeleteModalView: BaseView {
        let view = TLabel(
         text: "deleteModal_mainLabel".localized,
         custFont: .pretendardSemiBoldL,
-        textColor: .tGray1000)
+        textColor: .label)
         view.textAlignment = .center
         return view
     }()
@@ -30,7 +30,7 @@ class DeleteModalView: BaseView {
         let view = TLabel(
             text: "deleteModal_subLabel".localized,
          custFont: .pretendardRegularS,
-         textColor: .tGray1000)
+         textColor: .label)
         view.textAlignment = .center
          return view
     }()

@@ -15,7 +15,7 @@ class AddChecklistCollectionViewCell: BaseCollectionViewCell {
         view.layer.cornerRadius = Constant.TChecklist.cornerRadius
         view.layer.borderWidth = Constant.TChecklist.borderWidth
         view.layer.borderColor = UIColor.tGray400.cgColor
-        view.setTitleColor(.tGray1000, for: .normal)
+        view.setTitleColor(.label, for: .normal)
                 view.setTitle("test", for: .normal)
         view.titleLabel?.font = .customFont(.pretendardSemiBoldM)
         view.backgroundColor = UIColor.tGray100

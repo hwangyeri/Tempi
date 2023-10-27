@@ -34,7 +34,7 @@ class SearchResultCollectionViewCell: BaseCollectionViewCell {
         let view = TLabel(
             text: "searchResult_subCategoryNameLabel".localized,
             custFont: .pretendardMediumM,
-            textColor: .tGray1000
+            textColor: .label
         )
         view.numberOfLines = 1
         return view
@@ -44,7 +44,7 @@ class SearchResultCollectionViewCell: BaseCollectionViewCell {
         let view = UIImageView()
         view.image = UIImage(systemName: Constant.SFSymbol.chevronRightIcon)
         view.contentMode = .scaleAspectFit
-        view.tintColor = UIColor.tGray1000
+        view.tintColor = UIColor.label
         return view
     }()
     

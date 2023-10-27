@@ -14,7 +14,7 @@ class ChecklistView: BaseView {
        let view = TLabel(
         text: "checklist_checklistNameLabel".localized,
         custFont: .pretendardBoldXXXL,
-        textColor: .tGray1000
+        textColor: .label
        )
         return view
     }()
@@ -32,7 +32,7 @@ class ChecklistView: BaseView {
         let view = TImageButton(
             imageSize: Constant.TImageButton.checklistImageSize,
             imageName: Constant.SFSymbol.checklistNameEditIcon,
-            imageColor: .tGray1000
+            imageColor: .label
         )
         return view
     }()
@@ -40,10 +40,10 @@ class ChecklistView: BaseView {
     let bookmarkListButton = {
         let view = UIButton()
         view.setImage(UIImage(systemName: Constant.SFSymbol.bookmarkListIcon), for: .normal)
-        view.setTitleColor(.tGray1000, for: .normal)
-        view.tintColor = UIColor.tGray1000
+        view.setTitleColor(.label, for: .normal)
+        view.tintColor = UIColor.label
         view.layer.cornerRadius = Constant.TBookmarkListButton.cornerRadius
-        view.layer.borderColor = UIColor.tGray1000.cgColor
+        view.layer.borderColor = UIColor.label.cgColor
         view.layer.borderWidth = Constant.TBookmarkListButton.borderWidth
         var config = UIButton.Configuration.plain()
         let title = "checklist_bookmarkListButton".localized
@@ -58,7 +58,7 @@ class ChecklistView: BaseView {
         let view = TImageButton(
             imageSize: Constant.TImageButton.checklistImageSize,
             imageName: Constant.SFSymbol.checklistUnFixedIcon,
-            imageColor: .tGray1000
+            imageColor: .label
         )
         return view
     }()
@@ -67,7 +67,7 @@ class ChecklistView: BaseView {
         let view = TImageButton(
             imageSize: Constant.TImageButton.checklistImageSize,
             imageName: Constant.SFSymbol.checklistDeleteIcon,
-            imageColor: .tGray1000
+            imageColor: .label
         )
         return view
     }()
@@ -84,7 +84,7 @@ class ChecklistView: BaseView {
         let imageConfig = UIImage.SymbolConfiguration(pointSize: 50, weight: .light)
         let image = UIImage(systemName: Constant.SFSymbol.plusCircleIcon, withConfiguration: imageConfig)
         view.setImage(image, for: .normal)
-        view.tintColor = UIColor.tGray1000
+        view.tintColor = UIColor.label
         return view
     }()
     

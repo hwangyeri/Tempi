@@ -46,7 +46,7 @@ class MyListView: BaseView {
        let view = TLabel(
         text: "myList_mainLabel".localized,
         custFont: .pretendardBoldXXXL,
-        textColor: .tGray1000)
+        textColor: .label)
         view.setAttributedTextWithLineSpacing("myList_mainLabel".localized, lineSpacing: 8)
         return view
     }()
@@ -56,7 +56,7 @@ class MyListView: BaseView {
         let imageConfig = UIImage.SymbolConfiguration(pointSize: 45, weight: .light)
         let image = UIImage(systemName: Constant.SFSymbol.plusCircleIcon, withConfiguration: imageConfig)
         view.setImage(image, for: .normal)
-        view.tintColor = UIColor.tGray1000
+        view.tintColor = UIColor.label
         return view
     }()
     

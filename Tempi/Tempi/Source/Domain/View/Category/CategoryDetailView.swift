@@ -14,7 +14,7 @@ class CategoryDetailView: BaseView {
        let view = TLabel(
         text: "category_detail_main_label".localized,
         custFont: .pretendardSemiBoldXL,
-        textColor: .tGray1000)
+        textColor: .label)
         return view
     }()
     

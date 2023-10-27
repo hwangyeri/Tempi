@@ -21,7 +21,7 @@ class EmptyCollectionReusableView: BaseCollectionReusableView {
         let view = TLabel(
             text: "빈 화면 메인 라벨입니다.",
             custFont: .pretendardSemiBoldL,
-            textColor: .tGray1000
+            textColor: .label
         )
         return view
     }()
@@ -30,7 +30,7 @@ class EmptyCollectionReusableView: BaseCollectionReusableView {
         let view = TLabel(
             text: "빈 화면 서브 라벨입니다.",
             custFont: .pretendardRegularS,
-            textColor: .tGray1000
+            textColor: .label
         )
         return view
     }()
@@ -39,7 +39,7 @@ class EmptyCollectionReusableView: BaseCollectionReusableView {
         let view = TLabel(
             text: "",
             custFont: .pretendardRegularS,
-            textColor: .tGray1000
+            textColor: .label
         )
         return view
     }()

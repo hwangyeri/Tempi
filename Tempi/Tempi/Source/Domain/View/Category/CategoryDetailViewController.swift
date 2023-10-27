@@ -98,7 +98,7 @@ extension CategoryDetailViewController: UICollectionViewDelegate {
             }
             
             // 현재 선택된 cell UI 변경
-            cell.backView.backgroundColor = .tGray1000
+            cell.backView.backgroundColor = .label
             cell.textLabel.textColor = .tGray100
             cell.textLabel.font = .customFont(.pretendardSemiBoldL)
             
@@ -112,7 +112,7 @@ extension CategoryDetailViewController: UICollectionViewDelegate {
                 mainView.tButton.backgroundColor = .tGray200
             } else {
                 mainView.tButton.isEnabled = true
-                mainView.tButton.backgroundColor = .tGray1000
+                mainView.tButton.backgroundColor = .label
             }
         }
     }

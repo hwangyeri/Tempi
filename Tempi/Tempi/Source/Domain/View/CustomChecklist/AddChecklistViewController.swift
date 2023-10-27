@@ -50,7 +50,7 @@ class AddChecklistViewController: BaseViewController {
         print(#function)
         if isAnyButtonSelected {
             mainView.addButton.isEnabled = true
-            mainView.addButton.backgroundColor = UIColor.tGray1000
+            mainView.addButton.backgroundColor = UIColor.label
         } else {
             mainView.addButton.isEnabled = false
             mainView.addButton.backgroundColor = UIColor.tGray500
@@ -63,7 +63,7 @@ class AddChecklistViewController: BaseViewController {
         
         mainView.addToNewListButton.isSelected = true
         isAnyButtonSelected = true
-        mainView.addToNewListButton.layer.borderColor = UIColor.tGray1000.cgColor
+        mainView.addToNewListButton.layer.borderColor = UIColor.label.cgColor
         mainView.addToNewListButton.layer.borderWidth = Constant.TChecklist.selectedBorderWidth
         
         if let selectedIndex = selectedIndex,
@@ -182,7 +182,7 @@ extension AddChecklistViewController: UICollectionViewDelegate {
         
         // 현재 선택된 셀 UI 업데이트
         let selectedCell = collectionView.cellForItem(at: indexPath) as? AddChecklistCollectionViewCell
-        selectedCell?.checklistButton.layer.borderColor = UIColor.tGray1000.cgColor
+        selectedCell?.checklistButton.layer.borderColor = UIColor.label.cgColor
         selectedCell?.checklistButton.layer.borderWidth = Constant.TChecklist.selectedBorderWidth
         
         selectedIndex = indexPath

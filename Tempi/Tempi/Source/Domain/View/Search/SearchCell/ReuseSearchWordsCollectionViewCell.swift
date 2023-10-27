@@ -23,7 +23,7 @@ class ReuseSearchWordsCollectionViewCell: BaseCollectionViewCell {
         let view = TLabel(
             text: "test",
             custFont: .pretendardSemiBoldXS,
-            textColor: .tGray1000)
+            textColor: .label)
         view.numberOfLines = 1
         view.backgroundColor = .clear
         return view

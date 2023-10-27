@@ -21,7 +21,7 @@ class EditModalView: BaseView {
        let view = TLabel(
         text: "Main Label",
         custFont: .pretendardSemiBoldM,
-        textColor: .tGray1000)
+        textColor: .label)
         view.textAlignment = .center
         return view
     }()
@@ -30,7 +30,7 @@ class EditModalView: BaseView {
         let view = TLabel(
          text: "Sub Label",
          custFont: .pretendardRegularS,
-         textColor: .tGray1000)
+         textColor: .label)
         view.textAlignment = .center
          return view
     }()
@@ -52,7 +52,7 @@ class EditModalView: BaseView {
        let view = TLabel(
         text: "0",
         custFont: .pretendardRegularXS,
-        textColor: .tGray1000)
+        textColor: .label)
         return view
     }()
     
@@ -60,7 +60,7 @@ class EditModalView: BaseView {
        let view = TLabel(
         text: "Maximum Number Of Characters Label",
         custFont: .pretendardRegularXS,
-        textColor: .tGray1000)
+        textColor: .label)
         return view
     }()
     

@@ -151,7 +151,7 @@ extension EditChecklistNameViewController: UITextFieldDelegate {
         
         DispatchQueue.main.async {
             self.mainView.editButton.isEnabled = true
-            self.mainView.editButton.backgroundColor = .tGray1000
+            self.mainView.editButton.backgroundColor = .label
         }
     }
     

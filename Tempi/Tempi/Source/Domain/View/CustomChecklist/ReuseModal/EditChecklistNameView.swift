@@ -14,7 +14,7 @@ class EditChecklistNameView: BaseView {
         let view = TImageButton(
             imageSize: Constant.TImageButton.editChecklistNameImageSize,
             imageName: Constant.SFSymbol.xmarkIcon,
-            imageColor: .tGray1000
+            imageColor: .label
         )
         return view
     }()
@@ -24,7 +24,7 @@ class EditChecklistNameView: BaseView {
        let view = TLabel(
         text: "체크리스트의 이름을 입력해 주세요.",
         custFont: .pretendardSemiBoldXXL,
-        textColor: .tGray1000)
+        textColor: .label)
         return view
     }()
     

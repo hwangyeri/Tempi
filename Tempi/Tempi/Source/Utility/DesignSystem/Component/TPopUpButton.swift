@@ -14,7 +14,7 @@ final class TPopUpButton: UIButton {
         
         self.setTitle(text, for: .normal)
         self.setTitleColor(UIColor.tGray100, for: .normal)
-        self.backgroundColor = UIColor.tGray1000
+        self.backgroundColor = UIColor.label
         self.layer.cornerRadius = Constant.TPopUp.buttonCornerRadius
         self.titleLabel?.font = .customFont(.pretendardSemiBoldL)
     }

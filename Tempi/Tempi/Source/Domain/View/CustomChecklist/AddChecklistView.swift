@@ -14,7 +14,7 @@ class AddChecklistView: BaseView {
        let view = TLabel(
         text: "add_checklist_mainLabel".localized,
         custFont: .pretendardSemiBoldL,
-        textColor: .tGray1000)
+        textColor: .label)
         view.textAlignment = .center
         return view
     }()
@@ -36,8 +36,8 @@ class AddChecklistView: BaseView {
         view.layer.borderWidth = Constant.TChecklist.borderWidth
         view.layer.borderColor = UIColor.tGray500.cgColor
         view.clipsToBounds = true
-        view.setTitleColor(.tGray1000, for: .normal)
-        view.tintColor = UIColor.tGray1000
+        view.setTitleColor(.label, for: .normal)
+        view.tintColor = UIColor.label
         
         let title = "add_checklist_addToNewListButton_text".localized
         var config = UIButton.Configuration.plain()

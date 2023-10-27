@@ -267,7 +267,7 @@ extension EditModalViewController: UITextFieldDelegate {
         DispatchQueue.main.async {
             self.mainView.currentNumberOfCharactersLabel.text = "editModal_currentNumberOfCharactersLabel".localized(with: currentCount)
             self.mainView.saveButton.isEnabled = true
-            self.mainView.saveButton.backgroundColor = .tGray1000
+            self.mainView.saveButton.backgroundColor = .label
         }
         
         // maximumCharacterCount를 사용하여 버튼 활성화 상태 업데이트 - 최대 글자수 넘으면 버튼 비활성화 처리
@@ -277,7 +277,7 @@ extension EditModalViewController: UITextFieldDelegate {
                 self.mainView.saveButton.backgroundColor = .tGray500
             } else {
                 self.mainView.saveButton.isEnabled = true
-                self.mainView.saveButton.backgroundColor = .tGray1000
+                self.mainView.saveButton.backgroundColor = .label
             }
         }
     }

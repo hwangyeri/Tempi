@@ -86,7 +86,7 @@ class ChecklistViewController: BaseViewController {
     private func setNavigationBarButton() {
         let barButtonIcon = UIImage(systemName: Constant.SFSymbol.xmarkIcon)
         let rightBarButton = UIBarButtonItem(image: barButtonIcon, style: .plain, target: self, action: #selector(rightBarButtonTapped))
-        rightBarButton.tintColor = .tGray1000
+        rightBarButton.tintColor = .label
         self.navigationItem.rightBarButtonItem = rightBarButton
         self.navigationItem.hidesBackButton = true
     }
@@ -367,7 +367,7 @@ extension ChecklistViewController: UICollectionViewDelegate {
             if !isChecked {
                 // False -> True
                 DispatchQueue.main.async {
-                    cell.checkBoxButton.layer.backgroundColor = UIColor.tGray1000.cgColor
+                    cell.checkBoxButton.layer.backgroundColor = UIColor.label.cgColor
                     cell.checkBoxButton.setImage(UIImage(systemName: Constant.SFSymbol.checkIcon), for: .normal)
                     cell.tintColor = .tGray100
                 }

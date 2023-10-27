@@ -20,7 +20,7 @@ class ChecklistCollectionViewCell: BaseCollectionViewCell {
         let view = TLabel(
             text: "test",
             custFont: .pretendardRegularL,
-            textColor: .tGray1000)
+            textColor: .label)
         return view
     }()
     
@@ -53,7 +53,7 @@ class ChecklistCollectionViewCell: BaseCollectionViewCell {
         let view = TImageButton(
             imageSize: Constant.TImageButton.checklistCollectionCellImageSize,
             imageName: Constant.SFSymbol.checkboxMenuIcon,
-            imageColor: .tGray1000)
+            imageColor: .label)
         view.showsMenuAsPrimaryAction = true // long press 없이 한 번의 탭으로 메뉴 나오게 설정
         return view
     }()

@@ -21,7 +21,7 @@ class MyListHeaderView: BaseCollectionReusableView {
         let view = TLabel(
             text: "",
             custFont: .pretendardBoldS,
-            textColor: .tGray1000
+            textColor: .label
         )
         return view
     }()

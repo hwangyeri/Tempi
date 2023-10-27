@@ -14,7 +14,7 @@ class CategoryChecklistView: BaseView {
        let view = TLabel(
         text: "category_checklist_mainLabel".localized,
         custFont: .pretendardSemiBoldXL,
-        textColor: .tGray1000)
+        textColor: .label)
         return view
     }()
     
@@ -30,7 +30,7 @@ class CategoryChecklistView: BaseView {
        let view = TLabel(
         text: "category_checklist_checklistNameLabel".localized,
         custFont: .pretendardBoldXXL,
-        textColor: .tGray1000)
+        textColor: .label)
         return view
     }()
     
@@ -54,7 +54,7 @@ class CategoryChecklistView: BaseView {
        let view = TLabel(
         text: "category_checklist_selectAllLabel_selectAll".localized,
         custFont: .pretendardRegularXS,
-        textColor: .tGray1000)
+        textColor: .label)
         return view
     }()
     
