@@ -165,12 +165,12 @@ class CategoryHomeView: BaseView {
             make.horizontalEdges.equalTo(self.safeAreaLayoutGuide).inset(30)
         }
         
-        categoryCollectionView.backgroundColor = .lightGray
+//        categoryCollectionView.backgroundColor = .lightGray
         
         plusButton.snp.makeConstraints { make in
-            make.top.equalTo(categoryCollectionView.snp.bottom).offset(10)
+            make.top.equalTo(categoryCollectionView.snp.bottom).offset(15)
             make.centerX.equalToSuperview()
-            make.bottom.equalTo(self.safeAreaLayoutGuide).inset(20)
+            make.bottom.equalTo(self.safeAreaLayoutGuide).inset(15)
         }
     }
     
