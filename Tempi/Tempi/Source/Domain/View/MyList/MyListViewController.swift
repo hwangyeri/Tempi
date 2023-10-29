@@ -98,29 +98,29 @@ class MyListViewController: BaseViewController {
             
             // 고정된 리스트
             self.fixedChecklists = allItems.filter { $0.isFixed }
-            print("--- fixedChecklists ---", self.fixedChecklists)
+            //print("--- fixedChecklists ---", self.fixedChecklists)
             
             // 오늘
             self.todayChecklists = allItems.filter { item in
                 Calendar.current.isDate(item.createdAt, inSameDayAs: today) && !self.fixedChecklists.contains(item)
             }
-            print("--- todayChecklists ---", self.todayChecklists)
+            //print("--- todayChecklists ---", self.todayChecklists)
             
             // 어제
             self.yesterdayChecklists = allItems.filter { item in
                 Calendar.current.isDate(item.createdAt, inSameDayAs: yesterday) && !self.fixedChecklists.contains(item) && !self.todayChecklists.contains(item)
             }
-            print("--- yesterdayChecklists ---", self.yesterdayChecklists)
+            //print("--- yesterdayChecklists ---", self.yesterdayChecklists)
             
             
             // 이전
             self.previousChecklists = allItems.filter { item in
                 !Calendar.current.isDate(item.createdAt, inSameDayAs: today) && !Calendar.current.isDate(item.createdAt, inSameDayAs: yesterday) && !self.fixedChecklists.contains(item) && !self.todayChecklists.contains(item) && !self.yesterdayChecklists.contains(item)
             }
-            print("--- previousChecklists ---", self.previousChecklists)
+            //print("--- previousChecklists ---", self.previousChecklists)
             
             let allSections: [[ChecklistTable]] = [self.fixedChecklists, self.todayChecklists, self.yesterdayChecklists, self.previousChecklists]
-            print("--- allSections ---", allSections)
+            //print("--- allSections ---", allSections)
             
             DispatchQueue.main.async {
                 self.configureMyListDataSource(with: allSections)
@@ -157,7 +157,7 @@ class MyListViewController: BaseViewController {
             }
             
             headerView.titleLabel.text = sectionHeaderTitle
-            print("--- sectionHeaderTitle ---", sectionHeaderTitle)
+            //print("--- sectionHeaderTitle ---", sectionHeaderTitle)
             headerView.updateLayoutForHiddenImage(isHidden: headerView.imageView.isHidden)
         }
         
