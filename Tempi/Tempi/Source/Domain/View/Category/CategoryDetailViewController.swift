@@ -34,8 +34,8 @@ class CategoryDetailViewController: BaseViewController {
         configureSubCategoryDataSource()
         setLocalized()
         
-        //        print("---- DetailView", categoryName)
-        //        print(subCategoryList)
+//        print("---- DetailView", categoryName)
+//        print(subCategoryList)
     }
     
     override func configureHierarchy() {
