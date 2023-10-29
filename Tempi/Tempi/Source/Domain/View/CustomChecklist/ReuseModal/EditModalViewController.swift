@@ -262,7 +262,7 @@ extension EditModalViewController: UITextFieldDelegate {
         }
         
         let currentCount = text.count
-        print(currentCount, "--- currentCount ---0")
+        //print(currentCount, "--- currentCount ---")
 
         DispatchQueue.main.async {
             self.mainView.currentNumberOfCharactersLabel.text = "editModal_currentNumberOfCharactersLabel".localized(with: currentCount)
