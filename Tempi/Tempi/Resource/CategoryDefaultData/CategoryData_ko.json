@@ -1,0 +1,4269 @@
+{
+  "categoryDefaultData": [
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출할 때, 필수템",
+      "checkItem": "지갑"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출할 때, 필수템",
+      "checkItem": "휴대폰"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출할 때, 필수템",
+      "checkItem": "에어팟, 이어폰"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출할 때, 필수템",
+      "checkItem": "헤드셋"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출할 때, 필수템",
+      "checkItem": "열쇠"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출할 때, 필수템",
+      "checkItem": "신분증"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출할 때, 필수템",
+      "checkItem": "충전기"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출할 때, 필수템",
+      "checkItem": "보조배터리"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출할 때, 필수템",
+      "checkItem": "인공눈물"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출할 때, 필수템",
+      "checkItem": "머리끈"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출할 때, 필수템",
+      "checkItem": "기름종이"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출할 때, 필수템",
+      "checkItem": "립밤"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출할 때, 필수템",
+      "checkItem": "틴트, 립스틱"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출할 때, 필수템",
+      "checkItem": "우산, 양산"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출할 때, 필수템",
+      "checkItem": "자외선 차단제"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출할 때, 필수템",
+      "checkItem": "휴지"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출할 때, 필수템",
+      "checkItem": "물티슈"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출할 때, 필수템",
+      "checkItem": "신용카드"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출할 때, 필수템",
+      "checkItem": "현금"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출할 때, 필수템",
+      "checkItem": "마스크"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출할 때, 필수템",
+      "checkItem": "물"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출할 때, 필수템",
+      "checkItem": "노트, 필기도구"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출할 때, 필수템",
+      "checkItem": "선글라스"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출할 때, 필수템",
+      "checkItem": "모자"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출할 때, 필수템",
+      "checkItem": "여성 위생 용품"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출할 때, 필수템",
+      "checkItem": "비상약"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출할 때, 필수템",
+      "checkItem": "비타민"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출할 때, 필수템",
+      "checkItem": "간식"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출할 때, 필수템",
+      "checkItem": "핸드크림"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출 전, 체크리스트",
+      "checkItem": "가스 및 전기 장치 끄기"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출 전, 체크리스트",
+      "checkItem": "창문과 문 잠그기"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출 전, 체크리스트",
+      "checkItem": "가전제품 전원 차단"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출 전, 체크리스트",
+      "checkItem": "보안 시스템 활성화 여부 확인"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출 전, 체크리스트",
+      "checkItem": "필요한 서류나 USB 챙기기"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출 전, 체크리스트",
+      "checkItem": "필수품 챙기기"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출 전, 체크리스트",
+      "checkItem": "차량 연료 확인"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출 전, 체크리스트",
+      "checkItem": "타이어 압력 및 상태 확인"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출 전, 체크리스트",
+      "checkItem": "날씨 예보 확인하기"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출 전, 체크리스트",
+      "checkItem": "기온별 옷차림 확인하기"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출 전, 체크리스트",
+      "checkItem": "우산 챙기기"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출 전, 체크리스트",
+      "checkItem": "마스크 챙기기"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출 전, 체크리스트",
+      "checkItem": "반려동물 밥이랑 물 챙기기"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출 전, 체크리스트",
+      "checkItem": "음식물 쓰레기 버리기"
+    },
+    {
+      "categoryName": "외출",
+      "subCategoryName": "외출 전, 체크리스트",
+      "checkItem": "보일러 체크하기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "여권"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "필요한 서류"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "주민등록증"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "국제 운전 면허증"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "220v 변압기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "110v 변압기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "치약, 칫솔"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "스킨, 로션"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "수분크림"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "선크림"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "지갑"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "모자"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "양말"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "속옷"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "인공 눈물"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "클렌징 오일"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "클렌징 폼"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "클렌징 워터"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "클렌징 티슈"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "립앤아이 리무버"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "헤어핀"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "샴푸, 린스"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "바디로션"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "보조 배터리"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "핸드폰 충전기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "필름 카메라"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "폴라로이드"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "카메라"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "카메라 충전기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "동전 지갑"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "비닐 봉지"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "포켓 와이파이"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "현금"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "티켓"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "립밤"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "양산"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "에코백"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "마스크팩"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "마스크"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "비타민"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "렌즈, 렌즈 보존액, 렌즈통"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "면봉"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "여드름 패치"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "안경"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "선글라스"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "가방"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "손거울"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "화장품"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "유니폼"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "노트, 펜"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "컵라면"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "통조림"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "간식"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "여행용 키트"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "물"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "텀블러"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "잠옷"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "밴드, 연고"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "핸드백"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "운동화"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "슬리퍼"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "드라이기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "수건"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "신용카드"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "우산, 우비"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "휴대용 티슈"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "지사제, 소화제"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "멀미약"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "감기약"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "소염제, 진통제"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "지퍼백"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "패딩"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "목도리, 스카프"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "비니"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "멀티어댑터"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "SD 카드"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "삼각대"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "액션캠"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "셀카봉"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "블루투스 셀카봉"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "애플 워치"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "워치 충전기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "헤어 오일"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "고데기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "면도기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "여성 위생 용품"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "반짇고리"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "종이 비누"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "가글"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "미스트"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "노트북"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "테블릿"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "모기 약"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "자외선 차단제"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "목베게"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "안대, 귀마개"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "이어폰, 에어팟"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "귀걸이"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "목걸이"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "반지"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "샌들"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "치실"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "화장솜"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "여행 서적"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "지도"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "샤워 볼"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "샤워 타월"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "맨투맨"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "후드"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "후드 집업"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "크롭티"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "반팔티"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "긴팔티"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "트렌치 코트"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "항공 점퍼"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "코트"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "카고 바지"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "패딩 조끼"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "바람막이"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "후리스"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "목도리"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "장갑"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "스타킹"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "피어싱"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "긴바지"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "반바지"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "골덴 바지"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "스키니진"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "일자 바지"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "청바지"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "라이더 자켓"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "린넨 바지"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "블라우스"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "부츠"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "워커"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "스니커즈"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "구두"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "메리 제인"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "롱패딩"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "숏패딩"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "드레스"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "가디건"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "롱치마"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "조끼"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "재킷"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "레인부츠"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "셔츠"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "치마"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "슬랙스"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "와이드 팬츠"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "여행 짐싸기",
+      "checkItem": "면바지"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "출국 전, 체크리스트",
+      "checkItem": "여권 발급 받기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "출국 전, 체크리스트",
+      "checkItem": "필요한 서류 프린트하기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "출국 전, 체크리스트",
+      "checkItem": "환율 확인하기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "출국 전, 체크리스트",
+      "checkItem": "환전하기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "출국 전, 체크리스트",
+      "checkItem": "캐리어 짐싸기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "출국 전, 체크리스트",
+      "checkItem": "교통편 알아보기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "출국 전, 체크리스트",
+      "checkItem": "숙소 예약하기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "출국 전, 체크리스트",
+      "checkItem": "여행 일정 정하기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "출국 전, 체크리스트",
+      "checkItem": "보조 배터리 충전하기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "출국 전, 체크리스트",
+      "checkItem": "비상약 사기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "출국 전, 체크리스트",
+      "checkItem": "포켓 와이파이 예약하기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "출국 전, 체크리스트",
+      "checkItem": "비타민 사기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "출국 전, 체크리스트",
+      "checkItem": "카메라 대여하기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "출국 전, 체크리스트",
+      "checkItem": "유심 구매하기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "출국 전, 체크리스트",
+      "checkItem": "로밍 서비스 예약하기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "출국 전, 체크리스트",
+      "checkItem": "여행 유튜브 찾아보기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "출국 전, 체크리스트",
+      "checkItem": "여행 쇼핑 리스트 정하기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "출국 전, 체크리스트",
+      "checkItem": "유니버셜 티켓 구매하기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "출국 전, 체크리스트",
+      "checkItem": "디즈니랜드 티켓 구매하기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "출국 전, 체크리스트",
+      "checkItem": "간식 챙기기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "출국 전, 체크리스트",
+      "checkItem": "출발 전에 먹을 음식 사놓기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "출국 전, 체크리스트",
+      "checkItem": "보험사 연락처 확인하기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "출국 전, 체크리스트",
+      "checkItem": "여행자 보험 들기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "출국 전, 체크리스트",
+      "checkItem": "비자 신청하기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "출국 전, 체크리스트",
+      "checkItem": "면세 쇼핑하기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "출국 전, 체크리스트",
+      "checkItem": "기내 반입 물품 확인하기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "출국 전, 체크리스트",
+      "checkItem": "넷플릭스 다운"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "출국 전, 체크리스트",
+      "checkItem": "비행기에서 볼 영상 다운"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "출국 전, 체크리스트",
+      "checkItem": "비행기에서 들을 음악 다운"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "출국 전, 체크리스트",
+      "checkItem": "비상 연락망 확인하기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "출국 전, 체크리스트",
+      "checkItem": "날짜별 입을 옷 정하기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "상추, 깻잎"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "쌈채소"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "김치"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "쌈장"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "소금, 후추"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "고추장"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "간장"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "캠핑 도구"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "아이스 박스"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "밀키트"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "바베큐 도구"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "랜턴"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "세면 도구"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "장작"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "캠핑 의자, 테이블"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "라면"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "자외선 차단제"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "나무 젓가락"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "숟가락, 포크"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "플라스틱 컵"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "일회용 접시"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "돼지고기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "소고기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "새우"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "달걀"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "관자"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "해산물"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "와인"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "소주"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "맥주"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "음료수"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "꼬마 전구"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "프로젝터"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "양초"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "휴대용 파워뱅크"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "침낭"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "전기 포트"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "비닐 봉지"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "지퍼백"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "얼음"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "물"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "나침판"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "플래시"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "감자, 고구마"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "옥수수"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "양파"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "쿠킹 호일"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "종이 호일"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "과자"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "컵라면"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "블루투스 스피커"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "양말"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "속옷"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "아우터"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "물티슈"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "휴대용 티슈"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "슬리퍼"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "운동화"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "충전기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "카메라"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "삼각대"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "셀카봉"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "담요"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "조리용품"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "후라이팬"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "국자"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "냄비"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "집게"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "휴대용 그릴"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "비상약"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "잠옷"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "여성 위생 용품"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "설거지 용품"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "장갑"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "앞접시"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "수저"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "수건"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "보드게임"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "즉석밥"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "멀티탭"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "마스크"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "비타민"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "종이컵"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "파채"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "아스파라거스"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "마늘"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "버섯"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "과일"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "우산, 우비"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "치약, 칫솔"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "스킨, 로션"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "지사제, 소화제"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "멀미약"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "감기약"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "소염제, 진통제"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "샴푸, 린스, 트리트먼트"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "바디 로션, 바디 워시"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "보조 배터리"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "핸드폰 충전기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "필름 카메라"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "폴라로이드"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "카메라"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "카메라 충전기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "립밤"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "양산"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "구강 청결제"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "미스트"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "노트북"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "테블릿"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "모기 약"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "SD 카드"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "삼각대"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "액션캠"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "셀카봉"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "블루투스 셀카봉"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "애플 워치, 워치 충전기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "샤워 볼, 샤워 타월"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "고데기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "면도기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "후드"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "후드 집업"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "반팔티"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "긴팔티"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "항공 점퍼"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "카고 바지"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "패딩 조끼"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "바람막이"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "후리스"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "목도리"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "장갑"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "긴바지"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "반바지"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "청바지"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "와이드 팬츠"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "면바지"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "가디건"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "패딩"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "조끼"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "재킷"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "글램핑, 캠핑",
+      "checkItem": "레인부츠"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "수영복"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "비키니"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "수영모"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "수경"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "아쿠아 슈즈"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "선크림"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "선스틱"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "선스프레이"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "튜브"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "비치발리볼"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "태닝 오일"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "비치타올"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "수건"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "스포츠 타올"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "속옷"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "양말"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "샴푸, 린스"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "트리트먼트"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "칫솔, 치약"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "클렌징 용품"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "세면 용품"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "스킨, 로션"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "수분크림, 영양크림"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "드라이기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "의류"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "핸드폰 충전기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "샤워 타월, 샤워 볼"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "립밤"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "지갑"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "파우치"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "화장품"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "바디워시"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "바디로션"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "머리끈"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "헤어핀"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "빗"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "보조 배터리"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "인공 눈물"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "모자"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "렌즈통"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "렌즈"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "안경"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "선글라스"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "고데기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "수영장",
+      "checkItem": "면도기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "스키복"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "스키 장갑"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "안전모"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "안경 또는 고글"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "속옷, 양말"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "스노우보드"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "스키"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "부츠"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "스키 막대"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "비상약"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "핸드워머"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "선크림"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "립밤"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "숙박 예약 확인"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "여행 일정 세우기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "신분증, 여권"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "예약 확인서"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "지갑"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "신용카드, 현금"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "보조배터리"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "충전기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "멀티탭"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "짐 챙기기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "물, 스포츠 음료"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "스키장 여가 시설 확인하기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "스키 레슨 예약 여부 확인하기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "핫팩"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "비니"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "모자"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "인공눈물"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "샴푸, 린스"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "트리트먼트"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "칫솔, 치약"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "클렌징 용품"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "세면 용품"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "스킨, 로션, 크림"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "드라이기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "수건"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "샤워 타월"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "샤워 볼"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "파우치"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "화장품"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "바디워시"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "바디로션"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "머리끈"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "헤어핀"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "빗"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "렌즈통"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "렌즈"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "안경"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "선글라스"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "고데기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "면도기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "후드"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "후드 집업"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "반팔티"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "긴팔티"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "항공 점퍼"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "카고 바지"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "바람막이"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "후리스"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "목도리"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "귀마개"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "긴바지"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "반바지"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "청바지"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "와이드 팬츠"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "면바지"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "가디건"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "패딩"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "조끼"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "스키장",
+      "checkItem": "재킷"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "입욕제"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "보드게임"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "위스키"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "소주, 맥주"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "와인"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "일회용 샘플"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "여행용 키트"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "치약, 칫솔"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "스킨, 로션"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "수분크림"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "선크림"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "지갑"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "모자"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "양말"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "속옷"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "인공 눈물"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "클렌징 용품"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "헤어핀"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "머리끈"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "빗"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "샴푸, 린스"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "트리트먼트"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "바디로션"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "바디워시"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "보조 배터리"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "핸드폰 충전기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "필름 카메라"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "폴라로이드"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "카메라"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "카메라 충전기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "마스크팩"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "마스크"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "비타민"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "렌즈"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "렌즈 보존액"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "렌즈통"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "면봉"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "여드름 패치"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "안경"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "선글라스"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "가방"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "손거울"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "화장품"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "잠옷"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "기름종이"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "헤어 오일"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "고데기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "면도기"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "여성 위생 용품"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "HDMI 케이블"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "노트북"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "테블릿"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "에어팟, 이어폰"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "헤드셋"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "열쇠"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "신분증"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "블루투스 스피커"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "수영복"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "비키니"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "수영모"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "수경"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "아쿠아 슈즈"
+    },
+    {
+      "categoryName": "여행",
+      "subCategoryName": "호캉스",
+      "checkItem": "자외선 차단제"
+    },
+    {
+      "categoryName": "청소",
+      "subCategoryName": "대청소 체크리스트",
+      "checkItem": "벽과 천장 청소하기"
+    },
+    {
+      "categoryName": "청소",
+      "subCategoryName": "대청소 체크리스트",
+      "checkItem": "가구 먼지 제거하기"
+    },
+    {
+      "categoryName": "청소",
+      "subCategoryName": "대청소 체크리스트",
+      "checkItem": "바닥 닦기"
+    },
+    {
+      "categoryName": "청소",
+      "subCategoryName": "대청소 체크리스트",
+      "checkItem": "침대 정리하기"
+    },
+    {
+      "categoryName": "청소",
+      "subCategoryName": "대청소 체크리스트",
+      "checkItem": "침구 교체하기"
+    },
+    {
+      "categoryName": "청소",
+      "subCategoryName": "대청소 체크리스트",
+      "checkItem": "옷장 정리하기"
+    },
+    {
+      "categoryName": "청소",
+      "subCategoryName": "대청소 체크리스트",
+      "checkItem": "청소기 돌리기"
+    },
+    {
+      "categoryName": "청소",
+      "subCategoryName": "대청소 체크리스트",
+      "checkItem": "걸레질 하기"
+    },
+    {
+      "categoryName": "청소",
+      "subCategoryName": "대청소 체크리스트",
+      "checkItem": "쓰레기통 비우기"
+    },
+    {
+      "categoryName": "청소",
+      "subCategoryName": "대청소 체크리스트",
+      "checkItem": "옷장 청소하기"
+    },
+    {
+      "categoryName": "청소",
+      "subCategoryName": "대청소 체크리스트",
+      "checkItem": "계절 옷 정리하기"
+    },
+    {
+      "categoryName": "청소",
+      "subCategoryName": "대청소 체크리스트",
+      "checkItem": "소파와 의자 청소하기"
+    },
+    {
+      "categoryName": "청소",
+      "subCategoryName": "대청소 체크리스트",
+      "checkItem": "테이블 청소하기"
+    },
+    {
+      "categoryName": "청소",
+      "subCategoryName": "대청소 체크리스트",
+      "checkItem": "장식품 먼지 제거하기"
+    },
+    {
+      "categoryName": "청소",
+      "subCategoryName": "대청소 체크리스트",
+      "checkItem": "장식장 청소하기"
+    },
+    {
+      "categoryName": "청소",
+      "subCategoryName": "대청소 체크리스트",
+      "checkItem": "커튼 빨래하기"
+    },
+    {
+      "categoryName": "청소",
+      "subCategoryName": "대청소 체크리스트",
+      "checkItem": "수납 공간 정리하기"
+    },
+    {
+      "categoryName": "청소",
+      "subCategoryName": "화장실 청소 체크리스트",
+      "checkItem": "세면대 청소하기"
+    },
+    {
+      "categoryName": "청소",
+      "subCategoryName": "화장실 청소 체크리스트",
+      "checkItem": "변기 청소하기"
+    },
+    {
+      "categoryName": "청소",
+      "subCategoryName": "화장실 청소 체크리스트",
+      "checkItem": "욕조 청소하기"
+    },
+    {
+      "categoryName": "청소",
+      "subCategoryName": "화장실 청소 체크리스트",
+      "checkItem": "샤워실 청소하기"
+    },
+    {
+      "categoryName": "청소",
+      "subCategoryName": "화장실 청소 체크리스트",
+      "checkItem": "바닥 닦기"
+    },
+    {
+      "categoryName": "청소",
+      "subCategoryName": "화장실 청소 체크리스트",
+      "checkItem": "창문 청소하기"
+    },
+    {
+      "categoryName": "청소",
+      "subCategoryName": "화장실 청소 체크리스트",
+      "checkItem": "쓰레기통 비우기"
+    },
+    {
+      "categoryName": "청소",
+      "subCategoryName": "화장실 청소 체크리스트",
+      "checkItem": "수납 공간 정리"
+    },
+    {
+      "categoryName": "청소",
+      "subCategoryName": "실외 청소 체크리스트",
+      "checkItem": "차고 정리 및 청소하기"
+    },
+    {
+      "categoryName": "청소",
+      "subCategoryName": "실외 청소 체크리스트",
+      "checkItem": "정원 가꾸기"
+    },
+    {
+      "categoryName": "청소",
+      "subCategoryName": "실외 청소 체크리스트",
+      "checkItem": "창문 및 외벽 청소하기"
+    },
+    {
+      "categoryName": "청소",
+      "subCategoryName": "실외 청소 체크리스트",
+      "checkItem": "야외 가구 청소하기"
+    },
+    {
+      "categoryName": "청소",
+      "subCategoryName": "실외 청소 체크리스트",
+      "checkItem": "쓰레기 정리하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "이사 날짜랑 시간 정하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "이사 관련 서류 및 계약서 확인하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "포장 및 박스 준비 (박스, 신문지, 에어 포장재)"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "라벨 및 마킹용 펜 준비하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "사용하지 않는 물품 기부하거나 폐기하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "물품 정리 및 분류하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "가전제품 설치 및 이전 예약하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "유리, 등 깨지기 쉬운 물품 포장하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "이사 후 청소 계획짜기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "청소 도구 준비하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "새로운 이웃에게 인사하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "기본적인 생활용품 준비하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "가정용품 및 가구의 보험 상태 확인하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "이사와 관련된 보험 및 보증 확인하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "대형폐기물 신고하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "이삿짐센터 견적문의 및 예약하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "자녀 학교 전학 수속하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "전기, 전화, 인터넷 이전 신청하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "공과금 자동이체 해지하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "학습지, 신문, 우유 중지 신청하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "은행, 신용카드, 보험회사에 등록된 주소 변경하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "각종 고지서 및 우편물 주소 변경하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "냉장고 음식 처리하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "각종 설치물 분해하기 (앵글, 선반, 커튼, 등)"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "이사업체 도착시간 최종 확인하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "현금 및 고가 귀중품 별도 보관하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "이삿짐 포장하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "전기, 가스, 수도, 전화, 인터넷 개통하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "전입 신고하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "차량 주소 이전하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "가구 배치도 작성하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "배송 예정 물품 확인하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "베란다 및 다용도실 정리하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "버릴 가구 및 폐기물 스티커 구매하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "이사할 집 수리할 곳 있는지 점검하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "관리비 납부 및 해지하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "이사 체크리스트",
+      "checkItem": "세탁소에 맡긴 물품 수령하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "새 집 구할 때, 체크리스트",
+      "checkItem": "싱크대, 세면대, 변기 수압 확인하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "새 집 구할 때, 체크리스트",
+      "checkItem": "온수 나오는지 확인하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "새 집 구할 때, 체크리스트",
+      "checkItem": "베란다, 장롱 뒤 곰팡이 흔적 확인하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "새 집 구할 때, 체크리스트",
+      "checkItem": "벽, 천정의 누수 흔적 확인하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "새 집 구할 때, 체크리스트",
+      "checkItem": "개미, 바퀴벌레 나오는지 확인하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "새 집 구할 때, 체크리스트",
+      "checkItem": "싱크대 또는 하수구 악취 확인하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "새 집 구할 때, 체크리스트",
+      "checkItem": "벽을 두드려보고 텅텅 빈 소리가 나는지 확인하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "새 집 구할 때, 체크리스트",
+      "checkItem": "창문을 열어 통풍 가능 및 사생활 노출 여부 확인하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "새 집 구할 때, 체크리스트",
+      "checkItem": "방충망, 방법창 확인하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "새 집 구할 때, 체크리스트",
+      "checkItem": "재활용품, 음식물 쓰레기 처리 방법 확인하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "새 집 구할 때, 체크리스트",
+      "checkItem": "주차 가능 여부, 주차 가능 대수, 실제 주차 대수 모두 확인하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "새 집 구할 때, 체크리스트",
+      "checkItem": "CCTV 설치 및 작동 여부 확인하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "새 집 구할 때, 체크리스트",
+      "checkItem": "가구 배치 생각해보기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "새 집 구할 때, 체크리스트",
+      "checkItem": "부동산 등기부 확인하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "새 집 구할 때, 체크리스트",
+      "checkItem": "근처 편의시설 확인하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "새 집 구할 때, 체크리스트",
+      "checkItem": "주변 교육시설 확인하기"
+    },
+    {
+      "categoryName": "이사",
+      "subCategoryName": "새 집 구할 때, 체크리스트",
+      "checkItem": "관리비 확인하기"
+    },
+    {
+      "categoryName": "건강",
+      "subCategoryName": "다이어트 체크리스트",
+      "checkItem": "목표 설정 (체중 감량, 근육 강화)"
+    },
+    {
+      "categoryName": "건강",
+      "subCategoryName": "다이어트 체크리스트",
+      "checkItem": "운동 종류 선택 (유산소, 근력 운동, 등)"
+    },
+    {
+      "categoryName": "건강",
+      "subCategoryName": "다이어트 체크리스트",
+      "checkItem": "운동 시간 및 빈도 설정하기"
+    },
+    {
+      "categoryName": "건강",
+      "subCategoryName": "다이어트 체크리스트",
+      "checkItem": "규칙적인 운동 스케줄 작성하기"
+    },
+    {
+      "categoryName": "건강",
+      "subCategoryName": "다이어트 체크리스트",
+      "checkItem": "운동 성과 기록하기"
+    },
+    {
+      "categoryName": "건강",
+      "subCategoryName": "다이어트 체크리스트",
+      "checkItem": "중간점검 날짜 정하기"
+    },
+    {
+      "categoryName": "건강",
+      "subCategoryName": "다이어트 체크리스트",
+      "checkItem": "식단 계획 짜기"
+    },
+    {
+      "categoryName": "건강",
+      "subCategoryName": "다이어트 체크리스트",
+      "checkItem": "식사 및 간식 시간표 작성하기"
+    },
+    {
+      "categoryName": "건강",
+      "subCategoryName": "다이어트 체크리스트",
+      "checkItem": "물 섭취량 추적하여 유지하기"
+    },
+    {
+      "categoryName": "건강",
+      "subCategoryName": "다이어트 체크리스트",
+      "checkItem": "칼로리 섭취량 목표 설정하기"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "맨투맨"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "후드"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "후드 집업"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "크롭티"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "반팔티"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "긴팔티"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "트렌치 코트"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "항공 점퍼"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "코트"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "카고 바지"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "츄리닝"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "잠옷"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "수면 양말"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "수면 바지"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "발목 양말"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "양말"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "귀걸이"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "목걸이"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "반지"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "패딩 조끼"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "바람막이"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "후리스"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "캡모자"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "비니"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "헌팅캡"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "목도리"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "장갑"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "스타킹"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "피어싱"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "긴바지"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "반바지"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "골덴 바지"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "스키니진"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "일자 바지"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "청바지"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "레깅스"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "운동복"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "속옷"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "팬티"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "라이더 자켓"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "린넨 셔츠, 바지"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "블라우스"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "와이셔츠"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "넥타이"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "넥타이 핀"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "정장"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "운동화"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "슬리퍼"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "쪼리"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "부츠"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "워커"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "스니커즈"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "구두"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "메리 제인"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "롱패딩"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "숏패딩"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "드레스"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "가디건"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "롱치마"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "조끼"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "재킷"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "레인부츠"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "치마"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "슬랙스"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "와이드 팬츠"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "의류 체크리스트",
+      "checkItem": "면바지"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "스킨"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "로션"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "수분 크림"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "아이 크림"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "세럼"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "앰플"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "선크림"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "선스프레이"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "선스틱"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "헤어 에센스"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "헤어 오일"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "바디 로션"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "아이라이너"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "마스카라"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "섀도우 팔레트"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "싱글 섀도우"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "쉐딩"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "하이라이터"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "파운데이션"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "비비크림"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "쿠션"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "블러셔"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "립밤"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "립스틱"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "틴트"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "웨지퍼프"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "퍼프"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "팩트"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "속눈썹 영양제"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "토너 패드"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "브로우 카라"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "클렌징 폼"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "클렌징 오일"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "클렌징 티슈"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "클렌징 워터"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "클렌징 밤"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "립앤아이 리무버"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "마스카라 리무버"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "네일 리무버"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "네일"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "뷰러"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "아이브로우"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "컨실러"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "알로에 젤"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "헤어핀"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "머리끈"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "머리띠"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "리본"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "헤어 집게"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "미스트"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "바디 미스트"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "브러쉬"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "스크럽"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "향수"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "화장솜"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "면봉"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "트위저"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "글리터"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "립 플럼퍼"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "립 글로우"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "샤프너"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "파우더"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "프라이머"
+    },
+    {
+      "categoryName": "쇼핑",
+      "subCategoryName": "화장품 체크리스트",
+      "checkItem": "픽싱 미스트"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "번지점프 하기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "배낭여행 해보기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "스카이 다이빙 해보기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "부모님과 여행 가기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "헬리콥터 타기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "브이로그 찍기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "스쿠버 다이빙 해보기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "가족 사진 찍기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "외국 생활 해보기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "세계 일주 해보기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "에베레스트 등반하기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "기부하기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "로또 당첨"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "혼자 여행하기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "장기 기증"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "이모티콘 만들기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "책 집필하기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "스포트 대회 입상하기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "미라클 모닝 실천해보기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "카레이싱"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "배낭 여행 해보기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "내 집 마련"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "내 차 사기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "마라톤 완주하기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "다이어트 성공"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "내 사업 해보기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "고마웠던 선생님 찾아가기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "누군가의 멘토 되어주기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "채소, 과일 직접 기르기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "한번도 먹어보지 못한 음식 먹어보기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "손편지 쓰기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "세계적인 스포츠 대회 직관해보기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "독립하기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "하루종일 영화보기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "뮤직 페스티벌 가보기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "운전면허 따기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "길거리 버스킹 해보기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "첫 월급으로 누군가의 선물 사기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "해외 봉사 해보기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "셀프 인테리어 해보기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "퍼스널 컬러 진단"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "수영 배우기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "자전거 배우기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "외국인 친구 사귀기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "자연에서 살아보기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "일출, 일몰 보기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "글램핑 가기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "재판 방청해보기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "외국인 가이드 해주기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "재능 기부하기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "금연 성공"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "금주 성공"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "목적지 없는 여행 떠나기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "휴대폰 없이 살아보기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "거대한 눈사람 만들기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "저금통 가득 채우기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "나만의 레시피 개발하기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "많은 사람들 앞에서 발표하기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "라스베이거스에서 겜블하기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "카지노 가보기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "경매 참여해보기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "클라이밍"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "유기 동물 봉사 해보기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "미니멀리즘 실천해보기"
+    },
+    {
+      "categoryName": "기타",
+      "subCategoryName": "버킷 리스트",
+      "checkItem": "심리 상담 받아보기"
+    },
+    {
+      "categoryName": "건강",
+      "subCategoryName": "영양제 체크리스트",
+      "checkItem": "종합 비타민"
+    },
+    {
+      "categoryName": "건강",
+      "subCategoryName": "영양제 체크리스트",
+      "checkItem": "비타민 A"
+    },
+    {
+      "categoryName": "건강",
+      "subCategoryName": "영양제 체크리스트",
+      "checkItem": "비타민 B"
+    },
+    {
+      "categoryName": "건강",
+      "subCategoryName": "영양제 체크리스트",
+      "checkItem": "비타민 C"
+    },
+    {
+      "categoryName": "건강",
+      "subCategoryName": "영양제 체크리스트",
+      "checkItem": "비타민 D"
+    },
+    {
+      "categoryName": "건강",
+      "subCategoryName": "영양제 체크리스트",
+      "checkItem": "비타민 E"
+    },
+    {
+      "categoryName": "건강",
+      "subCategoryName": "영양제 체크리스트",
+      "checkItem": "비타민 K"
+    },
+    {
+      "categoryName": "건강",
+      "subCategoryName": "영양제 체크리스트",
+      "checkItem": "칼슘"
+    },
+    {
+      "categoryName": "건강",
+      "subCategoryName": "영양제 체크리스트",
+      "checkItem": "아연"
+    },
+    {
+      "categoryName": "건강",
+      "subCategoryName": "영양제 체크리스트",
+      "checkItem": "마그네슘"
+    },
+    {
+      "categoryName": "건강",
+      "subCategoryName": "영양제 체크리스트",
+      "checkItem": "철분"
+    },
+    {
+      "categoryName": "건강",
+      "subCategoryName": "영양제 체크리스트",
+      "checkItem": "밀크시슬"
+    },
+    {
+      "categoryName": "건강",
+      "subCategoryName": "영양제 체크리스트",
+      "checkItem": "코큐텐"
+    },
+    {
+      "categoryName": "건강",
+      "subCategoryName": "영양제 체크리스트",
+      "checkItem": "오메가3"
+    },
+    {
+      "categoryName": "건강",
+      "subCategoryName": "영양제 체크리스트",
+      "checkItem": "유산균"
+    },
+    {
+      "categoryName": "건강",
+      "subCategoryName": "영양제 체크리스트",
+      "checkItem": "비오틴"
+    },
+    {
+      "categoryName": "건강",
+      "subCategoryName": "영양제 체크리스트",
+      "checkItem": "루테인"
+    },
+    {
+      "categoryName": "건강",
+      "subCategoryName": "영양제 체크리스트",
+      "checkItem": "프로폴리스"
+    }
+  ]
+}
