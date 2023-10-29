@@ -1,0 +1,4269 @@
+{
+  "categoryDefaultData": [
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "must-have item when going outside",
+      "checkItem": "wallet"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "must-have item when going outside",
+      "checkItem": "mobile phone"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "must-have item when going outside",
+      "checkItem": "AirPods, earphones"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "must-have item when going outside",
+      "checkItem": "headset"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "must-have item when going outside",
+      "checkItem": "Key"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "must-have item when going outside",
+      "checkItem": "ID card"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "must-have item when going outside",
+      "checkItem": "Charger"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "must-have item when going outside",
+      "checkItem": "Power bank"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "must-have item when going outside",
+      "checkItem": "Artificial tears"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "must-have item when going outside",
+      "checkItem": "hair tie"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "must-have item when going outside",
+      "checkItem": "Oil control film"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "must-have item when going outside",
+      "checkItem": "Lip balm"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "must-have item when going outside",
+      "checkItem": "Tint, lipstick"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "must-have item when going outside",
+      "checkItem": "Umbrella"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "must-have item when going outside",
+      "checkItem": "Sunscreen"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "must-have item when going outside",
+      "checkItem": "tissue"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "must-have item when going outside",
+      "checkItem": "wet tissue"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "must-have item when going outside",
+      "checkItem": "Credit card"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "must-have item when going outside",
+      "checkItem": "cash"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "must-have item when going outside",
+      "checkItem": "mask"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "must-have item when going outside",
+      "checkItem": "water"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "must-have item when going outside",
+      "checkItem": "Notes, pens"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "must-have item when going outside",
+      "checkItem": "sunglasses"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "must-have item when going outside",
+      "checkItem": "hat"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "must-have item when going outside",
+      "checkItem": "Feminine pads"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "must-have item when going outside",
+      "checkItem": "Emergency medicine"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "must-have item when going outside",
+      "checkItem": "vitamin"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "must-have item when going outside",
+      "checkItem": "snack"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "must-have item when going outside",
+      "checkItem": "Hand cream"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "Before going out, checklist",
+      "checkItem": "Turn off gas and electrical devices"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "Before going out, checklist",
+      "checkItem": "Lock window and door"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "Before going out, checklist",
+      "checkItem": "Power cutting home appliances"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "Before going out, checklist",
+      "checkItem": "Confirm whether the security system is activated"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "Before going out, checklist",
+      "checkItem": "Packing necessary documents or USB"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "Before going out, checklist",
+      "checkItem": "packing a must-have item"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "Before going out, checklist",
+      "checkItem": "Vehicle fuel confirmation"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "Before going out, checklist",
+      "checkItem": "Check tire pressure and status"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "Before going out, checklist",
+      "checkItem": "Check the weather forecast"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "Before going out, checklist",
+      "checkItem": "Checking out clothes by temperature"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "Before going out, checklist",
+      "checkItem": "Bringing an umbrella"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "Before going out, checklist",
+      "checkItem": "Mask"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "Before going out, checklist",
+      "checkItem": "Prepare pet food and water"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "Before going out, checklist",
+      "checkItem": "Dispose of food waste"
+    },
+    {
+      "categoryName": "Outside",
+      "subCategoryName": "Before going out, checklist",
+      "checkItem": "Check the boiler"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "passport"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "necessary documents"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "ID card"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "International driver's license"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "220v transformer"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "110v transformer"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Toothbrush, toothpaste"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Skin, lotion"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Moisture cream"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Sunscreen"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "wallet"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "hat"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "socks"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "underwear"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Artificial tears"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Cleansing oil"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Cleansing Foam"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Cleansing water"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Cleansing Tissue"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Lip & eye Remover"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "hairclip, hair tie, comb"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Shampoo, rinse, treatment"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Body lotion, Body wash"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Power bank"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "phone charger"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Film camera"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Polaroid"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "camera"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Camera charger"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Coin wallet"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "plastic bag"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Pocket Wi-Fi"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "cash"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "ticket"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Lip balm"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "parasol"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Eco bag"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Mask Pack"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "mask"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "vitamin"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Lens, Contact lens solution, lens case"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Cotton swab"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Acne patch"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "glasses"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "sunglasses"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "bag"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "hand mirror"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "cosmetics"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "uniform"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Note, pen"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Cup ramen"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "canned food"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "snack"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Travel kit"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "water"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "tumbler"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Pajamas"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Band, ointment"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "handbag"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "running shoes"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "slipper"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Dryer"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Towel"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Credit card"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Umbrella, raincoat"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Portable tissue"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Governor, digestive agent"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Motion sickness"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "cold medicine"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Anti-inflammatory"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Zipper bag"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "padded jacket"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Muffler, Scarf"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Beanie"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Multi-adapter"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "SD card"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "tripod"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Action Cam"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Selfie stick"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Bluetooth selfie stick"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Apple Watch"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Watch charger"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Hair oil"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "curling iron"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Shaver"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Feminine pads"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "sewing box"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Paper soap"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Gaggle"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "mist"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "laptop"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Tablet"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Mosquito Repellent"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Sunscreen"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Neck pillow"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "eye patch, ear plug"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Earphones, AirPods"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "earring"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "necklace"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "ring"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "sandal"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "dental floss"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "cotton pad"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Travel book"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "map"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Shower ball"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Shower towel"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "sweatshirt"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Hood"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Hood zip"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Crop Tee"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Short-sleeved"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Long-sleeved"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Trench coat"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Flight jacket"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "coat"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Cargo pants"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "padded vest"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "windbreak"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Furis"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "muffler"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Gloves"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Stockings"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "piercing"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Long pants"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "shorts"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Golden pants"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Skinny jeans"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Straight pants"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "jeans"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Rider jacket"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "linen pants"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "blouse"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Boots"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Walker"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Sneakers"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "shoes"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Mary Jane"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "long padded coat"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "short padded coat"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Dress"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Cardigan"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Long skirt"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Vest"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "jacket"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Rainboots"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Shirt"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Skirt"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Slacks"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Wide pants"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Travel package",
+      "checkItem": "Cotton pants"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Pre-departure checklist",
+      "checkItem": "Get a passport issuance"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Pre-departure checklist",
+      "checkItem": "Print the necessary documents"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Pre-departure checklist",
+      "checkItem": "Checking the exchange rate"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Pre-departure checklist",
+      "checkItem": "exchange currency"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Pre-departure checklist",
+      "checkItem": "Carrier packing"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Pre-departure checklist",
+      "checkItem": "traffic check"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Pre-departure checklist",
+      "checkItem": "Booking accommodation"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Pre-departure checklist",
+      "checkItem": "Schedule travel schedules"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Pre-departure checklist",
+      "checkItem": "Charging a power bank"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Pre-departure checklist",
+      "checkItem": "buying emergency medicine"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Pre-departure checklist",
+      "checkItem": "Booking pocket Wi-Fi"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Pre-departure checklist",
+      "checkItem": "buying vitamins"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Pre-departure checklist",
+      "checkItem": "Camera rental"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Pre-departure checklist",
+      "checkItem": "Buy SIM"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Pre-departure checklist",
+      "checkItem": "Reservation for roaming service"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Pre-departure checklist",
+      "checkItem": "searching for travel videos"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Pre-departure checklist",
+      "checkItem": "Making a travel shopping list"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Pre-departure checklist",
+      "checkItem": "Buy Universal Tickets"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Pre-departure checklist",
+      "checkItem": "Buy Disney Land Ticket"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Pre-departure checklist",
+      "checkItem": "packing snacks"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Pre-departure checklist",
+      "checkItem": "Buy food to eat before departure"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Pre-departure checklist",
+      "checkItem": "Check the insurer contact"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Pre-departure checklist",
+      "checkItem": "Travel insurance"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Pre-departure checklist",
+      "checkItem": "Application for visa"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Pre-departure checklist",
+      "checkItem": "Duty-free shopping"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Pre-departure checklist",
+      "checkItem": "Checking on board items"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Pre-departure checklist",
+      "checkItem": "download Netflix"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Pre-departure checklist",
+      "checkItem": "download videos to watch on the plane"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Pre-departure checklist",
+      "checkItem": "download music to listen to on the plane"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Pre-departure checklist",
+      "checkItem": "Check the emergency contact network"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Pre-departure checklist",
+      "checkItem": "Determine the clothes to wear for each date"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Lettuce, sesame leaves"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "vegetables"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "kimchi"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Ssamjang"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Salt, pepper"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "chili pepper paste"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "soy sauce"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Camping tool"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Ice box"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Milkit"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "barbecue tools"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Lantern"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Toiletries"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "firewood"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Camping chair, table"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "ramen"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Sunscreen"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Wooden chopsticks"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Spoon, fork"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Plastic cup"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Disposable plate"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "pork"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "beef"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "shrimp"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "egg"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Temple"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "seafood"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "wine"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "soju"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "beer"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "drink"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "mini light bulb"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Projector"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "candle"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Portable Power Bank"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "sleeping bag"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Electric port"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "plastic bag"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Zipper bag"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "ice"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "water"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "compass"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "flash"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "potato, sweet potato"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "corner"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "onion"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Cooking foil"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Paper foil"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "snack"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Cup ramen"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Bluetooth speaker"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "socks"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "underwear"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "outer"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "wet tissue"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Portable tissue"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "slipper"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "running shoes"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "charger"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "camera"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "tripod"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "selfie stick"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "blanket"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Cooking supplies"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "frying pan"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "ladle"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "pot"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "tongs"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Portable grille"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Emergency medicine"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Pajamas"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Feminine pads"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Washed dishes"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Gloves"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "plate"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "spoon and chopsticks"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Towel"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "board game"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Instant rice"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Multitap"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "mask"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "vitamin"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Paper cup"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "scallion"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "asparagus"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "garlic"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "mushroom"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "fruit"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Umbrella, raincoat"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "toothpaste toothbrush"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Skin, lotion"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Governor, digestive agent"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "antiemetic"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "cold medicine"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Anti-inflammatory"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Shampoo, rinse, treatment"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Body lotion, Body wash"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Power bank"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "phone charger"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Film camera"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Polaroid"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "camera"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Camera charger"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Lip balm"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "parasol"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Oral cleaner"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "mist"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "laptop"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Tablet"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Mosquito Repellent"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "SD card"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "tripod"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Action Cam"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "selfie stick"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Bluetooth selfie stick"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Apple Watch, Watch Charger"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Shower ball, Shower towel"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "curling iron"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Shaver"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Hood"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Hood zip"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Short-sleeved"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Long-sleeved"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Air jumper"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Cargo pants"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "padded vest"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "windbreak"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Furis"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "muffler"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Gloves"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Long pants"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "shorts"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "jeans"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Wide pants"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Cotton pants"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Cardigan"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "padded jacket"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "vest"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "jacket"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Glamping, camping",
+      "checkItem": "Rainboots"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "swimsuit"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "bikini"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "Swimming"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "swimming goggles"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "Aqua Shoes"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "Sunscreen"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "Sunstick"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "Sunspray"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "tube"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "Beach Bali Ball"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "Tanning oil"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "Beach towel"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "Towel"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "Sports towel"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "underwear"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "socks"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "Shampoo, rinse"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "treatment"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "Toothbrush, toothpaste"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "cleansers"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "toiletries"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "Skin, lotion"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "moisturizer, nourishing cream"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "Dryer"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "clothes"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "phone charger"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "Shower towel, Shower ball"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "Lip balm"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "wallet"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "pouch"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "pouch"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "Body wash"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "Body lotion"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "hair tie"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "hairclip"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "comb"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "Power bank"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "Artificial tears"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "hat"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "Lens"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "lens"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "glasses"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "sunglasses"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "curling iron"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "swimming pool",
+      "checkItem": "Shaver"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Ski suits"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Ski gloves"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Safety hat"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Glasses or goggles"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Underwear, socks"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "snowboard"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "ski"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Boots"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Ski bar"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Emergency medicine"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Hand Warmer"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Sunscreen"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Lip balm"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Confirmation of accommodation reservation"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Schedule for travel"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "ID card, passport"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Reservation confirmation"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "wallet"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Credit card, cash"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Power bank"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "phone charger"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Multitap"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Pack"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Water, sports drink"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Checking ski resort leisure facilities"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Checking the reservation for ski lessons"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "hot pack"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Beanie"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "hat"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Artificial tears"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Shampoo, rinse"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "treatment"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Toothbrush, toothpaste"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "cleansers"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "toiletries"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Skin, lotion, cream"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Dryer"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Towel"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Shower towel"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Shower ball"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "pouch"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "cosmetics"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Body wash"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Body lotion"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "hair tie"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "hairclip"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "comb"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Lens case"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Lens"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "glasses"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "sunglasses"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "curling iron"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Shaver"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Hood"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Hood zip"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Short -sleeved"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Long -sleeved"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Air jumper"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Cargo pants"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "windbreak"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Furis"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "muffler"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "ear plug"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Long pants"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "shorts"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "jeans"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Wide pants"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Cotton pants"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "Cardigan"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "padded jacket"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "vest"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "ski resort",
+      "checkItem": "jacket"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "Bath"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "board game"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "whiskey"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "Soju, beer"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "wine"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "Disposable sample"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "Travel kit"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "toothpaste toothbrush"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "Skin, lotion"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "Moisture cream"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "Sunscreen"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "wallet"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "hat"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "socks"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "underwear"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "Artificial tears"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "Cleansing"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "hairclip"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "hair tie"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "comb"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "Shampoo, rinse"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "treatment"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "Body lotion"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "Body wash"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "Power bank"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "phone charger"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "Film camera"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "Polaroid"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "camera"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "Camera charger"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "Mask Pack"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "mask"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "vitamin"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "Lens"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "Lens preservation"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "Lens case"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "Cotton swab"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "Acne patch"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "glasses"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "sunglasses"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "bag"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "hand mirror"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "cosmetics"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "Pajamas"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "Oil control film"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "Hair oil"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "curling iron"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "Shaver"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "Feminine pads"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "HDMI cable"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "laptop"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "Tablet"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "AirPods, earphones"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "headset"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "key"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "ID card"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "Bluetooth speaker"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "swimsuit"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "bikini"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "Swimming"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "swimming goggles"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "Aqua Shoes"
+    },
+    {
+      "categoryName": "Travel",
+      "subCategoryName": "Hotel vacation",
+      "checkItem": "Sunscreen"
+    },
+    {
+      "categoryName": "Cleaning",
+      "subCategoryName": "Cleaning checklist",
+      "checkItem": "Cleaning walls and ceilings"
+    },
+    {
+      "categoryName": "Cleaning",
+      "subCategoryName": "Cleaning checklist",
+      "checkItem": "Remove furniture dust"
+    },
+    {
+      "categoryName": "Cleaning",
+      "subCategoryName": "Cleaning checklist",
+      "checkItem": "Flooring"
+    },
+    {
+      "categoryName": "Cleaning",
+      "subCategoryName": "Cleaning checklist",
+      "checkItem": "Cleaning the bed"
+    },
+    {
+      "categoryName": "Cleaning",
+      "subCategoryName": "Cleaning checklist",
+      "checkItem": "Replacement"
+    },
+    {
+      "categoryName": "Cleaning",
+      "subCategoryName": "Cleaning checklist",
+      "checkItem": "Cleaning the closet"
+    },
+    {
+      "categoryName": "Cleaning",
+      "subCategoryName": "Cleaning checklist",
+      "checkItem": "vacuuming"
+    },
+    {
+      "categoryName": "Cleaning",
+      "subCategoryName": "Cleaning checklist",
+      "checkItem": "mopping"
+    },
+    {
+      "categoryName": "Cleaning",
+      "subCategoryName": "Cleaning checklist",
+      "checkItem": "emptying the trash can"
+    },
+    {
+      "categoryName": "Cleaning",
+      "subCategoryName": "Cleaning checklist",
+      "checkItem": "Cleaning the closet"
+    },
+    {
+      "categoryName": "Cleaning",
+      "subCategoryName": "Cleaning checklist",
+      "checkItem": "Seasonal clothes"
+    },
+    {
+      "categoryName": "Cleaning",
+      "subCategoryName": "Cleaning checklist",
+      "checkItem": "Cleaning the sofa and chairs"
+    },
+    {
+      "categoryName": "Cleaning",
+      "subCategoryName": "Cleaning checklist",
+      "checkItem": "Clean the table"
+    },
+    {
+      "categoryName": "Cleaning",
+      "subCategoryName": "Cleaning checklist",
+      "checkItem": "Dusting ornaments to remove"
+    },
+    {
+      "categoryName": "Cleaning",
+      "subCategoryName": "Cleaning checklist",
+      "checkItem": "Cleaning the cabinet"
+    },
+    {
+      "categoryName": "Cleaning",
+      "subCategoryName": "Cleaning checklist",
+      "checkItem": "Curtain laundry"
+    },
+    {
+      "categoryName": "Cleaning",
+      "subCategoryName": "Cleaning checklist",
+      "checkItem": "Organizing storage space"
+    },
+    {
+      "categoryName": "Cleaning",
+      "subCategoryName": "Toilet cleaning checklist",
+      "checkItem": "Cleaning the sink"
+    },
+    {
+      "categoryName": "Cleaning",
+      "subCategoryName": "Toilet cleaning checklist",
+      "checkItem": "Cleaning the toilet"
+    },
+    {
+      "categoryName": "Cleaning",
+      "subCategoryName": "Toilet cleaning checklist",
+      "checkItem": "Cleaning the Bathtub"
+    },
+    {
+      "categoryName": "Cleaning",
+      "subCategoryName": "Toilet cleaning checklist",
+      "checkItem": "Cleaning the shower room"
+    },
+    {
+      "categoryName": "Cleaning",
+      "subCategoryName": "Toilet cleaning checklist",
+      "checkItem": "Flooring"
+    },
+    {
+      "categoryName": "Cleaning",
+      "subCategoryName": "Toilet cleaning checklist",
+      "checkItem": "Clean the window"
+    },
+    {
+      "categoryName": "Cleaning",
+      "subCategoryName": "Toilet cleaning checklist",
+      "checkItem": "Emptying the trash bin"
+    },
+    {
+      "categoryName": "Cleaning",
+      "subCategoryName": "Toilet cleaning checklist",
+      "checkItem": "Organizing storage space"
+    },
+    {
+      "categoryName": "Cleaning",
+      "subCategoryName": "Outdoor cleaning checklist",
+      "checkItem": "Cleaning and cleaning garage"
+    },
+    {
+      "categoryName": "Cleaning",
+      "subCategoryName": "Outdoor cleaning checklist",
+      "checkItem": "Gardening"
+    },
+    {
+      "categoryName": "Cleaning",
+      "subCategoryName": "Outdoor cleaning checklist",
+      "checkItem": "Cleaning windows and exterior walls"
+    },
+    {
+      "categoryName": "Cleaning",
+      "subCategoryName": "Outdoor cleaning checklist",
+      "checkItem": "Cleaning outdoor furniture"
+    },
+    {
+      "categoryName": "Cleaning",
+      "subCategoryName": "Outdoor cleaning checklist",
+      "checkItem": "cleaning up the trash"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "Setting moving date and time"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "Checking moving-related documents and contracts"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "Packing and box preparation (boxes, newspapers, bubble wrap)"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "Preparing a pen for labels and marking"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "Donating or disposing of unused items"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "Clearing and classifying goods"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "scheduling appliance installation"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "Packing fragile items such as glass"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "Cleaning plan after moving"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "Preparing for cleaning tools"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "Greetings to new neighbors"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "preparing basic household items"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "Checking the insurance status of household goods and furniture"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "Confirmation of insurance and warranty related to directors"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "reporting large waste disposal"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "Inquiries and reservation inquiries for moving centers"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "Children's school transfer"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "Application for electricity, telephone, Internet relocation"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "Canceling automatic bill payments"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "Requesting to stop delivery of learning materials, newspapers, milk"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "Change address registered with banks, credit cards, and insurance companies"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "Changing address for various notifications and mail"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "Check and manage the food in the refrigerator"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "Disassemble various installations (angle, shelves, curtains, etc.)"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "Check the final time arrival time of moving companies"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "Keep cash and expensive valuables separately"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "Moving packaging"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "Setting up electricity, gas, water, telephone, internet"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "Reporting change of address"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "transferring vehicle registration address"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "considering furniture layout"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "Checking the scheduled delivery items"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "Cleaning the veranda and the utility room"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "Purchase stickers for furniture and waste disposal"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "Checking for any repairs needed at the new house"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "Paying or terminating management fees"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "Moving Checklist",
+      "checkItem": "Picking up items from the dry cleaner's"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "house-hunting checklist",
+      "checkItem": "Checking the sink, the sink, the toilet water pressure"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "house-hunting checklist",
+      "checkItem": "Check that hot water comes out"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "house-hunting checklist",
+      "checkItem": "Checking the traces of mold behind the veranda"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "house-hunting checklist",
+      "checkItem": "Check the leakage traces of the wall and ceiling"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "house-hunting checklist",
+      "checkItem": "Check for ants, cockroaches"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "house-hunting checklist",
+      "checkItem": "Checking sinks or sewer odors"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "house-hunting checklist",
+      "checkItem": "Check if the wall sounds hollow when tapped"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "house-hunting checklist",
+      "checkItem": "Open the window to check whether you can be ventilated and privately exposed"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "house-hunting checklist",
+      "checkItem": "Check the window screens and windowpanes"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "house-hunting checklist",
+      "checkItem": "Check recycling and food waste disposal methods"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "house-hunting checklist",
+      "checkItem": "Checking all parking, parking number, and actual parking lots"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "house-hunting checklist",
+      "checkItem": "Check for parking availability, number of available spaces, and actual number of parked cars"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "house-hunting checklist",
+      "checkItem": "Consider furniture arrangement"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "house-hunting checklist",
+      "checkItem": "Checking the real estate register"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "house-hunting checklist",
+      "checkItem": "Checking the nearby convenience facilities"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "house-hunting checklist",
+      "checkItem": "Check nearby educational facilities"
+    },
+    {
+      "categoryName": "Move",
+      "subCategoryName": "house-hunting checklist",
+      "checkItem": "Check maintenance fees"
+    },
+    {
+      "categoryName": "Health",
+      "subCategoryName": "Diet checklist",
+      "checkItem": "Setting goal (weight loss, strengthening muscles)"
+    },
+    {
+      "categoryName": "Health",
+      "subCategoryName": "Diet checklist",
+      "checkItem": "Choosing types of exercises (aerobic, strength training, etc.)"
+    },
+    {
+      "categoryName": "Health",
+      "subCategoryName": "Diet checklist",
+      "checkItem": "Setting exercise time and frequency"
+    },
+    {
+      "categoryName": "Health",
+      "subCategoryName": "Diet checklist",
+      "checkItem": "Creating a consistent exercise schedule"
+    },
+    {
+      "categoryName": "Health",
+      "subCategoryName": "Diet checklist",
+      "checkItem": "Tracking exercise progress"
+    },
+    {
+      "categoryName": "Health",
+      "subCategoryName": "Diet checklist",
+      "checkItem": "Setting mid-term check-in dates"
+    },
+    {
+      "categoryName": "Health",
+      "subCategoryName": "Diet checklist",
+      "checkItem": "Meal planning"
+    },
+    {
+      "categoryName": "Health",
+      "subCategoryName": "Diet checklist",
+      "checkItem": "Creating a meal and snack schedule"
+    },
+    {
+      "categoryName": "Health",
+      "subCategoryName": "Diet checklist",
+      "checkItem": "Tracking and maintaining water intake"
+    },
+    {
+      "categoryName": "Health",
+      "subCategoryName": "Diet checklist",
+      "checkItem": "Setting calorie intake goals."
+    },
+    {
+      "categoryName": "Shopping",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "sweatshirt"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Hood"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Hood zip"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "crop top"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Short-sleeved"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Long-sleeved"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Trench coat"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Flight jacket"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "coat"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Cargo pants"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Sweat"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Pajamas"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "slumber"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "sleep pants"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Ankle socks"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "socks"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "earring"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "necklace"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "ring"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "padded vest"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "windbreak"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Furis"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Cap"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Beanie"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Hunting cap"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "muffler"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Gloves"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Stockings"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "piercing"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Long pants"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "shorts"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Golden pants"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Skinny jeans"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Straight pants"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "jeans"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Leggings"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Sportswear"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "underwear"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "panties"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Rider jacket"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Linen shirt, pants"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "blouse"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Shirt"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "necktie"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Tie"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "suit"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "running shoes"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "slipper"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Sloppy"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Boots"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Walker"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Sneakers"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "shoes"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Mary Jane"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Long padding"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Short padding"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "dress"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Cardigan"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Long skirt"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "vest"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "jacket"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Rainboots"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "skirt"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Slacks"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Wide pants"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Clothing checklist",
+      "checkItem": "Cotton pants"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "skin"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Lotion"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Moisture cream"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Eye cream"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Serum"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "ample"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Sunscreen"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Sunspray"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Sunstick"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Hair essence"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Hair oil"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Body lotion"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Eyeliner"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Mascara"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Shadow palette"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Single shadow"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Shading"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Highlighter"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "foundation"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "BB cream"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "cushion"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Blusher"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Lip balm"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "lipstick"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Tint"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Weatherfuff"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "puff"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "fact"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "eyelash supplements"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Toner pad"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "brow mascara"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Cleansing Foam"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Cleansing oil"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Cleansing Tissue"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Cleansing water"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Cleansing balm"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Lip & eye Remover"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Mascara Remover"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Nail remover"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Nail"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "eyelash curler"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "eyebrow"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Concealer"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Aloe gel"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "hairclip"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "hair tie"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "hair band"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "ribbon"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Hair tongs"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "mist"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Body mist"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "brush"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Scrub"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "perfume"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "cosmetic cotton pad"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Cotton swab"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Tweezer"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Glitter"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Lip plumper"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Lip glow"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Sharpner"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "powder"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "primer"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Cosmetics checklist",
+      "checkItem": "Pixing Mist"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Bungee jumping"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Backpacking trip"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Sky dive"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Travel with your parents"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "ride a helicopter"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "V-Log"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Scuba diving"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Taking a family picture"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Living abroad"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Try to walk around the world"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Everest climbing"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Donation"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Lotto winning"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "solo travel"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Organ donation"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Making emoticons"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Writing a book"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "winning a sports competition"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "try practicing the Miracle Morning"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Car racing"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Backpacking trip"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "buying my own house"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "buying my own car"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Complete marathon"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "successful weight loss"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "trying out my own business"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Visit the teacher you are thankful for"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Become someone's mentor"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Grow your own vegetables and fruits"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Try food you've never tried before"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Write a handwritten letter"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Attend a global sports event"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Become independent"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Watch movies all day"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Go to Music Festival"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Getting a driver's license"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Try street busking"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Buy someone a gift with your first paycheck"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Volunteer"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Do your own interior design"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Get a Personal Color"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Learn to swim"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Learn to ride a bike"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Making foreign friends"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Live in nature"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "watching the sunrise, sunset"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Glamping"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "attend a trial"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Become a foreign guide"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Talent donation"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "successfully quit smoking"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "successfully quit drinking"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Go on a trip with no destination"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "living without a mobile"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Building a giant snowman"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Fill up the piggy bank"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Create your own cooking recipe"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Presenting in front of a large audience"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Gambling in Las Vegas"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Visit a casino"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Try participating in an auction"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Climbing"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Volunteer for abandoned animals"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Practice minimalism"
+    },
+    {
+      "categoryName": "etc.",
+      "subCategoryName": "Bucket list",
+      "checkItem": "Get psychological counseling"
+    },
+    {
+      "categoryName": "Health",
+      "subCategoryName": "Supplement Checklist",
+      "checkItem": "Multivitamin"
+    },
+    {
+      "categoryName": "Health",
+      "subCategoryName": "Supplement Checklist",
+      "checkItem": "Vitamin A"
+    },
+    {
+      "categoryName": "Health",
+      "subCategoryName": "Supplement Checklist",
+      "checkItem": "Vitamin B"
+    },
+    {
+      "categoryName": "Health",
+      "subCategoryName": "Supplement Checklist",
+      "checkItem": "Vitamin C"
+    },
+    {
+      "categoryName": "Health",
+      "subCategoryName": "Supplement Checklist",
+      "checkItem": "Vitamin D"
+    },
+    {
+      "categoryName": "Health",
+      "subCategoryName": "Supplement Checklist",
+      "checkItem": "Vitamin E"
+    },
+    {
+      "categoryName": "Health",
+      "subCategoryName": "Supplement Checklist",
+      "checkItem": "Vitamin K"
+    },
+    {
+      "categoryName": "Health",
+      "subCategoryName": "Supplement Checklist",
+      "checkItem": "Calcium"
+    },
+    {
+      "categoryName": "Health",
+      "subCategoryName": "Supplement Checklist",
+      "checkItem": "Zinc"
+    },
+    {
+      "categoryName": "Health",
+      "subCategoryName": "Supplement Checklist",
+      "checkItem": "Magnesium"
+    },
+    {
+      "categoryName": "Health",
+      "subCategoryName": "Supplement Checklist",
+      "checkItem": "Iron"
+    },
+    {
+      "categoryName": "Health",
+      "subCategoryName": "Supplement Checklist",
+      "checkItem": "Milk Thistle"
+    },
+    {
+      "categoryName": "Health",
+      "subCategoryName": "Supplement Checklist",
+      "checkItem": "Coenzyme Q10"
+    },
+    {
+      "categoryName": "Health",
+      "subCategoryName": "Supplement Checklist",
+      "checkItem": "Omega-3"
+    },
+    {
+      "categoryName": "Health",
+      "subCategoryName": "Supplement Checklist",
+      "checkItem": "Probiotics"
+    },
+    {
+      "categoryName": "Health",
+      "subCategoryName": "Supplement Checklist",
+      "checkItem": "Biotin"
+    },
+    {
+      "categoryName": "Health",
+      "subCategoryName": "Supplement Checklist",
+      "checkItem": "Lutein"
+    },
+    {
+      "categoryName": "Health",
+      "subCategoryName": "Supplement Checklist",
+      "checkItem": "Propolis"
+    }
+  ]
+}
