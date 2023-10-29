@@ -8,41 +8,38 @@
 import UIKit
 
 enum CategoryDisplayModel: String {
+    case outside
     case travel
-    case shopping
-    case wishList
-    case bucketList
     case cleaning
     case move
-    case beforeGoingOut
     case health
+    case shopping
+    case etc
     
-    static let categories: [CategoryDisplayModel] = [.travel, .shopping, .wishList, .beforeGoingOut, .bucketList, .health, .cleaning, .move]
+    static let categories: [CategoryDisplayModel] = [.travel, .shopping, .cleaning, .move, .outside, .health, .etc]
     
     var image: UIImage? {
         switch self {
+        case .outside:
+            return UIImage(systemName: Constant.SFSymbol.outsideCategoryIcon)
         case .travel:
             return UIImage(systemName: Constant.SFSymbol.travelCategoryIcon)
-        case .shopping:
-            return UIImage(systemName: Constant.SFSymbol.shoppingCategoryIcon)
-        case .wishList:
-            return UIImage(systemName: Constant.SFSymbol.wishListCategoryIcon)
-        case .bucketList:
-            return UIImage(systemName: Constant.SFSymbol.bucketListCategoryIcon)
         case .cleaning:
             return UIImage(systemName: Constant.SFSymbol.cleaningCategoryIcon)
         case .move:
             return UIImage(systemName: Constant.SFSymbol.moveCategoryIcon)
-        case .beforeGoingOut:
-            return UIImage(systemName: Constant.SFSymbol.beforeGoingOutCategoryIcon)
         case .health:
             return UIImage(systemName: Constant.SFSymbol.healthCategoryIcon)
+        case .shopping:
+            return UIImage(systemName: Constant.SFSymbol.shoppingCategoryIcon)
+        case .etc:
+            return UIImage(systemName: Constant.SFSymbol.etcCategoryIcon)
         }
     }
     
     var text: String {
         switch self {
-        case .travel, .shopping, .wishList, .bucketList, .cleaning, .beforeGoingOut, .health, .move:
+        case .travel, .cleaning, .outside, .move, .health, .shopping, .etc:
             return "category_\(self.rawValue)".localized
         }
     }
