@@ -49,12 +49,13 @@ class CategoryDetailView: BaseView {
         subLabel.snp.makeConstraints { make in
             make.top.equalTo(mainLabel.snp.bottom).offset(10)
             make.leading.equalTo(mainLabel)
+            make.trailing.equalToSuperview().inset(10)
         }
         
         subCategoryCollectionView.snp.makeConstraints { make in
             make.top.equalTo(subLabel.snp.bottom).offset(30)
             make.leading.equalTo(mainLabel)
-            make.trailing.equalTo(self.safeAreaLayoutGuide)
+            make.trailing.equalToSuperview()
             make.bottom.equalTo(self.safeAreaLayoutGuide).inset(200)
         }
         
@@ -66,17 +67,18 @@ class CategoryDetailView: BaseView {
         }
     }
     
+    // FIXME: text 길이/전체 컬렉션뷰 가로 길이에 맞춰서 유동적으로 아이템 수가 변하게 수정하기
     private func configureSubCategoryCollectionLayout() -> UICollectionViewLayout {
         let itemSize = NSCollectionLayoutSize(widthDimension: .estimated(100), heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .estimated(100), heightDimension: .absolute(40))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 3)
-        group.interItemSpacing = .fixed(10)
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 2)
+        group.interItemSpacing = .fixed(12)
         
         let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10)
-        section.interGroupSpacing = 10
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 10)
+        section.interGroupSpacing = 12
         
         let configuration = UICollectionViewCompositionalLayoutConfiguration()
         configuration.scrollDirection = .vertical
