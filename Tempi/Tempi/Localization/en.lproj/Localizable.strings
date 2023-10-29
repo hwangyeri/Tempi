@@ -93,6 +93,13 @@
 "myList_emptyMainLabel" = "There is no checklist created yet.";
 "myList_emptySubLabel" = "Press the plus button to make a checklist!\nYou can view the checklist template\non the Explore Tab.";
 
+// EditChecklistNameView
+"editChecklistName_mainLabel_create" = "Create Checklist";
+"editChecklistName_mainLabel_update" = "To rename a checklist";
+"editChecklistName_subLabel" = "Please enter a name for the checklist.";
+"editChecklistName_textFieldLabel" = "Checklist Name";
+"editChecklistName_editButton" = "Done";
+
 // EditModalView
 "editModal_updateContent_mainLabel" = "Content Modification";
 "editModal_updateContent_subLabel" = "Please enter what you want to modify.";

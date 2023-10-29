@@ -93,6 +93,13 @@
 "myList_emptyMainLabel" = "아직 체크리스트가 없어요.";
 "myList_emptySubLabel" = "플러스 버튼을 눌러서 체크리스트를 만들어 보세요!\n탐색 탭에서 체크리스트 템플릿을 구경할 수 있어요.";
 
+// EditChecklistNameView
+"editChecklistName_mainLabel_create" = "체크리스트 만들기";
+"editChecklistName_mainLabel_update" = "체크리스트 이름 변경하기";
+"editChecklistName_subLabel" = "체크리스트의 이름을 입력해 주세요.";
+"editChecklistName_textFieldLabel" = "체크리스트 이름";
+"editChecklistName_editButton" = "완료";
+
 // EditModalView
 "editModal_updateContent_mainLabel" = "내용 수정";
 "editModal_updateContent_subLabel" = "수정하고 싶은 내용을 입력해 주세요.";
