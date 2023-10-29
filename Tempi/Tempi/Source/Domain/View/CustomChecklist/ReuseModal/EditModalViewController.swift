@@ -9,8 +9,8 @@ import UIKit
 import RealmSwift
 
 enum EditAction {
-    case updateCheckItemContent // 체크 아이템 내용 수정
-    case updateCheckItemMemo // 체크 아이템 메모 수정
+    case updateCheckItemContent // 체크 아이템 내용 변경
+    case updateCheckItemMemo // 체크 아이템 메모 변경
     case createCheckItem // 체크 아이템 생성
     case createBookmarkItem // 즐겨찾기 아이템 생성
 }
