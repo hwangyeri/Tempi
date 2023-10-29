@@ -20,29 +20,26 @@ class EditChecklistNameView: BaseView {
     }()
     
     let mainLabel = {
-        // FIXME: 다국어 설정
        let view = TLabel(
-        text: "체크리스트의 이름을 입력해 주세요.",
-        custFont: .pretendardSemiBoldXXL,
-        textColor: .label)
+        text: "editChecklistName_mainLabel".localized,
+        custFont: .pretendardBoldXL,
+        textColor: .point)
         return view
     }()
     
     let subLabel = {
-        // FIXME: 다국어 설정, 텍스트 수정
         let view = TLabel(
-         text: "완료 버튼을 눌러야 새로운 이름으로 변경할 수 있어요!",
-         custFont: .pretendardRegularM,
-         textColor: .point)
+         text: "editChecklistName_subLabel".localized,
+         custFont: .pretendardSemiBoldXXL,
+         textColor: .label)
          return view
     }()
     
     let textFieldLabel = {
-        // FIXME: 다국어 설정
         let view = TLabel(
-         text: "체크리스트 이름",
+         text: "editChecklistName_textFieldLabel".localized,
          custFont: .pretendardRegularXS,
-         textColor: .tGray700)
+         textColor: .secondaryLabel)
          return view
     }()
     
@@ -57,16 +54,31 @@ class EditChecklistNameView: BaseView {
         return view
     }()
     
+    let currentNumberOfCharactersLabel = {
+       let view = TLabel(
+        text: "0",
+        custFont: .pretendardRegularXS,
+        textColor: .label)
+        return view
+    }()
+    
+    let maximumNumberOfCharactersLabel = {
+       let view = TLabel(
+        text: " / 60",
+        custFont: .pretendardRegularXS,
+        textColor: .label)
+        return view
+    }()
+    
     let editButton = {
-        // FIXME: 다국어 설정, 텍스트 분기처리 (완료/다음)
         let view = TButton(
-            text: "완료"
+            text: "editChecklistName_editButton".localized
         )
         return view
     }()
     
     override func configureHierarchy() {
-        [exitButton, mainLabel, subLabel, textFieldLabel, textField, divider, editButton].forEach {
+        [exitButton, mainLabel, subLabel, textFieldLabel, textField, divider, currentNumberOfCharactersLabel, maximumNumberOfCharactersLabel, editButton].forEach {
             addSubview($0)
         }
     }
@@ -83,12 +95,12 @@ class EditChecklistNameView: BaseView {
         }
         
         subLabel.snp.makeConstraints { make in
-            make.top.equalTo(mainLabel.snp.bottom).offset(5)
+            make.top.equalTo(mainLabel.snp.bottom).offset(10)
             make.horizontalEdges.equalTo(mainLabel)
         }
         
         textFieldLabel.snp.makeConstraints { make in
-            make.top.equalTo(subLabel.snp.bottom).offset(15)
+            make.top.equalTo(subLabel.snp.bottom).offset(45)
             make.leading.equalTo(mainLabel)
         }
         
@@ -103,6 +115,16 @@ class EditChecklistNameView: BaseView {
             make.top.equalTo(textField.snp.bottom)
             make.horizontalEdges.equalTo(mainLabel)
             make.height.equalTo(2)
+        }
+        
+        currentNumberOfCharactersLabel.snp.makeConstraints { make in
+            make.top.equalTo(divider.snp.bottom).offset(10)
+            make.leading.equalTo(textFieldLabel)
+        }
+        
+        maximumNumberOfCharactersLabel.snp.makeConstraints { make in
+            make.top.equalTo(currentNumberOfCharactersLabel)
+            make.leading.equalTo(currentNumberOfCharactersLabel.snp.trailing)
         }
         
         editButton.snp.makeConstraints { make in
