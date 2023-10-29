@@ -162,14 +162,14 @@ class CategoryHomeView: BaseView {
         
         categoryCollectionView.snp.makeConstraints { make in
             make.top.equalTo(categorySubLabel.snp.bottom).offset(30)
-            make.horizontalEdges.equalTo(self.safeAreaLayoutGuide).inset(30)
+            make.horizontalEdges.equalTo(self.safeAreaLayoutGuide).inset(40)
         }
         
 //        categoryCollectionView.backgroundColor = .lightGray
         
         plusButton.snp.makeConstraints { make in
-            make.top.equalTo(categoryCollectionView.snp.bottom).offset(15)
             make.centerX.equalToSuperview()
+            make.top.equalTo(categoryCollectionView.snp.bottom)
             make.bottom.equalTo(self.safeAreaLayoutGuide).inset(15)
         }
     }
@@ -180,11 +180,11 @@ class CategoryHomeView: BaseView {
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(60))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 4)
-        group.interItemSpacing = .fixed(5)
+        group.interItemSpacing = .fixed(8)
         
         let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0)
-        section.interGroupSpacing = 20
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
+        section.interGroupSpacing = 25
         
         let configuration = UICollectionViewCompositionalLayoutConfiguration()
         configuration.scrollDirection = .vertical
