@@ -29,14 +29,13 @@
 "category_sub_label" = "관심 있는 카테고리를 선택하면\n상황에 맞는 체크 리스트를 추천 받을 수 있어요!";
 
 // CategoryCollectionView
+"category_outside" = "외출";
 "category_travel" = "여행";
-"category_shopping" = "쇼핑";
-"category_wishList" = "위시 리스트";
-"category_bucketList" = "버킷 리스트";
 "category_cleaning" = "청소";
-"category_beforeGoingOut" = "외출";
-"category_health" = "건강";
 "category_move" = "이사";
+"category_health" = "건강";
+"category_shopping" = "쇼핑";
+"category_etc" = "기타";
 
 // CategoryDetailView
 "category_detail_main_label" = "어떤 %@을 계획 중이신가요?";
