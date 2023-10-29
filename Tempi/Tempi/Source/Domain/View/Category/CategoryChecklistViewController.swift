@@ -43,6 +43,7 @@ class CategoryChecklistViewController: BaseViewController {
         
         configureSubCategoryDataSource()
         setLocalized()
+        setNavigationBarButton()
     }
     
     override func configureLayout() {
@@ -51,6 +52,7 @@ class CategoryChecklistViewController: BaseViewController {
         mainView.tButton.addTarget(self, action: #selector(addToMyListButtonTapped), for: .touchUpInside)
     }
 
+    // MARK: - 초기 데이터 다국어 설정
     private func setLocalized() {
         guard let subCategoryName = subCategoryName else {
             return
@@ -60,6 +62,21 @@ class CategoryChecklistViewController: BaseViewController {
         mainView.selectedItemCountLabel.text = "category_checklist_itemCountLabel".localized(with: selectedItems.count)
     }
     
+    // MARK: - Navi BarButton 설정
+    private func setNavigationBarButton() {
+        let rightBarButtonIcon = UIImage(systemName: Constant.SFSymbol.xmarkIcon)
+        let rightBarButton = UIBarButtonItem(image: rightBarButtonIcon, style: .plain, target: self, action: #selector(rightBarButtonTapped))
+        rightBarButton.tintColor = .label
+        self.navigationItem.rightBarButtonItem = rightBarButton
+    }
+    
+    // MARK: - 나가기 버튼 (Navi BarButton)
+    @objc private func rightBarButtonTapped() {
+        print(#function)
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
+    // MARK: - 전체 선택/해제 버튼
     @objc private func selectAllCheckBoxTapped() {
         if mainView.selectAllCheckBox.isSelected {
             // 전체 해제
