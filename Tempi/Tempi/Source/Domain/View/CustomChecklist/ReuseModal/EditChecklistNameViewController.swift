@@ -9,9 +9,9 @@ import UIKit
 import RealmSwift
 
 enum NameAction {
-    case createChecklistFromHome
-    case createChecklistFromMy
-    case updateChecklistName
+    case createChecklistFromHome // 체크리스트 생성시 이름 설정 (홈 화면)
+    case createChecklistFromMy // 체크리스트 생성시 이름 설정 (나의 리스트 화면)
+    case updateChecklistName // 체크리스트 이름 변경
 }
 
 class EditChecklistNameViewController: BaseViewController {
@@ -31,11 +31,11 @@ class EditChecklistNameViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        setLocalized()
+        setNotificationCenter()
     }
     
     override func configureLayout() {
-        
         DispatchQueue.main.async {
             self.mainView.textField.placeholder = self.textFieldPlaceholder
         }
@@ -50,6 +50,45 @@ class EditChecklistNameViewController: BaseViewController {
     @objc private func exitButtonTapped() {
         print(#function)
         self.dismiss(animated: true)
+    }
+    
+    // MARK: - 키보드 나타날 때 (노티)
+    @objc func keyboardWillShow(notification: NSNotification) {
+        print(#function)
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            let keyboardHeight = keyboardSize.height
+            DispatchQueue.main.async {
+                self.mainView.updateButtonConstraints(keyboardHeight: keyboardHeight)
+            }
+        }
+    }
+    
+    // MARK: - 노티 설정
+    private func setNotificationCenter() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+    }
+    
+    // MARK: - 다국어 설정
+    private func setLocalized() {
+        guard let action = nameAction else {
+            print("Name action is not defined")
+            return
+        }
+        
+        switch action {
+        case .createChecklistFromHome:
+            DispatchQueue.main.async {
+                self.mainView.mainLabel.text = "editChecklistName_mainLabel_create".localized
+            }
+        case .createChecklistFromMy:
+            DispatchQueue.main.async {
+                self.mainView.mainLabel.text = "editChecklistName_mainLabel_create".localized
+            }
+        case .updateChecklistName:
+            DispatchQueue.main.async {
+                self.mainView.mainLabel.text = "editChecklistName_mainLabel_update".localized
+            }
+        }
     }
     
     // MARK: - 변경하기 버튼
@@ -71,19 +110,9 @@ class EditChecklistNameViewController: BaseViewController {
         }
     }
     
-    // MARK: - 키보드 나타날 때 (노티)
-    @objc func keyboardWillShow(notification: NSNotification) {
-        print(#function)
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            let keyboardHeight = keyboardSize.height
-            DispatchQueue.main.async {
-                self.mainView.updateButtonConstraints(keyboardHeight: keyboardHeight)
-            }
-        }
-    }
-    
+    /// Checklist Name 생성 (홈/나의) - 저장 버튼 핸들러
     private func handleCreateChecklist() {
-        guard let textFieldText = mainView.textField.text else {
+        guard let textFieldText = mainView.textField.text, !textFieldText.isEmpty else {
             print("textFieldText error")
             return
         }
@@ -104,6 +133,7 @@ class EditChecklistNameViewController: BaseViewController {
         case .createChecklistFromMy:
             notificationName = .createChecklistFromMy
         default:
+            print(#function, "Name action is not defined")
             return
         }
         
@@ -114,13 +144,14 @@ class EditChecklistNameViewController: BaseViewController {
         }
     }
     
+    /// Checklist Name 업데이트 - 저장 버튼 핸들러
     private func handleUpdateChecklistName() {
         guard let selectedChecklistID = selectedChecklistID else {
             print("selectedChecklistID error")
             return
         }
         
-        guard let textFieldText = mainView.textField.text else {
+        guard let textFieldText = mainView.textField.text, !textFieldText.isEmpty else {
             print("textFieldText error")
             return
         }
@@ -143,15 +174,26 @@ extension EditChecklistNameViewController: UITextFieldDelegate {
     private func updateButtonState() {
         guard let text = mainView.textField.text, !text.isEmpty else {
             DispatchQueue.main.async {
+                self.mainView.currentNumberOfCharactersLabel.text = "0"
                 self.mainView.editButton.isEnabled = false
                 self.mainView.editButton.backgroundColor = .tGray500
             }
             return
         }
         
+        let currentCount = text.count
+        print(currentCount, "--- currentCount ---")
+        
         DispatchQueue.main.async {
-            self.mainView.editButton.isEnabled = true
-            self.mainView.editButton.backgroundColor = .label
+            if currentCount < 61 {
+                self.mainView.currentNumberOfCharactersLabel.text = String(currentCount)
+                self.mainView.editButton.isEnabled = true
+                self.mainView.editButton.backgroundColor = .label
+            } else {
+                self.mainView.currentNumberOfCharactersLabel.text = String(currentCount)
+                self.mainView.editButton.isEnabled = false
+                self.mainView.editButton.backgroundColor = .tGray500
+            }
         }
     }
     
