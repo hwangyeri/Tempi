@@ -28,12 +28,10 @@
 		2B81053E2ACEFD3F00B50223 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81053D2ACEFD3F00B50223 /* SearchView.swift */; };
 		2B8105492AD02A0C00B50223 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 2B8105482AD02A0C00B50223 /* Realm */; };
 		2B81054B2AD02A0C00B50223 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2B81054A2AD02A0C00B50223 /* RealmSwift */; };
-		2B8105502AD02B8F00B50223 /* CategoryTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81054F2AD02B8F00B50223 /* CategoryTable.swift */; };
 		2B8105522AD02D0600B50223 /* ChecklistTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8105512AD02D0600B50223 /* ChecklistTable.swift */; };
 		2B8105542AD02DA400B50223 /* CheckItemTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8105532AD02DA400B50223 /* CheckItemTable.swift */; };
 		2B8105562AD02F7600B50223 /* BookmarkTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8105552AD02F7600B50223 /* BookmarkTable.swift */; };
 		2B8105582AD0FE4600B50223 /* TempiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8105572AD0FE4600B50223 /* TempiModel.swift */; };
-		2B8105652AD2C22100B50223 /* CategoryData.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B8105642AD2C22100B50223 /* CategoryData.json */; };
 		2B8105692AD2C66B00B50223 /* CategoryDefaultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8105682AD2C66B00B50223 /* CategoryDefaultModel.swift */; };
 		2B81056D2AD5141700B50223 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81056C2AD5141700B50223 /* DataManager.swift */; };
 		2B91AB652AD6977B0078AB39 /* AddChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B91AB642AD6977B0078AB39 /* AddChecklistViewController.swift */; };
@@ -56,6 +54,8 @@
 		2B9D8D442AD97408006F42E0 /* BookmarkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9D8D432AD97408006F42E0 /* BookmarkListView.swift */; };
 		2B9D8D4A2ADBB3B8006F42E0 /* ChecklistTableRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9D8D492ADBB3B8006F42E0 /* ChecklistTableRepository.swift */; };
 		2BA2AECA2AE9423D0076324A /* BookmarkListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA2AEC92AE9423D0076324A /* BookmarkListCollectionViewCell.swift */; };
+		2BA2AED52AEE69DB0076324A /* CategoryData_en.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BA2AED42AEE69DB0076324A /* CategoryData_en.json */; };
+		2BA2AED72AEE69E10076324A /* CategoryData_ko.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BA2AED62AEE69E10076324A /* CategoryData_ko.json */; };
 		2BBFD9772AE83F3D00A00DEB /* LineSpacing+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBFD9762AE83F3D00A00DEB /* LineSpacing+.swift */; };
 		2BC72B7A2AC717240014420F /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC72B792AC717240014420F /* Font+.swift */; };
 		2BC72B7D2AC71FD50014420F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2BC72B7C2AC71FD50014420F /* SnapKit */; };
@@ -110,12 +110,10 @@
 		2B6785CD2AE90AF9009B2BD1 /* BookmarkTableRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTableRepository.swift; sourceTree = "<group>"; };
 		2B81053B2ACEFD3700B50223 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		2B81053D2ACEFD3F00B50223 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
-		2B81054F2AD02B8F00B50223 /* CategoryTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTable.swift; sourceTree = "<group>"; };
 		2B8105512AD02D0600B50223 /* ChecklistTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistTable.swift; sourceTree = "<group>"; };
 		2B8105532AD02DA400B50223 /* CheckItemTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckItemTable.swift; sourceTree = "<group>"; };
 		2B8105552AD02F7600B50223 /* BookmarkTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTable.swift; sourceTree = "<group>"; };
 		2B8105572AD0FE4600B50223 /* TempiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempiModel.swift; sourceTree = "<group>"; };
-		2B8105642AD2C22100B50223 /* CategoryData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CategoryData.json; sourceTree = "<group>"; };
 		2B8105682AD2C66B00B50223 /* CategoryDefaultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDefaultModel.swift; sourceTree = "<group>"; };
 		2B81056C2AD5141700B50223 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		2B91AB642AD6977B0078AB39 /* AddChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChecklistViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +136,8 @@
 		2B9D8D432AD97408006F42E0 /* BookmarkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListView.swift; sourceTree = "<group>"; };
 		2B9D8D492ADBB3B8006F42E0 /* ChecklistTableRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistTableRepository.swift; sourceTree = "<group>"; };
 		2BA2AEC92AE9423D0076324A /* BookmarkListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListCollectionViewCell.swift; sourceTree = "<group>"; };
+		2BA2AED42AEE69DB0076324A /* CategoryData_en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CategoryData_en.json; sourceTree = "<group>"; };
+		2BA2AED62AEE69E10076324A /* CategoryData_ko.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CategoryData_ko.json; sourceTree = "<group>"; };
 		2BBFD9762AE83F3D00A00DEB /* LineSpacing+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LineSpacing+.swift"; sourceTree = "<group>"; };
 		2BC72B792AC717240014420F /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
 		2BC72B7E2AC7207D0014420F /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -231,7 +231,6 @@
 		2B81054C2AD02ABA00B50223 /* RealmTable */ = {
 			isa = PBXGroup;
 			children = (
-				2B81054F2AD02B8F00B50223 /* CategoryTable.swift */,
 				2B8105512AD02D0600B50223 /* ChecklistTable.swift */,
 				2B8105532AD02DA400B50223 /* CheckItemTable.swift */,
 				2B8105552AD02F7600B50223 /* BookmarkTable.swift */,
@@ -248,13 +247,22 @@
 				2B952A122ACE835F0074D4F2 /* ChecklistView.swift */,
 				2B9D8D412AD973F3006F42E0 /* BookmarkListViewController.swift */,
 				2B9D8D432AD97408006F42E0 /* BookmarkListView.swift */,
-				2BAF93FD2AE041AA00F0584A /* ReuseModel */,
+				2BAF93FD2AE041AA00F0584A /* ReuseModal */,
 				2B8105392ACEFCDB00B50223 /* ChecklistCell */,
 			);
 			path = CustomChecklist;
 			sourceTree = "<group>";
 		};
-		2BAF93FD2AE041AA00F0584A /* ReuseModel */ = {
+		2BA2AED32AEE69B80076324A /* CategoryDefaultData */ = {
+			isa = PBXGroup;
+			children = (
+				2BA2AED42AEE69DB0076324A /* CategoryData_en.json */,
+				2BA2AED62AEE69E10076324A /* CategoryData_ko.json */,
+			);
+			path = CategoryDefaultData;
+			sourceTree = "<group>";
+		};
+		2BAF93FD2AE041AA00F0584A /* ReuseModal */ = {
 			isa = PBXGroup;
 			children = (
 				2B63782E2ADD56B700203AFA /* DeleteModalViewController.swift */,
@@ -264,7 +272,7 @@
 				2B6378412ADFCC9200203AFA /* EditModalViewController.swift */,
 				2B6378432ADFCCA100203AFA /* EditModalView.swift */,
 			);
-			path = ReuseModel;
+			path = ReuseModal;
 			sourceTree = "<group>";
 		};
 		2BDE84D12AC95FEB0018C759 /* Component */ = {
@@ -348,10 +356,10 @@
 		2BF5FE3A2AC6F411009BCBD9 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				2BA2AED32AEE69B80076324A /* CategoryDefaultData */,
 				2BFC74C02AE2A78900AD757D /* LaunchScreen */,
 				2BF5FE3B2AC6F46A009BCBD9 /* Fonts */,
 				2BF5FE162AC6E6C2009BCBD9 /* Assets.xcassets */,
-				2B8105642AD2C22100B50223 /* CategoryData.json */,
 				2BF5FE182AC6E6C2009BCBD9 /* LaunchScreen.storyboard */,
 			);
 			path = Resource;
@@ -618,12 +626,13 @@
 				2BF5FE1A2AC6E6C2009BCBD9 /* LaunchScreen.storyboard in Resources */,
 				2BF5FE5A2AC703F1009BCBD9 /* Pretendard-Bold.otf in Resources */,
 				2BFC74BF2AE2A70E00AD757D /* TempiLaunchScreen.jpg in Resources */,
-				2B8105652AD2C22100B50223 /* CategoryData.json in Resources */,
 				2BF5FE172AC6E6C2009BCBD9 /* Assets.xcassets in Resources */,
+				2BA2AED72AEE69E10076324A /* CategoryData_ko.json in Resources */,
 				2BF5FE572AC703F1009BCBD9 /* Pretendard-Medium.otf in Resources */,
 				2BF5FE5B2AC703F1009BCBD9 /* Pretendard-Regular.otf in Resources */,
 				2BF5FE5F2AC7062E009BCBD9 /* Localizable.strings in Resources */,
 				2BF5FE582AC703F1009BCBD9 /* Pretendard-SemiBold.otf in Resources */,
+				2BA2AED52AEE69DB0076324A /* CategoryData_en.json in Resources */,
 				2BF5FE592AC703F1009BCBD9 /* Pretendard-Black.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -683,7 +692,6 @@
 				2B952A0E2ACE7B1B0074D4F2 /* CategoryChecklistCollectionViewCell.swift in Sources */,
 				2B2D3E042AE3FF8700476A46 /* MyListCollectionViewCell.swift in Sources */,
 				2BFE96E52AE553EF007CD4ED /* SearchResultCollectionViewCell.swift in Sources */,
-				2B8105502AD02B8F00B50223 /* CategoryTable.swift in Sources */,
 				2B9D8D442AD97408006F42E0 /* BookmarkListView.swift in Sources */,
 				2B952A132ACE835F0074D4F2 /* ChecklistView.swift in Sources */,
 				2BDE84D32ACAB7EC0018C759 /* ReuseSearchWordsCollectionViewCell.swift in Sources */,
