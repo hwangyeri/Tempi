@@ -72,7 +72,7 @@ enum Constant {
         static let checklistDeleteIcon: String = "trash"
         static let checklistFixedIcon: String = "pin.fill"
         static let checklistUnFixedIcon: String = "pin"
-        static let bookmarkListIcon: String = "contextualmenu.and.cursorarrow" //"note.text.badge.plus"
+        static let bookmarkListIcon: String = "contextualmenu.and.cursorarrow"
         static let checkboxMenuIcon: String = "ellipsis"
 //        static let alarmIcon: String = "alarm"
 //        static let alarmMessageIcon: String = "message"
@@ -82,19 +82,17 @@ enum Constant {
         
         /// Category Icon
         static let travelCategoryIcon: String = "airplane.departure"
-        static let shoppingCategoryIcon: String = "cart.fill"
-        static let wishListCategoryIcon: String = "sparkles"
-        static let bucketListCategoryIcon: String = "list.bullet.clipboard.fill"
         static let cleaningCategoryIcon: String = "bubbles.and.sparkles"
-        static let healthCategoryIcon: String = "figure.run"
-        static let beforeGoingOutCategoryIcon: String = "car.fill"
+        static let outsideCategoryIcon: String = "shoeprints.fill"
         static let moveCategoryIcon: String = "box.truck.fill"
+        static let healthCategoryIcon: String = "figure.walk"
+        static let shoppingCategoryIcon: String = "cart.fill"
+        static let etcCategoryIcon: String = "sparkles"
         
         /// Checklist Menu Icon
         static let editMenuItemIcon: String = "pencil"
         static let addMemoMenuItemIcon: String = "note.text"
 //        static let alarmCheckBoxIcon: String = "alarm"
-//        static let bookmarkCheckBoxIcon: String = "star"
         static let deleteMemuItemIcon: String = "trash"
         
         /// TabBar Icon
