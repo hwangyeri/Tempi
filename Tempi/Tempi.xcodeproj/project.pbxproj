@@ -54,10 +54,11 @@
 		2B9D8D442AD97408006F42E0 /* BookmarkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9D8D432AD97408006F42E0 /* BookmarkListView.swift */; };
 		2B9D8D4A2ADBB3B8006F42E0 /* ChecklistTableRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9D8D492ADBB3B8006F42E0 /* ChecklistTableRepository.swift */; };
 		2BA2AECA2AE9423D0076324A /* BookmarkListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA2AEC92AE9423D0076324A /* BookmarkListCollectionViewCell.swift */; };
-		2BA2AED52AEE69DB0076324A /* CategoryData_en.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BA2AED42AEE69DB0076324A /* CategoryData_en.json */; };
-		2BA2AED72AEE69E10076324A /* CategoryData_ko.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BA2AED62AEE69E10076324A /* CategoryData_ko.json */; };
 		2BA2AED92AEEB3F60076324A /* NaviBarButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA2AED82AEEB3F60076324A /* NaviBarButton+.swift */; };
 		2BA2AEE12AEEC9840076324A /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = 2BA2AEE02AEEC9840076324A /* SwiftMessages */; };
+		2BA2AEE52AEFD4B60076324A /* CategoryData_ko.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BA2AEE42AEFD4B50076324A /* CategoryData_ko.json */; };
+		2BA2AEE72AEFD4C50076324A /* CategoryData_en.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BA2AEE62AEFD4C50076324A /* CategoryData_en.json */; };
+		2BA2AEE92AEFEB030076324A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA2AEE82AEFEB030076324A /* ViewModel.swift */; };
 		2BBFD9772AE83F3D00A00DEB /* LineSpacing+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBFD9762AE83F3D00A00DEB /* LineSpacing+.swift */; };
 		2BC72B7A2AC717240014420F /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC72B792AC717240014420F /* Font+.swift */; };
 		2BC72B7D2AC71FD50014420F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2BC72B7C2AC71FD50014420F /* SnapKit */; };
@@ -138,9 +139,10 @@
 		2B9D8D432AD97408006F42E0 /* BookmarkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListView.swift; sourceTree = "<group>"; };
 		2B9D8D492ADBB3B8006F42E0 /* ChecklistTableRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistTableRepository.swift; sourceTree = "<group>"; };
 		2BA2AEC92AE9423D0076324A /* BookmarkListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListCollectionViewCell.swift; sourceTree = "<group>"; };
-		2BA2AED42AEE69DB0076324A /* CategoryData_en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CategoryData_en.json; sourceTree = "<group>"; };
-		2BA2AED62AEE69E10076324A /* CategoryData_ko.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CategoryData_ko.json; sourceTree = "<group>"; };
 		2BA2AED82AEEB3F60076324A /* NaviBarButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaviBarButton+.swift"; sourceTree = "<group>"; };
+		2BA2AEE42AEFD4B50076324A /* CategoryData_ko.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CategoryData_ko.json; sourceTree = "<group>"; };
+		2BA2AEE62AEFD4C50076324A /* CategoryData_en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CategoryData_en.json; sourceTree = "<group>"; };
+		2BA2AEE82AEFEB030076324A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewModel.swift; path = Tempi/Source/Utility/DesignSystem/Extension/ViewModel.swift; sourceTree = SOURCE_ROOT; };
 		2BBFD9762AE83F3D00A00DEB /* LineSpacing+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LineSpacing+.swift"; sourceTree = "<group>"; };
 		2BC72B792AC717240014420F /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
 		2BC72B7E2AC7207D0014420F /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -260,8 +262,8 @@
 		2BA2AED32AEE69B80076324A /* CategoryDefaultData */ = {
 			isa = PBXGroup;
 			children = (
-				2BA2AED42AEE69DB0076324A /* CategoryData_en.json */,
-				2BA2AED62AEE69E10076324A /* CategoryData_ko.json */,
+				2BA2AEE62AEFD4C50076324A /* CategoryData_en.json */,
+				2BA2AEE42AEFD4B50076324A /* CategoryData_ko.json */,
 			);
 			path = CategoryDefaultData;
 			sourceTree = "<group>";
@@ -467,6 +469,7 @@
 		2BF5FE452AC6F699009BCBD9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2BA2AEE82AEFEB030076324A /* ViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -630,16 +633,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BA2AEE72AEFD4C50076324A /* CategoryData_en.json in Resources */,
 				2BF5FE1A2AC6E6C2009BCBD9 /* LaunchScreen.storyboard in Resources */,
 				2BF5FE5A2AC703F1009BCBD9 /* Pretendard-Bold.otf in Resources */,
 				2BFC74BF2AE2A70E00AD757D /* TempiLaunchScreen.jpg in Resources */,
+				2BA2AEE52AEFD4B60076324A /* CategoryData_ko.json in Resources */,
 				2BF5FE172AC6E6C2009BCBD9 /* Assets.xcassets in Resources */,
-				2BA2AED72AEE69E10076324A /* CategoryData_ko.json in Resources */,
 				2BF5FE572AC703F1009BCBD9 /* Pretendard-Medium.otf in Resources */,
 				2BF5FE5B2AC703F1009BCBD9 /* Pretendard-Regular.otf in Resources */,
 				2BF5FE5F2AC7062E009BCBD9 /* Localizable.strings in Resources */,
 				2BF5FE582AC703F1009BCBD9 /* Pretendard-SemiBold.otf in Resources */,
-				2BA2AED52AEE69DB0076324A /* CategoryData_en.json in Resources */,
 				2BF5FE592AC703F1009BCBD9 /* Pretendard-Black.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -679,6 +682,7 @@
 				2B81056D2AD5141700B50223 /* DataManager.swift in Sources */,
 				2B8105692AD2C66B00B50223 /* CategoryDefaultModel.swift in Sources */,
 				2B9529D12ACCE6760074D4F2 /* TButton.swift in Sources */,
+				2BA2AEE92AEFEB030076324A /* ViewModel.swift in Sources */,
 				2B6378392ADD72A000203AFA /* EditChecklistNameViewController.swift in Sources */,
 				2BDE84D02AC95CF90018C759 /* TLabel.swift in Sources */,
 				2BC72B7F2AC7207D0014420F /* BaseView.swift in Sources */,
