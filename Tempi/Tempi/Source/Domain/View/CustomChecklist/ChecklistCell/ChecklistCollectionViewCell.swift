@@ -78,7 +78,7 @@ class ChecklistCollectionViewCell: BaseCollectionViewCell {
         checkBoxMemoLabel.snp.makeConstraints { make in
             make.top.equalTo(checkBoxLabel.snp.bottom).offset(3)
             make.leading.equalTo(checkBoxLabel).offset(1)
-            make.trailing.equalTo(checkBoxLabel)
+            make.trailing.equalToSuperview()
             make.bottom.equalToSuperview()
         }
         
