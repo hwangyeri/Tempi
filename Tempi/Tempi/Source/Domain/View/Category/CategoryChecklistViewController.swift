@@ -17,10 +17,13 @@ class CategoryChecklistViewController: BaseViewController {
     
     private var checkItemList: [String] {
         // subCategoryName, subCategoryName 일치하는 checkItem 필터링
-        return DataManager.shared.categoryList
+        let checkItems = DataManager.shared.categoryList
             .filter { $0.categoryName == categoryName }
             .filter { $0.subCategoryName == subCategoryName }
             .map { $0.checkItem }
+        
+        let uniqueCheckItems = Array(Set(checkItems)) // 중복 제거
+        return uniqueCheckItems
     }
     
     private var selectedIndexPaths: [IndexPath] = []
