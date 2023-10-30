@@ -13,7 +13,7 @@ class CategoryChecklistView: BaseView {
     let mainLabel = {
        let view = TLabel(
         text: "category_checklist_mainLabel".localized,
-        custFont: .pretendardSemiBoldXL,
+        custFont: .pretendardSemiBoldXXL,
         textColor: .label)
         return view
     }()
@@ -21,15 +21,16 @@ class CategoryChecklistView: BaseView {
     let subLabel = {
        let view = TLabel(
         text: "category_checklist_subLabel".localized,
-        custFont: .pretendardRegularM,
-        textColor: .tGray900)
+        custFont: .pretendardRegularS,
+        textColor: .secondaryLabel)
+        view.setAttributedTextWithLineSpacing("category_checklist_subLabel".localized, lineSpacing: 3)
         return view
     }()
     
     let checklistNameLabel = {
        let view = TLabel(
         text: "category_checklist_checklistNameLabel".localized,
-        custFont: .pretendardBoldXXL,
+        custFont: .pretendardBoldXL,
         textColor: .label)
         return view
     }()
@@ -38,7 +39,7 @@ class CategoryChecklistView: BaseView {
        let view = TLabel(
         text: "category_checklist_itemCountLabel".localized,
         custFont: .pretendardSemiBoldS,
-        textColor: .tGray900)
+        textColor: .secondaryLabel)
         return view
     }()
     
@@ -46,7 +47,7 @@ class CategoryChecklistView: BaseView {
        let view = TLabel(
         text: "category_checklist_totalCountLabel".localized,
         custFont: .pretendardSemiBoldS,
-        textColor: .tGray900)
+        textColor: .secondaryLabel)
         return view
     }()
     
@@ -92,7 +93,7 @@ class CategoryChecklistView: BaseView {
         
         subLabel.snp.makeConstraints { make in
             make.top.equalTo(mainLabel.snp.bottom).offset(10)
-            make.leading.equalTo(mainLabel)
+            make.horizontalEdges.equalTo(mainLabel)
         }
         
         checklistNameLabel.snp.makeConstraints { make in
