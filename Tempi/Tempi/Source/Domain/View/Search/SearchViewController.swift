@@ -23,6 +23,7 @@ class SearchViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        hideBackButtonTitle()
     }
     
     override func configureLayout() {
@@ -93,8 +94,7 @@ class SearchViewController: BaseViewController {
         }
         
         let cellRegistration = UICollectionView.CellRegistration<SearchResultCollectionViewCell, CategoryDefaultData> { cell, indexPath, itemIdentifier in
-            // FIXME: 다국어 + JSON Data Eng version
-            cell.categoryLabel.text = "카테고리 • \(itemIdentifier.categoryName)"
+            cell.categoryLabel.text = "searchResult_categoryNameLabel".localized(with: itemIdentifier.categoryName)
             cell.subCategoryNameLabel.text = itemIdentifier.subCategoryName
         }
         
