@@ -31,14 +31,16 @@ class CategoryDetailViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureSubCategoryDataSource()
+        setRightBarButton()
+        hideBackButtonTitle()
         setLocalized()
+        configureSubCategoryDataSource()
         
 //        print("---- DetailView", categoryName)
 //        print(subCategoryList)
     }
     
-    override func configureHierarchy() {
+    override func configureLayout() {
         mainView.subCategoryCollectionView.delegate = self
         mainView.tButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
     }
@@ -92,8 +94,8 @@ extension CategoryDetailViewController: UICollectionViewDelegate {
             // 이전에 선택된 cell UI 원래대로 복원
             if let prevSelectedIndexPath = selectedIndexPath,
                let prevSelectedCell = collectionView.cellForItem(at: prevSelectedIndexPath) as? SubCategoryCollectionViewCell {
-                prevSelectedCell.backView.backgroundColor = .tGray200
-                prevSelectedCell.textLabel.textColor = .tGray600
+                prevSelectedCell.backView.backgroundColor = .textFieldBackground
+                prevSelectedCell.textLabel.textColor = .lightGray
                 prevSelectedCell.textLabel.font = .customFont(.pretendardRegularL)
             }
             
@@ -104,12 +106,12 @@ extension CategoryDetailViewController: UICollectionViewDelegate {
             
             // 현재 선택된 indexPath 저장
             selectedIndexPath = indexPath
-            print(selectedIndexPath)
+            //print(selectedIndexPath)
             
             // tButton Disable 처리
             if selectedIndexPath == nil {
                 mainView.tButton.isEnabled = false
-                mainView.tButton.backgroundColor = .tGray200
+                mainView.tButton.backgroundColor = .tButtonDisable
             } else {
                 mainView.tButton.isEnabled = true
                 mainView.tButton.backgroundColor = .label
