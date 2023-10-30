@@ -26,11 +26,13 @@ class CategoryChecklistViewController: BaseViewController {
     private var selectedIndexPaths: [IndexPath] = []
     private var selectedItems: [String] = [] {
         didSet {
-            mainView.selectedItemCountLabel.text = "category_checklist_itemCountLabel".localized(with: selectedItems.count)
+            DispatchQueue.main.async {
+                self.mainView.selectedItemCountLabel.text = "category_checklist_itemCountLabel".localized(with: self.selectedItems.count)
+            }
         }
     }
     
-    let mainView = CategoryChecklistView()
+    private let mainView = CategoryChecklistView()
     
     private var categoryChecklistDataSource: UICollectionViewDiffableDataSource<Int, String>!
     
@@ -41,9 +43,10 @@ class CategoryChecklistViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureSubCategoryDataSource()
+        setRightBarButton()
+        hideBackButtonTitle()
         setLocalized()
-        setNavigationBarButton()
+        configureSubCategoryDataSource()
     }
     
     override func configureLayout() {
@@ -57,23 +60,12 @@ class CategoryChecklistViewController: BaseViewController {
         guard let subCategoryName = subCategoryName else {
             return
         }
-        mainView.checklistNameLabel.text = "category_checklist_checklistNameLabel".localized(with: subCategoryName)
-        mainView.totalCountLabel.text = "category_checklist_totalCountLabel".localized(with: checkItemList.count)
-        mainView.selectedItemCountLabel.text = "category_checklist_itemCountLabel".localized(with: selectedItems.count)
-    }
-    
-    // MARK: - Navi BarButton 설정
-    private func setNavigationBarButton() {
-        let rightBarButtonIcon = UIImage(systemName: Constant.SFSymbol.xmarkIcon)
-        let rightBarButton = UIBarButtonItem(image: rightBarButtonIcon, style: .plain, target: self, action: #selector(rightBarButtonTapped))
-        rightBarButton.tintColor = .label
-        self.navigationItem.rightBarButtonItem = rightBarButton
-    }
-    
-    // MARK: - 나가기 버튼 (Navi BarButton)
-    @objc private func rightBarButtonTapped() {
-        print(#function)
-        navigationController?.popToRootViewController(animated: true)
+        
+        DispatchQueue.main.async {
+            self.mainView.checklistNameLabel.text = "category_checklist_checklistNameLabel".localized(with: subCategoryName)
+            self.mainView.totalCountLabel.text = "category_checklist_totalCountLabel".localized(with: self.checkItemList.count)
+            self.mainView.selectedItemCountLabel.text = "category_checklist_itemCountLabel".localized(with: self.selectedItems.count)
+        }
     }
     
     // MARK: - 전체 선택/해제 버튼
@@ -95,9 +87,11 @@ class CategoryChecklistViewController: BaseViewController {
         // 선택된 항목만 선택된 상태로 설정
         for indexPath in selectedIndexPaths {
             if let cell = mainView.categoryChecklistCollectionView.cellForItem(at: indexPath) as? CategoryChecklistCollectionViewCell {
-                cell.checkBoxButton.layer.backgroundColor = UIColor.label.cgColor
-                cell.checkBoxButton.setImage(UIImage(systemName: Constant.SFSymbol.checkIcon), for: .normal)
-                cell.tintColor = .systemBackground
+                DispatchQueue.main.async {
+                    cell.checkBoxButton.layer.backgroundColor = UIColor.label.cgColor
+                    cell.checkBoxButton.setImage(UIImage(systemName: Constant.SFSymbol.checkIcon), for: .normal)
+                    cell.tintColor = .systemBackground
+                }
             }
         }
         
@@ -105,28 +99,31 @@ class CategoryChecklistViewController: BaseViewController {
         for itemIndex in 0..<checkItemList.count {
             if !selectedIndexPaths.contains(IndexPath(item: itemIndex, section: 0)) {
                 if let cell = mainView.categoryChecklistCollectionView.cellForItem(at: IndexPath(item: itemIndex, section: 0)) as? CategoryChecklistCollectionViewCell {
-                    cell.checkBoxButton.layer.backgroundColor = UIColor.systemBackground.cgColor
-                    cell.checkBoxButton.setImage(nil, for: .normal)
+                    DispatchQueue.main.async {
+                        cell.checkBoxButton.layer.backgroundColor = UIColor.systemBackground.cgColor
+                        cell.checkBoxButton.setImage(nil, for: .normal)
+                    }
                 }
             }
         }
         
         // 전체 선택/해제 Button, Label UI 업데이트
-        if mainView.selectAllCheckBox.isSelected {
-            mainView.selectAllLabel.text = "category_checklist_selectAllLabel_unSelectAll".localized
-            mainView.selectAllCheckBox.setImage(UIImage(systemName: Constant.SFSymbol.checkIcon), for: .normal)
-            mainView.selectAllCheckBox.backgroundColor = .label
-            mainView.selectAllCheckBox.tintColor = .systemBackground
-            mainView.tButton.isEnabled = true
-            mainView.tButton.backgroundColor = .label
-        } else {
-            mainView.selectAllLabel.text = "category_checklist_selectAllLabel_selectAll".localized
-            mainView.selectAllCheckBox.setImage(nil, for: .normal)
-            mainView.selectAllCheckBox.backgroundColor = .clear
-            mainView.tButton.isEnabled = false
-            mainView.tButton.backgroundColor = .tGray500
+        DispatchQueue.main.async {
+            if self.mainView.selectAllCheckBox.isSelected {
+                self.mainView.selectAllLabel.text = "category_checklist_selectAllLabel_unSelectAll".localized
+                self.mainView.selectAllCheckBox.setImage(UIImage(systemName: Constant.SFSymbol.checkIcon), for: .normal)
+                self.mainView.selectAllCheckBox.backgroundColor = .label
+                self.mainView.selectAllCheckBox.tintColor = .systemBackground
+                self.mainView.tButton.isEnabled = true
+                self.mainView.tButton.backgroundColor = .label
+            } else {
+                self.mainView.selectAllLabel.text = "category_checklist_selectAllLabel_selectAll".localized
+                self.mainView.selectAllCheckBox.setImage(nil, for: .normal)
+                self.mainView.selectAllCheckBox.backgroundColor = .clear
+                self.mainView.tButton.isEnabled = false
+                self.mainView.tButton.backgroundColor = .tButtonDisable
+            }
         }
-    
     }
     
     // MARK: - 내 리스트에 추가하기 버튼
@@ -201,8 +198,8 @@ extension CategoryChecklistViewController: UICollectionViewDelegate {
         
         // tButton 활성화/비활성화
         mainView.tButton.isEnabled = !selectedItems.isEmpty
-        mainView.tButton.backgroundColor = selectedItems.isEmpty ? .tGray500 : .label
-        print(selectedItems, "-- 선택된 체크 아이템 --")
+        mainView.tButton.backgroundColor = selectedItems.isEmpty ? .tButtonDisable : .label
+        //print(selectedItems, "-- 선택된 체크 아이템 --")
     }
 
 }
