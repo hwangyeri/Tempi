@@ -59,6 +59,10 @@
 		2BA2AEE52AEFD4B60076324A /* CategoryData_ko.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BA2AEE42AEFD4B50076324A /* CategoryData_ko.json */; };
 		2BA2AEE72AEFD4C50076324A /* CategoryData_en.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BA2AEE62AEFD4C50076324A /* CategoryData_en.json */; };
 		2BA2AEE92AEFEB030076324A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA2AEE82AEFEB030076324A /* ViewModel.swift */; };
+		2BA2AEEB2AF00C5B0076324A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2BA2AEEA2AF00C5B0076324A /* .gitignore */; };
+		2BA2AEED2AF00CE30076324A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BA2AEEC2AF00CE20076324A /* GoogleService-Info.plist */; };
+		2BA2AEF02AF00DE40076324A /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2BA2AEEF2AF00DE40076324A /* FirebaseAnalyticsSwift */; };
+		2BA2AEF22AF00DE40076324A /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 2BA2AEF12AF00DE40076324A /* FirebaseCrashlytics */; };
 		2BBFD9772AE83F3D00A00DEB /* LineSpacing+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBFD9762AE83F3D00A00DEB /* LineSpacing+.swift */; };
 		2BC72B7A2AC717240014420F /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC72B792AC717240014420F /* Font+.swift */; };
 		2BC72B7D2AC71FD50014420F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2BC72B7C2AC71FD50014420F /* SnapKit */; };
@@ -143,6 +147,8 @@
 		2BA2AEE42AEFD4B50076324A /* CategoryData_ko.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CategoryData_ko.json; sourceTree = "<group>"; };
 		2BA2AEE62AEFD4C50076324A /* CategoryData_en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CategoryData_en.json; sourceTree = "<group>"; };
 		2BA2AEE82AEFEB030076324A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewModel.swift; path = Tempi/Source/Utility/DesignSystem/Extension/ViewModel.swift; sourceTree = SOURCE_ROOT; };
+		2BA2AEEA2AF00C5B0076324A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		2BA2AEEC2AF00CE20076324A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2BBFD9762AE83F3D00A00DEB /* LineSpacing+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LineSpacing+.swift"; sourceTree = "<group>"; };
 		2BC72B792AC717240014420F /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
 		2BC72B7E2AC7207D0014420F /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -188,7 +194,9 @@
 				2B81054B2AD02A0C00B50223 /* RealmSwift in Frameworks */,
 				2B8105492AD02A0C00B50223 /* Realm in Frameworks */,
 				2BC72B7D2AC71FD50014420F /* SnapKit in Frameworks */,
+				2BA2AEF22AF00DE40076324A /* FirebaseCrashlytics in Frameworks */,
 				2BA2AEE12AEEC9840076324A /* SwiftMessages in Frameworks */,
+				2BA2AEF02AF00DE40076324A /* FirebaseAnalyticsSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,10 +331,12 @@
 			isa = PBXGroup;
 			children = (
 				2BF5FE1B2AC6E6C2009BCBD9 /* Info.plist */,
+				2BA2AEEC2AF00CE20076324A /* GoogleService-Info.plist */,
 				2BF5FE472AC6F7B8009BCBD9 /* Application */,
 				2BF5FE342AC6F3D0009BCBD9 /* Source */,
 				2BF5FE3A2AC6F411009BCBD9 /* Resource */,
 				2BF5FE4F2AC6FD46009BCBD9 /* Localization */,
+				2BA2AEEA2AF00C5B0076324A /* .gitignore */,
 			);
 			path = Tempi;
 			sourceTree = "<group>";
@@ -584,6 +594,8 @@
 				2B8105482AD02A0C00B50223 /* Realm */,
 				2B81054A2AD02A0C00B50223 /* RealmSwift */,
 				2BA2AEE02AEEC9840076324A /* SwiftMessages */,
+				2BA2AEEF2AF00DE40076324A /* FirebaseAnalyticsSwift */,
+				2BA2AEF12AF00DE40076324A /* FirebaseCrashlytics */,
 			);
 			productName = Tempi;
 			productReference = 2BF5FE0A2AC6E6C1009BCBD9 /* Tempi.app */;
@@ -618,6 +630,7 @@
 				2BC72B7B2AC71FD40014420F /* XCRemoteSwiftPackageReference "SnapKit" */,
 				2B8105472AD02A0C00B50223 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				2BA2AEDF2AEEC9840076324A /* XCRemoteSwiftPackageReference "SwiftMessages" */,
+				2BA2AEEE2AF00DE40076324A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 2BF5FE0B2AC6E6C1009BCBD9 /* Products */;
 			projectDirPath = "";
@@ -633,10 +646,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BA2AEED2AF00CE30076324A /* GoogleService-Info.plist in Resources */,
 				2BA2AEE72AEFD4C50076324A /* CategoryData_en.json in Resources */,
 				2BF5FE1A2AC6E6C2009BCBD9 /* LaunchScreen.storyboard in Resources */,
 				2BF5FE5A2AC703F1009BCBD9 /* Pretendard-Bold.otf in Resources */,
 				2BFC74BF2AE2A70E00AD757D /* TempiLaunchScreen.jpg in Resources */,
+				2BA2AEEB2AF00C5B0076324A /* .gitignore in Resources */,
 				2BA2AEE52AEFD4B60076324A /* CategoryData_ko.json in Resources */,
 				2BF5FE172AC6E6C2009BCBD9 /* Assets.xcassets in Resources */,
 				2BF5FE572AC703F1009BCBD9 /* Pretendard-Medium.otf in Resources */,
@@ -975,6 +990,14 @@
 				minimumVersion = 9.0.8;
 			};
 		};
+		2BA2AEEE2AF00DE40076324A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.16.0;
+			};
+		};
 		2BC72B7B2AC71FD40014420F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -1000,6 +1023,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2BA2AEDF2AEEC9840076324A /* XCRemoteSwiftPackageReference "SwiftMessages" */;
 			productName = SwiftMessages;
+		};
+		2BA2AEEF2AF00DE40076324A /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2BA2AEEE2AF00DE40076324A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		2BA2AEF12AF00DE40076324A /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2BA2AEEE2AF00DE40076324A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
 		};
 		2BC72B7C2AC71FD50014420F /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
