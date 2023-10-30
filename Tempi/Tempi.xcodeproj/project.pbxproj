@@ -56,6 +56,8 @@
 		2BA2AECA2AE9423D0076324A /* BookmarkListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA2AEC92AE9423D0076324A /* BookmarkListCollectionViewCell.swift */; };
 		2BA2AED52AEE69DB0076324A /* CategoryData_en.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BA2AED42AEE69DB0076324A /* CategoryData_en.json */; };
 		2BA2AED72AEE69E10076324A /* CategoryData_ko.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BA2AED62AEE69E10076324A /* CategoryData_ko.json */; };
+		2BA2AED92AEEB3F60076324A /* NaviBarButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA2AED82AEEB3F60076324A /* NaviBarButton+.swift */; };
+		2BA2AEE12AEEC9840076324A /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = 2BA2AEE02AEEC9840076324A /* SwiftMessages */; };
 		2BBFD9772AE83F3D00A00DEB /* LineSpacing+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBFD9762AE83F3D00A00DEB /* LineSpacing+.swift */; };
 		2BC72B7A2AC717240014420F /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC72B792AC717240014420F /* Font+.swift */; };
 		2BC72B7D2AC71FD50014420F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2BC72B7C2AC71FD50014420F /* SnapKit */; };
@@ -138,6 +140,7 @@
 		2BA2AEC92AE9423D0076324A /* BookmarkListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListCollectionViewCell.swift; sourceTree = "<group>"; };
 		2BA2AED42AEE69DB0076324A /* CategoryData_en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CategoryData_en.json; sourceTree = "<group>"; };
 		2BA2AED62AEE69E10076324A /* CategoryData_ko.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CategoryData_ko.json; sourceTree = "<group>"; };
+		2BA2AED82AEEB3F60076324A /* NaviBarButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaviBarButton+.swift"; sourceTree = "<group>"; };
 		2BBFD9762AE83F3D00A00DEB /* LineSpacing+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LineSpacing+.swift"; sourceTree = "<group>"; };
 		2BC72B792AC717240014420F /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
 		2BC72B7E2AC7207D0014420F /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -183,6 +186,7 @@
 				2B81054B2AD02A0C00B50223 /* RealmSwift in Frameworks */,
 				2B8105492AD02A0C00B50223 /* Realm in Frameworks */,
 				2BC72B7D2AC71FD50014420F /* SnapKit in Frameworks */,
+				2BA2AEE12AEEC9840076324A /* SwiftMessages in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +417,7 @@
 				2B6378342ADD700B00203AFA /* NSNotification+.swift */,
 				2B6378452ADFF1E400203AFA /* HideKeyboard+.swift */,
 				2BBFD9762AE83F3D00A00DEB /* LineSpacing+.swift */,
+				2BA2AED82AEEB3F60076324A /* NaviBarButton+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -575,6 +580,7 @@
 				2BC72B7C2AC71FD50014420F /* SnapKit */,
 				2B8105482AD02A0C00B50223 /* Realm */,
 				2B81054A2AD02A0C00B50223 /* RealmSwift */,
+				2BA2AEE02AEEC9840076324A /* SwiftMessages */,
 			);
 			productName = Tempi;
 			productReference = 2BF5FE0A2AC6E6C1009BCBD9 /* Tempi.app */;
@@ -608,6 +614,7 @@
 			packageReferences = (
 				2BC72B7B2AC71FD40014420F /* XCRemoteSwiftPackageReference "SnapKit" */,
 				2B8105472AD02A0C00B50223 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				2BA2AEDF2AEEC9840076324A /* XCRemoteSwiftPackageReference "SwiftMessages" */,
 			);
 			productRefGroup = 2BF5FE0B2AC6E6C1009BCBD9 /* Products */;
 			projectDirPath = "";
@@ -690,6 +697,7 @@
 				2BC72B812AC720B30014420F /* BaseViewController.swift in Sources */,
 				2BF5FE652AC7079B009BCBD9 /* Localized+.swift in Sources */,
 				2B952A0E2ACE7B1B0074D4F2 /* CategoryChecklistCollectionViewCell.swift in Sources */,
+				2BA2AED92AEEB3F60076324A /* NaviBarButton+.swift in Sources */,
 				2B2D3E042AE3FF8700476A46 /* MyListCollectionViewCell.swift in Sources */,
 				2BFE96E52AE553EF007CD4ED /* SearchResultCollectionViewCell.swift in Sources */,
 				2B9D8D442AD97408006F42E0 /* BookmarkListView.swift in Sources */,
@@ -955,6 +963,14 @@
 				minimumVersion = 10.42.1;
 			};
 		};
+		2BA2AEDF2AEEC9840076324A /* XCRemoteSwiftPackageReference "SwiftMessages" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftKickMobile/SwiftMessages.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.8;
+			};
+		};
 		2BC72B7B2AC71FD40014420F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -975,6 +991,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2B8105472AD02A0C00B50223 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		2BA2AEE02AEEC9840076324A /* SwiftMessages */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2BA2AEDF2AEEC9840076324A /* XCRemoteSwiftPackageReference "SwiftMessages" */;
+			productName = SwiftMessages;
 		};
 		2BC72B7C2AC71FD50014420F /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
