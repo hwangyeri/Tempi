@@ -13,7 +13,7 @@ class CategoryDetailView: BaseView {
     let mainLabel = {
        let view = TLabel(
         text: "category_detail_main_label".localized,
-        custFont: .pretendardSemiBoldXL,
+        custFont: .pretendardSemiBoldXXL,
         textColor: .label)
         return view
     }()
@@ -21,8 +21,8 @@ class CategoryDetailView: BaseView {
     let subLabel = {
        let view = TLabel(
         text: "category_detail_sub_label".localized,
-        custFont: .pretendardRegularM,
-        textColor: .tGray900)
+        custFont: .pretendardRegularS,
+        textColor: .secondaryLabel)
         return view
     }()
     
@@ -77,7 +77,7 @@ class CategoryDetailView: BaseView {
         group.interItemSpacing = .fixed(12)
         
         let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 10)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 10)
         section.interGroupSpacing = 12
         
         let configuration = UICollectionViewCompositionalLayoutConfiguration()
