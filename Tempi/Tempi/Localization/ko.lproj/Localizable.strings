@@ -21,13 +21,19 @@
 "showToast_update" = "성공적으로 수정되었습니다!";
 "showToast_create" = "성공적으로 생성되었습니다!";
 
+// showMessage
+"showMessage_delete_title" = "체크리스트 삭제";
+"showMessage_delete_body" = "체크리스트가 성공적으로 삭제되었습니다!";
+"showMessage_create_title" = "체크리스트 생성";
+"showMessage_create_body" = "체크리스트가 성공적으로 생성되었습니다!";
+
 // SceneDelegate
 "firstVC_tabBarTitle" = "탐색";
 "secondVC_tabBarTitle" = "홈";
 
 // CategoryHomeView
-"search_main_label" = "어떤 체크리스트가 궁금하신가요?\n다양한 템플릿을 검색해 보세요.";
-"searchBar_placeholder" = " 다양한 템플릿을 검색해 보세요.";
+"search_main_label" = "Tempi 의 가이드를 따라\n간편하게 체크리스트 작성해 보세요.";
+"searchBar_placeholder" = " 고민될 땐 다양한 템플릿 검색!";
 "category_title_label" = "Category";
 "category_main_label" = "이런 카테고리는 어때요?";
 "category_sub_label" = "관심 있는 카테고리를 선택하면\n상황에 맞는 체크 리스트를 추천 받을 수 있어요!";
@@ -42,13 +48,13 @@
 "category_etc" = "기타";
 
 // CategoryDetailView
-"category_detail_main_label" = "어떤 %@을 계획 중이신가요?";
+"category_detail_main_label" = "%@ 관련 체크리스트 추천";
 "category_detail_sub_label" = "가장 필요한 상황을 1개 골라 주세요.";
 "category_detail_tButton_text" = "다음";
 
 // CategoryChecklistView
 "category_checklist_mainLabel" = "원하는 항목을 선택해 주세요.";
-"category_checklist_subLabel" = "선택된 항목들을 수정하거나 메모도 작성할 수 있어요!\n내 리스트에 추가해서 나만의 리스트를 완성해 보세요.";
+"category_checklist_subLabel" = "최소한의 가이드를 제공해 드려요!\n가이드를 보면서 떠오른 내용을 수정하거나 메모해 보세요.";
 "category_checklist_checklistNameLabel" = "%@";
 "category_checklist_itemCountLabel" = "%d / ";
 "category_checklist_totalCountLabel" = "%d";
@@ -71,7 +77,7 @@
 
 // AddChecklistView
 "add_checklist_mainLabel" = "어떤 체크리스트에 추가하실 건가요?";
-"add_checklist_subLabel" = "추가하고 싶은 체크리스트를 1개 선택해 주세요.";
+"add_checklist_subLabel" = "체크리스트는 1개만 선택할 수 있어요.\n체크리스트를 선택한 후, 추가 버튼을 눌러주세요!";
 "add_checklist_addToNewListButton_text" = "새로운 리스트에 추가하기";
 "add_checklist_cancelButton_text" = "취소";
 "add_checklist_addButton_text" = "추가";
