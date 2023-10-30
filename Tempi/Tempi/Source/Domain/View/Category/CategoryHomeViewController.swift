@@ -80,7 +80,7 @@ class CategoryHomeViewController: BaseViewController {
     // MARK: - 체크리스트 삭제시 알럿 (노티)
     @objc func deleteChecklistAlertNotificationObserver(notification: NSNotification) {
         print(#function)
-        showToast(message: "showToast_delete".localized)
+        showMessage(title: "showMessage_delete_title".localized, body: "showMessage_delete_body".localized)
     }
     
     // MARK: - CollectionView DataSource

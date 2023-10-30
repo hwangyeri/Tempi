@@ -21,7 +21,7 @@ class MyListViewController: BaseViewController {
     
     var storeDic: [Int: Int] = [:] // [indexPathSection: headerSection]
     
-    let mainView = MyListView()
+    private let mainView = MyListView()
     
     private var myListDataSource: UICollectionViewDiffableDataSource<Int, ChecklistTable>!
     
@@ -83,7 +83,7 @@ class MyListViewController: BaseViewController {
     // MARK: - 체크리스트 삭제시 알럿 (노티)
     @objc func deleteChecklistAlertNotificationObserver(notification: NSNotification) {
         print(#function)
-        showToast(message: "showToast_delete".localized)
+        showMessage(title: "showMessage_delete_title".localized, body: "showMessage_delete_body".localized)
     }
     
     // MARK: - CollectionView Section Filtering Date
@@ -189,7 +189,7 @@ class MyListViewController: BaseViewController {
         
         var snapshot = NSDiffableDataSourceSnapshot<Int, ChecklistTable>()
         var section = 0
-        print("--- allSections ---", allSections)
+        //print("--- allSections ---", allSections)
         
 //        for i in 0..<sections.count {
 //            print(i, sections[i].count)
