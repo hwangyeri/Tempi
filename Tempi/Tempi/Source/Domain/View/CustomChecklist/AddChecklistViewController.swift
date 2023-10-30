@@ -26,7 +26,7 @@ class AddChecklistViewController: BaseViewController {
         }
     }
     
-    let mainView = AddChecklistView()
+    private let mainView = AddChecklistView()
     
     private var addChecklistDataSource: UICollectionViewDiffableDataSource<Int, ChecklistTable>!
     
@@ -37,6 +37,8 @@ class AddChecklistViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setRightBarButton()
+        hideBackButtonTitle()
         configureAddChecklistDataSource()
     }
     
@@ -46,14 +48,19 @@ class AddChecklistViewController: BaseViewController {
         mainView.addButton.addTarget(self, action: #selector(addButtonTapped), for: .touchUpInside)
     }
     
+    // MARK: - isAnyButtonSelected 기준으로 버튼 상태 및 UI 업데이트
     private func updateAddButtonState() {
         print(#function)
         if isAnyButtonSelected {
             mainView.addButton.isEnabled = true
-            mainView.addButton.backgroundColor = UIColor.label
+            DispatchQueue.main.async {
+                self.mainView.addButton.backgroundColor = UIColor.label
+            }
         } else {
             mainView.addButton.isEnabled = false
-            mainView.addButton.backgroundColor = UIColor.tGray500
+            DispatchQueue.main.async {
+                self.mainView.addButton.backgroundColor = UIColor.tertiaryLabel
+            }
         }
     }
     
@@ -63,13 +70,17 @@ class AddChecklistViewController: BaseViewController {
         
         mainView.addToNewListButton.isSelected = true
         isAnyButtonSelected = true
-        mainView.addToNewListButton.layer.borderColor = UIColor.label.cgColor
-        mainView.addToNewListButton.layer.borderWidth = Constant.TChecklist.selectedBorderWidth
+        DispatchQueue.main.async {
+            self.mainView.addToNewListButton.layer.borderColor = UIColor.label.cgColor
+            self.mainView.addToNewListButton.layer.borderWidth = Constant.TChecklist.selectedBorderWidth
+        }
         
         if let selectedIndex = selectedIndex,
            let selectedCell = mainView.addChecklistCollectionView.cellForItem(at: selectedIndex) as? AddChecklistCollectionViewCell {
-            selectedCell.checklistButton.layer.borderColor = UIColor.tGray500.cgColor
-            selectedCell.checklistButton.layer.borderWidth = Constant.TChecklist.borderWidth
+            DispatchQueue.main.async {
+                selectedCell.checklistButton.layer.borderColor = UIColor.tertiaryLabel.cgColor
+                selectedCell.checklistButton.layer.borderWidth = Constant.TChecklist.borderWidth
+            }
         }
         
         selectedIndex = nil
@@ -170,13 +181,13 @@ extension AddChecklistViewController: UICollectionViewDelegate {
         
         mainView.addToNewListButton.isSelected = false
         isAnyButtonSelected = false
-        mainView.addToNewListButton.layer.borderColor = UIColor.tGray500.cgColor
+        mainView.addToNewListButton.layer.borderColor = UIColor.tertiaryLabel.cgColor
         mainView.addToNewListButton.layer.borderWidth = Constant.TChecklist.borderWidth
         
         // 이전에 선택된 셀이 있는 경우, 선택 해제 및 UI 업데이트
         if let selectedIndex = selectedIndex,
            let selectedCell = collectionView.cellForItem(at: selectedIndex) as? AddChecklistCollectionViewCell {
-            selectedCell.checklistButton.layer.borderColor = UIColor.tGray500.cgColor
+            selectedCell.checklistButton.layer.borderColor = UIColor.tertiaryLabel.cgColor
             selectedCell.checklistButton.layer.borderWidth = Constant.TChecklist.borderWidth
         }
         
