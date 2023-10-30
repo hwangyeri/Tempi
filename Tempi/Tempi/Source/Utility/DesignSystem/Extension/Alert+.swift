@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftMessages
 
 extension UIViewController {
     
@@ -26,6 +27,24 @@ extension UIViewController {
         }, completion: {(isCompleted) in
             toastLabel.removeFromSuperview()
         })
+    }
+    
+    func showMessage(title: String, body: String) {
+        let view = MessageView.viewFromNib(layout: .cardView)
+        view.configureTheme(.info)
+        view.configureDropShadow()
+        view.configureContent(title: title, body: body, iconText: "🎉")
+        view.layoutMarginAdditions = UIEdgeInsets(top: 0, left: 50, bottom: 0, right: 50)
+        (view.backgroundView as? CornerRoundingView)?.cornerRadius = 50
+        
+        view.button?.isHidden = true
+        if let iconLabel = view.iconLabel, let titleLabel = view.titleLabel, let bodyLabel = view.bodyLabel {
+            iconLabel.font = UIFont.systemFont(ofSize: 25)
+            titleLabel.font = UIFont.customFont(.pretendardSemiBoldM)
+            bodyLabel.font = UIFont.customFont(.pretendardRegularXS)
+        }
+        
+        SwiftMessages.show(view: view)
     }
     
 }
