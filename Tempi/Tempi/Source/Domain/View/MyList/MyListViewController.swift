@@ -52,6 +52,7 @@ class MyListViewController: BaseViewController {
     // MARK: - NotificationCenter 설정
     private func setNotificationCenter() {
         NotificationCenter.default.addObserver(self, selector: #selector(createChecklistNameFromMyNotificationObserver(notification:)), name: .createChecklistFromMy, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(deleteChecklistAlertNotificationObserver(notification:)), name: .deleteChecklistAlert, object: nil)
     }
     
     // MARK: - 플러스 버튼
@@ -77,6 +78,12 @@ class MyListViewController: BaseViewController {
         } else {
             print(#function, "newChecklistID error")
         }
+    }
+    
+    // MARK: - 체크리스트 삭제시 알럿 (노티)
+    @objc func deleteChecklistAlertNotificationObserver(notification: NSNotification) {
+        print(#function)
+        showToast(message: "showToast_delete".localized)
     }
     
     // MARK: - CollectionView Section Filtering Date
@@ -129,7 +136,6 @@ class MyListViewController: BaseViewController {
     }
     
     // MARK: - CollectionView DataSource
-    
     private func configureMyListDataSource(with allSections: [[ChecklistTable]]) {
         // 헤더 설정
         let headerRegistration = UICollectionView.SupplementaryRegistration<MyListHeaderView>(elementKind: UICollectionView.elementKindSectionHeader) { [weak self] headerView, elementKind, indexPath in
