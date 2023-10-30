@@ -251,6 +251,7 @@ extension EditModalViewController: UITextFieldDelegate {
     }
     
     private func updateButtonState() {
+        print(#function)
         guard let text = mainView.textField.text, !text.isEmpty else {
             print("TextField text Error")
             DispatchQueue.main.async {
