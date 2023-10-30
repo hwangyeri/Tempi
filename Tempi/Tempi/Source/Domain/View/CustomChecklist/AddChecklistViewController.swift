@@ -118,6 +118,8 @@ class AddChecklistViewController: BaseViewController {
                 checkItemRepository.createItem(checkItemTask)
             }
             
+            NotificationCenter.default.post(name: .createChecklistAlert, object: nil)
+            
         } else {
             // 컬렉션 셀이 선택된 경우
             guard let selectedIndexPath = selectedIndex,

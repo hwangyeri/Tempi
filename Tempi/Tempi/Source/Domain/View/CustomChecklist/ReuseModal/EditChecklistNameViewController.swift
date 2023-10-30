@@ -140,6 +140,7 @@ class EditChecklistNameViewController: BaseViewController {
         if let name = notificationName {
             dismiss(animated: true) {
                 NotificationCenter.default.post(name: name, object: nil, userInfo: ["newChecklistID": newChecklistID])
+                NotificationCenter.default.post(name: .createChecklistAlert, object: nil)
             }
         }
     }

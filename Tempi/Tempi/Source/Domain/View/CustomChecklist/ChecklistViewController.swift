@@ -91,6 +91,7 @@ class ChecklistViewController: BaseViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(updateCheckItemContentNotificationObserver(notification:)), name: .updateCheckItemContent, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(updateCheckItemMemoNotificationObserver(notification:)), name: .updateCheckItemMemo, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(createCheckItemNotificationObserver(notification:)), name: .createCheckItem, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(createChecklistNotificationObserver(notification:)), name: .createChecklistAlert, object: nil)
     }
     
     // MARK: - 체크리스트 이름 수정 버튼
@@ -246,6 +247,12 @@ class ChecklistViewController: BaseViewController {
         }
     }
     
+    // MARK: - 체크아이템 생성 시 Alert (노티)
+    @objc func createChecklistNotificationObserver(notification: NSNotification) {
+        print(#function)
+        showMessage(title: "showMessage_create_title".localized, body: "showMessage_create_body".localized)
+    }
+    
     // MARK: - CollectionView DataSource
     private func configureChecklistDataSource() {
         print(#function)
@@ -331,6 +338,7 @@ class ChecklistViewController: BaseViewController {
         NotificationCenter.default.removeObserver(self, name: .updateCheckItemContent, object: nil)
         NotificationCenter.default.removeObserver(self, name: .updateCheckItemMemo, object: nil)
         NotificationCenter.default.removeObserver(self, name: .createCheckItem, object: nil)
+        NotificationCenter.default.removeObserver(self, name: .createChecklistAlert, object: nil)
     }
     
 }
