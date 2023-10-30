@@ -8,6 +8,8 @@
 import UIKit
 
 extension UILabel {
+    
+    // MARK: - 텍스트 행간 설정
     func setAttributedTextWithLineSpacing(_ text: String, lineSpacing: CGFloat) {
         let attrString = NSMutableAttributedString(string: text.localized)
         let paragraphStyle = NSMutableParagraphStyle()
