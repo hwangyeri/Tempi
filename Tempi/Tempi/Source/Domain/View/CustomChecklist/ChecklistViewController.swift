@@ -30,11 +30,12 @@ class ChecklistViewController: BaseViewController {
         
         configureChecklistDataSource()
         setChecklistData()
-        setNavigationBarButton()
+        setRightBarButton()
         setNotificationCenter()
     }
     
     override func configureLayout() {
+        self.navigationItem.hidesBackButton = true
         mainView.checklistCollectionView.delegate = self
         mainView.checklistNameEditButton.addTarget(self, action: #selector(checklistNameEditButtonTapped), for: .touchUpInside)
         mainView.bookmarkListButton.addTarget(self, action: #selector(bookmarkListButtonTapped), for: .touchUpInside)
@@ -82,15 +83,6 @@ class ChecklistViewController: BaseViewController {
         }
     }
     
-    // MARK: - Navi BarButton 설정
-    private func setNavigationBarButton() {
-        let barButtonIcon = UIImage(systemName: Constant.SFSymbol.xmarkIcon)
-        let rightBarButton = UIBarButtonItem(image: barButtonIcon, style: .plain, target: self, action: #selector(rightBarButtonTapped))
-        rightBarButton.tintColor = .label
-        self.navigationItem.rightBarButtonItem = rightBarButton
-        self.navigationItem.hidesBackButton = true
-    }
-    
     // MARK: - NotificationCenter 설정
     private func setNotificationCenter() {
         NotificationCenter.default.addObserver(self, selector: #selector(deleteChecklistNotificationObserver(notification:)), name: .deleteChecklist, object: nil)
@@ -99,12 +91,6 @@ class ChecklistViewController: BaseViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(updateCheckItemContentNotificationObserver(notification:)), name: .updateCheckItemContent, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(updateCheckItemMemoNotificationObserver(notification:)), name: .updateCheckItemMemo, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(createCheckItemNotificationObserver(notification:)), name: .createCheckItem, object: nil)
-    }
-    
-    // MARK: - 나가기 버튼 (Navi BarButton)
-    @objc private func rightBarButtonTapped() {
-        print(#function)
-        navigationController?.popToRootViewController(animated: true)
     }
     
     // MARK: - 체크리스트 이름 수정 버튼
@@ -197,19 +183,23 @@ class ChecklistViewController: BaseViewController {
     @objc func deleteChecklistNotificationObserver(notification: NSNotification) {
         print(#function)
         navigationController?.popToRootViewController(animated: true)
+        NotificationCenter.default.post(name: .deleteChecklistAlert, object: nil)
     }
     
     // MARK: - 이름 수정 (노티)
     @objc func updateChecklistNameNotificationObserver(notification: NSNotification) {
         print(#function)
         
-        DispatchQueue.main.async {
-            if let newName = notification.userInfo?["checklistName"] as? String {
-                self.mainView.checklistNameLabel.text = newName
-            } else {
-                print(#function, "newName error")
-            }
+        guard let newName = notification.userInfo?["checklistName"] as? String else {
+            print(#function, "newName error")
+            return
         }
+        
+        DispatchQueue.main.async {
+            self.mainView.checklistNameLabel.text = newName
+        }
+        
+        showToast(message: "showToast_update".localized)
     }
     
     // MARK: - 체크아이템 삭제 apply (노티)
