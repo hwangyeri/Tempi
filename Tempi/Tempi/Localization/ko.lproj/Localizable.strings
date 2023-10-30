@@ -19,7 +19,11 @@
 // showToast
 "showToast_delete" = "성공적으로 삭제되었습니다!";
 "showToast_update" = "성공적으로 수정되었습니다!";
-"showToast_create" = "성공적으로 셍성되었습니다!";
+"showToast_create" = "성공적으로 생성되었습니다!";
+
+// SceneDelegate
+"firstVC_tabBarTitle" = "탐색";
+"secondVC_tabBarTitle" = "홈";
 
 // CategoryHomeView
 "search_main_label" = "어떤 체크리스트가 궁금하신가요?\n다양한 템플릿을 검색해 보세요.";
@@ -63,6 +67,7 @@
 "search_searchBar" = " 다양한 템플릿을 검색해 보세요.";
 "search_recommendSearchWords_header" = "추천 검색어";
 "search_searchResults_header" = "검색 결과";
+"searchResult_categoryNameLabel" = "카테고리 • %@";
 
 // AddChecklistView
 "add_checklist_mainLabel" = "어떤 체크리스트에 추가하실 건가요?";

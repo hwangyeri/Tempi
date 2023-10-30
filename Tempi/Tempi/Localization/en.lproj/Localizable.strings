@@ -21,6 +21,10 @@
 "showToast_update" = "Corrected successfully!";
 "showToast_create" = "Created successfully!";
 
+// SceneDelegate
+"firstVC_tabBarTitle" = "Explore";
+"secondVC_tabBarTitle" = "Home";
+
 // CategoryHomeView
 "search_main_label" = "What kind of Checklist\nare you looking for?\nSearch for various templates.";
 "searchBar_placeholder" = " Search for various templates.";
@@ -63,6 +67,7 @@
 "search_searchBar" = " Search for various templates.";
 "search_recommendSearchWords_header" = "Recommended search keyword";
 "search_searchResults_header" = "Search Results";
+"searchResult_categoryNameLabel" = "Category • %@";
 
 // AddChecklistView
 "add_checklist_mainLabel" = "Which checklist do you want to add to?";
