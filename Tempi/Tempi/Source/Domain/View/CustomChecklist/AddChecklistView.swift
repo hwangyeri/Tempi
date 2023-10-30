@@ -14,7 +14,8 @@ class AddChecklistView: BaseView {
        let view = TLabel(
         text: "add_checklist_mainLabel".localized,
         custFont: .pretendardSemiBoldXXL,
-        textColor: .label)
+        textColor: .label
+       )
         return view
     }()
     
@@ -22,7 +23,9 @@ class AddChecklistView: BaseView {
         let view = TLabel(
          text: "add_checklist_subLabel".localized,
          custFont: .pretendardRegularS,
-         textColor: .secondaryLabel)
+         textColor: .secondaryLabel
+        )
+        view.setAttributedTextWithLineSpacing("add_checklist_subLabel".localized, lineSpacing: 3)
          return view
     }()
     
