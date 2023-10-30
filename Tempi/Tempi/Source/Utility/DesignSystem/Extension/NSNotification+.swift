@@ -40,5 +40,8 @@ extension NSNotification.Name {
     
     /// 체크리스트 삭제 시 알럿
     static let deleteChecklistAlert = NSNotification.Name("DeleteChecklistAlert")
+    
+    /// 체크리스트 생성 시 알럿
+    static let createChecklistAlert = NSNotification.Name("CreateChecklistAlert")
 }
 
