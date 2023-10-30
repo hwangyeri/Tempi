@@ -13,9 +13,8 @@ class AddChecklistView: BaseView {
     let mainLabel = {
        let view = TLabel(
         text: "add_checklist_mainLabel".localized,
-        custFont: .pretendardSemiBoldL,
+        custFont: .pretendardSemiBoldXXL,
         textColor: .label)
-        view.textAlignment = .center
         return view
     }()
     
@@ -23,8 +22,7 @@ class AddChecklistView: BaseView {
         let view = TLabel(
          text: "add_checklist_subLabel".localized,
          custFont: .pretendardRegularS,
-         textColor: .tGray800)
-         view.textAlignment = .center
+         textColor: .secondaryLabel)
          return view
     }()
     
@@ -34,7 +32,7 @@ class AddChecklistView: BaseView {
         let view = UIButton()
         view.layer.cornerRadius = Constant.TChecklist.cornerRadius
         view.layer.borderWidth = Constant.TChecklist.borderWidth
-        view.layer.borderColor = UIColor.tGray500.cgColor
+        view.layer.borderColor = UIColor.tertiaryLabel.cgColor
         view.clipsToBounds = true
         view.setTitleColor(.label, for: .normal)
         view.tintColor = UIColor.label
@@ -67,20 +65,19 @@ class AddChecklistView: BaseView {
     
     override func configureLayout() {
         mainLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.safeAreaLayoutGuide).inset(10)
-            make.leading.equalTo(self.safeAreaLayoutGuide).inset(30)
+            make.top.horizontalEdges.equalTo(self.safeAreaLayoutGuide).inset(20)
         }
         
         subLabel.snp.makeConstraints { make in
-            make.top.equalTo(mainLabel.snp.bottom).offset(5)
-            make.leading.equalTo(mainLabel)
+            make.top.equalTo(mainLabel.snp.bottom).offset(10)
+            make.horizontalEdges.equalTo(mainLabel)
         }
         
         addChecklistCollectionView.snp.makeConstraints { make in
-            make.top.equalTo(subLabel.snp.bottom).offset(20)
+            make.top.equalTo(subLabel.snp.bottom).offset(30)
             make.horizontalEdges.equalTo(self.safeAreaLayoutGuide)
         }
-        addChecklistCollectionView.backgroundColor = .tGray200
+        addChecklistCollectionView.backgroundColor = .listBackground
         
         addToNewListButton.snp.makeConstraints { make in
             make.top.equalTo(addChecklistCollectionView.snp.bottom).offset(20)
