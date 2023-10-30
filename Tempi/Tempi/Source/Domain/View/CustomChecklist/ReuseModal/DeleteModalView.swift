@@ -66,7 +66,7 @@ class DeleteModalView: BaseView {
         }
         
         mainLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(20)
+            make.top.equalToSuperview().inset(25)
             make.horizontalEdges.equalToSuperview().inset(10)
         }
         
