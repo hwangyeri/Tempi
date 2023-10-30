@@ -25,17 +25,24 @@ class CategoryHomeViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 //        print(realm.configuration.fileURL)
         
+        hideBackButtonTitle()
         configureCategoryDataSource()
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(createChecklistNameFromHomeNotificationObserver(notification:)), name: .createChecklistFromHome, object: nil)
+        setNotificationCenter()
     }
     
     override func configureLayout() {
         mainView.categoryCollectionView.delegate = self
         mainView.searchBackgroundButton.addTarget(self, action: #selector(searchBackgroundButtonTapped), for: .touchUpInside)
         mainView.plusButton.addTarget(self, action: #selector(plusButtonTapped), for: .touchUpInside)
+    }
+    
+    // MARK: - 노티 설정
+    private func setNotificationCenter() {
+        NotificationCenter.default.addObserver(self, selector: #selector(createChecklistNameFromHomeNotificationObserver(notification:)), name: .createChecklistFromHome, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(deleteChecklistAlertNotificationObserver(notification:)), name: .deleteChecklistAlert, object: nil)
     }
     
     // MARK: - 서치 버튼
@@ -70,6 +77,13 @@ class CategoryHomeViewController: BaseViewController {
         }
     }
     
+    // MARK: - 체크리스트 삭제시 알럿 (노티)
+    @objc func deleteChecklistAlertNotificationObserver(notification: NSNotification) {
+        print(#function)
+        showToast(message: "showToast_delete".localized)
+    }
+    
+    // MARK: - CollectionView DataSource
     private func configureCategoryDataSource() {
         let cellRegistration = UICollectionView.CellRegistration<CategoryCollectionViewCell, CategoryDisplayModel> { cell, indexPath, itemIdentifier in
             cell.imageView.image = itemIdentifier.image
@@ -86,6 +100,10 @@ class CategoryHomeViewController: BaseViewController {
         snapshot.appendSections([0])
         snapshot.appendItems(categories)
         categoryDataSource.apply(snapshot)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
 }
