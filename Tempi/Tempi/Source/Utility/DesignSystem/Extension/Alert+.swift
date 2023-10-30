@@ -34,10 +34,10 @@ extension UIViewController {
         view.configureTheme(.info)
         view.configureDropShadow()
         view.configureContent(title: title, body: body, iconText: "🎉")
-        view.layoutMarginAdditions = UIEdgeInsets(top: 0, left: 50, bottom: 0, right: 50)
+        view.layoutMarginAdditions = UIEdgeInsets(top: 0, left: 40, bottom: 0, right: 40)
         (view.backgroundView as? CornerRoundingView)?.cornerRadius = 50
-        
         view.button?.isHidden = true
+        
         if let iconLabel = view.iconLabel, let titleLabel = view.titleLabel, let bodyLabel = view.bodyLabel {
             iconLabel.font = UIFont.systemFont(ofSize: 25)
             titleLabel.font = UIFont.customFont(.pretendardSemiBoldM)
