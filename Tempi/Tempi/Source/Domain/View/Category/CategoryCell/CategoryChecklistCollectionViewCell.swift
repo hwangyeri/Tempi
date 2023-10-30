@@ -38,6 +38,7 @@ class CategoryChecklistCollectionViewCell: BaseCollectionViewCell {
         checkBoxLabel.snp.makeConstraints { make in
             make.centerY.equalTo(checkBoxButton)
             make.leading.equalTo(checkBoxButton.snp.trailing).offset(12)
+            make.trailing.equalTo(self.safeAreaLayoutGuide)
         }
     }
     
