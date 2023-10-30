@@ -12,7 +12,7 @@ class CategoryHomeView: BaseView {
     
     let backView = {
         let view = UIView()
-        view.backgroundColor = UIColor.mainBack
+        view.backgroundColor = UIColor.homeBackground
         return view
     }()
     
@@ -27,10 +27,10 @@ class CategoryHomeView: BaseView {
     
     let searchBackgroundButton = {
         let view = UIButton()
-        view.backgroundColor = UIColor.tGray900
+        view.backgroundColor = UIColor.searchBackground
         view.layer.cornerRadius = 20
         view.layer.borderWidth = 1
-        view.layer.borderColor = UIColor.tGray800.cgColor
+        view.layer.borderColor = UIColor.searchBorder.cgColor
         return view
     }()
     
@@ -38,7 +38,7 @@ class CategoryHomeView: BaseView {
         let view = TLabel(
             text: "searchBar_placeholder".localized,
             custFont: .pretendardRegularS,
-            textColor: .tGray700
+            textColor: .searchPlaceholder
         )
         return view
     }()
@@ -77,7 +77,7 @@ class CategoryHomeView: BaseView {
         let view = TLabel(
             text: "category_sub_label".localized,
             custFont: .pretendardRegularXS,
-            textColor: .tGray800)
+            textColor: .secondaryLabel)
         view.setAttributedTextWithLineSpacing("category_sub_label".localized, lineSpacing: 3)
         view.textAlignment = .center
         return view

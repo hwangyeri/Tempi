@@ -13,7 +13,7 @@ class ReuseSearchWordsCollectionViewCell: BaseCollectionViewCell {
     let borderView = {
         let view = UIView()
         view.layer.borderWidth = Constant.TKeywordBorder.borderWidth
-        view.layer.borderColor = UIColor.tGray400.cgColor
+        view.layer.borderColor = UIColor.systemGray4.cgColor
         view.layer.cornerRadius = Constant.TKeywordBorder.cornerRadius
         view.backgroundColor = UIColor.systemBackground
         return view

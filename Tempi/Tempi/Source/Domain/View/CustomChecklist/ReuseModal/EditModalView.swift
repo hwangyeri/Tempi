@@ -37,7 +37,7 @@ class EditModalView: BaseView {
     
     let textFieldBackView = {
         let view = UIView()
-        view.backgroundColor = UIColor.tGray200
+        view.backgroundColor = UIColor.textFieldBackground
         view.layer.cornerRadius = 15
         return view
     }()

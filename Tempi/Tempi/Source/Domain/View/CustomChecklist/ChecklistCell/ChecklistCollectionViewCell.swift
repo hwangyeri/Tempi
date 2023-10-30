@@ -28,7 +28,7 @@ class ChecklistCollectionViewCell: BaseCollectionViewCell {
         let view = TLabel(
             text: "test",
             custFont: .pretendardRegularS,
-            textColor: .tGray700)
+            textColor: .secondaryLabel)
         view.numberOfLines = 1
         return view
     }()

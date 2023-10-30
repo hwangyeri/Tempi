@@ -39,7 +39,7 @@ class DeleteModalView: BaseView {
         let view = TPopUpButton(
             text: "deleteModal_cancelButton".localized
         )
-        view.backgroundColor = UIColor.tGray700
+        view.backgroundColor = UIColor.deleteCancel
         return view
     }()
     

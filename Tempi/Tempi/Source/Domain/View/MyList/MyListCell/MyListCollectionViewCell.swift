@@ -14,7 +14,7 @@ class MyListCollectionViewCell: BaseCollectionViewCell {
         let view = UIButton()
         view.layer.cornerRadius = Constant.TMyList.cornerRadius
         view.layer.borderWidth = Constant.TMyList.borderWidth
-        view.layer.borderColor = UIColor.tGray400.cgColor
+        view.layer.borderColor = UIColor.tertiaryLabel.cgColor
         view.backgroundColor = UIColor.systemBackground
         view.isUserInteractionEnabled = false
         return view
@@ -33,7 +33,7 @@ class MyListCollectionViewCell: BaseCollectionViewCell {
        let view = TLabel(
         text: "test",
         custFont: .pretendardRegularXS,
-        textColor: .tGray800
+        textColor: .secondaryLabel
        )
         return view
     }()
@@ -55,7 +55,7 @@ class MyListCollectionViewCell: BaseCollectionViewCell {
     }
     
     override func configureLayout() {
-        contentView.backgroundColor = .tGray200
+        contentView.backgroundColor = .listBackground
         
         checklistBackgroundButton.snp.makeConstraints { make in
             make.edges.equalToSuperview()

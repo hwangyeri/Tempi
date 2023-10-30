@@ -12,7 +12,7 @@ final class TDivider: UIView {
     init() {
         super.init(frame: .zero)
        
-        self.backgroundColor = UIColor.tGray200
+        self.backgroundColor = .divider
     }
     
     required init?(coder aDecoder: NSCoder) {

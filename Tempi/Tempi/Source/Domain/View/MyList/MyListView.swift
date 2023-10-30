@@ -35,7 +35,7 @@ class MyListView: BaseView {
     let emptySubLabel = {
         let view = UILabel()
         view.setAttributedTextWithLineSpacing("myList_emptySubLabel".localized, lineSpacing: 5)
-        view.font = .customFont(.pretendardRegularS)
+        view.font = .customFont(.pretendardRegularXS)
         view.textColor = .label
         view.numberOfLines = 0
         view.textAlignment = .center
@@ -87,7 +87,7 @@ class MyListView: BaseView {
             make.horizontalEdges.equalTo(self.safeAreaLayoutGuide)
             make.bottom.equalTo(self.safeAreaLayoutGuide).inset(20)
         }
-        myListCollectionView.backgroundColor = .tGray200
+        myListCollectionView.backgroundColor = .listBackground
         
         emptyView.snp.makeConstraints { make in
             make.edges.equalTo(myListCollectionView)

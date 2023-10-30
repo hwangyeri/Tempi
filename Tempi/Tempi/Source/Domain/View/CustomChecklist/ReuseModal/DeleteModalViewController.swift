@@ -31,7 +31,8 @@ class DeleteModalViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        mainView.backgroundColor = .tGray400.withAlphaComponent(0.7)
+        
+        mainView.backgroundColor = .lightGray.withAlphaComponent(0.5)
     }
     
     override func configureLayout() {

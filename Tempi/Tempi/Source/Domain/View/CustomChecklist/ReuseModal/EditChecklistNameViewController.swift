@@ -176,13 +176,13 @@ extension EditChecklistNameViewController: UITextFieldDelegate {
             DispatchQueue.main.async {
                 self.mainView.currentNumberOfCharactersLabel.text = "0"
                 self.mainView.editButton.isEnabled = false
-                self.mainView.editButton.backgroundColor = .tGray500
+                self.mainView.editButton.backgroundColor = .tButtonDisable
             }
             return
         }
         
         let currentCount = text.count
-        print(currentCount, "--- currentCount ---")
+        //print(currentCount, "--- currentCount ---")
         
         DispatchQueue.main.async {
             if currentCount < 61 {
@@ -192,7 +192,7 @@ extension EditChecklistNameViewController: UITextFieldDelegate {
             } else {
                 self.mainView.currentNumberOfCharactersLabel.text = String(currentCount)
                 self.mainView.editButton.isEnabled = false
-                self.mainView.editButton.backgroundColor = .tGray500
+                self.mainView.editButton.backgroundColor = .tButtonDisable
             }
         }
     }

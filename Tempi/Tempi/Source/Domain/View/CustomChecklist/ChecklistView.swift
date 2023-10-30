@@ -23,7 +23,7 @@ class ChecklistView: BaseView {
        let view = TLabel(
         text: "checklist_checklistDateLabel".localized,
         custFont: .pretendardMediumS,
-        textColor: .tGray800
+        textColor: .secondaryLabel
        )
         return view
     }()

@@ -38,7 +38,7 @@ class EditModalViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mainView.backgroundColor = .tGray400.withAlphaComponent(0.7)
+        mainView.backgroundColor = .lightGray.withAlphaComponent(0.5)
         
         setLocalized()
         setNotificationCenter()
@@ -255,7 +255,7 @@ extension EditModalViewController: UITextFieldDelegate {
             print("TextField text Error")
             DispatchQueue.main.async {
                 self.mainView.saveButton.isEnabled = false
-                self.mainView.saveButton.backgroundColor = .tGray500
+                self.mainView.saveButton.backgroundColor = .tButtonDisable
                 self.mainView.currentNumberOfCharactersLabel.text = "0"
             }
             return
@@ -274,7 +274,7 @@ extension EditModalViewController: UITextFieldDelegate {
         DispatchQueue.main.async {
             if currentCount > self.maximumCount {
                 self.mainView.saveButton.isEnabled = false
-                self.mainView.saveButton.backgroundColor = .tGray500
+                self.mainView.saveButton.backgroundColor = .tButtonDisable
             } else {
                 self.mainView.saveButton.isEnabled = true
                 self.mainView.saveButton.backgroundColor = .label

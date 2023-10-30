@@ -14,7 +14,7 @@ class SearchResultCollectionViewCell: BaseCollectionViewCell {
         let view = UIButton()
         view.layer.cornerRadius = 35
         view.layer.borderWidth = 0.5
-        view.layer.borderColor = UIColor.tGray400.cgColor
+        view.layer.borderColor = UIColor.systemGray4.cgColor
         view.backgroundColor = UIColor.systemBackground
         view.isUserInteractionEnabled = false
         return view
@@ -24,7 +24,7 @@ class SearchResultCollectionViewCell: BaseCollectionViewCell {
        let view = TLabel(
         text: "searchResult_categoryNameLabel".localized,
         custFont: .pretendardMediumXS,
-        textColor: .tGray700
+        textColor: .secondaryLabel
        )
         view.numberOfLines = 1
         return view

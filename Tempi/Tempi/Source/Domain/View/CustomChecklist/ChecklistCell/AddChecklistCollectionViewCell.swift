@@ -14,7 +14,7 @@ class AddChecklistCollectionViewCell: BaseCollectionViewCell {
         let view = UIButton()
         view.layer.cornerRadius = Constant.TChecklist.cornerRadius
         view.layer.borderWidth = Constant.TChecklist.borderWidth
-        view.layer.borderColor = UIColor.tGray400.cgColor
+        view.layer.borderColor = UIColor.tertiaryLabel.cgColor
         view.setTitleColor(.label, for: .normal)
                 view.setTitle("test", for: .normal)
         view.titleLabel?.font = .customFont(.pretendardSemiBoldM)
@@ -33,7 +33,7 @@ class AddChecklistCollectionViewCell: BaseCollectionViewCell {
             make.horizontalEdges.equalTo(contentView).inset(10)
         }
         
-        contentView.backgroundColor = .tGray200
+        contentView.backgroundColor = .listBackground
     }
     
 }

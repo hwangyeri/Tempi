@@ -64,7 +64,7 @@ class BookmarkListView: BaseView {
         let view = TLabel(
          text: "bookmarkList_subLabel".localized,
          custFont: .pretendardMediumS,
-         textColor: .tGray900)
+         textColor: .red)
         view.setAttributedTextWithLineSpacing("bookmarkList_subLabel".localized, lineSpacing: 3)
          return view
     }()
@@ -100,7 +100,7 @@ class BookmarkListView: BaseView {
         let view = UIButton()
         view.layer.cornerRadius = 22
         view.layer.borderWidth = 1
-        view.layer.borderColor = UIColor.tGray400.cgColor
+        view.layer.borderColor = UIColor.red.cgColor
         return view
     }()
     

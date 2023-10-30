@@ -12,7 +12,7 @@ class CategoryCollectionViewCell: BaseCollectionViewCell {
     
     let imageView = {
         let view = UIImageView()
-        view.tintColor = UIColor.tGray900
+        view.tintColor = .tColor(.homeImage)
         view.contentMode = .scaleAspectFit
         return view
     }()
@@ -21,7 +21,8 @@ class CategoryCollectionViewCell: BaseCollectionViewCell {
         let view = TLabel(
             text: "test",
             custFont: .pretendardSemiBoldS,
-            textColor: .tGray900)
+            textColor: .home
+        )
         view.textAlignment = .center
         return view
     }()
