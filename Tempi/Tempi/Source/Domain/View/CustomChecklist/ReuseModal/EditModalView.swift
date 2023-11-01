@@ -44,7 +44,7 @@ class EditModalView: BaseView {
     
     let textField = {
         let view = UITextField()
-        view.placeholder = "placeholder"
+        view.placeholder = ""
         return view
     }()
     

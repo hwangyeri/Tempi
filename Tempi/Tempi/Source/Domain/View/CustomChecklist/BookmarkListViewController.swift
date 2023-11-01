@@ -82,7 +82,7 @@ class BookmarkListViewController: BaseViewController {
         let editModalVC = EditModalViewController()
         editModalVC.modalTransitionStyle = .crossDissolve
         editModalVC.modalPresentationStyle = .overCurrentContext
-        editModalVC.textFieldPlaceholder = "placeholder"
+        editModalVC.textFieldPlaceholder = ""
         editModalVC.editAction = .createBookmarkItem
         self.present(editModalVC, animated: true)
     }

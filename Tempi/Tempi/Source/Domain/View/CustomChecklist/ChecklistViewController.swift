@@ -175,7 +175,7 @@ class ChecklistViewController: BaseViewController {
         editModalVC.modalTransitionStyle = .crossDissolve
         editModalVC.modalPresentationStyle = .overCurrentContext
         editModalVC.selectedItemID = selectedChecklistID
-        editModalVC.textFieldPlaceholder = "placeholder"
+        editModalVC.textFieldPlaceholder = ""
         editModalVC.editAction = .createCheckItem
         self.present(editModalVC, animated: true)
     }
@@ -298,7 +298,7 @@ class ChecklistViewController: BaseViewController {
                     editModalVC.selectedItemID = checkItemID
                     editModalVC.editAction = .updateCheckItemMemo
                     
-                    let placeholder = self.checkItemRepository.getCheckItemMemo(forId: checkItemID) ?? "placeholder"
+                    let placeholder = self.checkItemRepository.getCheckItemMemo(forId: checkItemID) ?? ""
                     editModalVC.textFieldPlaceholder = placeholder
                     
                     self.present(editModalVC, animated: true)
