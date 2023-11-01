@@ -36,7 +36,7 @@ class SearchView: BaseView {
         
         recommendSearchWordsCollectionView.snp.makeConstraints { make in
             make.top.equalTo(searchBar.snp.bottom).offset(15)
-            make.leading.equalToSuperview().inset(10)
+            make.leading.equalToSuperview().inset(20)
             make.trailing.equalToSuperview()
             make.height.equalTo(65)
         }
@@ -61,7 +61,7 @@ class SearchView: BaseView {
         group.interItemSpacing = .fixed(8)
         
         let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 0, trailing: 10)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 10)
         section.interGroupSpacing = 10
         
         let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(20))
