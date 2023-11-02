@@ -42,4 +42,17 @@ class CategoryChecklistCollectionViewCell: BaseCollectionViewCell {
         }
     }
     
+    var cellIsSelected: Bool = false {
+        didSet {
+            checkBoxButton.isSelected = cellIsSelected
+            checkBoxButton.layer.backgroundColor = cellIsSelected ? UIColor.label.cgColor : UIColor.systemBackground.cgColor
+        }
+    }
+        
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        checkBoxButton.isSelected = false
+    }
+    
 }
