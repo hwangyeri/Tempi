@@ -37,7 +37,7 @@ class CategoryChecklistView: BaseView {
     
     let selectedItemCountLabel = {
        let view = TLabel(
-        text: "category_checklist_itemCountLabel".localized,
+        text: "0",
         custFont: .pretendardSemiBoldS,
         textColor: .secondaryLabel)
         return view
@@ -162,6 +162,19 @@ class CategoryChecklistView: BaseView {
         layout.configuration = configuration
         
         return layout
+    }
+    
+    var selectedAllCheckBoxIsSelected: Bool = false {
+        didSet {
+            selectAllCheckBox.isSelected = selectedAllCheckBoxIsSelected
+            selectAllCheckBox.backgroundColor = selectedAllCheckBoxIsSelected ? UIColor.label : UIColor.systemBackground
+        }
+    }
+    
+    var tButtonIsSelected: Bool = false {
+        didSet {
+            tButton.isEnabled = tButtonIsSelected
+        }
     }
     
 }
