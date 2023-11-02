@@ -76,11 +76,7 @@ class ChecklistViewController: BaseViewController {
             return
         }
         
-        if isFixed {
-            let imageConfig = UIImage.SymbolConfiguration(pointSize: Constant.TImageButton.checklistImageSize, weight: .regular)
-            let image = UIImage(systemName: Constant.SFSymbol.checklistFixedIcon, withConfiguration: imageConfig)
-            self.mainView.checklistFixedButton.setImage(image, for: .normal)
-        }
+        mainView.checklistFixedButton.isSelected = isFixed
     }
     
     // MARK: - NotificationCenter 설정
@@ -119,18 +115,11 @@ class ChecklistViewController: BaseViewController {
             return
         }
         
+        let newIsFixed = !isFixed
+        self.checklistRepository.updateIsFixed(forId: selectedChecklistID, newIsFixed: newIsFixed)
+        
         DispatchQueue.main.async {
-            if isFixed { // True -> False
-                let imageConfig = UIImage.SymbolConfiguration(pointSize: Constant.TImageButton.checklistImageSize, weight: .regular)
-                let image = UIImage(systemName: Constant.SFSymbol.checklistUnFixedIcon, withConfiguration: imageConfig)
-                self.mainView.checklistFixedButton.setImage(image, for: .normal)
-                self.checklistRepository.updateIsFixed(forId: selectedChecklistID, newIsFixed: false)
-            } else { // False -> True
-                let imageConfig = UIImage.SymbolConfiguration(pointSize: Constant.TImageButton.checklistImageSize, weight: .regular)
-                let image = UIImage(systemName: Constant.SFSymbol.checklistFixedIcon, withConfiguration: imageConfig)
-                self.mainView.checklistFixedButton.setImage(image, for: .normal)
-                self.checklistRepository.updateIsFixed(forId: selectedChecklistID, newIsFixed: true)
-            }
+            self.mainView.checklistFixedButton.isSelected.toggle()
         }
     }
     
@@ -268,6 +257,7 @@ class ChecklistViewController: BaseViewController {
             
             cell.checkBoxLabel.text = itemIdentifier.content
             cell.checkBoxMemoLabel.text = itemIdentifier.memo
+            cell.cellIsSelected = itemIdentifier.isChecked
             
             // MARK: - 체크아이템 메뉴 버튼
             cell.checkBoxMenuButton.menu = UIMenu(preferredElementSize: .medium, children: [
@@ -349,36 +339,24 @@ extension ChecklistViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(#function)
         
-        guard let selectedItem = checklistDataSource.itemIdentifier(for: indexPath) else {
+        guard let item = checklistDataSource.itemIdentifier(for: indexPath) else {
+            print("item Error")
             return
         }
         
-        let isCheckedOfSelectedCell = checkItemRepository.getCheckItemIsChecked(forId: selectedItem.id)
-        
-        guard let isChecked = isCheckedOfSelectedCell else {
-            print("isChecked error")
+        guard let cell = collectionView.cellForItem(at: indexPath) as? ChecklistCollectionViewCell else {
+            print("cell Error")
             return
         }
         
-        // FIXME: cellForItem -> UICollectionViewDiffableDataSource 안에서 구현하는 걸로 변경?
-        if let cell = collectionView.cellForItem(at: indexPath) as? ChecklistCollectionViewCell {
-            if !isChecked {
-                // False -> True
-                DispatchQueue.main.async {
-                    cell.checkBoxButton.layer.backgroundColor = UIColor.label.cgColor
-                    cell.checkBoxButton.setImage(UIImage(systemName: Constant.SFSymbol.checkIcon), for: .normal)
-                    cell.tintColor = .systemBackground
-                }
-                checkItemRepository.updateCheckItemIsChecked(forId: selectedItem.id, newIsChecked: true)
-            } else {
-                // True -> False
-                DispatchQueue.main.async {
-                    cell.checkBoxButton.layer.backgroundColor = UIColor.systemBackground.cgColor
-                    cell.checkBoxButton.setImage(nil, for: .normal)
-                }
-                checkItemRepository.updateCheckItemIsChecked(forId: selectedItem.id, newIsChecked: false)
-            }
+        guard let result = self.checkItemRepository.getCheckItemIsChecked(forId: item.id) else {
+            print("result Error")
+            return
         }
+        
+        let newIsChecked = !result
+        self.checkItemRepository.updateCheckItemIsChecked(forId: item.id, newIsChecked: newIsChecked)
+        cell.cellIsSelected = !cell.cellIsSelected
     }
     
 }
