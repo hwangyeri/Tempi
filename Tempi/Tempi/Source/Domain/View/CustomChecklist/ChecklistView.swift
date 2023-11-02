@@ -60,6 +60,11 @@ class ChecklistView: BaseView {
             imageName: Constant.SFSymbol.checklistUnFixedIcon,
             imageColor: .label
         )
+        let imageConfig = UIImage.SymbolConfiguration(pointSize: Constant.TImageButton.checklistImageSize, weight: .regular)
+        let unFixedImage = UIImage(systemName: Constant.SFSymbol.checklistUnFixedIcon, withConfiguration: imageConfig)
+        let fixedImage = UIImage(systemName: Constant.SFSymbol.checklistFixedIcon, withConfiguration: imageConfig)
+        view.setImage(unFixedImage, for: .normal)
+        view.setImage(fixedImage, for: .selected)
         return view
     }()
     
