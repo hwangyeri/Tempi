@@ -56,8 +56,8 @@
 "category_checklist_mainLabel" = "원하는 항목을 선택해 주세요.";
 "category_checklist_subLabel" = "최소한의 가이드를 제공해 드려요!\n가이드를 보면서 떠오른 내용을 수정하거나 메모해 보세요.";
 "category_checklist_checklistNameLabel" = "%@";
-"category_checklist_itemCountLabel" = "%d / ";
-"category_checklist_totalCountLabel" = "%d";
+"category_checklist_itemCountLabel" = "%d";
+"category_checklist_totalCountLabel" = " / %d";
 "category_checklist_selectAllLabel_selectAll" = "전체 선택";
 "category_checklist_selectAllLabel_unSelectAll" = "전체 해제";
 "category_checklist_tButton" = "내 리스트에 추가하기";

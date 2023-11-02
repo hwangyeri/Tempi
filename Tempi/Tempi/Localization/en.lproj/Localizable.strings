@@ -56,8 +56,8 @@
 "category_checklist_mainLabel" = "Please select the item you want.";
 "category_checklist_subLabel" = "We'll give you a minimal guide!\nCorrect or take notes on what comes to mind.";
 "category_checklist_checklistNameLabel" = "%@";
-"category_checklist_itemCountLabel" = "%d / ";
-"category_checklist_totalCountLabel" = "%d";
+"category_checklist_itemCountLabel" = "%d";
+"category_checklist_totalCountLabel" = " / %d";
 "category_checklist_selectAllLabel_selectAll" = "Select All";
 "category_checklist_selectAllLabel_unSelectAll" = "Unselect All";
 "category_checklist_tButton" = "Add to My List";
