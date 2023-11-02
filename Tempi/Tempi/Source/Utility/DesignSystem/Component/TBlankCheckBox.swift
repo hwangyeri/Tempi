@@ -15,7 +15,10 @@ final class TBlankCheckBox: UIButton {
         self.layer.cornerRadius = Constant.TBlankCheckBox.cornerRadius
         self.layer.borderWidth = Constant.TBlankCheckBox.borderWidth
         self.layer.borderColor = UIColor.label.cgColor
-        self.backgroundColor = UIColor.systemBackground
+        self.backgroundColor = self.isSelected ? UIColor.label : UIColor.systemBackground
+        self.setImage(nil, for: .normal)
+        self.setImage(UIImage(systemName: Constant.SFSymbol.checkIcon), for: .selected)
+        self.tintColor = .systemBackground
     }
     
     required init?(coder aDecoder: NSCoder) {
