@@ -31,7 +31,6 @@
 		2B8105522AD02D0600B50223 /* ChecklistTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8105512AD02D0600B50223 /* ChecklistTable.swift */; };
 		2B8105542AD02DA400B50223 /* CheckItemTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8105532AD02DA400B50223 /* CheckItemTable.swift */; };
 		2B8105562AD02F7600B50223 /* BookmarkTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8105552AD02F7600B50223 /* BookmarkTable.swift */; };
-		2B8105582AD0FE4600B50223 /* TempiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8105572AD0FE4600B50223 /* TempiModel.swift */; };
 		2B8105692AD2C66B00B50223 /* CategoryDefaultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8105682AD2C66B00B50223 /* CategoryDefaultModel.swift */; };
 		2B81056D2AD5141700B50223 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81056C2AD5141700B50223 /* DataManager.swift */; };
 		2B91AB652AD6977B0078AB39 /* AddChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B91AB642AD6977B0078AB39 /* AddChecklistViewController.swift */; };
@@ -120,7 +119,6 @@
 		2B8105512AD02D0600B50223 /* ChecklistTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistTable.swift; sourceTree = "<group>"; };
 		2B8105532AD02DA400B50223 /* CheckItemTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckItemTable.swift; sourceTree = "<group>"; };
 		2B8105552AD02F7600B50223 /* BookmarkTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTable.swift; sourceTree = "<group>"; };
-		2B8105572AD0FE4600B50223 /* TempiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempiModel.swift; sourceTree = "<group>"; };
 		2B8105682AD2C66B00B50223 /* CategoryDefaultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDefaultModel.swift; sourceTree = "<group>"; };
 		2B81056C2AD5141700B50223 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		2B91AB642AD6977B0078AB39 /* AddChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChecklistViewController.swift; sourceTree = "<group>"; };
@@ -489,7 +487,6 @@
 			children = (
 				2BDE84D42ACAEBF10018C759 /* CategoryDisplayModel.swift */,
 				2B8105682AD2C66B00B50223 /* CategoryDefaultModel.swift */,
-				2B8105572AD0FE4600B50223 /* TempiModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -733,7 +730,6 @@
 				2B6378462ADFF1E400203AFA /* HideKeyboard+.swift in Sources */,
 				2B952A152ACEA5960074D4F2 /* TImageButton.swift in Sources */,
 				2B8105542AD02DA400B50223 /* CheckItemTable.swift in Sources */,
-				2B8105582AD0FE4600B50223 /* TempiModel.swift in Sources */,
 				2BC72B912AC84AE40014420F /* CalendarViewController.swift in Sources */,
 				2BC72B8D2AC731D70014420F /* Constant.swift in Sources */,
 				2B952A062ACD7E480074D4F2 /* CategoryChecklistViewController.swift in Sources */,
