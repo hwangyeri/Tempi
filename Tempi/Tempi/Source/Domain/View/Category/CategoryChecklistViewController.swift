@@ -16,14 +16,15 @@ class CategoryChecklistViewController: BaseViewController {
     var subCategoryName: String?
     
     private var checkItemList: [String] {
-        // subCategoryName, subCategoryName 일치하는 checkItem 필터링
-        let checkItems = DataManager.shared.categoryList
-            .filter { $0.categoryName == categoryName }
-            .filter { $0.subCategoryName == subCategoryName }
-            .map { $0.checkItem }
+        var uniqueCheckItems: [String] = []
         
-        // 중복 제거
-        let uniqueCheckItems = Array(Set(checkItems))
+        // categoryName 및 subCategoryName이 일치하는 항목(checkItem) 필터링 및 중복 확인
+        for item in DataManager.shared.categoryList {
+            if item.categoryName == categoryName, item.subCategoryName == subCategoryName, !uniqueCheckItems.contains(item.checkItem) {
+                uniqueCheckItems.append(item.checkItem)
+            }
+        }
+        
         return uniqueCheckItems
     }
     
@@ -79,21 +80,16 @@ class CategoryChecklistViewController: BaseViewController {
         if !mainView.selectAllCheckBox.isSelected {
             selectedItems = checkItemList
             self.mainView.tButtonIsSelected = true
-//            self.mainView.selectAllCheckBox.isSelected = true
             self.mainView.selectedAllCheckBoxIsSelected = true
-            print(mainView.selectAllCheckBox.isSelected)
+            //print(mainView.selectAllCheckBox.isSelected)
         } else {
             selectedItems.removeAll()
             self.mainView.tButtonIsSelected = false
-//            self.mainView.selectAllCheckBox.isSelected = false
             self.mainView.selectedAllCheckBoxIsSelected = false
-            print(mainView.selectAllCheckBox.isSelected)
+            //print(mainView.selectAllCheckBox.isSelected)
         }
         
-        var snapshot = NSDiffableDataSourceSnapshot<Int, String>()
-        snapshot.appendSections([0])
-        snapshot.appendItems(checkItemList)
-        categoryChecklistDataSource.apply(snapshot)
+        configureSubCategoryDataSource()
     }
     
     // MARK: - 내 리스트에 추가하기 버튼
@@ -112,6 +108,7 @@ class CategoryChecklistViewController: BaseViewController {
         navigationController?.pushViewController(addChecklistVC, animated: true)
     }
 
+    // MARK: - CollectionView Delegate
     private func configureSubCategoryDataSource() {
         let cellRegistration = UICollectionView.CellRegistration<CategoryChecklistCollectionViewCell, String> {
             cell, indexPath, itemIdentifier in
@@ -129,7 +126,6 @@ class CategoryChecklistViewController: BaseViewController {
         snapshot.appendItems(checkItemList)
         categoryChecklistDataSource.apply(snapshot)
     }
-    
 }
 
 // MARK: - CollectionView Delegate
