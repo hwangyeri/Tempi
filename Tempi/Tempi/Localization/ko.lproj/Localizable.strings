@@ -20,6 +20,8 @@
 "showToast_delete" = "성공적으로 삭제되었습니다!";
 "showToast_update" = "성공적으로 수정되었습니다!";
 "showToast_create" = "성공적으로 생성되었습니다!";
+"showToast_updateFixButton_fixed" = "체크리스트가 고정되었습니다.";
+"showToast_updateFixButton_unfixed" = "고정이 해제되었습니다.";
 
 // showMessage
 "showMessage_delete_title" = "체크리스트 삭제";
