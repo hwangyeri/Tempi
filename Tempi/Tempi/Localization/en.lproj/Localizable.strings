@@ -20,6 +20,8 @@
 "showToast_delete" = "Successfully deleted!";
 "showToast_update" = "Successfully updated!";
 "showToast_create" = "Successfully created!";
+"showToast_updateFixButton_fixed" = "Checklist is now fixed.";
+"showToast_updateFixButton_unfixed" = "Checklist is now unfixed.";
 
 // showMessage
 "showMessage_delete_title" = "Delete a checklist";
