@@ -43,5 +43,8 @@ extension NSNotification.Name {
     
     /// 체크리스트 생성 시 알럿
     static let createChecklistAlert = NSNotification.Name("CreateChecklistAlert")
+    
+    /// 체크리스트 고정 버튼 UI 업데이트
+    static let updateChecklistFixedButton = NSNotification.Name("UpdateChecklistFixedButton")
 }
 
