@@ -88,6 +88,7 @@ class ChecklistViewController: BaseViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(updateCheckItemMemoNotificationObserver(notification:)), name: .updateCheckItemMemo, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(createCheckItemNotificationObserver(notification:)), name: .createCheckItem, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(createChecklistNotificationObserver(notification:)), name: .createChecklistAlert, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateChecklistFixedButtonNotificationObserver(notification:)), name: .updateChecklistFixedButton, object: nil)
     }
     
     // MARK: - 체크리스트 이름 수정 버튼
@@ -118,8 +119,29 @@ class ChecklistViewController: BaseViewController {
         let newIsFixed = !isFixed
         self.checklistRepository.updateIsFixed(forId: selectedChecklistID, newIsFixed: newIsFixed)
         
+        NotificationCenter.default.post(name: .updateChecklistFixedButton, object: nil, userInfo: ["newIsFixed": newIsFixed])
+    }
+    
+    // MARK: - 체크리스트 고정 버튼 (노티)
+    @objc func updateChecklistFixedButtonNotificationObserver(notification: NSNotification) {
+        print(#function)
+        
+        guard let newIsFixed = notification.userInfo?["newIsFixed"] as? Bool else {
+            print(#function, "newIsFixed error")
+            return
+        }
+        
         DispatchQueue.main.async {
             self.mainView.checklistFixedButton.isSelected.toggle()
+            
+            if !newIsFixed {
+                print("a", newIsFixed)
+                self.showToast(message: "showToast_updateFixButton_unfixed".localized)
+            } else {
+                // FIXME: 3번 호출되는 이유 물어보기
+                print("b", newIsFixed)
+                self.showToast(message: "showToast_updateFixButton_fixed".localized)
+            }
         }
     }
     
@@ -329,6 +351,7 @@ class ChecklistViewController: BaseViewController {
         NotificationCenter.default.removeObserver(self, name: .updateCheckItemMemo, object: nil)
         NotificationCenter.default.removeObserver(self, name: .createCheckItem, object: nil)
         NotificationCenter.default.removeObserver(self, name: .createChecklistAlert, object: nil)
+        NotificationCenter.default.removeObserver(self, name: .updateChecklistFixedButton, object: nil)
     }
     
 }
