@@ -44,8 +44,10 @@ class CategoryChecklistCollectionViewCell: BaseCollectionViewCell {
     
     var cellIsSelected: Bool = false {
         didSet {
-            checkBoxButton.isSelected = cellIsSelected
-            checkBoxButton.layer.backgroundColor = cellIsSelected ? UIColor.label.cgColor : UIColor.systemBackground.cgColor
+            DispatchQueue.main.async {  
+                self.checkBoxButton.isSelected = self.cellIsSelected
+                self.checkBoxButton.layer.backgroundColor = self.cellIsSelected ? UIColor.label.cgColor : UIColor.systemBackground.cgColor
+            }
         }
     }
         
