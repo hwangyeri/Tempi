@@ -1,10 +1,10 @@
 # Tempi - 기준을 세우다!
 
-<img src = "https://github.com/hwangyeri/SeSAC/assets/114602459/c9dc5044-a3c7-4077-b611-51164aba0af6.png" width="165" height="400">
-<img src = "https://github.com/hwangyeri/SeSAC/assets/114602459/1652481b-bd2a-4854-91f5-fef66cb20301.png" width="165" height="400">
-<img src = "https://github.com/hwangyeri/SeSAC/assets/114602459/d7d83765-aa4f-41f1-8a07-65c3b58f2440.png" width="165" height="400">
-<img src = "https://github.com/hwangyeri/SeSAC/assets/114602459/4a2466d9-5e3e-46c5-95d7-ef7851560954.png" width="165" height="400">
-<img src = "https://github.com/hwangyeri/SeSAC/assets/114602459/423479a2-aab5-45cb-8c02-8b192f3f648d.png" width="165" height="400">
+<img src = "https://github.com/hwangyeri/SeSAC/assets/114602459/c9dc5044-a3c7-4077-b611-51164aba0af6.png" width="160" height="300">
+<img src = "https://github.com/hwangyeri/SeSAC/assets/114602459/1652481b-bd2a-4854-91f5-fef66cb20301.png" width="160" height="300">
+<img src = "https://github.com/hwangyeri/SeSAC/assets/114602459/d7d83765-aa4f-41f1-8a07-65c3b58f2440.png" width="160" height="300">
+<img src = "https://github.com/hwangyeri/SeSAC/assets/114602459/4a2466d9-5e3e-46c5-95d7-ef7851560954.png" width="160" height="300">
+<img src = "https://github.com/hwangyeri/SeSAC/assets/114602459/423479a2-aab5-45cb-8c02-8b192f3f648d.png" width="160" height="300">
 
 ### 0. 효율적인 계획 관리를 위해, 템플릿을 제공해주는 투두 앱입니다.
 - `Default Data` 를 활용한 체크리스트 추천 / 템플릿 검색 / 나의 리스트 관리 기능 구현
