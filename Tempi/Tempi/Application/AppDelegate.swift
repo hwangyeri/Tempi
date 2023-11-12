@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Firebase 초기화
         FirebaseApp.configure()
         
+        // FIXME: Local Notification? 다국어 대응 필요
+        
         // 푸시 알림 권한 설정, FCM 등록
         UNUserNotificationCenter.current().delegate = self
         
