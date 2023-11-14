@@ -13,10 +13,11 @@ extension UIViewController {
     func setRightBarButton() {
         let rightBarButtonIcon = UIImage(systemName: Constant.SFSymbol.xmarkIcon)
         let rightBarButton = UIBarButtonItem(image: rightBarButtonIcon, style: .plain, target: self, action: #selector(rightBarButtonTapped))
-        DispatchQueue.main.async {
-            rightBarButton.tintColor = .label
-            self.navigationItem.rightBarButtonItem = rightBarButton
-        }
+        
+//        print("Is Main Thread: \(Thread.isMainThread)")
+        
+        rightBarButton.tintColor = .label
+        self.navigationItem.rightBarButtonItem = rightBarButton
     }
     
     // MARK: - 나가기 버튼 (Navi BarButton)
