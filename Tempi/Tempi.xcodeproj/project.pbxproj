@@ -19,6 +19,7 @@
 		2B4FEAA82AFF953800E12B69 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2B4FEAA72AFF953800E12B69 /* FirebaseRemoteConfigSwift */; };
 		2B4FEAAA2AFF953800E12B69 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 2B4FEAA92AFF953800E12B69 /* FirebaseStorage */; };
 		2B4FEAAC2AFF953800E12B69 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 2B4FEAAB2AFF953800E12B69 /* FirebaseStorageCombine-Community */; };
+		2B5EABB62B03D54C004AD7D8 /* UserDefaults+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5EABB52B03D54C004AD7D8 /* UserDefaults+.swift */; };
 		2B63782B2ADBCCEF00203AFA /* CheckItemTableRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63782A2ADBCCEF00203AFA /* CheckItemTableRepository.swift */; };
 		2B63782D2ADC578200203AFA /* MyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63782C2ADC578200203AFA /* MyListView.swift */; };
 		2B63782F2ADD56B700203AFA /* DeleteModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63782E2ADD56B700203AFA /* DeleteModalViewController.swift */; };
@@ -108,6 +109,7 @@
 		2B2D3E092AE4F8BB00476A46 /* EmptyCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCollectionReusableView.swift; sourceTree = "<group>"; };
 		2B49F59F2AC864F100FF903F /* CategoryHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHomeView.swift; sourceTree = "<group>"; };
 		2B4FEA9D2AFF929300E12B69 /* Tempi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tempi.entitlements; sourceTree = "<group>"; };
+		2B5EABB52B03D54C004AD7D8 /* UserDefaults+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+.swift"; sourceTree = "<group>"; };
 		2B63782A2ADBCCEF00203AFA /* CheckItemTableRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckItemTableRepository.swift; sourceTree = "<group>"; };
 		2B63782C2ADC578200203AFA /* MyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListView.swift; sourceTree = "<group>"; };
 		2B63782E2ADD56B700203AFA /* DeleteModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteModalViewController.swift; sourceTree = "<group>"; };
@@ -440,6 +442,7 @@
 				2B6378452ADFF1E400203AFA /* HideKeyboard+.swift */,
 				2BBFD9762AE83F3D00A00DEB /* LineSpacing+.swift */,
 				2BA2AED82AEEB3F60076324A /* NaviBarButton+.swift */,
+				2B5EABB52B03D54C004AD7D8 /* UserDefaults+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -741,6 +744,7 @@
 				2B952A0C2ACD895E0074D4F2 /* TBlankCheckBox.swift in Sources */,
 				2B49F5A02AC864F100FF903F /* CategoryHomeView.swift in Sources */,
 				2BC72B8F2AC84AD10014420F /* CategoryHomeViewController.swift in Sources */,
+				2B5EABB62B03D54C004AD7D8 /* UserDefaults+.swift in Sources */,
 				2BF5FE102AC6E6C1009BCBD9 /* SceneDelegate.swift in Sources */,
 				2B6378332ADD684600203AFA /* TPopUpButton.swift in Sources */,
 				2B8105562AD02F7600B50223 /* BookmarkTable.swift in Sources */,
