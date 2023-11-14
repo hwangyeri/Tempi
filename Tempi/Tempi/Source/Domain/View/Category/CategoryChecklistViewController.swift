@@ -30,9 +30,13 @@ class CategoryChecklistViewController: BaseViewController {
     
     private var selectedItems: [String] = [] {
         didSet {
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { [weak self] in
                 // 선택된 아이템 수
-                self.mainView.selectedItemCountLabel.text = "category_checklist_itemCountLabel".localized(with: self.selectedItems.count)
+                if let itemCount = self?.selectedItems.count {
+                    self?.mainView.selectedItemCountLabel.text = "category_checklist_itemCountLabel".localized(with: itemCount)
+                } else {
+                    print("itemCount Error")
+                }
             }
             // tButton 활성화/비활성화
             self.mainView.tButtonIsSelected = !self.selectedItems.isEmpty
@@ -69,9 +73,13 @@ class CategoryChecklistViewController: BaseViewController {
             return
         }
         
-        DispatchQueue.main.async {
-            self.mainView.checklistNameLabel.text = "category_checklist_checklistNameLabel".localized(with: subCategoryName)
-            self.mainView.totalCountLabel.text = "category_checklist_totalCountLabel".localized(with: self.checkItemList.count)
+        DispatchQueue.main.async { [weak self] in
+            self?.mainView.checklistNameLabel.text = "category_checklist_checklistNameLabel".localized(with: subCategoryName)
+            if let checkItemListCount = self?.checkItemList.count {
+                self?.mainView.totalCountLabel.text = "category_checklist_totalCountLabel".localized(with: checkItemListCount)
+            } else {
+                print("checkItemListCount Error")
+            }
         }
     }
     
@@ -100,20 +108,27 @@ class CategoryChecklistViewController: BaseViewController {
         addChecklistVC.subCategoryName = subCategoryName
         addChecklistVC.checkItemList = selectedItems
         
-        repository.fetch { tasks in
-            // addChecklistDataSource 에 쓰이는 데이터 미리 넘겨주기
+        // addChecklistDataSource 에 쓰이는 데이터 미리 넘겨주기
+        repository.fetch { [weak self, weak addChecklistVC] tasks in
+            guard let self = self, let addChecklistVC = addChecklistVC else {
+                return
+            }
             addChecklistVC.checklistTasks = tasks
+            self.navigationController?.pushViewController(addChecklistVC, animated: true)
         }
-        
-        navigationController?.pushViewController(addChecklistVC, animated: true)
     }
 
     // MARK: - CollectionView Delegate
     private func configureSubCategoryDataSource() {
         let cellRegistration = UICollectionView.CellRegistration<CategoryChecklistCollectionViewCell, String> {
-            cell, indexPath, itemIdentifier in
+            [weak self] cell, indexPath, itemIdentifier in
             cell.checkBoxLabel.text = itemIdentifier
-            cell.cellIsSelected = self.selectedItems.contains(itemIdentifier)
+            
+            if let selectedItems = self?.selectedItems {
+                cell.cellIsSelected = selectedItems.contains(itemIdentifier)
+            } else {
+                print("selectedItems Error")
+            }
         }
         
         categoryChecklistDataSource = UICollectionViewDiffableDataSource(collectionView: mainView.categoryChecklistCollectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
@@ -125,6 +140,11 @@ class CategoryChecklistViewController: BaseViewController {
         snapshot.appendSections([0])
         snapshot.appendItems(checkItemList)
         categoryChecklistDataSource.apply(snapshot)
+    }
+    
+    deinit {
+        print("deinit - CategoryChecklistViewController")
+        NotificationCenter.default.removeObserver(self)
     }
 }
 
