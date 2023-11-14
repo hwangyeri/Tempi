@@ -68,10 +68,15 @@ class CategoryHomeViewController: BaseViewController {
         if let newChecklistID = notification.userInfo?["newChecklistID"] as? ObjectId {
             let checklistVC = ChecklistViewController()
             checklistVC.selectedChecklistID = newChecklistID
-            checkItemRepository.fetch(for: newChecklistID) { result in
+            
+            checkItemRepository.fetch(for: newChecklistID) { [weak self, weak checklistVC] result in
+                guard let self = self, let checklistVC = checklistVC else {
+                    return
+                }
+                
                 checklistVC.checkItemTasks = result
+                self.navigationController?.pushViewController(checklistVC, animated: true)
             }
-            self.navigationController?.pushViewController(checklistVC, animated: true)
         } else {
             print(#function, "newChecklistID error")
         }
@@ -103,9 +108,9 @@ class CategoryHomeViewController: BaseViewController {
     }
     
     deinit {
+        print("deinit - CategoryHomeViewController")
         NotificationCenter.default.removeObserver(self)
     }
-    
 }
 
 // MARK: - CollectionView Delegate
