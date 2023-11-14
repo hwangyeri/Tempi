@@ -103,4 +103,7 @@ class DeleteModalViewController: BaseViewController {
 //        }
     }
     
+    deinit {
+        print("deinit - DeleteModalViewController")
+    }
 }
