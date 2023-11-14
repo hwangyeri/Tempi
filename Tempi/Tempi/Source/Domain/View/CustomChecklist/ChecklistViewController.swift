@@ -38,7 +38,7 @@ class ChecklistViewController: BaseViewController {
         self.navigationItem.hidesBackButton = true
         mainView.checklistCollectionView.delegate = self
         mainView.checklistNameEditButton.addTarget(self, action: #selector(checklistNameEditButtonTapped), for: .touchUpInside)
-        mainView.bookmarkListButton.addTarget(self, action: #selector(bookmarkListButtonTapped), for: .touchUpInside)
+//        mainView.bookmarkListButton.addTarget(self, action: #selector(bookmarkListButtonTapped), for: .touchUpInside)
         mainView.checklistFixedButton.addTarget(self, action: #selector(checklistFixedButtonTapped), for: .touchUpInside)
         mainView.checklistDeleteButton.addTarget(self, action: #selector(checklistDeleteButtonTapped), for: .touchUpInside)
         mainView.plusButton.addTarget(self, action: #selector(plusButtonTapped), for: .touchUpInside)
@@ -46,6 +46,7 @@ class ChecklistViewController: BaseViewController {
     
     // MARK: - 초기 데이터 설정
     private func setChecklistData() {
+        print(#function)
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .short
@@ -81,6 +82,7 @@ class ChecklistViewController: BaseViewController {
     
     // MARK: - NotificationCenter 설정
     private func setNotificationCenter() {
+        print(#function)
         NotificationCenter.default.addObserver(self, selector: #selector(deleteChecklistNotificationObserver(notification:)), name: .deleteChecklist, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(updateChecklistNameNotificationObserver(notification:)), name: .updateChecklistName, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(deleteCheckItemNotificationObserver(notification:)), name: .deleteCheckItem, object: nil)
@@ -125,22 +127,21 @@ class ChecklistViewController: BaseViewController {
     // MARK: - 체크리스트 고정 버튼 (노티)
     @objc func updateChecklistFixedButtonNotificationObserver(notification: NSNotification) {
         print(#function)
-        
+
         guard let newIsFixed = notification.userInfo?["newIsFixed"] as? Bool else {
             print(#function, "newIsFixed error")
             return
         }
-        
-        DispatchQueue.main.async {
-            self.mainView.checklistFixedButton.isSelected.toggle()
-            
+
+        DispatchQueue.main.async { [weak self] in
+            self?.mainView.checklistFixedButton.isSelected.toggle()
+
             if !newIsFixed {
                 print("a", newIsFixed)
-                self.showToast(message: "showToast_updateFixButton_unfixed".localized)
+                self?.showToast(message: "showToast_updateFixButton_unfixed".localized)
             } else {
-                // FIXME: 3번 호출되는 이유 물어보기
                 print("b", newIsFixed)
-                self.showToast(message: "showToast_updateFixButton_fixed".localized)
+                self?.showToast(message: "showToast_updateFixButton_fixed".localized)
             }
         }
     }
@@ -163,21 +164,21 @@ class ChecklistViewController: BaseViewController {
     }
     
     // MARK: - 즐겨찾기 버튼
-    @objc private func bookmarkListButtonTapped() {
-        print(#function)
-        let bookmarkListVC = BookmarkListViewController()
-        
-        self.bookmarkRepository.fetch { data in
-            bookmarkListVC.bookmarkTasks = data
-        }
-        
-        if let sheet = bookmarkListVC.sheetPresentationController {
-            sheet.detents = [.large()]
-            sheet.delegate = self
-        }
-        
-        self.present(bookmarkListVC, animated: true)
-    }
+//    @objc private func bookmarkListButtonTapped() {
+//        print(#function)
+//        let bookmarkListVC = BookmarkListViewController()
+//
+//        self.bookmarkRepository.fetch { data in
+//            bookmarkListVC.bookmarkTasks = data
+//        }
+//
+//        if let sheet = bookmarkListVC.sheetPresentationController {
+//            sheet.detents = [.large()]
+//            sheet.delegate = self
+//        }
+//
+//        self.present(bookmarkListVC, animated: true)
+//    }
     
     // MARK: - 체크 항목 추가 버튼
     @objc private func plusButtonTapped() {
@@ -273,7 +274,7 @@ class ChecklistViewController: BaseViewController {
         }
         
         let cellRegistration = UICollectionView.CellRegistration<ChecklistCollectionViewCell, CheckItemTable> {
-            cell, indexPath, itemIdentifier in
+            [weak self] cell, indexPath, itemIdentifier in
             
             let checkItemID = itemIdentifier.id
             
@@ -294,10 +295,10 @@ class ChecklistViewController: BaseViewController {
                     editModalVC.selectedItemID = checkItemID
                     editModalVC.editAction = .updateCheckItemContent
                     
-                    let placeholder = self.checkItemRepository.getCheckItemContent(forId: checkItemID)
+                    let placeholder = self?.checkItemRepository.getCheckItemContent(forId: checkItemID)
                     editModalVC.textFieldPlaceholder = placeholder
                     
-                    self.present(editModalVC, animated: true)
+                    self?.present(editModalVC, animated: true)
                 }),
                 /// 메모 설정
                 UIAction(title: "checklist_checkBoxMenuButton_secondMenu".localized, image: UIImage(systemName: Constant.SFSymbol.addMemoMenuItemIcon), handler: { _ in
@@ -310,10 +311,10 @@ class ChecklistViewController: BaseViewController {
                     editModalVC.selectedItemID = checkItemID
                     editModalVC.editAction = .updateCheckItemMemo
                     
-                    let placeholder = self.checkItemRepository.getCheckItemMemo(forId: checkItemID) ?? ""
+                    let placeholder = self?.checkItemRepository.getCheckItemMemo(forId: checkItemID) ?? ""
                     editModalVC.textFieldPlaceholder = placeholder
                     
-                    self.present(editModalVC, animated: true)
+                    self?.present(editModalVC, animated: true)
                 }),
                 /// 삭제
                 UIAction(title: "checklist_checkBoxMenuButton_thirdMenu".localized, image: UIImage(systemName: Constant.SFSymbol.deleteMemuItemIcon), attributes: .destructive, handler: { _ in
@@ -326,7 +327,7 @@ class ChecklistViewController: BaseViewController {
                     modalVC.selectedItemID = checkItemID
                     modalVC.deleteAction = .deleteCheckItem
                     
-                    self.present(modalVC, animated: true)
+                    self?.present(modalVC, animated: true)
                 })
             ])
         }
@@ -344,16 +345,9 @@ class ChecklistViewController: BaseViewController {
     }
     
     deinit {
-        NotificationCenter.default.removeObserver(self, name: .deleteChecklist, object: nil)
-        NotificationCenter.default.removeObserver(self, name: .updateChecklistName, object: nil)
-        NotificationCenter.default.removeObserver(self, name: .deleteCheckItem, object: nil)
-        NotificationCenter.default.removeObserver(self, name: .updateCheckItemContent, object: nil)
-        NotificationCenter.default.removeObserver(self, name: .updateCheckItemMemo, object: nil)
-        NotificationCenter.default.removeObserver(self, name: .createCheckItem, object: nil)
-        NotificationCenter.default.removeObserver(self, name: .createChecklistAlert, object: nil)
-        NotificationCenter.default.removeObserver(self, name: .updateChecklistFixedButton, object: nil)
+        print("deinit - ChecklistViewController")
+        NotificationCenter.default.removeObserver(self)
     }
-    
 }
 
 // MARK: - CollectionView Delegate
@@ -381,7 +375,6 @@ extension ChecklistViewController: UICollectionViewDelegate {
         self.checkItemRepository.updateCheckItemIsChecked(forId: item.id, newIsChecked: newIsChecked)
         cell.cellIsSelected = !cell.cellIsSelected
     }
-    
 }
 
 
