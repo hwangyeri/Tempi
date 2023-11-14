@@ -172,6 +172,10 @@ class AddChecklistViewController: BaseViewController {
         snapshot.appendItems(result)
         addChecklistDataSource.apply(snapshot)
     }
+    
+    deinit {
+        print("deinit - AddChecklistViewController")
+    }
 
 }
 
