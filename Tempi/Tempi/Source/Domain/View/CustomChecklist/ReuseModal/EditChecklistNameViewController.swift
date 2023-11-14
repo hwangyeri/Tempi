@@ -138,10 +138,9 @@ class EditChecklistNameViewController: BaseViewController {
         }
         
         if let name = notificationName {
-            dismiss(animated: true) {
-                NotificationCenter.default.post(name: name, object: nil, userInfo: ["newChecklistID": newChecklistID])
-                NotificationCenter.default.post(name: .createChecklistAlert, object: nil)
-            }
+            NotificationCenter.default.post(name: name, object: nil, userInfo: ["newChecklistID": newChecklistID])
+            UserDefaults.standard.isCreated = true
+            dismiss(animated: true)
         }
     }
     
@@ -163,6 +162,10 @@ class EditChecklistNameViewController: BaseViewController {
         self.dismiss(animated: true)
     }
     
+    deinit {
+        print("deinit - EditChecklistNameViewController")
+        NotificationCenter.default.removeObserver(self)
+    }
 }
 
 // MARK: TextField Delegate
