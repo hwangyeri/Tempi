@@ -23,11 +23,9 @@ extension NSNotification.Name {
     /// 체크 아이템 메모 업데이트
     static let updateCheckItemMemo = NSNotification.Name("UpdateCheckItemMemo")
     
-    /// 홈화면에서 체크리스트 생성
-    static let createChecklistFromHome = NSNotification.Name("CreateChecklistFromHome")
-    
-    /// 나의 체크리스트 화면에서 체크리스트 생성
-    static let createChecklistFromMy = NSNotification.Name("CreateChecklistFromMy")
+    /// 체크리스트 생성
+    static let createChecklistFromHome = NSNotification.Name("CreateChecklistFromHome") // 홈 화면
+    static let createChecklistFromMy = NSNotification.Name("CreateChecklistFromMy") // 나의 리스트 화면
     
     /// 체크 아이템 생성
     static let createCheckItem = NSNotification.Name("CreateCheckItem")
@@ -41,10 +39,10 @@ extension NSNotification.Name {
     /// 체크리스트 삭제 시 알럿
     static let deleteChecklistAlert = NSNotification.Name("DeleteChecklistAlert")
     
-    /// 체크리스트 생성 시 알럿
-    static let createChecklistAlert = NSNotification.Name("CreateChecklistAlert")
-    
     /// 체크리스트 고정 버튼 UI 업데이트
     static let updateChecklistFixedButton = NSNotification.Name("UpdateChecklistFixedButton")
+    
+    /// 체크박스 체크 시 알럿
+    static let updateCheckBoxStateAlert = NSNotification.Name("UpdateCheckBoxStateAlert")
 }
 
