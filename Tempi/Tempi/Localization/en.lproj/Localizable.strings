@@ -22,6 +22,7 @@
 "showToast_create" = "Successfully created!";
 "showToast_updateFixButton_fixed" = "Checklist is now fixed.";
 "showToast_updateFixButton_unfixed" = "Checklist is now unfixed.";
+"showToast_checkbox_isSelected" = "Checked. 👍🏻";
 
 // showMessage
 "showMessage_delete_title" = "Delete a checklist";
