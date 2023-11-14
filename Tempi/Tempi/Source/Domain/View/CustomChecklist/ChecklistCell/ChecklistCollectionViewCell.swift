@@ -109,6 +109,12 @@ class ChecklistCollectionViewCell: BaseCollectionViewCell {
         didSet {
             checkBoxButton.isSelected = cellIsSelected
             checkBoxButton.layer.backgroundColor = cellIsSelected ? UIColor.label.cgColor : UIColor.systemBackground.cgColor
+            
+            if cellIsSelected {
+                NotificationCenter.default.post(name: .updateCheckBoxStateAlert, object: nil)
+            } else {
+                print("cellIsSelected false")
+            }
         }
     }
         
