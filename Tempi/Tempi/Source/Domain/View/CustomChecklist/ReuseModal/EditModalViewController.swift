@@ -241,6 +241,9 @@ class EditModalViewController: BaseViewController {
         setMaxCharacterCount(for: "editModal_createBookmarkItem")
     }
 
+    deinit {
+        print("deinit - EditModalViewController")
+    }
 }
 
 // MARK: TextField Delegate
