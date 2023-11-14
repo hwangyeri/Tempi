@@ -10,7 +10,6 @@ import RealmSwift
 
 class ChecklistViewController: BaseViewController {
     
-//    var isCreated: Bool?
     var selectedChecklistID: ObjectId?
     var checkItemTasks: Results<CheckItemTable>!
     
@@ -33,10 +32,7 @@ class ChecklistViewController: BaseViewController {
         setChecklistData()
         setRightBarButton()
         setNotificationCenter()
-        
-//        if let isCreated = isCreated, isCreated {
-//            createChecklistAlertFromEditNotificationObserver()
-//        }
+        isCreated()
     }
     
     override func configureLayout() {
@@ -94,10 +90,23 @@ class ChecklistViewController: BaseViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(updateCheckItemContentNotificationObserver(notification:)), name: .updateCheckItemContent, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(updateCheckItemMemoNotificationObserver(notification:)), name: .updateCheckItemMemo, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(createCheckItemNotificationObserver(notification:)), name: .createCheckItem, object: nil)
-//        NotificationCenter.default.addObserver(self, selector: #selector(createChecklistAlertFromEditNotificationObserver(notification:)), name: .createChecklistAlertFromEdit, object: nil)
-//        NotificationCenter.default.addObserver(self, selector: #selector(createChecklistAlertFromAddNotificationObserver(notification:)), name: .createChecklistAlertFromAdd, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(updateChecklistFixedButtonNotificationObserver(notification:)), name: .updateChecklistFixedButton, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(updateCheckBoxStateAlertNotificationObserver(notification:)), name: .updateCheckBoxStateAlert, object: nil)
+    }
+    
+    // MARK: - 체크리스트 생성 상태 확인 메서드
+    private func isCreated() {
+        print(#function)
+        
+        let isCreatedValue = UserDefaults.standard.bool(forKey: "isCreated")
+        
+        if isCreatedValue {
+            // 새롭게 생성한 체크리스트인 경우 showMessage
+            showMessage(title: "showMessage_create_title".localized, body: "showMessage_create_body".localized)
+            UserDefaults.standard.isCreated = false
+        } else {
+            print("Value is false")
+        }
     }
     
     // MARK: - 체크리스트 이름 수정 버튼
@@ -270,13 +279,6 @@ class ChecklistViewController: BaseViewController {
         DispatchQueue.main.async {
             self.configureChecklistDataSource()
         }
-    }
-    
-    // MARK: - 체크리스트 생성 시 Alert (노티)
-    @objc func createChecklistNotificationObserver(notification: NSNotification) {
-//    @objc func createChecklistAlertFromEditNotificationObserver() {
-        print(#function)
-        showMessage(title: "showMessage_create_title".localized, body: "showMessage_create_body".localized)
     }
     
     // MARK: - CollectionView DataSource
