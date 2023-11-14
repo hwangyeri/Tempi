@@ -71,7 +71,8 @@ class MyListViewController: BaseViewController {
         if let newChecklistID = notification.userInfo?["newChecklistID"] as? ObjectId {
             let checklistVC = ChecklistViewController()
             checklistVC.selectedChecklistID = newChecklistID
-            checkItemRepository.fetch(for: newChecklistID) { result in
+            checkItemRepository.fetch(for: newChecklistID) { [weak self] result in
+                guard let self = self else { return }
                 checklistVC.checkItemTasks = result
             }
             self.navigationController?.pushViewController(checklistVC, animated: true)
@@ -88,8 +89,8 @@ class MyListViewController: BaseViewController {
     
     // MARK: - CollectionView Section Filtering Date
     private func fetchAndFilterChecklistData() {
-        self.checklistRepository.fetch { allItems in
-            guard let allItems = allItems else {
+        self.checklistRepository.fetch { [weak self] allItems in
+            guard let self = self, let allItems = allItems else {
                 print("allItems Error")
                 return
             }
@@ -137,6 +138,7 @@ class MyListViewController: BaseViewController {
     
     // MARK: - CollectionView DataSource
     private func configureMyListDataSource(with allSections: [[ChecklistTable]]) {
+        print(#function)
         // 헤더 설정
         let headerRegistration = UICollectionView.SupplementaryRegistration<MyListHeaderView>(elementKind: UICollectionView.elementKindSectionHeader) { [weak self] headerView, elementKind, indexPath in
             let sectionHeaderTitle: String
@@ -191,20 +193,6 @@ class MyListViewController: BaseViewController {
         var section = 0
         //print("--- allSections ---", allSections)
         
-//        for i in 0..<sections.count {
-//            print(i, sections[i].count)
-////            snapshot.appendSections([i])
-//            if sections[i].isEmpty {
-//                continue
-//            }
-//
-//            snapshot.appendSections([section])
-//            dic[section] = i
-//            print(snapshot.numberOfItems(inSection: i))
-//            snapshot.appendItems(sections[i], toSection: section)
-//            section += 1
-//        }
-        
         for (index, checklists) in allSections.enumerated() {
             if checklists.isEmpty {
                 continue
@@ -215,16 +203,11 @@ class MyListViewController: BaseViewController {
             section += 1
         }
         
-//        print("numberOfSections", snapshot.numberOfSections)
-//        
-//        for i in 0..<snapshot.numberOfSections {
-//            print(snapshot.numberOfItems(inSection: i))
-//        }
-        
         self.myListDataSource.apply(snapshot, animatingDifferences: true)
     }
     
     deinit {
+        print("NotificationCenter deinit - MyListViewController")
         NotificationCenter.default.removeObserver(self)
     }
 }
@@ -241,7 +224,8 @@ extension MyListViewController: UICollectionViewDelegate {
         let selectedChecklistID = cell.id
         let checklistVC = ChecklistViewController()
         checklistVC.selectedChecklistID = selectedChecklistID
-        checkItemRepository.fetch(for: selectedChecklistID) { result in
+        checkItemRepository.fetch(for: selectedChecklistID) { [weak self] result in
+            guard let self = self else { return }
             checklistVC.checkItemTasks = result
         }
         self.navigationController?.pushViewController(checklistVC, animated: true)
