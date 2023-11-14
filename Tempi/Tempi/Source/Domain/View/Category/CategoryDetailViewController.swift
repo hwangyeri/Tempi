@@ -81,6 +81,9 @@ class CategoryDetailViewController: BaseViewController {
         subCategoryDataSource.apply(snapshot)
     }
     
+    deinit {
+        print("deinit - CategoryDetailViewController")
+    }
 }
 
 // MARK: - CollectionView Delegate
