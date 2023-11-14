@@ -53,38 +53,43 @@ class AddChecklistViewController: BaseViewController {
         print(#function)
         if isAnyButtonSelected {
             mainView.addButton.isEnabled = true
-            DispatchQueue.main.async {
-                self.mainView.addButton.backgroundColor = UIColor.label
+            
+            DispatchQueue.main.async { [weak self] in
+                self?.mainView.addButton.backgroundColor = UIColor.label
             }
         } else {
             mainView.addButton.isEnabled = false
-            DispatchQueue.main.async {
-                self.mainView.addButton.backgroundColor = UIColor.tertiaryLabel
+            
+            DispatchQueue.main.async { [weak self] in
+                self?.mainView.addButton.backgroundColor = UIColor.tertiaryLabel
             }
         }
     }
-    
+
     // MARK: 새로운 리스트에 추가하기 버튼
     @objc private func addToNewListButtonTapped() {
         print(#function)
-        
+
         mainView.addToNewListButton.isSelected = true
         isAnyButtonSelected = true
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
             self.mainView.addToNewListButton.layer.borderColor = UIColor.label.cgColor
             self.mainView.addToNewListButton.layer.borderWidth = Constant.TChecklist.selectedBorderWidth
         }
-        
+
         if let selectedIndex = selectedIndex,
            let selectedCell = mainView.addChecklistCollectionView.cellForItem(at: selectedIndex) as? AddChecklistCollectionViewCell {
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
                 selectedCell.checklistButton.layer.borderColor = UIColor.tertiaryLabel.cgColor
                 selectedCell.checklistButton.layer.borderWidth = Constant.TChecklist.borderWidth
             }
         }
-        
+
         selectedIndex = nil
     }
+
     
     // MARK: 추가 버튼
     @objc private func addButtonTapped() {
@@ -118,8 +123,7 @@ class AddChecklistViewController: BaseViewController {
                 checkItemRepository.createItem(checkItemTask)
             }
             
-            NotificationCenter.default.post(name: .createChecklistAlert, object: nil)
-            
+            UserDefaults.standard.isCreated = true
         } else {
             // 컬렉션 셀이 선택된 경우
             guard let selectedIndexPath = selectedIndex,
