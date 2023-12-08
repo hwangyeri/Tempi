@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class CategoryCollectionViewCell: BaseCollectionViewCell {
+final class CategoryCollectionViewCell: BaseCollectionViewCell {
     
     let imageView = {
         let view = UIImageView()

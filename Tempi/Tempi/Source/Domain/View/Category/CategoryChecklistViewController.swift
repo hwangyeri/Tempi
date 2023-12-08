@@ -8,7 +8,7 @@
 import UIKit
 import RealmSwift
 
-class CategoryChecklistViewController: BaseViewController {
+final class CategoryChecklistViewController: BaseViewController {
         
     private let repository = ChecklistTableRepository()
     

@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class CategoryHomeView: BaseView {
+final class CategoryHomeView: BaseView {
     
     let backView = {
         let view = UIView()

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SearchViewController: BaseViewController {
+final class SearchViewController: BaseViewController {
     
     private var searchResult: [CategoryDefaultData] = []
     

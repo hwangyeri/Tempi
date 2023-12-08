@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class BookmarkListCollectionViewCell: BaseCollectionViewCell {
+final class BookmarkListCollectionViewCell: BaseCollectionViewCell {
     
 //    var selectedItemId: ObjectId?
     

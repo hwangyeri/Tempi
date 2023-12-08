@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class SetupView: BaseView {
+final class SetupView: BaseView {
     
     let titleLabel = {
        let view = UILabel()

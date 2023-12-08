@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class MyListCollectionViewCell: BaseCollectionViewCell {
+final class MyListCollectionViewCell: BaseCollectionViewCell {
     
     let checklistBackgroundButton = {
         let view = UIButton()

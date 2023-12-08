@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class SubCategoryCollectionViewCell: BaseCollectionViewCell {
+final class SubCategoryCollectionViewCell: BaseCollectionViewCell {
     
     let backView = {
         let view = UIView()

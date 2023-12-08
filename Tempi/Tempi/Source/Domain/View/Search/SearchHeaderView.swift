@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class SearchHeaderView: BaseCollectionReusableView {
+final class SearchHeaderView: BaseCollectionReusableView {
     
     let titleLabel = {
         let view = TLabel(

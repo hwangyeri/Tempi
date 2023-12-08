@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class BookmarkListView: BaseView {
+final class BookmarkListView: BaseView {
     
     let emptyView = {
         let view = UIView()

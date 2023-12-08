@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class ReuseSearchWordsCollectionViewCell: BaseCollectionViewCell {
+final class ReuseSearchWordsCollectionViewCell: BaseCollectionViewCell {
     
     let borderView = {
         let view = UIView()

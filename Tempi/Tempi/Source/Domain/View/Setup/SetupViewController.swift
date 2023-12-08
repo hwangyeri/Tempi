@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SetupViewController: BaseViewController {
+final class SetupViewController: BaseViewController {
     
     let mainView = SetupView()
     

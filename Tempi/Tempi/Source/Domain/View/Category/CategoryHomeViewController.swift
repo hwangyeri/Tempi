@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import RealmSwift
 
-class CategoryHomeViewController: BaseViewController {
+final class CategoryHomeViewController: BaseViewController {
     
 //    let realm = try! Realm()
     

@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class EmptyCollectionReusableView: BaseCollectionReusableView {
+final class EmptyCollectionReusableView: BaseCollectionReusableView {
         
     let imageView = {
         let view = UIImageView()

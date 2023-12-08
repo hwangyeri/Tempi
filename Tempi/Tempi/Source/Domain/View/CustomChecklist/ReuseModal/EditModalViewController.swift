@@ -17,7 +17,7 @@ enum EditAction {
 
 // FIXME: 분기처리 저장 핸들러 - 반복되는 코드 리팩토링
 
-class EditModalViewController: BaseViewController {
+final class EditModalViewController: BaseViewController {
     
     var selectedItemID: ObjectId?
     var editAction: EditAction?

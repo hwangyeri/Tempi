@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import RealmSwift
 
-class MyListViewController: BaseViewController {
+final class MyListViewController: BaseViewController {
     
     private var fixedChecklists: [ChecklistTable] = []
     private var todayChecklists: [ChecklistTable] = []

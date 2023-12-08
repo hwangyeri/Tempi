@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class SearchResultCollectionViewCell: BaseCollectionViewCell {
+final class SearchResultCollectionViewCell: BaseCollectionViewCell {
     
     let backgroundButton = {
         let view = UIButton()

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CategoryDetailViewController: BaseViewController {
+final class CategoryDetailViewController: BaseViewController {
     
     var categoryName: String?
     

@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class MyListView: BaseView {
+final class MyListView: BaseView {
     
     let emptyView = {
         let view = UIView()

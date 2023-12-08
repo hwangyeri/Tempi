@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class ChecklistCollectionViewCell: BaseCollectionViewCell {
+final class ChecklistCollectionViewCell: BaseCollectionViewCell {
     
     let checkBoxButton = {
         let view = TBlankCheckBox()

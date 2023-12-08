@@ -14,7 +14,7 @@ enum NameAction {
     case updateChecklistName // 체크리스트 이름 변경
 }
 
-class EditChecklistNameViewController: BaseViewController {
+final class EditChecklistNameViewController: BaseViewController {
     
     var selectedChecklistID: ObjectId?
     var textFieldPlaceholder: String?

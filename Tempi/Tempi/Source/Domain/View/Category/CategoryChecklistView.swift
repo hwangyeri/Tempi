@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class CategoryChecklistView: BaseView {
+final class CategoryChecklistView: BaseView {
     
     let mainLabel = {
        let view = TLabel(

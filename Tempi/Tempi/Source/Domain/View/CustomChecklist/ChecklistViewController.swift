@@ -8,7 +8,7 @@
 import UIKit
 import RealmSwift
 
-class ChecklistViewController: BaseViewController {
+final class ChecklistViewController: BaseViewController {
     
     var selectedChecklistID: ObjectId?
     var checkItemTasks: Results<CheckItemTable>!

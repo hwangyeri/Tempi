@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class EditModalView: BaseView {
+final class EditModalView: BaseView {
     
     let backView = {
         let view = UIView()

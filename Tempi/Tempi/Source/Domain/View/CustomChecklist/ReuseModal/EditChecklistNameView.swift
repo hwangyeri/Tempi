@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class EditChecklistNameView: BaseView {
+final class EditChecklistNameView: BaseView {
     
     let exitButton = {
         let view = TImageButton(

@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class MyListHeaderView: BaseCollectionReusableView {
+final class MyListHeaderView: BaseCollectionReusableView {
     
     let imageView = {
         let view = UIImageView()

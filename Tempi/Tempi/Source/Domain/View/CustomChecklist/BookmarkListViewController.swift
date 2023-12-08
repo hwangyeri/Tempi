@@ -8,7 +8,7 @@
 import UIKit
 import RealmSwift
 
-class BookmarkListViewController: BaseViewController {
+final class BookmarkListViewController: BaseViewController {
     
     var bookmarkTasks: Results<BookmarkTable>!
     

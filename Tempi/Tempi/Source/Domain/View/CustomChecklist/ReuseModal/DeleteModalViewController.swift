@@ -14,7 +14,7 @@ enum DeleteAction {
     case deleteBookmarkItem // 즐겨찾기 아이템 삭제
 }
 
-class DeleteModalViewController: BaseViewController {
+final class DeleteModalViewController: BaseViewController {
     
     var selectedItemID: ObjectId?
     var deleteAction: DeleteAction?

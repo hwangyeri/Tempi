@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class CategoryDetailView: BaseView {
+final class CategoryDetailView: BaseView {
     
     let mainLabel = {
        let view = TLabel(

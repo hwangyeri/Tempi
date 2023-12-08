@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CalendarViewController: UIViewController {
+final class CalendarViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
