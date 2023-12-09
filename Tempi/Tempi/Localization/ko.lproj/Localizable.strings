@@ -90,7 +90,7 @@
 "bookmarkList_emptySubLabel" = "언제나 필요한 물건이나 반복되는 루틴을 등록해 보세요.";
 "bookmarkList_titleLabel" = "즐겨찾기";
 "bookmarkList_mainLabel" = "불러올 즐겨찾기 항목을 선택해 주세요.";
-"bookmarkList_subLabel" = "자주 쓰는 항목을 등록하면 간편하게 사용할 수 있어요!";
+"bookmarkList_subLabel" = "자주 쓰는 항목을 등록하면 간편하게 사용할 수 있어요!\n삭제하려면 왼쪽으로 스와이프 하세요.";
 "bookmarkList_addBookmarkItemLabel" = "항목 추가";
 "bookmarkList_selectedItemCountLabel" = "%d";
 "bookmarkList_selectAllLabel_selectAll" = "전체 선택";
