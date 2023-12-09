@@ -39,7 +39,7 @@ final class ChecklistViewController: BaseViewController {
         self.navigationItem.hidesBackButton = true
         mainView.checklistCollectionView.delegate = self
         mainView.checklistNameEditButton.addTarget(self, action: #selector(checklistNameEditButtonTapped), for: .touchUpInside)
-//        mainView.bookmarkListButton.addTarget(self, action: #selector(bookmarkListButtonTapped), for: .touchUpInside)
+        mainView.bookmarkListButton.addTarget(self, action: #selector(bookmarkListButtonTapped), for: .touchUpInside)
         mainView.checklistFixedButton.addTarget(self, action: #selector(checklistFixedButtonTapped), for: .touchUpInside)
         mainView.checklistDeleteButton.addTarget(self, action: #selector(checklistDeleteButtonTapped), for: .touchUpInside)
         mainView.plusButton.addTarget(self, action: #selector(plusButtonTapped), for: .touchUpInside)
@@ -180,21 +180,21 @@ final class ChecklistViewController: BaseViewController {
     }
     
     // MARK: - 즐겨찾기 버튼
-//    @objc private func bookmarkListButtonTapped() {
-//        print(#function)
-//        let bookmarkListVC = BookmarkListViewController()
-//
-//        self.bookmarkRepository.fetch { data in
-//            bookmarkListVC.bookmarkTasks = data
-//        }
-//
-//        if let sheet = bookmarkListVC.sheetPresentationController {
-//            sheet.detents = [.large()]
-//            sheet.delegate = self
-//        }
-//
-//        self.present(bookmarkListVC, animated: true)
-//    }
+    @objc private func bookmarkListButtonTapped() {
+        print(#function)
+        let bookmarkListVC = BookmarkListViewController()
+
+        self.bookmarkRepository.fetch { data in
+            bookmarkListVC.bookmarkTasks = data
+        }
+
+        if let sheet = bookmarkListVC.sheetPresentationController {
+            sheet.detents = [.large()]
+            sheet.delegate = self
+        }
+
+        self.present(bookmarkListVC, animated: true)
+    }
     
     // MARK: - 체크 항목 추가 버튼
     @objc private func plusButtonTapped() {
