@@ -42,8 +42,7 @@ final class EditModalViewController: BaseViewController {
         
         setLocalized()
         setNotificationCenter()
-        
-        //print("viewDidLoad", mainView.textField.text?.count, mainView.textField.text)
+        updateButtonState()
     }
     
     override func configureLayout() {
