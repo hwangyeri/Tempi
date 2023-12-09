@@ -90,7 +90,7 @@
 "bookmarkList_emptySubLabel" = "Try adding things that you always need, routine that repeats, etc.";
 "bookmarkList_titleLabel" = "Favorite";
 "bookmarkList_mainLabel" = "Please select a favorite item to recall.";
-"bookmarkList_subLabel" = "It's easy to use if you register a frequently used item!";
+"bookmarkList_subLabel" = "It's easy to use if you register a frequently used item!\nSwipe left to delete.";
 "bookmarkList_addBookmarkItemLabel" = "Add Item";
 "bookmarkList_selectedItemCountLabel" = "%d";
 "bookmarkList_selectAllLabel_selectAll" = "Select All";
