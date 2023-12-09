@@ -135,7 +135,7 @@ final class ChecklistView: BaseView {
         }
         
         divider.snp.makeConstraints { make in
-            make.top.equalTo(bookmarkListButton.snp.bottom).offset(15)
+            make.top.equalTo(bookmarkListButton.snp.bottom).offset(20)
             make.horizontalEdges.equalToSuperview()
             make.height.equalTo(1)
         }
