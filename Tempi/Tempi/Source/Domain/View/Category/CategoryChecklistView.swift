@@ -174,6 +174,7 @@ final class CategoryChecklistView: BaseView {
     var tButtonIsSelected: Bool = false {
         didSet {
             tButton.isEnabled = tButtonIsSelected
+            tButton.backgroundColor = tButtonIsSelected ? .label : .tButtonDisable
         }
     }
     
