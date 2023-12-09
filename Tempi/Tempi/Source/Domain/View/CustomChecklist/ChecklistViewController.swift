@@ -34,7 +34,7 @@ final class ChecklistViewController: BaseViewController {
         setNotificationCenter()
         isCreated()
     }
-    
+   
     override func configureLayout() {
         self.navigationItem.hidesBackButton = true
         mainView.checklistCollectionView.delegate = self
@@ -45,7 +45,7 @@ final class ChecklistViewController: BaseViewController {
         mainView.plusButton.addTarget(self, action: #selector(plusButtonTapped), for: .touchUpInside)
     }
     
-    // MARK: - 초기 데이터 설정
+    //MARK: - 초기 데이터 설정
     private func setChecklistData() {
         print(#function)
         let dateFormatter = DateFormatter()
@@ -81,20 +81,20 @@ final class ChecklistViewController: BaseViewController {
         mainView.checklistFixedButton.isSelected = isFixed
     }
     
-    // MARK: - NotificationCenter 설정
+    //MARK: - NotificationCenter 설정
     private func setNotificationCenter() {
         print(#function)
-        NotificationCenter.default.addObserver(self, selector: #selector(deleteChecklistNotificationObserver(notification:)), name: .deleteChecklist, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(updateChecklistNameNotificationObserver(notification:)), name: .updateChecklistName, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(deleteCheckItemNotificationObserver(notification:)), name: .deleteCheckItem, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(updateCheckItemContentNotificationObserver(notification:)), name: .updateCheckItemContent, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(updateCheckItemMemoNotificationObserver(notification:)), name: .updateCheckItemMemo, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(createCheckItemNotificationObserver(notification:)), name: .createCheckItem, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(updateChecklistFixedButtonNotificationObserver(notification:)), name: .updateChecklistFixedButton, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(updateCheckBoxStateAlertNotificationObserver(notification:)), name: .updateCheckBoxStateAlert, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(deleteChecklistNotificationObserver), name: .deleteChecklist, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateChecklistNameNotificationObserver), name: .updateChecklistName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(deleteCheckItemNotificationObserver), name: .deleteCheckItem, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateCheckItemContentNotificationObserver), name: .updateCheckItemContent, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateCheckItemMemoNotificationObserver), name: .updateCheckItemMemo, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(createCheckItemNotificationObserver), name: .createCheckItem, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateChecklistFixedButtonNotificationObserver), name: .updateChecklistFixedButton, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateCheckBoxStateAlertNotificationObserver), name: .updateCheckBoxStateAlert, object: nil)
     }
     
-    // MARK: - 체크리스트 생성 상태 확인 메서드
+    //MARK: - 체크리스트 생성 상태 확인 메서드
     private func isCreated() {
         print(#function)
         
@@ -109,7 +109,7 @@ final class ChecklistViewController: BaseViewController {
         }
     }
     
-    // MARK: - 체크리스트 이름 수정 버튼
+    //MARK: - 체크리스트 이름 수정 버튼
     @objc private func checklistNameEditButtonTapped() {
         print(#function)
         let editChecklistNameVC = EditChecklistNameViewController()
@@ -121,7 +121,7 @@ final class ChecklistViewController: BaseViewController {
         self.present(editChecklistNameVC, animated: true)
     }
     
-    // MARK: - 체크리스트 고정 버튼
+    //MARK: - 체크리스트 고정 버튼
     @objc private func checklistFixedButtonTapped() {
         print(#function)
         
@@ -140,8 +140,8 @@ final class ChecklistViewController: BaseViewController {
         NotificationCenter.default.post(name: .updateChecklistFixedButton, object: nil, userInfo: ["newIsFixed": newIsFixed])
     }
     
-    // MARK: - 체크리스트 고정 버튼 (노티)
-    @objc func updateChecklistFixedButtonNotificationObserver(notification: NSNotification) {
+    //MARK: - 체크리스트 고정 버튼 (노티)
+    @objc func updateChecklistFixedButtonNotificationObserver(_ notification: NSNotification) {
         print(#function)
 
         guard let newIsFixed = notification.userInfo?["newIsFixed"] as? Bool else {
@@ -162,7 +162,7 @@ final class ChecklistViewController: BaseViewController {
         }
     }
     
-    // MARK: - 체크리스트 삭제 버튼
+    //MARK: - 체크리스트 삭제 버튼
     @objc private func checklistDeleteButtonTapped() {
         print(#function)
         
@@ -179,7 +179,7 @@ final class ChecklistViewController: BaseViewController {
         self.present(modalVC, animated: true)
     }
     
-    // MARK: - 즐겨찾기 버튼
+    //MARK: - 즐겨찾기 버튼
     @objc private func bookmarkListButtonTapped() {
         print(#function)
         let bookmarkListVC = BookmarkListViewController()
@@ -193,10 +193,12 @@ final class ChecklistViewController: BaseViewController {
             sheet.delegate = self
         }
 
+        bookmarkListVC.selectedChecklistID = self.selectedChecklistID
+        
         self.present(bookmarkListVC, animated: true)
     }
     
-    // MARK: - 체크 항목 추가 버튼
+    //MARK: - 체크 항목 추가 버튼
     @objc private func plusButtonTapped() {
         print(#function)
         let editModalVC = EditModalViewController()
@@ -208,21 +210,21 @@ final class ChecklistViewController: BaseViewController {
         self.present(editModalVC, animated: true)
     }
     
-    // MARK: - 체크박스 체크 시 알럿 (노티)
-    @objc func updateCheckBoxStateAlertNotificationObserver(notification: NSNotification) {
+    //MARK: - 체크박스 체크 시 알럿 (노티)
+    @objc func updateCheckBoxStateAlertNotificationObserver(_ notification: NSNotification) {
         print(#function)
         showToast(message: "showToast_checkbox_isSelected".localized)
     }
     
-    // MARK: - 체크리스트 삭제 버튼 (노티)
-    @objc func deleteChecklistNotificationObserver(notification: NSNotification) {
+    //MARK: - 체크리스트 삭제 버튼 (노티)
+    @objc func deleteChecklistNotificationObserver(_ notification: NSNotification) {
         print(#function)
         navigationController?.popToRootViewController(animated: true)
         NotificationCenter.default.post(name: .deleteChecklistAlert, object: nil)
     }
     
-    // MARK: - 이름 수정 (노티)
-    @objc func updateChecklistNameNotificationObserver(notification: NSNotification) {
+    //MARK: - 이름 수정 (노티)
+    @objc func updateChecklistNameNotificationObserver(_ notification: NSNotification) {
         print(#function)
         
         guard let newName = notification.userInfo?["checklistName"] as? String else {
@@ -230,58 +232,58 @@ final class ChecklistViewController: BaseViewController {
             return
         }
         
-        DispatchQueue.main.async {
-            self.mainView.checklistNameLabel.text = newName
+        DispatchQueue.main.async { [weak self] in
+            self?.mainView.checklistNameLabel.text = newName
         }
         
         showToast(message: "showToast_update".localized)
     }
     
-    // MARK: - 체크아이템 삭제 apply (노티)
-    @objc func deleteCheckItemNotificationObserver(notification: NSNotification) {
+    //MARK: - 체크아이템 삭제 apply (노티)
+    @objc func deleteCheckItemNotificationObserver(_ notification: NSNotification) {
         print(#function)
         
         showToast(message: "showToast_delete".localized)
         
-        DispatchQueue.main.async {
-            self.configureChecklistDataSource()
+        DispatchQueue.main.async { [weak self] in
+            self?.configureChecklistDataSource()
         }
     }
     
-    // MARK: - 체크아이템 내용 수정 apply (노티)
-    @objc func updateCheckItemContentNotificationObserver(notification: NSNotification) {
+    //MARK: - 체크아이템 내용 수정 apply (노티)
+    @objc func updateCheckItemContentNotificationObserver(_ notification: NSNotification) {
         print(#function)
         
         showToast(message: "showToast_update".localized)
         
-        DispatchQueue.main.async {
-            self.configureChecklistDataSource()
+        DispatchQueue.main.async { [weak self] in
+            self?.configureChecklistDataSource()
         }
     }
     
-    // MARK: - 체크아이템 메모 설정 apply (노티)
-    @objc func updateCheckItemMemoNotificationObserver(notification: NSNotification) {
+    //MARK: - 체크아이템 메모 설정 apply (노티)
+    @objc func updateCheckItemMemoNotificationObserver(_ notification: NSNotification) {
         print(#function)
         
         showToast(message: "showToast_update".localized)
         
-        DispatchQueue.main.async {
-            self.configureChecklistDataSource()
+        DispatchQueue.main.async { [weak self] in
+            self?.configureChecklistDataSource()
         }
     }
     
-    // MARK: - 체크아이템 추가 apply (노티)
-    @objc func createCheckItemNotificationObserver(notification: NSNotification) {
+    //MARK: - 체크아이템 추가 apply (노티)
+    @objc func createCheckItemNotificationObserver(_ notification: NSNotification) {
         print(#function)
         
         showToast(message: "showToast_create".localized)
         
-        DispatchQueue.main.async {
-            self.configureChecklistDataSource()
+        DispatchQueue.main.async { [weak self] in
+            self?.configureChecklistDataSource()
         }
     }
     
-    // MARK: - CollectionView DataSource
+    //MARK: - CollectionView DataSource
     private func configureChecklistDataSource() {
         print(#function)
         guard let checkItemTasks = checkItemTasks else {
@@ -298,9 +300,10 @@ final class ChecklistViewController: BaseViewController {
             cell.checkBoxMemoLabel.text = itemIdentifier.memo
             cell.cellIsSelected = itemIdentifier.isChecked
             
-            // MARK: - 체크아이템 메뉴 버튼
+            /// 체크아이템 메뉴 버튼
             cell.checkBoxMenuButton.menu = UIMenu(preferredElementSize: .medium, children: [
-                /// 내용 수정
+                
+                // 내용 수정
                 UIAction(title: "checklist_checkBoxMenuButton_firstMenu".localized, image: UIImage(systemName: Constant.SFSymbol.editMenuItemIcon), handler: { _ in
                     print("Edit Menu Tapped")
                     
@@ -316,7 +319,8 @@ final class ChecklistViewController: BaseViewController {
                     
                     self?.present(editModalVC, animated: true)
                 }),
-                /// 메모 설정
+                
+                // 메모 설정
                 UIAction(title: "checklist_checkBoxMenuButton_secondMenu".localized, image: UIImage(systemName: Constant.SFSymbol.addMemoMenuItemIcon), handler: { _ in
                     print("Add Memo Menu Tapped")
                     
@@ -332,7 +336,8 @@ final class ChecklistViewController: BaseViewController {
                     
                     self?.present(editModalVC, animated: true)
                 }),
-                /// 삭제
+                
+                // 삭제
                 UIAction(title: "checklist_checkBoxMenuButton_thirdMenu".localized, image: UIImage(systemName: Constant.SFSymbol.deleteMemuItemIcon), attributes: .destructive, handler: { _ in
                     print("Delete Menu Tapped")
                     
@@ -366,7 +371,7 @@ final class ChecklistViewController: BaseViewController {
     }
 }
 
-// MARK: - CollectionView Delegate
+//MARK: - CollectionView Delegate
 extension ChecklistViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -394,7 +399,7 @@ extension ChecklistViewController: UICollectionViewDelegate {
 }
 
 
-// MARK: - Sheet Delegate
+//MARK: - Sheet Delegate
 extension ChecklistViewController: UISheetPresentationControllerDelegate {
     
 }
