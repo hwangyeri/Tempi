@@ -69,13 +69,13 @@ final class BookmarkListView: BaseView {
         return view
     }()
     
-    let selectAllLabel = TLabel(
-        text: "bookmarkList_selectAllLabel_selectAll".localized,
-        custFont: .pretendardRegularXS,
-        textColor: .label
-    )
- 
-    let selectAllCheckBox = TBlankCheckBox()
+//    let selectAllLabel = TLabel(
+//        text: "bookmarkList_selectAllLabel_selectAll".localized,
+//        custFont: .pretendardRegularXS,
+//        textColor: .label
+//    )
+// 
+//    let selectAllCheckBox = TBlankCheckBox()
   
     let divider = TDivider()
   
@@ -130,7 +130,7 @@ final class BookmarkListView: BaseView {
     )
     
     override func configureHierarchy() {
-        [titleLabel, mainLabel, subLabel, selectAllLabel, selectAllCheckBox, divider, addBookmarkItemLabel, addBookmarkItemButton, tableView, tButton, emptyView].forEach {
+        [titleLabel, mainLabel, subLabel, divider, addBookmarkItemLabel, addBookmarkItemButton, tableView, tButton, emptyView].forEach {
             addSubview($0)
         }
         
@@ -150,29 +150,29 @@ final class BookmarkListView: BaseView {
         }
         
         mainLabel.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).offset(35)
+            make.top.equalTo(titleLabel.snp.bottom).offset(45)
             make.leading.equalToSuperview().inset(25)
             make.trailing.equalToSuperview().inset(10)
         }
         
         subLabel.snp.makeConstraints { make in
-            make.top.equalTo(mainLabel.snp.bottom).offset(6)
+            make.top.equalTo(mainLabel.snp.bottom).offset(10)
             make.horizontalEdges.equalTo(mainLabel)
         }
         
-        selectAllCheckBox.snp.makeConstraints { make in
-            make.top.equalTo(subLabel.snp.bottom).offset(35)
-            make.trailing.equalToSuperview().inset(25)
-            make.size.equalTo(32)
-        }
-        
-        selectAllLabel.snp.makeConstraints { make in
-            make.centerY.equalTo(selectAllCheckBox)
-            make.trailing.equalTo(selectAllCheckBox.snp.leading).offset(-8)
-        }
+//        selectAllCheckBox.snp.makeConstraints { make in
+//            make.top.equalTo(subLabel.snp.bottom).offset(35)
+//            make.trailing.equalToSuperview().inset(25)
+//            make.size.equalTo(32)
+//        }
+//        
+//        selectAllLabel.snp.makeConstraints { make in
+//            make.centerY.equalTo(selectAllCheckBox)
+//            make.trailing.equalTo(selectAllCheckBox.snp.leading).offset(-8)
+//        }
         
         divider.snp.makeConstraints { make in
-            make.top.equalTo(selectAllCheckBox.snp.bottom).offset(15)
+            make.top.equalTo(subLabel.snp.bottom).offset(30)
             make.horizontalEdges.equalToSuperview()
             make.height.equalTo(1)
         }
