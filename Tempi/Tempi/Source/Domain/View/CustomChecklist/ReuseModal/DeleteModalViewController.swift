@@ -11,7 +11,6 @@ import RealmSwift
 enum DeleteAction {
     case deleteChecklist // 체크리스트 삭제
     case deleteCheckItem // 체크 아이템 삭제
-    case deleteBookmarkItem // 즐겨찾기 아이템 삭제
 }
 
 final class DeleteModalViewController: BaseViewController {
@@ -21,7 +20,6 @@ final class DeleteModalViewController: BaseViewController {
     
     private let checklistRepository = ChecklistTableRepository()
     private let checkItemRepository = CheckItemTableRepository()
-    private let bookmarkRepository = BookmarkTableRepository()
 
     private let mainView = DeleteModalView()
     
@@ -60,8 +58,6 @@ final class DeleteModalViewController: BaseViewController {
             handleDeleteChecklist()
         case .deleteCheckItem:
             handleDeleteCheckItem()
-        case .deleteBookmarkItem:
-            handleDeleteBookmarkItem()
         }
     }
     
@@ -88,19 +84,6 @@ final class DeleteModalViewController: BaseViewController {
         dismiss(animated: true) {
             NotificationCenter.default.post(name: .deleteCheckItem, object: nil)
         }
-    }
-    
-    private func handleDeleteBookmarkItem() {
-        print(#function)
-//        guard let selectedItemID = selectedItemID else {
-//            print("selectedItemID error")
-//            return
-//        }
-//        
-//        bookmarkRepository.deleteItem(forId: selectedItemID)
-//        dismiss(animated: true) {
-//            NotificationCenter.default.post(name: .deleteBookmarkItem, object: nil)
-//        }
     }
     
     deinit {
