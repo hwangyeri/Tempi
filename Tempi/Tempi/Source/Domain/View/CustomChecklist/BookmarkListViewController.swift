@@ -35,7 +35,7 @@ final class BookmarkListViewController: BaseViewController {
         mainView.addBookmarkItemButton.addTarget(self, action: #selector(addBookmarkItemButtonTapped), for: .touchUpInside)
     }
     
-    // MARK: - 초기 데이터 설정
+    //MARK: - 초기 데이터 설정
     private func setBookmarkListData() {
         print(#function)
         // 현재 즐겨찾기 항목 개수 UI 업데이트
@@ -45,14 +45,14 @@ final class BookmarkListViewController: BaseViewController {
         }
     }
     
-    // MARK: - NotificationCenter 설정
+    //MARK: - NotificationCenter 설정
     private func setNotificationCenter() {
         print(#function)
         NotificationCenter.default.addObserver(self, selector: #selector(createBookmarkItemNotificationObserver(notification:)), name: .createBookmarkItem, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(deleteBookmarkItemNotificationObserver(notification:)), name: .deleteBookmarkItem, object: nil)
     }
     
-    // MARK: - 즐겨찾기 항목 생성 (노티)
+    //MARK: - 즐겨찾기 항목 생성 (노티)
     @objc private func createBookmarkItemNotificationObserver(notification: NSNotification) {
         print(#function)
         
@@ -64,7 +64,7 @@ final class BookmarkListViewController: BaseViewController {
         }
     }
     
-    // MARK: - 즐겨찾기 항목 삭제 (노티)
+    //MARK: - 즐겨찾기 항목 삭제 (노티)
     @objc private func deleteBookmarkItemNotificationObserver(notification: NSNotification) {
         print(#function)
         
@@ -76,7 +76,7 @@ final class BookmarkListViewController: BaseViewController {
 //        }
     }
     
-    // MARK: - 즐겨찾기 항목 추가 버튼
+    //MARK: - 즐겨찾기 항목 추가 버튼
     @objc private func addBookmarkItemButtonTapped() {
         print(#function)
         let editModalVC = EditModalViewController()
@@ -87,7 +87,7 @@ final class BookmarkListViewController: BaseViewController {
         self.present(editModalVC, animated: true)
     }
     
-    // MARK: - 즐겨찾기 항목 삭제 버튼
+    //MARK: - 즐겨찾기 항목 삭제 버튼
     @objc private func deleteButtonTapped (_ sender: UIButton) {
         print(#function)
 //        guard let selectedItemID = self.selectedItemID else {
@@ -104,7 +104,7 @@ final class BookmarkListViewController: BaseViewController {
 //        self.present(deleteModalVC, animated: true)
     }
     
-    // MARK: - CollectionView DataSource
+    //MARK: - CollectionView DataSource
     private func configureBookmarkDataSource() {
         print(#function)
         
@@ -139,7 +139,7 @@ final class BookmarkListViewController: BaseViewController {
     
 }
 
-// MARK: - CollectionView Delegate
+//MARK: - CollectionView Delegate
 extension BookmarkListViewController: UICollectionViewDelegate {
     
 //    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
