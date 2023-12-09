@@ -32,6 +32,9 @@
 		2B6378442ADFCCA100203AFA /* EditModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6378432ADFCCA100203AFA /* EditModalView.swift */; };
 		2B6378462ADFF1E400203AFA /* HideKeyboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6378452ADFF1E400203AFA /* HideKeyboard+.swift */; };
 		2B6785CE2AE90AF9009B2BD1 /* BookmarkTableRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6785CD2AE90AF9009B2BD1 /* BookmarkTableRepository.swift */; };
+		2B76B8D22B24631E00F19F7C /* BookmarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B76B8D12B24631E00F19F7C /* BookmarkTableViewCell.swift */; };
+		2B76B8D52B24639400F19F7C /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B76B8D42B24639400F19F7C /* BaseTableViewCell.swift */; };
+		2B76B8D72B2464A100F19F7C /* ReusableViewProtocol+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B76B8D62B2464A100F19F7C /* ReusableViewProtocol+.swift */; };
 		2B81053C2ACEFD3700B50223 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81053B2ACEFD3700B50223 /* SearchViewController.swift */; };
 		2B81053E2ACEFD3F00B50223 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81053D2ACEFD3F00B50223 /* SearchView.swift */; };
 		2B8105492AD02A0C00B50223 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 2B8105482AD02A0C00B50223 /* Realm */; };
@@ -57,15 +60,13 @@
 		2B952A132ACE835F0074D4F2 /* ChecklistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B952A122ACE835F0074D4F2 /* ChecklistView.swift */; };
 		2B952A152ACEA5960074D4F2 /* TImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B952A142ACEA5960074D4F2 /* TImageButton.swift */; };
 		2B952A172ACEB1DC0074D4F2 /* ChecklistCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B952A162ACEB1DC0074D4F2 /* ChecklistCollectionViewCell.swift */; };
-		2B9D8D422AD973F3006F42E0 /* BookmarkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9D8D412AD973F3006F42E0 /* BookmarkListViewController.swift */; };
-		2B9D8D442AD97408006F42E0 /* BookmarkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9D8D432AD97408006F42E0 /* BookmarkListView.swift */; };
+		2B9D8D422AD973F3006F42E0 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9D8D412AD973F3006F42E0 /* BookmarkViewController.swift */; };
+		2B9D8D442AD97408006F42E0 /* BookmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9D8D432AD97408006F42E0 /* BookmarkView.swift */; };
 		2B9D8D4A2ADBB3B8006F42E0 /* ChecklistTableRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9D8D492ADBB3B8006F42E0 /* ChecklistTableRepository.swift */; };
-		2BA2AECA2AE9423D0076324A /* BookmarkListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA2AEC92AE9423D0076324A /* BookmarkListCollectionViewCell.swift */; };
 		2BA2AED92AEEB3F60076324A /* NaviBarButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA2AED82AEEB3F60076324A /* NaviBarButton+.swift */; };
 		2BA2AEE12AEEC9840076324A /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = 2BA2AEE02AEEC9840076324A /* SwiftMessages */; };
 		2BA2AEE52AEFD4B60076324A /* CategoryData_ko.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BA2AEE42AEFD4B50076324A /* CategoryData_ko.json */; };
 		2BA2AEE72AEFD4C50076324A /* CategoryData_en.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BA2AEE62AEFD4C50076324A /* CategoryData_en.json */; };
-		2BA2AEE92AEFEB030076324A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA2AEE82AEFEB030076324A /* ViewModel.swift */; };
 		2BA2AEEB2AF00C5B0076324A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2BA2AEEA2AF00C5B0076324A /* .gitignore */; };
 		2BA2AEED2AF00CE30076324A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BA2AEEC2AF00CE20076324A /* GoogleService-Info.plist */; };
 		2BBFD9772AE83F3D00A00DEB /* LineSpacing+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBFD9762AE83F3D00A00DEB /* LineSpacing+.swift */; };
@@ -122,6 +123,9 @@
 		2B6378432ADFCCA100203AFA /* EditModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditModalView.swift; sourceTree = "<group>"; };
 		2B6378452ADFF1E400203AFA /* HideKeyboard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HideKeyboard+.swift"; sourceTree = "<group>"; };
 		2B6785CD2AE90AF9009B2BD1 /* BookmarkTableRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTableRepository.swift; sourceTree = "<group>"; };
+		2B76B8D12B24631E00F19F7C /* BookmarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTableViewCell.swift; sourceTree = "<group>"; };
+		2B76B8D42B24639400F19F7C /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		2B76B8D62B2464A100F19F7C /* ReusableViewProtocol+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReusableViewProtocol+.swift"; sourceTree = "<group>"; };
 		2B81053B2ACEFD3700B50223 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		2B81053D2ACEFD3F00B50223 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		2B8105512AD02D0600B50223 /* ChecklistTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistTable.swift; sourceTree = "<group>"; };
@@ -145,14 +149,12 @@
 		2B952A122ACE835F0074D4F2 /* ChecklistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistView.swift; sourceTree = "<group>"; };
 		2B952A142ACEA5960074D4F2 /* TImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TImageButton.swift; sourceTree = "<group>"; };
 		2B952A162ACEB1DC0074D4F2 /* ChecklistCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistCollectionViewCell.swift; sourceTree = "<group>"; };
-		2B9D8D412AD973F3006F42E0 /* BookmarkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListViewController.swift; sourceTree = "<group>"; };
-		2B9D8D432AD97408006F42E0 /* BookmarkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListView.swift; sourceTree = "<group>"; };
+		2B9D8D412AD973F3006F42E0 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
+		2B9D8D432AD97408006F42E0 /* BookmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkView.swift; sourceTree = "<group>"; };
 		2B9D8D492ADBB3B8006F42E0 /* ChecklistTableRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistTableRepository.swift; sourceTree = "<group>"; };
-		2BA2AEC92AE9423D0076324A /* BookmarkListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListCollectionViewCell.swift; sourceTree = "<group>"; };
 		2BA2AED82AEEB3F60076324A /* NaviBarButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaviBarButton+.swift"; sourceTree = "<group>"; };
 		2BA2AEE42AEFD4B50076324A /* CategoryData_ko.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CategoryData_ko.json; sourceTree = "<group>"; };
 		2BA2AEE62AEFD4C50076324A /* CategoryData_en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CategoryData_en.json; sourceTree = "<group>"; };
-		2BA2AEE82AEFEB030076324A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewModel.swift; path = Tempi/Source/Utility/DesignSystem/Extension/ViewModel.swift; sourceTree = SOURCE_ROOT; };
 		2BA2AEEA2AF00C5B0076324A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		2BA2AEEC2AF00CE20076324A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2BBFD9762AE83F3D00A00DEB /* LineSpacing+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LineSpacing+.swift"; sourceTree = "<group>"; };
@@ -222,6 +224,88 @@
 			path = MyListCell;
 			sourceTree = "<group>";
 		};
+		2B76B8D32B24632D00F19F7C /* Bookmark */ = {
+			isa = PBXGroup;
+			children = (
+				2B9D8D412AD973F3006F42E0 /* BookmarkViewController.swift */,
+				2B9D8D432AD97408006F42E0 /* BookmarkView.swift */,
+				2B76B8D12B24631E00F19F7C /* BookmarkTableViewCell.swift */,
+			);
+			path = Bookmark;
+			sourceTree = "<group>";
+		};
+		2B76B8D82B24D71A00F19F7C /* DeleteModal */ = {
+			isa = PBXGroup;
+			children = (
+				2B63782E2ADD56B700203AFA /* DeleteModalViewController.swift */,
+				2B6378302ADD56BF00203AFA /* DeleteModalView.swift */,
+			);
+			path = DeleteModal;
+			sourceTree = "<group>";
+		};
+		2B76B8D92B24D74800F19F7C /* EditChecklistName */ = {
+			isa = PBXGroup;
+			children = (
+				2B6378382ADD72A000203AFA /* EditChecklistNameViewController.swift */,
+				2B6378362ADD729600203AFA /* EditChecklistNameView.swift */,
+			);
+			path = EditChecklistName;
+			sourceTree = "<group>";
+		};
+		2B76B8DA2B24D76A00F19F7C /* EditModal */ = {
+			isa = PBXGroup;
+			children = (
+				2B6378412ADFCC9200203AFA /* EditModalViewController.swift */,
+				2B6378432ADFCCA100203AFA /* EditModalView.swift */,
+			);
+			path = EditModal;
+			sourceTree = "<group>";
+		};
+		2B76B8DB2B24D83600F19F7C /* CategoryHome */ = {
+			isa = PBXGroup;
+			children = (
+				2BC72B8E2AC84AD10014420F /* CategoryHomeViewController.swift */,
+				2B49F59F2AC864F100FF903F /* CategoryHomeView.swift */,
+			);
+			path = CategoryHome;
+			sourceTree = "<group>";
+		};
+		2B76B8DC2B24D85000F19F7C /* CategoryDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2B9529CC2ACC41BC0074D4F2 /* CategoryDetailViewController.swift */,
+				2B9529CE2ACC41E40074D4F2 /* CategoryDetailView.swift */,
+			);
+			path = CategoryDetail;
+			sourceTree = "<group>";
+		};
+		2B76B8DD2B24D86B00F19F7C /* CategoryChecklist */ = {
+			isa = PBXGroup;
+			children = (
+				2B952A052ACD7E480074D4F2 /* CategoryChecklistViewController.swift */,
+				2B952A072ACD7E9A0074D4F2 /* CategoryChecklistView.swift */,
+			);
+			path = CategoryChecklist;
+			sourceTree = "<group>";
+		};
+		2B76B8DE2B24D9B500F19F7C /* AddChecklist */ = {
+			isa = PBXGroup;
+			children = (
+				2B91AB682AD697940078AB39 /* AddChecklistView.swift */,
+				2B91AB642AD6977B0078AB39 /* AddChecklistViewController.swift */,
+			);
+			path = AddChecklist;
+			sourceTree = "<group>";
+		};
+		2B76B8DF2B24D9CB00F19F7C /* Checklist */ = {
+			isa = PBXGroup;
+			children = (
+				2B952A122ACE835F0074D4F2 /* ChecklistView.swift */,
+				2B952A102ACE83420074D4F2 /* ChecklistViewController.swift */,
+			);
+			path = Checklist;
+			sourceTree = "<group>";
+		};
 		2B8105382ACEFCBD00B50223 /* CategoryCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,7 +321,6 @@
 			children = (
 				2B91AB6A2AD699D70078AB39 /* AddChecklistCollectionViewCell.swift */,
 				2B952A162ACEB1DC0074D4F2 /* ChecklistCollectionViewCell.swift */,
-				2BA2AEC92AE9423D0076324A /* BookmarkListCollectionViewCell.swift */,
 			);
 			path = ChecklistCell;
 			sourceTree = "<group>";
@@ -266,12 +349,9 @@
 		2B952A0F2ACE818C0074D4F2 /* CustomChecklist */ = {
 			isa = PBXGroup;
 			children = (
-				2B91AB642AD6977B0078AB39 /* AddChecklistViewController.swift */,
-				2B91AB682AD697940078AB39 /* AddChecklistView.swift */,
-				2B952A102ACE83420074D4F2 /* ChecklistViewController.swift */,
-				2B952A122ACE835F0074D4F2 /* ChecklistView.swift */,
-				2B9D8D412AD973F3006F42E0 /* BookmarkListViewController.swift */,
-				2B9D8D432AD97408006F42E0 /* BookmarkListView.swift */,
+				2B76B8DE2B24D9B500F19F7C /* AddChecklist */,
+				2B76B8DF2B24D9CB00F19F7C /* Checklist */,
+				2B76B8D32B24632D00F19F7C /* Bookmark */,
 				2BAF93FD2AE041AA00F0584A /* ReuseModal */,
 				2B8105392ACEFCDB00B50223 /* ChecklistCell */,
 			);
@@ -290,12 +370,9 @@
 		2BAF93FD2AE041AA00F0584A /* ReuseModal */ = {
 			isa = PBXGroup;
 			children = (
-				2B63782E2ADD56B700203AFA /* DeleteModalViewController.swift */,
-				2B6378302ADD56BF00203AFA /* DeleteModalView.swift */,
-				2B6378382ADD72A000203AFA /* EditChecklistNameViewController.swift */,
-				2B6378362ADD729600203AFA /* EditChecklistNameView.swift */,
-				2B6378412ADFCC9200203AFA /* EditModalViewController.swift */,
-				2B6378432ADFCCA100203AFA /* EditModalView.swift */,
+				2B76B8D82B24D71A00F19F7C /* DeleteModal */,
+				2B76B8DA2B24D76A00F19F7C /* EditModal */,
+				2B76B8D92B24D74800F19F7C /* EditChecklistName */,
 			);
 			path = ReuseModal;
 			sourceTree = "<group>";
@@ -443,6 +520,7 @@
 				2BBFD9762AE83F3D00A00DEB /* LineSpacing+.swift */,
 				2BA2AED82AEEB3F60076324A /* NaviBarButton+.swift */,
 				2B5EABB52B03D54C004AD7D8 /* UserDefaults+.swift */,
+				2B76B8D62B2464A100F19F7C /* ReusableViewProtocol+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -470,7 +548,6 @@
 			children = (
 				2BF5FE4D2AC6FA29009BCBD9 /* Base */,
 				2BF5FE462AC6F6A0009BCBD9 /* Model */,
-				2BF5FE452AC6F699009BCBD9 /* ViewModel */,
 				2BF5FE442AC6F691009BCBD9 /* View */,
 			);
 			path = Domain;
@@ -487,14 +564,6 @@
 				2BE49C752AE595B200007EC9 /* Setup */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		2BF5FE452AC6F699009BCBD9 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				2BA2AEE82AEFEB030076324A /* ViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		2BF5FE462AC6F6A0009BCBD9 /* Model */ = {
@@ -535,12 +604,9 @@
 		2BF5FE4B2AC6F9C5009BCBD9 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				2BC72B8E2AC84AD10014420F /* CategoryHomeViewController.swift */,
-				2B49F59F2AC864F100FF903F /* CategoryHomeView.swift */,
-				2B9529CC2ACC41BC0074D4F2 /* CategoryDetailViewController.swift */,
-				2B9529CE2ACC41E40074D4F2 /* CategoryDetailView.swift */,
-				2B952A052ACD7E480074D4F2 /* CategoryChecklistViewController.swift */,
-				2B952A072ACD7E9A0074D4F2 /* CategoryChecklistView.swift */,
+				2B76B8DB2B24D83600F19F7C /* CategoryHome */,
+				2B76B8DC2B24D85000F19F7C /* CategoryDetail */,
+				2B76B8DD2B24D86B00F19F7C /* CategoryChecklist */,
 				2B8105382ACEFCBD00B50223 /* CategoryCell */,
 			);
 			path = Category;
@@ -565,6 +631,7 @@
 				2BC72B802AC720B30014420F /* BaseViewController.swift */,
 				2BC72B842AC723160014420F /* BaseCollectionViewCell.swift */,
 				2B2D3E072AE4F7E800476A46 /* BaseCollectionReusableView.swift */,
+				2B76B8D42B24639400F19F7C /* BaseTableViewCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -688,7 +755,7 @@
 			files = (
 				2B2D3E0A2AE4F8BB00476A46 /* EmptyCollectionReusableView.swift in Sources */,
 				2B6378442ADFCCA100203AFA /* EditModalView.swift in Sources */,
-				2B9D8D422AD973F3006F42E0 /* BookmarkListViewController.swift in Sources */,
+				2B9D8D422AD973F3006F42E0 /* BookmarkViewController.swift in Sources */,
 				2B952A112ACE83420074D4F2 /* ChecklistViewController.swift in Sources */,
 				2B91AB652AD6977B0078AB39 /* AddChecklistViewController.swift in Sources */,
 				2B6378422ADFCC9200203AFA /* EditModalViewController.swift in Sources */,
@@ -714,7 +781,6 @@
 				2B81056D2AD5141700B50223 /* DataManager.swift in Sources */,
 				2B8105692AD2C66B00B50223 /* CategoryDefaultModel.swift in Sources */,
 				2B9529D12ACCE6760074D4F2 /* TButton.swift in Sources */,
-				2BA2AEE92AEFEB030076324A /* ViewModel.swift in Sources */,
 				2B6378392ADD72A000203AFA /* EditChecklistNameViewController.swift in Sources */,
 				2BDE84D02AC95CF90018C759 /* TLabel.swift in Sources */,
 				2BC72B7F2AC7207D0014420F /* BaseView.swift in Sources */,
@@ -723,8 +789,8 @@
 				2BC72B872AC727640014420F /* Alert+.swift in Sources */,
 				2B9D8D4A2ADBB3B8006F42E0 /* ChecklistTableRepository.swift in Sources */,
 				2B6785CE2AE90AF9009B2BD1 /* BookmarkTableRepository.swift in Sources */,
-				2BA2AECA2AE9423D0076324A /* BookmarkListCollectionViewCell.swift in Sources */,
 				2B63782D2ADC578200203AFA /* MyListView.swift in Sources */,
+				2B76B8D22B24631E00F19F7C /* BookmarkTableViewCell.swift in Sources */,
 				2BFE96E72AE55F9F007CD4ED /* SearchHeaderView.swift in Sources */,
 				2BE49C782AE5961D00007EC9 /* SetupViewController.swift in Sources */,
 				2B6378312ADD56BF00203AFA /* DeleteModalView.swift in Sources */,
@@ -732,11 +798,13 @@
 				2BE49C7A2AE5964500007EC9 /* SetupView.swift in Sources */,
 				2BC72B812AC720B30014420F /* BaseViewController.swift in Sources */,
 				2BF5FE652AC7079B009BCBD9 /* Localized+.swift in Sources */,
+				2B76B8D52B24639400F19F7C /* BaseTableViewCell.swift in Sources */,
 				2B952A0E2ACE7B1B0074D4F2 /* CategoryChecklistCollectionViewCell.swift in Sources */,
+				2B76B8D72B2464A100F19F7C /* ReusableViewProtocol+.swift in Sources */,
 				2BA2AED92AEEB3F60076324A /* NaviBarButton+.swift in Sources */,
 				2B2D3E042AE3FF8700476A46 /* MyListCollectionViewCell.swift in Sources */,
 				2BFE96E52AE553EF007CD4ED /* SearchResultCollectionViewCell.swift in Sources */,
-				2B9D8D442AD97408006F42E0 /* BookmarkListView.swift in Sources */,
+				2B9D8D442AD97408006F42E0 /* BookmarkView.swift in Sources */,
 				2B952A132ACE835F0074D4F2 /* ChecklistView.swift in Sources */,
 				2BDE84D32ACAB7EC0018C759 /* ReuseSearchWordsCollectionViewCell.swift in Sources */,
 				2B91AB692AD697940078AB39 /* AddChecklistView.swift in Sources */,
@@ -924,7 +992,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yerihwang.Tempi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -957,7 +1025,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yerihwang.Tempi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
