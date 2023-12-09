@@ -63,8 +63,8 @@ final class BookmarkListView: BaseView {
     let subLabel = {
         let view = TLabel(
          text: "bookmarkList_subLabel".localized,
-         custFont: .pretendardMediumS,
-         textColor: .red)
+         custFont: .pretendardRegularS,
+         textColor: .label)
         view.setAttributedTextWithLineSpacing("bookmarkList_subLabel".localized, lineSpacing: 3)
          return view
     }()
@@ -98,9 +98,9 @@ final class BookmarkListView: BaseView {
     
     let addBookmarkItemButton = {
         let view = UIButton()
-        view.layer.cornerRadius = 22
+        view.layer.cornerRadius = 20
         view.layer.borderWidth = 1
-        view.layer.borderColor = UIColor.red.cgColor
+        view.layer.borderColor = UIColor.label.cgColor
         return view
     }()
     
@@ -167,7 +167,7 @@ final class BookmarkListView: BaseView {
         }
         
         subLabel.snp.makeConstraints { make in
-            make.top.equalTo(mainLabel.snp.bottom).offset(10)
+            make.top.equalTo(mainLabel.snp.bottom).offset(6)
             make.horizontalEdges.equalTo(mainLabel)
         }
         
@@ -196,7 +196,7 @@ final class BookmarkListView: BaseView {
         addBookmarkItemButton.snp.makeConstraints { make in
             make.leading.equalTo(addBookmarkItemLabel.snp.trailing).offset(8)
             make.top.equalTo(divider.snp.bottom).offset(20)
-            make.height.equalTo(44)
+            make.height.equalTo(40)
         }
         
         selectedItemCountLabel.snp.makeConstraints { make in
