@@ -44,57 +44,46 @@ final class BookmarkListView: BaseView {
     }()
     
     let titleLabel = {
-       let view = TLabel(
-        text: "bookmarkList_titleLabel".localized,
-        custFont: .pretendardSemiBoldM,
-        textColor: .label)
+        let view = TLabel(
+            text: "bookmarkList_titleLabel".localized,
+            custFont: .pretendardSemiBoldM,
+            textColor: .label
+        )
         view.textAlignment = .center
         return view
     }()
     
-    let mainLabel = {
-       let view = TLabel(
+    let mainLabel = TLabel(
         text: "bookmarkList_mainLabel".localized,
         custFont: .pretendardSemiBoldXL,
-        textColor: .label)
-        return view
-    }()
+        textColor: .label
+    )
     
     let subLabel = {
         let view = TLabel(
-         text: "bookmarkList_subLabel".localized,
-         custFont: .pretendardRegularS,
-         textColor: .label)
-        view.setAttributedTextWithLineSpacing("bookmarkList_subLabel".localized, lineSpacing: 3)
-         return view
-    }()
-    
-    let selectAllLabel = {
-       let view = TLabel(
-        text: "bookmarkList_selectAllLabel_selectAll".localized,
-        custFont: .pretendardRegularXS,
-        textColor: .label)
-        return view
-    }()
-    
-    let selectAllCheckBox = {
-        let view = TBlankCheckBox()
-        return view
-    }()
-    
-    let divider = {
-        let view = TDivider()
-        return view
-    }()
-    
-    let addBookmarkItemLabel = {
-        let view = TLabel(
-            text: "bookmarkList_addBookmarkItemLabel".localized,
-            custFont: .pretendardRegularXS,
+            text: "bookmarkList_subLabel".localized,
+            custFont: .pretendardRegularS,
             textColor: .label
         )
+        view.setAttributedTextWithLineSpacing("bookmarkList_subLabel".localized, lineSpacing: 3)
         return view
     }()
+    
+    let selectAllLabel = TLabel(
+        text: "bookmarkList_selectAllLabel_selectAll".localized,
+        custFont: .pretendardRegularXS,
+        textColor: .label
+    )
+ 
+    let selectAllCheckBox = TBlankCheckBox()
+  
+    let divider = TDivider()
+  
+    let addBookmarkItemLabel = TLabel(
+        text: "bookmarkList_addBookmarkItemLabel".localized,
+        custFont: .pretendardRegularXS,
+        textColor: .label
+    )
     
     let addBookmarkItemButton = {
         let view = UIButton()
@@ -104,22 +93,18 @@ final class BookmarkListView: BaseView {
         return view
     }()
     
-    let selectedItemCountLabel = {
-        let view = TLabel(
-            text: "0",
-            custFont: .pretendardMediumL,
-            textColor: .label)
-        return view
-    }()
+    let selectedItemCountLabel = TLabel(
+        text: "0",
+        custFont: .pretendardMediumL,
+        textColor: .label
+    )
     
-    let totalCountLabel = {
-        let view = TLabel(
-            text: "/10",
-            custFont: .pretendardMediumL,
-            textColor: .label)
-        return view
-    }()
-    
+    let totalCountLabel = TLabel(
+        text: "/10",
+        custFont: .pretendardMediumL,
+        textColor: .label
+    )
+
     let plusImageButton = {
         let view = UIButton()
         view.isUserInteractionEnabled = false
@@ -131,17 +116,21 @@ final class BookmarkListView: BaseView {
         return view
     }()
     
-    lazy var bookmarkListCollectionView = UICollectionView(frame: .zero, collectionViewLayout: configureBookmarkListCollectionLayout())
-    
-    let tButton = {
-        let view = TButton(
-            text: "bookmarkList_tButton".localized
-        )
+    lazy var tableView = {
+        let view = UITableView()
+        view.rowHeight = UITableView.automaticDimension
+        view.estimatedRowHeight = 100
+        view.register(BookmarkTableViewCell.self, forCellReuseIdentifier: BookmarkTableViewCell.identifier)
+        view.separatorStyle = .none
         return view
     }()
     
+    let tButton = TButton(
+        text: "bookmarkList_tButton".localized
+    )
+    
     override func configureHierarchy() {
-        [titleLabel, mainLabel, subLabel, selectAllLabel, selectAllCheckBox, divider, addBookmarkItemLabel, addBookmarkItemButton, bookmarkListCollectionView, tButton, emptyView].forEach {
+        [titleLabel, mainLabel, subLabel, selectAllLabel, selectAllCheckBox, divider, addBookmarkItemLabel, addBookmarkItemButton, tableView, tButton, emptyView].forEach {
             addSubview($0)
         }
         
@@ -215,14 +204,11 @@ final class BookmarkListView: BaseView {
             make.centerY.equalToSuperview()
         }
         
-        // FIXME: 컬렉션뷰 높이 유동적으로 변경될 수 있도록 수정하기
-        bookmarkListCollectionView.snp.makeConstraints { make in
+        tableView.snp.makeConstraints { make in
             make.top.equalTo(addBookmarkItemButton.snp.bottom).offset(25)
             make.horizontalEdges.equalToSuperview().inset(25)
             make.bottom.equalTo(tButton.snp.top).offset(-30)
         }
-        
-//        bookmarkListCollectionView.backgroundColor = .lightGray
         
         tButton.snp.makeConstraints { make in
             make.bottom.horizontalEdges.equalTo(self.safeAreaLayoutGuide).inset(20)
@@ -230,7 +216,7 @@ final class BookmarkListView: BaseView {
         }
         
         emptyView.snp.makeConstraints { make in
-            make.edges.equalTo(bookmarkListCollectionView)
+            make.edges.equalTo(tableView)
         }
         
         emptySymbolLabel.snp.makeConstraints { make in
@@ -247,23 +233,6 @@ final class BookmarkListView: BaseView {
             make.top.equalTo(emptyMainLabel.snp.bottom).offset(10)
             make.horizontalEdges.equalTo(emptyMainLabel)
         }
-    }
-    
-    private func configureBookmarkListCollectionLayout() -> UICollectionViewLayout {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(35))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 1)
-        group.interItemSpacing = .fixed(10)
-        
-        let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
-        section.interGroupSpacing = 10
-        
-        let layout = UICollectionViewCompositionalLayout(section: section)
-        
-        return layout
     }
     
 }
