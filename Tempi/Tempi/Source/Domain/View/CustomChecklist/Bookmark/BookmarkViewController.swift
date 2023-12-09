@@ -8,7 +8,7 @@
 import UIKit
 import RealmSwift
 
-final class BookmarkListViewController: BaseViewController {
+final class BookmarkViewController: BaseViewController {
     
     var selectedChecklistID: ObjectId?
     
@@ -23,7 +23,7 @@ final class BookmarkListViewController: BaseViewController {
     private let bookmarkRepository = BookmarkTableRepository()
     private let checkItemRepository = CheckItemTableRepository()
     
-    private let mainView = BookmarkListView()
+    private let mainView = BookmarkView()
     
     override func loadView() {
         self.view = mainView
@@ -117,7 +117,7 @@ final class BookmarkListViewController: BaseViewController {
 }
 
 //MARK: - 테이블뷰
-extension BookmarkListViewController: UITableViewDelegate, UITableViewDataSource {
+extension BookmarkViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return bookmarkTasks.count

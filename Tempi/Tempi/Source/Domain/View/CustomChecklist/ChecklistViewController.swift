@@ -182,7 +182,7 @@ final class ChecklistViewController: BaseViewController {
     //MARK: - 즐겨찾기 버튼
     @objc private func bookmarkListButtonTapped() {
         print(#function)
-        let bookmarkListVC = BookmarkListViewController()
+        let bookmarkListVC = BookmarkViewController()
 
         self.bookmarkRepository.fetch { data in
             bookmarkListVC.bookmarkTasks = data
