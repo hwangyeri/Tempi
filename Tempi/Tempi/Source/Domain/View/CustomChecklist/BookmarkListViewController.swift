@@ -10,9 +10,18 @@ import RealmSwift
 
 final class BookmarkListViewController: BaseViewController {
     
+    var selectedChecklistID: ObjectId?
+    
+    private var selectedItems: [String] = [] {
+        didSet {
+            self.updateTButtonState()
+        }
+    }
+    
     var bookmarkTasks: Results<BookmarkTable>!
     
     private let bookmarkRepository = BookmarkTableRepository()
+    private let checkItemRepository = CheckItemTableRepository()
     
     private let mainView = BookmarkListView()
     
@@ -31,6 +40,7 @@ final class BookmarkListViewController: BaseViewController {
         mainView.tableView.dataSource = self
         mainView.tableView.delegate = self
         mainView.addBookmarkItemButton.addTarget(self, action: #selector(addBookmarkItemButtonTapped), for: .touchUpInside)
+        mainView.tButton.addTarget(self, action: #selector(tButtonTapped), for: .touchUpInside)
     }
     
     //MARK: - 초기 데이터 설정
@@ -49,6 +59,12 @@ final class BookmarkListViewController: BaseViewController {
         DispatchQueue.main.async { [weak self] in
             self?.mainView.selectedItemCountLabel.text = "bookmarkList_selectedItemCountLabel".localized(with: count)
         }
+    }
+    
+    private func updateTButtonState() {
+        // 리스트 추가하기 버튼 - 활성화/비활성화 상태 UI 업데이트
+        mainView.tButton.isEnabled = !selectedItems.isEmpty
+        mainView.tButton.backgroundColor = selectedItems.isEmpty ? .tButtonDisable : .label
     }
     
     //MARK: - NotificationCenter 설정
@@ -80,6 +96,24 @@ final class BookmarkListViewController: BaseViewController {
         self.present(editModalVC, animated: true)
     }
     
+    //MARK: - 리스트에 추가하기 버튼
+    @objc private func tButtonTapped() {
+        print(#function)
+        guard let ChecklistID = selectedChecklistID else {
+            print("selectedChecklistID error")
+            return
+        }
+        
+        for content in selectedItems {
+            let newItem = CheckItemTable(checklistPK: ChecklistID, content: content, createdAt: Date(), memo: nil, alarmDate: nil, isChecked: false)
+            print("+++", content)
+            print("+++", newItem)
+            checkItemRepository.createItem(newItem)
+        }
+        
+        NotificationCenter.default.post(name: .createCheckItem, object: nil)
+        self.dismiss(animated: true)
+    }
 }
 
 //MARK: - 테이블뷰
@@ -91,11 +125,45 @@ extension BookmarkListViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: BookmarkTableViewCell.identifier, for: indexPath) as? BookmarkTableViewCell else { return UITableViewCell() }
-        let row = bookmarkTasks.first
+        let row = bookmarkTasks[indexPath.row]
         
-        cell.checkBoxLabel.text = row?.content
+        cell.checkBoxLabel.text = row.content
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? BookmarkTableViewCell else {
+            print("TableViewCell Error")
+            return
+        }
+        
+        print("+++++", cell.isChecked)
+        cell.isChecked.toggle()
+        print("+++++", cell.isChecked)
+        
+        let content = bookmarkTasks[indexPath.row].content
+        
+        if cell.isChecked {
+            selectedItems.append(content)
+        } else {
+            if let index = selectedItems.firstIndex(of: content) {
+                selectedItems.remove(at: index)
+            }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let row = bookmarkTasks[indexPath.row]
+            bookmarkRepository.deleteItem(forId: row.id)
+            tableView.reloadData()
+            setBookmarkListData()
+        }
     }
 
 }
