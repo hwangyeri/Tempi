@@ -16,7 +16,8 @@ final class TButton: UIButton {
         self.setTitleColor(UIColor.systemBackground, for: .normal)
         self.layer.cornerRadius = Constant.TButton.cornerRadius
         self.titleLabel?.font = .customFont(.pretendardSemiBoldXL)
-        self.backgroundColor = self.isEnabled ? .label : .tButtonDisable
+        self.backgroundColor = .tButtonDisable
+        self.isEnabled = false
     }
     
     required init?(coder aDecoder: NSCoder) {
