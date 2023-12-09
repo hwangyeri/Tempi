@@ -22,6 +22,21 @@ final class BookmarkTableViewCell: BaseTableViewCell {
         textColor: .label
     )
     
+    var isChecked: Bool = false {
+        didSet {
+            checkBoxButton.isSelected = isChecked
+            checkBoxButton.layer.backgroundColor = isChecked ? UIColor.label.cgColor : UIColor.systemBackground.cgColor
+        }
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        checkBoxButton.layer.backgroundColor = UIColor.systemBackground.cgColor
+        checkBoxButton.isSelected = false
+        isChecked = false
+    }
+    
     override func configureHierarchy() {
         [checkBoxButton, checkBoxLabel].forEach {
             contentView.addSubview($0)
