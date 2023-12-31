@@ -98,7 +98,7 @@ enum Constant {
         /// TabBar Icon
         static let firstTabBarIcon: String = "doc.text.magnifyingglass"
         static let secondTabBarIcon: String = "house"
-        static let thirdTabBarIcon: String = "calendar"
+        static let thirdTabBarIcon: String = "gearshape"
     }
     
 }
