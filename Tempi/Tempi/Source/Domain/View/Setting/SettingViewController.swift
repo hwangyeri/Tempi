@@ -6,10 +6,14 @@
 //
 
 import UIKit
+import MessageUI
 
 final class SettingViewController: BaseViewController {
     
-    let mainView = SettingView()
+    private let mainView = SettingView()
+    
+    private let section0Title = ["sectionTitle01".localized, "sectionTitle02".localized, "sectionTitle03".localized]
+    private let section1Title = ["sectionTitle04".localized, "sectionTitle05".localized, "sectionTitle06".localized, "sectionTitle07".localized]
     
     override func loadView() {
         self.view = mainView
@@ -18,6 +22,123 @@ final class SettingViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    }
+    
+    override func configureLayout() {
+        mainView.tableView.dataSource = self
+        mainView.tableView.delegate = self
+        self.navigationItem.title = "navigationTitle".localized
+    }
+    
+    // 메일 사용 가능한지 체크하는 메서드
+    private func checkMailAvailability() {
+        if MFMailComposeViewController.canSendMail() {
+            let mailVC = MFMailComposeViewController()
+            mailVC.mailComposeDelegate = self
+            mailVC.setToRecipients(["dpfl420@icloud.com"])
+            mailVC.setSubject("Tempi " + "sectionTitle04".localized)
+            mailVC.setMessageBody("messageContent".localized, isHTML: false)
+            
+            self.present(mailVC, animated: true, completion: nil)
+        }
+        else {
+            print("Mail services are not available")
+            self.showAlert(title: "messageAlertTitle".localized, message: "messageAlertSubTitle".localized)
+        }
+    }
+    
+}
+
+extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch section {
+        case 0:
+            return section0Title.count
+        default:
+            return section1Title.count
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = SettingHeaderView()
+        
+        switch section {
+        case 0:
+            headerView.titleLabel.text = "headerViewTitle01".localized
+        default:
+            headerView.titleLabel.text = "headerViewTitle02".localized
+        }
+        
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: SettingTableViewCell.identifier, for: indexPath) as? SettingTableViewCell else { return UITableViewCell() }
+        
+        cell.selectionStyle = .none
+        
+        switch indexPath.section {
+        case 0:
+            cell.titleLabel.text = section0Title[indexPath.row]
+            return cell
+        default:
+            cell.titleLabel.text = section1Title[indexPath.row]
+            return cell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let section = indexPath.section
+        let row = indexPath.row
+        
+        switch section {
+        case 0:
+            switch row {
+            case 0:
+                // 알람 설정
+                print("프로필 수정하기 탭")
+            case 1:
+                // 데이터 초기화
+                print("데이터 초기화 탭")
+            default:
+                // 데이터 백업/복구
+                print("데이터 백업/복구 탭")
+            }
+        default:
+            switch row {
+            case 0:
+                // 1:1 문의하기
+                print("1:1 문의하기 탭")
+                checkMailAvailability()
+            case 1:
+                // 앱 평가하기
+                print("앱 평가하기 탭")
+            case 2:
+                // 개인정보처리방침
+                print("개인정보처리방침 탭")
+                
+            default:
+                // 버전정보
+                print("버전정보 탭")
+            }
+        }
+    }
+    
+}
+
+extension SettingViewController: MFMailComposeViewControllerDelegate {
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        dismiss(animated: true)
     }
     
 }
