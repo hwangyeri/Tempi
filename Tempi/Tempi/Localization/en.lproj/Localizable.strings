@@ -140,3 +140,19 @@
 "deleteModal_subLabel" = "Deleted data is difficult to recover...😢";
 "deleteModal_cancelButton" = "Cancel";
 "deleteModal_deleteButton" = "Delete";
+
+// SettingView
+"sectionTitle01" = "Notification Settings";
+"sectionTitle02" = "Reset Data";
+"sectionTitle03" = "Data Backup/Recovery";
+"sectionTitle04" = "Contact the developer";
+"sectionTitle05" = "Rate the app";
+"sectionTitle06" = "Privacy Policy";
+"sectionTitle07" = "Version Information";
+
+"navigationTitle" = "Setting";
+"headerViewTitle01" = "My Info";
+"headerViewTitle02" = "Customer Support";
+"messageContent" = "Please provide details regarding the matter you wish to inquire about.\n----";
+"messageAlertTitle" = "Alert";
+"messageAlertSubTitle" = "Please check your iPhone email settings and try again.";
