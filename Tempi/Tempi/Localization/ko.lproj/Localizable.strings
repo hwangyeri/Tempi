@@ -140,3 +140,20 @@
 "deleteModal_subLabel" = "삭제된 데이터는 복구가 어려워요...😢";
 "deleteModal_cancelButton" = "취소";
 "deleteModal_deleteButton" = "삭제";
+
+// SettingView
+"sectionTitle01" = "알림 설정";
+"sectionTitle02" = "데이터 초기화";
+"sectionTitle03" = "데이터 백업/복구";
+"sectionTitle04" = "1:1 문의하기";
+"sectionTitle05" = "앱 평가하기";
+"sectionTitle06" = "개인정보 처리방침";
+"sectionTitle07" = "버전 정보";
+
+"navigationTitle" = "설정";
+"headerViewTitle01" = "내 정보";
+"headerViewTitle02" = "고객지원";
+
+"messageContent" = "문의하고 싶은 내용을 작성해 주세요.\n----";
+"messageAlertTitle" = "알림";
+"messageAlertSubTitle" = "아이폰 이메일 설정을 확인하고, 다시 시도해 주세요.";
