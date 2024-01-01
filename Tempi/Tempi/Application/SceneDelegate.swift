@@ -13,33 +13,28 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-       
-        // MARK: - Navigation Controller
         
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        let vc = MyListViewController()
-        window?.rootViewController = UINavigationController(rootViewController: vc)
-        window?.makeKeyAndVisible()
-        
-        // MARK: - TabBar Controller
         
         let tabBar = UITabBarController()
         
         let firstVC = UINavigationController(rootViewController: CategoryHomeViewController())
-        firstVC.tabBarItem = UITabBarItem(title: "firstVC_tabBarTitle".localized, image: UIImage(systemName: Constant.SFSymbol.firstTabBarIcon),selectedImage: UIImage(systemName: Constant.SFSymbol.firstTabBarIcon))
+        firstVC.tabBarItem = UITabBarItem(title: .none, image: UIImage(systemName: Constant.SFSymbol.firstTabBarIcon),selectedImage: UIImage(systemName: Constant.SFSymbol.firstTabBarIcon))
 
         let secondVC = UINavigationController(rootViewController: MyListViewController())
-        secondVC.tabBarItem = UITabBarItem(title: "secondVC_tabBarTitle".localized, image: UIImage(systemName: Constant.SFSymbol.secondTabBarIcon),selectedImage: UIImage(systemName: Constant.SFSymbol.secondTabBarIcon))
+        secondVC.tabBarItem = UITabBarItem(title: .none, image: UIImage(systemName: Constant.SFSymbol.secondTabBarIcon),selectedImage: UIImage(systemName: Constant.SFSymbol.secondTabBarIcon))
         
-//        let thirdVC = UINavigationController(rootViewController: SearchViewController())
-//        thirdVC.tabBarItem = UITabBarItem(title: .none, image: UIImage(systemName: Constant.SFSymbol.thirdTabBarIcon),selectedImage: UIImage(systemName: Constant.SFSymbol.thirdTabBarIcon))
+        let thirdVC = UINavigationController(rootViewController: SettingViewController())
+        thirdVC.tabBarItem = UITabBarItem(title: .none, image: UIImage(systemName: Constant.SFSymbol.thirdTabBarIcon),selectedImage: UIImage(systemName: Constant.SFSymbol.thirdTabBarIcon))
         
-        tabBar.viewControllers = [firstVC, secondVC]
+        tabBar.viewControllers = [firstVC, secondVC, thirdVC]
         tabBar.tabBar.backgroundColor = UIColor.systemBackground
         tabBar.tabBar.tintColor = UIColor.label
+        tabBar.selectedIndex = 1
         
         window?.rootViewController = tabBar
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
