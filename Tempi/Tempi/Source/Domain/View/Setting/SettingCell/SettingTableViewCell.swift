@@ -23,9 +23,15 @@ final class SettingTableViewCell: BaseTableViewCell {
         view.contentMode = .scaleAspectFit
         return view
     }()
+    
+    let versionLabel = TLabel(
+        text: "version",
+        custFont: .pretendardSemiBoldS,
+        textColor: .label
+    )
 
     override func configureHierarchy() {
-        [titleLabel, chevronImageView].forEach {
+        [titleLabel, chevronImageView, versionLabel].forEach {
             contentView.addSubview($0)
         }
     }
@@ -40,6 +46,11 @@ final class SettingTableViewCell: BaseTableViewCell {
             make.centerY.equalToSuperview()
             make.trailing.equalToSuperview().inset(10)
             make.size.equalTo(16)
+        }
+        
+        versionLabel.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.trailing.equalToSuperview().inset(15)
         }
     }
 
