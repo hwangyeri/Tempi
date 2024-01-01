@@ -7,6 +7,7 @@
 
 import UIKit
 import MessageUI
+import SafariServices
 
 final class SettingViewController: BaseViewController {
     
@@ -43,7 +44,18 @@ final class SettingViewController: BaseViewController {
         }
         else {
             print("Mail services are not available")
-            self.showAlert(title: "messageAlertTitle".localized, message: "messageAlertSubTitle".localized)
+            self.showAlert(title: "messageAlertTitle".localized, message: "mailAlertSubTitle".localized)
+        }
+    }
+    
+    // Safari WebView
+    private func openWebView(withURL urlString: String) {
+        if let url = URL(string: urlString) {
+            let safariVC = SFSafariViewController(url: url)
+            present(safariVC, animated: true)
+        } else {
+            print("Safari services are not available")
+            self.showAlert(title: "messageAlertTitle".localized, message: "safariAlertSubTitle".localized)
         }
     }
     
@@ -89,9 +101,26 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.section {
         case 0:
             cell.titleLabel.text = section0Title[indexPath.row]
+            cell.versionLabel.isHidden = true
             return cell
         default:
             cell.titleLabel.text = section1Title[indexPath.row]
+            switch indexPath.row {
+            case 3:
+                // 버전 라벨 업데이트
+                if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
+                    cell.versionLabel.text = "\(version)"
+                } else {
+                    cell.versionLabel.text = ""
+                }
+                
+                cell.chevronImageView.isHidden = true
+                cell.versionLabel.isHidden = false
+                cell.isUserInteractionEnabled = false
+            default:
+                cell.chevronImageView.isHidden = false
+                cell.versionLabel.isHidden = true
+            }
             return cell
         }
     }
@@ -122,13 +151,14 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
             case 1:
                 // 앱 평가하기
                 print("앱 평가하기 탭")
+                openWebView(withURL: "https://apps.apple.com/kr/app/tempi-%EA%B8%B0%EC%A4%80%EC%9D%84-%EC%84%B8%EC%9A%B0%EB%8B%A4/id6469019571")
             case 2:
                 // 개인정보처리방침
                 print("개인정보처리방침 탭")
-                
+                openWebView(withURL: "privacyPolicyLink".localized)
             default:
                 // 버전정보
-                print("버전정보 탭")
+                print("버전정보 클릭 불가")
             }
         }
     }
