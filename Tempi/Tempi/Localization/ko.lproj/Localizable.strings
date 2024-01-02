@@ -157,5 +157,6 @@
 "messageAlertTitle" = "알림";
 "mailAlertSubTitle" = "아이폰 이메일 설정을 확인하고, 다시 시도해 주세요.";
 "safariAlertSubTitle" = "Safari 연결에 문제가 있어요. 네트워크 연결을 확인해 주세요.";
+"resetData_message" = "정말로 초기화하시나요? 😥\n삭제된 데이터는 복구가 어려워요.";
 
 "privacyPolicyLink" = "https://past-hook-26c.notion.site/c9e81459d5c044eb8eb998d08b82338c?pvs=4";
