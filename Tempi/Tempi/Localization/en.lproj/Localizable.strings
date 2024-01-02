@@ -157,4 +157,6 @@
 "messageAlertTitle" = "Alert";
 "mailAlertSubTitle" = "Please check your iPhone email settings and try again.";
 "safariAlertSubTitle" = "Unable to connect to Safari. Please check your network connection.";
+"resetData_message" = "Are you sure you want to reset? 😥\nDeleted data is challenging to recover.";
+
 "privacyPolicyLink" = "https://past-hook-26c.notion.site/Privacy-Policy-Guide-f317a4643b5d439b8ad3bbb8a9f40686?pvs=4";
