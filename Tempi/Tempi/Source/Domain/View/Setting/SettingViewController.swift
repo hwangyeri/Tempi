@@ -135,7 +135,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             // 데이터 초기화
             print("데이터 초기화 탭")
-            showDeleteAlert(title: "데이터 초기화", message: "정말로 초기화하시나요?\n삭제된 데이터는 복구가 어려워요. 😥") { [weak self] in
+            showDeleteAlert(title: "sectionTitle01".localized, message: "resetData_message".localized) { [weak self] in
                 self?.checklistRepository.deleteAllData()
             }
         default:
