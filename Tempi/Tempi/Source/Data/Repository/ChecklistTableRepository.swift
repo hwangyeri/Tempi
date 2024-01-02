@@ -119,4 +119,16 @@ class ChecklistTableRepository: ChecklistTableRepositoryType {
         }
     }
     
+    // 전체 Realm 데이터 삭제 메서드
+    func deleteAllData() {
+        do {
+            try realm.write {
+                realm.deleteAll()
+                print("전체 데이터 삭제 성공!")
+            }
+        } catch {
+            print("Error deleting All Data: \(error)")
+        }
+    }
+    
 }
