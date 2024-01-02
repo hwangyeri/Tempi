@@ -85,7 +85,7 @@ final class MyListView: BaseView {
         myListCollectionView.snp.makeConstraints { make in
             make.top.equalTo(mainLabel.snp.bottom).offset(30)
             make.horizontalEdges.equalTo(self.safeAreaLayoutGuide)
-            make.bottom.equalTo(self.safeAreaLayoutGuide).inset(20)
+            make.bottom.equalTo(self.safeAreaLayoutGuide).inset(10)
         }
         myListCollectionView.backgroundColor = .listBackground
         

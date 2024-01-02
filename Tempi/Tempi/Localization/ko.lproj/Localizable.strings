@@ -30,9 +30,10 @@
 "showMessage_create_title" = "체크리스트 생성";
 "showMessage_create_body" = "체크리스트가 성공적으로 생성되었습니다!";
 
-// SceneDelegate
-"firstVC_tabBarTitle" = "탐색";
-"secondVC_tabBarTitle" = "홈";
+// showAlert
+"showAlert_ok" = "확인";
+"showAlert_cancel" = "취소";
+"showAlert_delete" = "삭제";
 
 // CategoryHomeView
 "search_main_label" = "Tempi 의 가이드를 따라\n간편하게 체크리스트 작성해 보세요.";
@@ -140,3 +141,22 @@
 "deleteModal_subLabel" = "삭제된 데이터는 복구가 어려워요...😢";
 "deleteModal_cancelButton" = "취소";
 "deleteModal_deleteButton" = "삭제";
+
+// SettingView
+"sectionTitle01" = "데이터 초기화";
+"sectionTitle02" = "1:1 문의하기";
+"sectionTitle03" = "앱 평가하기";
+"sectionTitle04" = "개인정보 처리방침";
+"sectionTitle05" = "버전 정보";
+
+"setting_navigationTitle" = "설정";
+"headerViewTitle01" = "시스템";
+"headerViewTitle02" = "고객지원";
+
+"messageContent" = "문의하고 싶은 내용을 작성해 주세요.\n----";
+"messageAlertTitle" = "알림";
+"mailAlertSubTitle" = "아이폰 이메일 설정을 확인하고, 다시 시도해 주세요.";
+"safariAlertSubTitle" = "Safari 연결에 문제가 있어요. 네트워크 연결을 확인해 주세요.";
+"resetData_message" = "정말로 초기화하시나요? 😥\n삭제된 데이터는 복구가 어려워요.";
+
+"privacyPolicyLink" = "https://past-hook-26c.notion.site/c9e81459d5c044eb8eb998d08b82338c?pvs=4";

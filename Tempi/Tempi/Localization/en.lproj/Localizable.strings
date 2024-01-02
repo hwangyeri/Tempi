@@ -30,9 +30,10 @@
 "showMessage_create_title" = "Create a checklist";
 "showMessage_create_body" = "Checklist has been successfully created!";
 
-// SceneDelegate
-"firstVC_tabBarTitle" = "Explore";
-"secondVC_tabBarTitle" = "Home";
+// showAlert
+"showAlert_ok" = "OK";
+"showAlert_cancel" = "Cancel";
+"showAlert_delete" = "Delete";
 
 // CategoryHomeView
 "search_main_label" = "Create a simple checklist\nfollowing Tempi's guide";
@@ -140,3 +141,22 @@
 "deleteModal_subLabel" = "Deleted data is difficult to recover...😢";
 "deleteModal_cancelButton" = "Cancel";
 "deleteModal_deleteButton" = "Delete";
+
+// SettingView
+"sectionTitle01" = "Reset Data";
+"sectionTitle02" = "Contact the developer";
+"sectionTitle03" = "Rate the app";
+"sectionTitle04" = "Privacy Policy";
+"sectionTitle05" = "Version Information";
+
+"setting_navigationTitle" = "Setting";
+"headerViewTitle01" = "System";
+"headerViewTitle02" = "Customer Support";
+"messageContent" = "Please provide details regarding the matter you wish to inquire about.\n----";
+
+"messageAlertTitle" = "Alert";
+"mailAlertSubTitle" = "Please check your iPhone email settings and try again.";
+"safariAlertSubTitle" = "Unable to connect to Safari. Please check your network connection.";
+"resetData_message" = "Are you sure you want to reset? 😥\nDeleted data is challenging to recover.";
+
+"privacyPolicyLink" = "https://past-hook-26c.notion.site/Privacy-Policy-Guide-f317a4643b5d439b8ad3bbb8a9f40686?pvs=4";
