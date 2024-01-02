@@ -381,6 +381,14 @@
 			path = ReuseModal;
 			sourceTree = "<group>";
 		};
+		2BC268BB2B4298A200738F34 /* SettingCell */ = {
+			isa = PBXGroup;
+			children = (
+				2B10889B2B416AE30085EE4C /* SettingTableViewCell.swift */,
+			);
+			path = SettingCell;
+			sourceTree = "<group>";
+		};
 		2BDE84D12AC95FEB0018C759 /* Component */ = {
 			isa = PBXGroup;
 			children = (
@@ -399,8 +407,8 @@
 			children = (
 				2BE49C772AE5961D00007EC9 /* SettingViewController.swift */,
 				2BE49C792AE5964500007EC9 /* SettingView.swift */,
-				2B10889B2B416AE30085EE4C /* SettingTableViewCell.swift */,
 				2B10889D2B416C300085EE4C /* SettingHeaderView.swift */,
+				2BC268BB2B4298A200738F34 /* SettingCell */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
