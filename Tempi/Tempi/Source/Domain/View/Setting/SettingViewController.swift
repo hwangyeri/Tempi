@@ -13,8 +13,10 @@ final class SettingViewController: BaseViewController {
     
     private let mainView = SettingView()
     
-    private let section0Title = ["sectionTitle01".localized, "sectionTitle02".localized, "sectionTitle03".localized]
-    private let section1Title = ["sectionTitle04".localized, "sectionTitle05".localized, "sectionTitle06".localized, "sectionTitle07".localized]
+    private let checklistRepository = ChecklistTableRepository()
+    
+    private let section0Title = ["sectionTitle01".localized]
+    private let section1Title = ["sectionTitle02".localized, "sectionTitle03".localized, "sectionTitle04".localized, "sectionTitle05".localized]
     
     override func loadView() {
         self.view = mainView
@@ -28,7 +30,7 @@ final class SettingViewController: BaseViewController {
     override func configureLayout() {
         mainView.tableView.dataSource = self
         mainView.tableView.delegate = self
-        self.navigationItem.title = "navigationTitle".localized
+        self.navigationItem.title = "setting_navigationTitle".localized
     }
     
     // 메일 사용 가능한지 체크하는 메서드
@@ -131,16 +133,10 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch section {
         case 0:
-            switch row {
-            case 0:
-                // 알람 설정
-                print("프로필 수정하기 탭")
-            case 1:
-                // 데이터 초기화
-                print("데이터 초기화 탭")
-            default:
-                // 데이터 백업/복구
-                print("데이터 백업/복구 탭")
+            // 데이터 초기화
+            print("데이터 초기화 탭")
+            showDeleteAlert(title: "데이터 초기화", message: "정말로 초기화하시나요?\n삭제된 데이터는 복구가 어려워요. 😥") { [weak self] in
+                self?.checklistRepository.deleteAllData()
             }
         default:
             switch row {
