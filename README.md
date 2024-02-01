@@ -1,26 +1,33 @@
 # Tempi - 기준을 세우다!
 
-<img src="https://github.com/hwangyeri/SeSAC/assets/114602459/c9dc5044-a3c7-4077-b611-51164aba0af6.png" width="160" height="300">
-<img src="https://github.com/hwangyeri/SeSAC/assets/114602459/1652481b-bd2a-4854-91f5-fef66cb20301.png" width="160" height="300">
-<img src="https://github.com/hwangyeri/SeSAC/assets/114602459/d7d83765-aa4f-41f1-8a07-65c3b58f2440.png" width="160" height="300">
-<img src="https://github.com/hwangyeri/SeSAC/assets/114602459/4a2466d9-5e3e-46c5-95d7-ef7851560954.png" width="160" height="300">
-<img src="https://github.com/hwangyeri/SeSAC/assets/114602459/423479a2-aab5-45cb-8c02-8b192f3f648d.png" width="160" height="300">
+![tempi_screenshot_mockup](https://github.com/hwangyeri/Tempi/assets/114602459/9d3cc8b0-2c1a-4df6-864d-d0bf056bb1ba)
 
-### 0. 효율적인 계획 관리를 위해, 템플릿을 제공해주는 투두 앱입니다.
+### 효율적인 계획 관리를 위해, 템플릿을 제공해주는 투두 앱입니다.
 - `JSON Data`를 활용해 템플릿 기반의 체크리스트 추천/검색 기능 제공
 - 체크리스트 목록 관리 및 즐겨찾기 기능 제공
 - `RealmSwift`을 이용해 체크리스트에 대한 `CRUD` 기능 제공
 <br/>
 
-### Link
-[ 🔗 App Store ](https://apps.apple.com/kr/app/tempi-%EA%B8%B0%EC%A4%80%EC%9D%84-%EC%84%B8%EC%9A%B0%EB%8B%A4/id6469019571)
+### 앱 스토어 링크
 
-[ 🔗 Blog 앱 출시 회고 ](https://yeridev.tistory.com/entry/XFile-27)
+🔗 [ Tempi - 기준을 세우다! ](https://apps.apple.com/kr/app/tempi-%EA%B8%B0%EC%A4%80%EC%9D%84-%EC%84%B8%EC%9A%B0%EB%8B%A4/id6469019571)
+
+### 앱 출시 회고 링크
+
+🔗 [ Tempi - 기준을 세우다! iOS 앱 출시 회고 ](https://yeridev.tistory.com/entry/XFile-27)
 
 <br/>
 
-## 1. 개발 기간
-- 2023.09.29 ~ 2023.10.31 (4주)
+## 1. 개발 환경
+- Xcooe 15.0.1
+- Deployment Target iOS 16.0
+- 다크모드 지원
+- 가로모드 미지원
+<br/>
+
+## 2. 개인 프로젝트
+- 개발 인원 : 1명
+- 개발 기간 : 2023.09.29 ~ 2023.10.31 (4주)
 - 세부 개발 기간
  
 | 진행 사항 | 진행 기간 | 세부 내용 |
@@ -34,24 +41,12 @@
 | 버그 픽스, 앱 심사 준비        | `2023.10.26 ~ 2023.10.31` | 버그 수정, mock-up, QA 및 개인정보 처리방침 준비, 앱 심사 제출 |
 <br/>
 
-### 1.1 개발 인원
-- 1명, 개인 프로젝트
-<br/>
-
-## 2. 개발 환경
-- Xcooe 15.0.1
-- Deployment Target iOS 16.0
-- 다크모드 지원
-- 가로모드 미지원
-<br/>
-
 ## 3. 기술 스택
-- `UIKit`, `CodeBaseUI`
+- `UIKit`, `CodeBaseUI`, `DarkMode`
 - `MVC`, `Singleton`, `Repository`
-- `Snapkit`, `Realm`, `GCD`
 - `Autolayout`, `Compositional Layout`, `DiffableDataSource`
-- `Design System`, `DarkMode`
-- `JSON parsing`, `Toast`, `SwiftMessages`
+- `Snapkit`, `Realm`, `SwiftMessages`
+- `GCD`, `JSON parsing`, `Design System`
 - `Firebase Analytics`, `Firebase Crashlytics`, `FCM`
 - `Localization`, `Local Notification`
 <br/>
@@ -153,7 +148,11 @@
 
 <br/>
 
-## 6. 버전 정보
+## 6. 프로젝트 회고
+글 수정 예정
+<br/>
+
+## 7. 버전 정보
 ### v1.0.0
 - 2023.10.31 출시
 
@@ -168,10 +167,6 @@
 ### v1.0.3
 - 2023.12.10 업데이트
 - `Realm`를 이용한 즐겨찾기 기능 추가
-<br/>
-
-## 7. UI/UX
-- 설정 탭 추가한 후에 gif 파일 업데이트 예정
 <br/>
 
 ## 8. Commit Convention
