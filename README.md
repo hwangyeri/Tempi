@@ -23,6 +23,7 @@
 - Deployment Target iOS 16.0
 - 다크모드 지원
 - 가로모드 미지원
+- 다국어 대응
 <br/>
 
 ## 2. 개인 프로젝트
@@ -42,11 +43,11 @@
 <br/>
 
 ## 3. 기술 스택
-- `UIKit`, `CodeBaseUI`, `DarkMode`
+- `UIKit`, `CodeBaseUI`
 - `MVC`, `Singleton`, `Repository`
 - `Autolayout`, `Compositional Layout`, `DiffableDataSource`
-- `Snapkit`, `Realm`, `SwiftMessages`
 - `GCD`, `JSON parsing`, `Design System`
+- `Snapkit`, `Realm`, `SwiftMessages`
 - `Firebase Analytics`, `Firebase Crashlytics`, `FCM`
 - `Localization`, `Local Notification`
 <br/>
@@ -65,13 +66,15 @@
 - `Figma/FigJam`, `Git/Github`, `Jandi`, `Notion`, `Discode`
 <br/>
 
-## 4. 핵심 기능
-- `Realm`을 이용해 Local DB CRUD
-- `DiffableDataSource`를 사용해 `snapshot` 기반의 업데이트 관리 및 접근 방식 사용
-- `Singleton` 패턴으로 하나의 객체만을 생성해 메모리 낭비 방지
-- `NotificationCenter`를 통한 데이터 전달 및 알림 기능 구현
-- `Custom View`를 이용해 UI 관리 및 재사용성 향상
-- `Autolayout`을 통한 기기 대응 (iPhone SE, iPhone15 Max)
+## 4. 기능 구현
+- `SnapKit` 을 통한 `CodeBaseUI` 구현
+- `Realm`과 `Repository` 패턴을 사용해 Local DB 구성 및 CRUD 기능 구현
+- `DiffableDataSource`를 사용해 데이터 기반의 `snapshot` 업데이트 관리 및 접근 방식 구현
+  - `Custom Header View`를 활용해 ~ 수정 필요
+- `Custom View`와 `Design System`을 적용해 UI 관리, 유지 보수성 및 재사용성 향상
+   - 다양한 `Custom Cell`을 사용해 다채로운 UI 구성
+- `Constant`와 `Enum` 및 정적 변수를 사용해 로우한 스트링 값 사용을 줄이고, 메모리 최적화
+- `Firebase Crashlytics, Analytics`를 통해 앱의 안정성 모니터링 및 크래시 추적
 - `FCM`을 이용해 `Push Notification` 구현
 <br/>
 
@@ -111,9 +114,14 @@
     }
 ```
 
+#### 5-1. 해당 이슈에 대한 블로그 링크
+🔗 [ NotificationCenter를 통한 값 전달 시 주의해야 할 점! ](https://yeridev.tistory.com/entry/XFile-29)
+
+</br>
+
 ### 클로저의 메모리 누수
-- 문제 상황 : 체크리스트 생성 플로우에서 몇 개의 뷰가 deinit이 안되었고, 강한 참조 순환으로 인한 메모리 누수가 발생하였습니다.
-- 해결 방법 : 클로저 캡처 목록에 [weak self] 추가해서 메모리의 순환 참조를 방지하였습니다.
+- 문제 상황 : Debug Memory Graph와 deinit을 통해 확인한 결과, 템플릿을 기반으로 체크리스트를 생성하는 플로우에서 몇 개의 뷰가 메모리에서 해제되지 않고 쌓이는 문제가 발생하였습니다.
+- 해결 방법 : 클로저 캡처 목록에 [weak self] 추가해서 메모리의 순환 참조를 방지하고, 메모리 누수를 해결하였습니다.
 
 ```swift
  private func configureSubCategoryDataSource() {
@@ -144,12 +152,43 @@
     }
 ```
 
-[ 🔗 Blog 해당 이슈에 대한 블로그 글 ](https://yeridev.tistory.com/entry/XFile-29)
+### DiffableDataSource 사용 시, 중복된 Item 값으로 인한 런타임 오류
+- 문제 상황 : 사용자가 선택한 카테고리에 맞는 서브 카테고리 리스트를 보여주기 위해서 JSON Data를 필터링해서 CollectionView에 보이도록 구현했습니다. 하지만 특정한 Item을 클릭했을 때, 강제로 앱이 종료되는 런타임 에러가 발생하였습니다.
+- 해결 방법 : 원인은 선택한 Item이 유니크하지 않아서 생기는 문제였습니다. 필터링 + 중복 제거한 새로운 배열을 snapshot에 넘겨줌으로 문제를 해결하였습니다.
+
+```swift
+// 이전 코드
+private var checkItemList: [String] {
+            return DataManager.shared.categoryList
+                .filter { $0.categoryName == categoryName }
+                .filter { $0.subCategoryName == subCategoryName }
+                .map { $0.checkItem }
+        }
+
+// 개선된 코드
+private var checkItemList: [String] {
+        var uniqueCheckItems: [String] = []
+        
+        // categoryName 및 subCategoryName이 일치하는 항목(checkItem) 필터링 및 중복 제거
+        for item in DataManager.shared.categoryList {
+            if item.categoryName == categoryName, item.subCategoryName == subCategoryName, !uniqueCheckItems.contains(item.checkItem) {
+                uniqueCheckItems.append(item.checkItem)
+            }
+        }
+        
+        return uniqueCheckItems
+    }
+```
 
 <br/>
 
 ## 6. 프로젝트 회고
-글 수정 예정
+### Keep
+- 수정 예정
+
+### Problem • Try
+- 수정 예정
+
 <br/>
 
 ## 7. 버전 정보
