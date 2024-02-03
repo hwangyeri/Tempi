@@ -35,6 +35,7 @@ final class SearchViewController: BaseViewController {
         mainView.recommendSearchWordsCollectionView.delegate = self
         mainView.searchResultCollectionView.delegate = self
         mainView.searchResultCollectionView.isHidden = true
+        self.navigationItem.title = "search_navTitle".localized
     }
     
     // MARK: - 추천 검색어 DataSource
