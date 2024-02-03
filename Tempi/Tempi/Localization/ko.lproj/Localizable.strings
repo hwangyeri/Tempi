@@ -78,6 +78,7 @@
 "search_recommendSearchWords_header" = "추천 검색어";
 "search_searchResults_header" = "검색 결과";
 "searchResult_categoryNameLabel" = "카테고리 • %@";
+"search_navTitle" = "체크리스트 검색";
 
 // AddChecklistView
 "add_checklist_mainLabel" = "어떤 체크리스트에 추가하실 건가요?";

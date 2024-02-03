@@ -78,6 +78,7 @@
 "search_recommendSearchWords_header" = "Recommended search keyword";
 "search_searchResults_header" = "Search Results";
 "searchResult_categoryNameLabel" = "Category • %@";
+"search_navTitle" = "Template Checklist Search";
 
 // AddChecklistView
 "add_checklist_mainLabel" = "Which checklist do you want to add to?";
