@@ -46,11 +46,11 @@
 ## 4. 핵심 기능
 - `Repository` Pattern을 이용한 DB Schema 구조화
 - i18n, l10n 기반 `Localization`
-- `DiffableDataSource`를 사용해 데이터 기반의 `snapshot` 업데이트 및 관리
+- `DiffableDataSource`를 이용한 데이터 기반의 `snapshot` 업데이트 및 관리
 - `Custom View`와 `Design System`을 적용해 UI 관리, 유지 보수성 및 재사용성 향상
-- 다양한 `Custom Cell`을 사용해 다채로운 UI
+- 다양한 `Custom Cell`을 이용한 다채로운 UI
 - `Firebase Crashlytics, Analytics`를 통해 앱의 안정성 모니터링 및 크래시 추적
-- `FCM`을 이용해 `Push Notification`
+- `FCM`을 이용한`Push Notification`
 <br/>
 
 ## 5. Trouble Shooting
