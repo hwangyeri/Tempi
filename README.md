@@ -3,8 +3,8 @@
 ![tempi_screenshot_mockup2](https://github.com/hwangyeri/Tempi/assets/114602459/ef2b4507-db9b-45e8-b3f3-86ca5c7b9bdf)
 
 ### 효율적인 계획 관리를 위해, 템플릿을 제공해주는 투두 앱입니다.
-- JSON Data를 활용해 템플릿 기반의 체크리스트 추천, 실시간 검색 기능 제공
-- 투두 항목 CRUD • 메모 • 즐겨찾기 기능 제공
+- 템플릿 기반의 체크리스트 추천 • 실시간 검색 기능 제공
+- 투두 • 메모 • 즐겨찾기 기능 제공
 - 날짜별로 구분해 체크리스트 목록 관리 기능 제공
 <br/>
 
@@ -43,18 +43,14 @@
 - `Localization`, `Local Notification`
 <br/>
 
-### 3.1 Tools
-- `Figma/FigJam`, `Git/Github`, `Jandi`, `Notion`, `Discode`
-<br/>
-
 ## 4. 핵심 기능
-- `Realm`과 `Repository` 패턴을활용해 Local DB 구성 및 CRUD 기능 구현
-- `DiffableDataSource`를 사용해 데이터 기반의 `snapshot` 업데이트 관리 및 접근 방식 구현
-  - `Custom Header View`를 활용해 ~ 수정 필요
+- `Repository` Pattern을 이용한 DB Schema 구조화
+- i18n, l10n 기반 `Localization`
+- `DiffableDataSource`를 사용해 데이터 기반의 `snapshot` 업데이트 및 관리
 - `Custom View`와 `Design System`을 적용해 UI 관리, 유지 보수성 및 재사용성 향상
-   - 다양한 `Custom Cell`을 사용해 다채로운 UI 구성
+- 다양한 `Custom Cell`을 사용해 다채로운 UI
 - `Firebase Crashlytics, Analytics`를 통해 앱의 안정성 모니터링 및 크래시 추적
-- `FCM`을 이용해 `Push Notification` 구현
+- `FCM`을 이용해 `Push Notification`
 <br/>
 
 ## 5. Trouble Shooting
