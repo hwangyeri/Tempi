@@ -49,9 +49,9 @@
 <br/>
 
 ## 문제 해결
-### 1. NotificationCenter Observer 등록 타이밍
-- 문제 상황 : 초기 구현에서는 알림 게시 후 addObserver 과정이 발생했습니다. 이로 인해서 필요한 관찰자가 배치되기 전에 알림이 전송되서 화면에 알럿이 나타나지 않았습니다.
-- 해결 방법 : NotificationCenter를 통해 데이터(체크리스트 생성 상태)를 전달하는 대신, UserDefaults를 사용해 저장된 데이터로 체크리스트 생성 상태 확인하고 사용자에게 Custom Alert을 표시해 주는 방법으로 변경하였습니다.
+### 1. NotificationCenter Observer 등록 시점과 View가 생성되는 시점의 불일치
+- 문제 상황 : 알림 게시 후 addObserver 과정으로 인해 필요한 관찰자가 배치 되기 전에 알림이 전송 되서 화면에 Alert이 나타나지 않음. 
+- 해결 방법 : NotificationCenter를 이용해 데이터(체크리스트 생성 상태)를 전달하는 대신, UserDefaults를 이용해 Alert을 띄워주는 방법으로 문제를 해결함.
 
 ```swift
  extension UserDefaults {
@@ -89,10 +89,9 @@
 
 </br>
 
-### 2. 클로저의 메모리 누수
-- 문제 상황 : Debug Memory Graph와 deinit을 통해 확인한 결과, 템플릿을 기반으로 체크리스트를 생성하는 플로우에서 몇 개의 뷰가 메모리에서 해제되지 않고 쌓이는 문제가 발생하였습니다.
-- 해결 방법 : 클로저 캡처 목록에 [weak self] 추가해서 메모리의 순환 참조를 방지하고, 메모리 누수를 해결하였습니다.
-
+### 2. 뎁스가 깊은 체크리스트 생성 플로우에서 메모리 누적 문제 발생
+- 문제 상황 : Debug Memory Graph, Instruments 및 deinit을 통해 확인한 결과, 몇 개의 뷰가 메모리에서 해제되지 않고 쌓이는 문제가 발생함.
+- 해결 방법 : 클로저 캡처 목록에 [weak self] 추가해서 메모리의 순환 참조를 방지하고, 메모리 누수를 해결함.
 ```swift
  private func configureSubCategoryDataSource() {
         let cellRegistration = UICollectionView.CellRegistration<CategoryChecklistCollectionViewCell, String> {
@@ -125,8 +124,8 @@
 </br>
 
 ### 3. DiffableDataSource 사용 시, 중복된 Item 값으로 인한 런타임 오류
-- 문제 상황 : 사용자가 선택한 카테고리에 맞는 서브 카테고리 리스트를 보여주기 위해서 JSON Data를 필터링해서 CollectionView에 보이도록 구현했습니다. 하지만 특정한 Item을 클릭했을 때, 강제로 앱이 종료되는 런타임 에러가 발생하였습니다.
-- 해결 방법 : 원인은 선택한 Item이 유니크하지 않아서 생기는 문제였습니다. 필터링 + 중복 제거한 새로운 배열을 snapshot에 넘겨줌으로 문제를 해결하였습니다.
+- 문제 상황 : 사용자가 선택한 카테고리에 맞는 서브 카테고리 리스트를 보여주기 위해서 JSON Data를 필터링해서 CollectionView에 표시했지만, 특정 Item을 클릭했을 때, 런타임 에러가 발생함.
+- 해결 방법 : 선택한 Item이 유니크하지 않아서 생기는 문제로 필터링 후 중복을 제거한 새로운 배열을 snapshot에 전달하여 문제를 해결함.
 
 ```swift
 // 이전 코드
