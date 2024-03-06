@@ -1,8 +1,9 @@
 # Tempi - 기준을 세우다!
+### 효율적인 계획 관리를 위해, 템플릿을 제공해주는 투두 앱입니다.
 
 ![tempi_screenshot_mockup2](https://github.com/hwangyeri/Tempi/assets/114602459/ef2b4507-db9b-45e8-b3f3-86ca5c7b9bdf)
 
-### 효율적인 계획 관리를 위해, 템플릿을 제공해주는 투두 앱입니다.
+## 주요 기능
 - 템플릿 기반의 체크리스트 추천 • 실시간 검색 기능 제공
 - 투두 • 메모 • 즐겨찾기 기능 제공
 - 날짜별 체크리스트 목록 관리 기능 제공
@@ -21,40 +22,34 @@
 
 <br/>
 
-## 1. 개발 환경
-- Xcooe 15.0.1
-- Deployment Target iOS 16.0
-- 가로모드 미지원
-- 다크모드 지원
-- 다국어 대응
+## 개발 환경
+- **최소 버전** : iOS 16.0
+- **개발 인원** : 1명
+- **개발 기간** : 2023.09.29 ~ 2023.10.31 (4주)
+- **기타** : Dark Mode 및 다국어 지원
 <br/>
 
-## 2. 개인 프로젝트
-- 개발 인원 : 1명
-- 개발 기간 : 2023.09.29 ~ 2023.10.31 (4주)
-<br/>
-
-## 3. 기술 스택
-- `UIKit`, `CodeBaseUI`
-- `MVC`, `Singleton`, `Repository`, `Design System`
+## 기술 스택
+- `UIKit`, `CodeBaseUI`, `SPM`
+- `MVC`, `MVVM`, `Singleton`, `Repository`, `Design System`
 - `Autolayout`, `Compositional Layout`, `DiffableDataSource`
-- `Snapkit`, `Realm`, `SwiftMessages`, `SPM`
+- `Realm`, `Snapkit`, `SwiftMessages`
 - `Firebase Analytics`, `Firebase Crashlytics`, `FCM`
-- `Localization`, `Local Notification`
+- `Localization`, `Remote Notification`
 <br/>
 
-## 4. 핵심 기능
+## 핵심 기술
 - `Repository` Pattern을 이용한 DB Schema 구조화
-- i18n, l10n 기반 `Localization`
+- i18n, l10n 기반 `Localization` 구현
 - `DiffableDataSource`를 이용한 데이터 기반의 `snapshot` 업데이트 및 관리
-- `Custom View`와 `Design System`을 적용해 UI 관리, 유지 보수성 및 재사용성 향상
+- `final`과 `private`과 같은 접근제어자를 이용한 은닉화 및 컴파일 최적화
 - 다양한 `Custom Cell`을 이용한 다채로운 UI
 - `Firebase Crashlytics, Analytics`를 통해 앱의 안정성 모니터링 및 크래시 추적
-- `FCM`을 이용한`Push Notification`
+- `FCM`과 `APNs`를 이용한 푸시 알람(Remote Notification) 구현
 <br/>
 
-## 5. Trouble Shooting
-### NotificationCenter Observer 등록 타이밍
+## 문제 해결
+### 1. NotificationCenter Observer 등록 타이밍
 - 문제 상황 : 초기 구현에서는 알림 게시 후 addObserver 과정이 발생했습니다. 이로 인해서 필요한 관찰자가 배치되기 전에 알림이 전송되서 화면에 알럿이 나타나지 않았습니다.
 - 해결 방법 : NotificationCenter를 통해 데이터(체크리스트 생성 상태)를 전달하는 대신, UserDefaults를 사용해 저장된 데이터로 체크리스트 생성 상태 확인하고 사용자에게 Custom Alert을 표시해 주는 방법으로 변경하였습니다.
 
@@ -89,12 +84,12 @@
     }
 ```
 
-#### 5-1. 해당 이슈에 대한 블로그 링크
+#### 1-1. 해당 이슈에 대한 블로그 링크
 🔗 [ NotificationCenter를 통한 값 전달 시 주의해야 할 점! ](https://yeridev.tistory.com/entry/XFile-29)
 
 </br>
 
-### 클로저의 메모리 누수
+### 2. 클로저의 메모리 누수
 - 문제 상황 : Debug Memory Graph와 deinit을 통해 확인한 결과, 템플릿을 기반으로 체크리스트를 생성하는 플로우에서 몇 개의 뷰가 메모리에서 해제되지 않고 쌓이는 문제가 발생하였습니다.
 - 해결 방법 : 클로저 캡처 목록에 [weak self] 추가해서 메모리의 순환 참조를 방지하고, 메모리 누수를 해결하였습니다.
 
@@ -129,7 +124,7 @@
 
 </br>
 
-### DiffableDataSource 사용 시, 중복된 Item 값으로 인한 런타임 오류
+### 3. DiffableDataSource 사용 시, 중복된 Item 값으로 인한 런타임 오류
 - 문제 상황 : 사용자가 선택한 카테고리에 맞는 서브 카테고리 리스트를 보여주기 위해서 JSON Data를 필터링해서 CollectionView에 보이도록 구현했습니다. 하지만 특정한 Item을 클릭했을 때, 강제로 앱이 종료되는 런타임 에러가 발생하였습니다.
 - 해결 방법 : 원인은 선택한 Item이 유니크하지 않아서 생기는 문제였습니다. 필터링 + 중복 제거한 새로운 배열을 snapshot에 넘겨줌으로 문제를 해결하였습니다.
 
@@ -159,16 +154,7 @@ private var checkItemList: [String] {
 
 <br/>
 
-## 6. 프로젝트 회고
-### Keep
-- 수정 예정
-
-### Problem • Try
-- 수정 예정
-
-<br/>
-
-## 7. 버전 정보
+## 버전 정보
 ### v1.0.0
 - 2023.10.31 출시
 
@@ -185,7 +171,7 @@ private var checkItemList: [String] {
 - `Realm`를 이용한 즐겨찾기 기능 추가
 <br/>
 
-## 8. Commit Convention
+## Commit Convention
 ```
 - [Feat] 새로운 기능 구현
 - [Style] UI 디자인 변경
@@ -199,7 +185,7 @@ private var checkItemList: [String] {
 ```
 <br/>
 
-## 9. 개발 공수
+## 개발 공수
  
 | 진행 사항 | 진행 기간 | 세부 내용 |
 | ------- | :----: | ------- |
