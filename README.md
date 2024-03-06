@@ -1,4 +1,7 @@
 # Tempi - 기준을 세우다!
+
+<img width="70" alt="스크린샷 2024-03-07 오전 1 36 13" src="https://github.com/hwangyeri/Tempi/assets/114602459/5e4599f0-a6c4-4340-b317-258740be91df">
+
 ### 효율적인 계획 관리를 위해, 템플릿을 제공해주는 투두 앱입니다.
 
 ![tempi_screenshot_mockup2](https://github.com/hwangyeri/Tempi/assets/114602459/ef2b4507-db9b-45e8-b3f3-86ca5c7b9bdf)
