@@ -36,7 +36,7 @@
 - `UIKit`, `CodeBaseUI`, `SPM`
 - `MVC`, `MVVM`, `Singleton`, `Repository`, `Design System`
 - `Autolayout`, `Compositional Layout`, `DiffableDataSource`
-- `Realm`, `Snapkit`, `SwiftMessages`
+- `Realm`, `JSON Parsing`, `Snapkit`, `SwiftMessages`
 - `Firebase Analytics`, `Firebase Crashlytics`, `FCM`
 - `Localization`, `Remote Notification`
 <br/>
