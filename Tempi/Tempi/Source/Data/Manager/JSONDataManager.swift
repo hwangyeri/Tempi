@@ -7,9 +7,9 @@
 
 import Foundation
 
-final class DataManager {
+final class JSONDataManager {
     
-    static let shared = DataManager()
+    static let shared = JSONDataManager()
     
     private init() {
         loadData() // JSON Data -> categoryDataList

@@ -49,7 +49,7 @@ final class SearchViewController: BaseViewController {
             cell.searchWordsLabel.text = itemIdentifier.subCategoryName
         }
         
-        let list = DataManager.shared.categoryList
+        let list = JSONDataManager.shared.categoryList
         
         // 중복 제거
         var uniqueList = [CategoryDefaultData]()
@@ -151,7 +151,7 @@ extension SearchViewController: UISearchBarDelegate {
                 self.mainView.searchResultCollectionView.isHidden = true
                 self.mainView.recommendSearchWordsCollectionView.isHidden = false
             } else {
-                let filteredList = DataManager.shared.categoryList.filter { category in
+                let filteredList = JSONDataManager.shared.categoryList.filter { category in
                     return category.subCategoryName.lowercased().contains(searchText.lowercased())
                 }
                 

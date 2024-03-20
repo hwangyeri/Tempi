@@ -19,7 +19,7 @@ final class CategoryChecklistViewController: BaseViewController {
         var uniqueCheckItems: [String] = []
         
         // categoryName 및 subCategoryName이 일치하는 항목(checkItem) 필터링 및 중복 확인
-        for item in DataManager.shared.categoryList {
+        for item in JSONDataManager.shared.categoryList {
             if item.categoryName == categoryName, item.subCategoryName == subCategoryName, !uniqueCheckItems.contains(item.checkItem) {
                 uniqueCheckItems.append(item.checkItem)
             }
