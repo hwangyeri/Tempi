@@ -8,12 +8,14 @@
 import UIKit
 import FirebaseCore
 import FirebaseMessaging
+import RealmSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        migrateRealmToSharedContainer()
         
         Thread.sleep(forTimeInterval: 1.0)
         
@@ -51,6 +53,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
+    
+    // Realm DB를 앱의 공유 컨테이너로 마이그레이션
+    func migrateRealmToSharedContainer() {
+        let defaultRealm = Realm.Configuration.defaultConfiguration.fileURL!
+        let container = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.yerihwang.Tempi")
+        let realmURL = container?.appendingPathComponent("default.realm")
+        var config: Realm.Configuration!
+        
+        if FileManager.default.fileExists(atPath: defaultRealm.path) {
+            do {
+                // 기존 파일을 공유 컨테이너로 이동, 기존 위치에서 새 위치로 파일 교체
+                _ = try FileManager.default.replaceItemAt(realmURL!, withItemAt: defaultRealm)
+                // 마이그레이션 후 새로운 파일 위치와 스키마 버전으로 Realm 구성을 업데이트
+                config = Realm.Configuration(fileURL: realmURL, schemaVersion: 1)
+            } catch {
+                print("Error info: \(error)")
+            }
+        } else {
+            config = Realm.Configuration(fileURL: realmURL, schemaVersion: 1)
+        }
+        
+        Realm.Configuration.defaultConfiguration = config
+    }
+
 }
 
 // MARK: - UNUserNotificationCenterDelegate (Apple)
