@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import WidgetKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -60,11 +61,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
-        // Called as the scene transitions from the foreground to the background.
-        // Use this method to save data, release shared resources, and store enough scene-specific state information
-        // to restore the scene back to its current state.
+        // 앱이 포그라운드에서 백그라운드로 전환될 때 위젯 데이터 업데이트
+        WidgetCenter.shared.reloadTimelines(ofKind: "TempiWidget")
     }
 
-
+    
 }
 

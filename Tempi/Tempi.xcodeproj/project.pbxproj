@@ -34,6 +34,22 @@
 		2B6378442ADFCCA100203AFA /* EditModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6378432ADFCCA100203AFA /* EditModalView.swift */; };
 		2B6378462ADFF1E400203AFA /* HideKeyboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6378452ADFF1E400203AFA /* HideKeyboard+.swift */; };
 		2B6785CE2AE90AF9009B2BD1 /* BookmarkTableRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6785CD2AE90AF9009B2BD1 /* BookmarkTableRepository.swift */; };
+		2B6D55192BAACE7F0084FE93 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B6D55182BAACE7F0084FE93 /* GoogleService-Info.plist */; };
+		2B6D55212BAACFFF0084FE93 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B6D55202BAACFFF0084FE93 /* WidgetKit.framework */; };
+		2B6D55232BAACFFF0084FE93 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B6D55222BAACFFF0084FE93 /* SwiftUI.framework */; };
+		2B6D55262BAACFFF0084FE93 /* TempiWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6D55252BAACFFF0084FE93 /* TempiWidgetBundle.swift */; };
+		2B6D55282BAACFFF0084FE93 /* TempiWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6D55272BAACFFF0084FE93 /* TempiWidget.swift */; };
+		2B6D552A2BAAD0000084FE93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B6D55292BAAD0000084FE93 /* Assets.xcassets */; };
+		2B6D552E2BAAD0000084FE93 /* TempiWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2B6D551E2BAACFFF0084FE93 /* TempiWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2B6D55342BAAD5010084FE93 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 2B6D55332BAAD5010084FE93 /* Realm */; };
+		2B6D55362BAAD5040084FE93 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2B6D55352BAAD5040084FE93 /* RealmSwift */; };
+		2B6D55412BAB08460084FE93 /* WidgetRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6D553F2BAAF1DE0084FE93 /* WidgetRealmManager.swift */; };
+		2B6D55432BAB08CA0084FE93 /* ChecklistTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8105512AD02D0600B50223 /* ChecklistTable.swift */; };
+		2B6D55472BAB0B820084FE93 /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6D55452BAB0B780084FE93 /* EntryView.swift */; };
+		2B6D554A2BAB0BA90084FE93 /* EntryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6D55482BAB0BA20084FE93 /* EntryData.swift */; };
+		2B6D554D2BAB0D540084FE93 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6D554C2BAB0D540084FE93 /* Provider.swift */; };
+		2B6D554E2BAC174F0084FE93 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B6D55202BAACFFF0084FE93 /* WidgetKit.framework */; };
+		2B6D554F2BAC17530084FE93 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B6D55222BAACFFF0084FE93 /* SwiftUI.framework */; };
 		2B76B8D22B24631E00F19F7C /* BookmarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B76B8D12B24631E00F19F7C /* BookmarkTableViewCell.swift */; };
 		2B76B8D52B24639400F19F7C /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B76B8D42B24639400F19F7C /* BaseTableViewCell.swift */; };
 		2B76B8D72B2464A100F19F7C /* ReusableViewProtocol+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B76B8D62B2464A100F19F7C /* ReusableViewProtocol+.swift */; };
@@ -45,7 +61,7 @@
 		2B8105542AD02DA400B50223 /* CheckItemTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8105532AD02DA400B50223 /* CheckItemTable.swift */; };
 		2B8105562AD02F7600B50223 /* BookmarkTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8105552AD02F7600B50223 /* BookmarkTable.swift */; };
 		2B8105692AD2C66B00B50223 /* CategoryDefaultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8105682AD2C66B00B50223 /* CategoryDefaultModel.swift */; };
-		2B81056D2AD5141700B50223 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81056C2AD5141700B50223 /* DataManager.swift */; };
+		2B81056D2AD5141700B50223 /* JSONDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81056C2AD5141700B50223 /* JSONDataManager.swift */; };
 		2B91AB652AD6977B0078AB39 /* AddChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B91AB642AD6977B0078AB39 /* AddChecklistViewController.swift */; };
 		2B91AB692AD697940078AB39 /* AddChecklistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B91AB682AD697940078AB39 /* AddChecklistView.swift */; };
 		2B91AB6B2AD699D70078AB39 /* AddChecklistCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B91AB6A2AD699D70078AB39 /* AddChecklistCollectionViewCell.swift */; };
@@ -70,8 +86,11 @@
 		2BA2AEE52AEFD4B60076324A /* CategoryData_ko.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BA2AEE42AEFD4B50076324A /* CategoryData_ko.json */; };
 		2BA2AEE72AEFD4C50076324A /* CategoryData_en.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BA2AEE62AEFD4C50076324A /* CategoryData_en.json */; };
 		2BA2AEEB2AF00C5B0076324A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2BA2AEEA2AF00C5B0076324A /* .gitignore */; };
-		2BA2AEED2AF00CE30076324A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BA2AEEC2AF00CE20076324A /* GoogleService-Info.plist */; };
 		2BBFD9772AE83F3D00A00DEB /* LineSpacing+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBFD9762AE83F3D00A00DEB /* LineSpacing+.swift */; };
+		2BC2DB012BB00CFC0005FCCF /* Ex+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2DB002BB00CFC0005FCCF /* Ex+Font.swift */; };
+		2BC2DB022BB00EEA0005FCCF /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2BF5FE562AC703F1009BCBD9 /* Pretendard-Regular.otf */; };
+		2BC2DB032BB00EED0005FCCF /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2BF5FE532AC703F0009BCBD9 /* Pretendard-SemiBold.otf */; };
+		2BC2DB042BB00EEF0005FCCF /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2BF5FE522AC703F0009BCBD9 /* Pretendard-Medium.otf */; };
 		2BC72B7A2AC717240014420F /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC72B792AC717240014420F /* Font+.swift */; };
 		2BC72B7D2AC71FD50014420F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2BC72B7C2AC71FD50014420F /* SnapKit */; };
 		2BC72B7F2AC7207D0014420F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC72B7E2AC7207D0014420F /* BaseView.swift */; };
@@ -105,6 +124,30 @@
 		2BFE96E72AE55F9F007CD4ED /* SearchHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE96E62AE55F9F007CD4ED /* SearchHeaderView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2B6D552C2BAAD0000084FE93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BF5FE022AC6E6C1009BCBD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B6D551D2BAACFFF0084FE93;
+			remoteInfo = TempiWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2B6D55322BAAD0000084FE93 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2B6D552E2BAAD0000084FE93 /* TempiWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2B10889B2B416AE30085EE4C /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		2B10889D2B416C300085EE4C /* SettingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingHeaderView.swift; sourceTree = "<group>"; };
@@ -127,6 +170,19 @@
 		2B6378432ADFCCA100203AFA /* EditModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditModalView.swift; sourceTree = "<group>"; };
 		2B6378452ADFF1E400203AFA /* HideKeyboard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HideKeyboard+.swift"; sourceTree = "<group>"; };
 		2B6785CD2AE90AF9009B2BD1 /* BookmarkTableRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTableRepository.swift; sourceTree = "<group>"; };
+		2B6D55182BAACE7F0084FE93 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2B6D551E2BAACFFF0084FE93 /* TempiWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TempiWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B6D55202BAACFFF0084FE93 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		2B6D55222BAACFFF0084FE93 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		2B6D55252BAACFFF0084FE93 /* TempiWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempiWidgetBundle.swift; sourceTree = "<group>"; };
+		2B6D55272BAACFFF0084FE93 /* TempiWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempiWidget.swift; sourceTree = "<group>"; };
+		2B6D55292BAAD0000084FE93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B6D552B2BAAD0000084FE93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B6D553A2BAADB650084FE93 /* TempiWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TempiWidgetExtension.entitlements; sourceTree = "<group>"; };
+		2B6D553F2BAAF1DE0084FE93 /* WidgetRealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetRealmManager.swift; sourceTree = "<group>"; };
+		2B6D55452BAB0B780084FE93 /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
+		2B6D55482BAB0BA20084FE93 /* EntryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryData.swift; sourceTree = "<group>"; };
+		2B6D554C2BAB0D540084FE93 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		2B76B8D12B24631E00F19F7C /* BookmarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTableViewCell.swift; sourceTree = "<group>"; };
 		2B76B8D42B24639400F19F7C /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		2B76B8D62B2464A100F19F7C /* ReusableViewProtocol+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReusableViewProtocol+.swift"; sourceTree = "<group>"; };
@@ -136,7 +192,7 @@
 		2B8105532AD02DA400B50223 /* CheckItemTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckItemTable.swift; sourceTree = "<group>"; };
 		2B8105552AD02F7600B50223 /* BookmarkTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTable.swift; sourceTree = "<group>"; };
 		2B8105682AD2C66B00B50223 /* CategoryDefaultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDefaultModel.swift; sourceTree = "<group>"; };
-		2B81056C2AD5141700B50223 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		2B81056C2AD5141700B50223 /* JSONDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataManager.swift; sourceTree = "<group>"; };
 		2B91AB642AD6977B0078AB39 /* AddChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChecklistViewController.swift; sourceTree = "<group>"; };
 		2B91AB682AD697940078AB39 /* AddChecklistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChecklistView.swift; sourceTree = "<group>"; };
 		2B91AB6A2AD699D70078AB39 /* AddChecklistCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChecklistCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -160,9 +216,9 @@
 		2BA2AEE42AEFD4B50076324A /* CategoryData_ko.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CategoryData_ko.json; sourceTree = "<group>"; };
 		2BA2AEE62AEFD4C50076324A /* CategoryData_en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CategoryData_en.json; sourceTree = "<group>"; };
 		2BA2AEEA2AF00C5B0076324A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		2BA2AEEC2AF00CE20076324A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2BBFD9762AE83F3D00A00DEB /* LineSpacing+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LineSpacing+.swift"; sourceTree = "<group>"; };
 		2BC2690B2B45467B00738F34 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		2BC2DB002BB00CFC0005FCCF /* Ex+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+Font.swift"; sourceTree = "<group>"; };
 		2BC72B792AC717240014420F /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
 		2BC72B7E2AC7207D0014420F /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		2BC72B802AC720B30014420F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -199,11 +255,23 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2B6D551B2BAACFFF0084FE93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B6D55362BAAD5040084FE93 /* RealmSwift in Frameworks */,
+				2B6D55342BAAD5010084FE93 /* Realm in Frameworks */,
+				2B6D55232BAACFFF0084FE93 /* SwiftUI.framework in Frameworks */,
+				2B6D55212BAACFFF0084FE93 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2BF5FE072AC6E6C1009BCBD9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2B4FEAAC2AFF953800E12B69 /* FirebaseStorageCombine-Community in Frameworks */,
+				2B6D554F2BAC17530084FE93 /* SwiftUI.framework in Frameworks */,
 				2B81054B2AD02A0C00B50223 /* RealmSwift in Frameworks */,
 				2B8105492AD02A0C00B50223 /* Realm in Frameworks */,
 				2B4FEAA42AFF953800E12B69 /* FirebaseMessaging in Frameworks */,
@@ -214,6 +282,7 @@
 				2B4FEAA02AFF953800E12B69 /* FirebaseAnalytics in Frameworks */,
 				2BA2AEE12AEEC9840076324A /* SwiftMessages in Frameworks */,
 				2B4FEAA62AFF953800E12B69 /* FirebaseRemoteConfig in Frameworks */,
+				2B6D554E2BAC174F0084FE93 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +295,47 @@
 				2B2D3E032AE3FF8700476A46 /* MyListCollectionViewCell.swift */,
 			);
 			path = MyListCell;
+			sourceTree = "<group>";
+		};
+		2B6D551F2BAACFFF0084FE93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B6D55202BAACFFF0084FE93 /* WidgetKit.framework */,
+				2B6D55222BAACFFF0084FE93 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2B6D55242BAACFFF0084FE93 /* TempiWidget */ = {
+			isa = PBXGroup;
+			children = (
+				2B6D55292BAAD0000084FE93 /* Assets.xcassets */,
+				2B6D552B2BAAD0000084FE93 /* Info.plist */,
+				2B6D55252BAACFFF0084FE93 /* TempiWidgetBundle.swift */,
+				2B6D55272BAACFFF0084FE93 /* TempiWidget.swift */,
+				2BC2DB052BB00FB80005FCCF /* Ex+ */,
+				2BC2DB062BB00FC70005FCCF /* Realm */,
+				2B6D55442BAB0B5B0084FE93 /* Entry */,
+				2B6D554B2BAB0D3A0084FE93 /* Provider */,
+			);
+			path = TempiWidget;
+			sourceTree = "<group>";
+		};
+		2B6D55442BAB0B5B0084FE93 /* Entry */ = {
+			isa = PBXGroup;
+			children = (
+				2B6D55482BAB0BA20084FE93 /* EntryData.swift */,
+				2B6D55452BAB0B780084FE93 /* EntryView.swift */,
+			);
+			path = Entry;
+			sourceTree = "<group>";
+		};
+		2B6D554B2BAB0D3A0084FE93 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				2B6D554C2BAB0D540084FE93 /* Provider.swift */,
+			);
+			path = Provider;
 			sourceTree = "<group>";
 		};
 		2B76B8D32B24632D00F19F7C /* Bookmark */ = {
@@ -389,6 +499,22 @@
 			path = SettingCell;
 			sourceTree = "<group>";
 		};
+		2BC2DB052BB00FB80005FCCF /* Ex+ */ = {
+			isa = PBXGroup;
+			children = (
+				2BC2DB002BB00CFC0005FCCF /* Ex+Font.swift */,
+			);
+			path = "Ex+";
+			sourceTree = "<group>";
+		};
+		2BC2DB062BB00FC70005FCCF /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				2B6D553F2BAAF1DE0084FE93 /* WidgetRealmManager.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
 		2BDE84D12AC95FEB0018C759 /* Component */ = {
 			isa = PBXGroup;
 			children = (
@@ -416,7 +542,10 @@
 		2BF5FE012AC6E6C1009BCBD9 = {
 			isa = PBXGroup;
 			children = (
+				2B6D553A2BAADB650084FE93 /* TempiWidgetExtension.entitlements */,
 				2BF5FE0C2AC6E6C1009BCBD9 /* Tempi */,
+				2B6D55242BAACFFF0084FE93 /* TempiWidget */,
+				2B6D551F2BAACFFF0084FE93 /* Frameworks */,
 				2BF5FE0B2AC6E6C1009BCBD9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -425,6 +554,7 @@
 			isa = PBXGroup;
 			children = (
 				2BF5FE0A2AC6E6C1009BCBD9 /* Tempi.app */,
+				2B6D551E2BAACFFF0084FE93 /* TempiWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -433,13 +563,13 @@
 			isa = PBXGroup;
 			children = (
 				2B4FEA9D2AFF929300E12B69 /* Tempi.entitlements */,
+				2BA2AEEA2AF00C5B0076324A /* .gitignore */,
+				2B6D55182BAACE7F0084FE93 /* GoogleService-Info.plist */,
 				2BF5FE1B2AC6E6C2009BCBD9 /* Info.plist */,
-				2BA2AEEC2AF00CE20076324A /* GoogleService-Info.plist */,
 				2BF5FE472AC6F7B8009BCBD9 /* Application */,
 				2BF5FE342AC6F3D0009BCBD9 /* Source */,
 				2BF5FE3A2AC6F411009BCBD9 /* Resource */,
 				2BF5FE4F2AC6FD46009BCBD9 /* Localization */,
-				2BA2AEEA2AF00C5B0076324A /* .gitignore */,
 			);
 			path = Tempi;
 			sourceTree = "<group>";
@@ -552,7 +682,7 @@
 		2BF5FE422AC6F666009BCBD9 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				2B81056C2AD5141700B50223 /* DataManager.swift */,
+				2B81056C2AD5141700B50223 /* JSONDataManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -669,6 +799,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2B6D551D2BAACFFF0084FE93 /* TempiWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B6D552F2BAAD0000084FE93 /* Build configuration list for PBXNativeTarget "TempiWidgetExtension" */;
+			buildPhases = (
+				2B6D551A2BAACFFF0084FE93 /* Sources */,
+				2B6D551B2BAACFFF0084FE93 /* Frameworks */,
+				2B6D551C2BAACFFF0084FE93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TempiWidgetExtension;
+			packageProductDependencies = (
+				2B6D55332BAAD5010084FE93 /* Realm */,
+				2B6D55352BAAD5040084FE93 /* RealmSwift */,
+			);
+			productName = TempiWidgetExtension;
+			productReference = 2B6D551E2BAACFFF0084FE93 /* TempiWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		2BF5FE092AC6E6C1009BCBD9 /* Tempi */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2BF5FE1E2AC6E6C2009BCBD9 /* Build configuration list for PBXNativeTarget "Tempi" */;
@@ -676,10 +827,12 @@
 				2BF5FE062AC6E6C1009BCBD9 /* Sources */,
 				2BF5FE072AC6E6C1009BCBD9 /* Frameworks */,
 				2BF5FE082AC6E6C1009BCBD9 /* Resources */,
+				2B6D55322BAAD0000084FE93 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2B6D552D2BAAD0000084FE93 /* PBXTargetDependency */,
 			);
 			name = Tempi;
 			packageProductDependencies = (
@@ -709,6 +862,9 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					2B6D551D2BAACFFF0084FE93 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
 					2BF5FE092AC6E6C1009BCBD9 = {
 						CreatedOnToolsVersion = 15.0;
 					};
@@ -735,16 +891,28 @@
 			projectRoot = "";
 			targets = (
 				2BF5FE092AC6E6C1009BCBD9 /* Tempi */,
+				2B6D551D2BAACFFF0084FE93 /* TempiWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2B6D551C2BAACFFF0084FE93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BC2DB032BB00EED0005FCCF /* Pretendard-SemiBold.otf in Resources */,
+				2B6D552A2BAAD0000084FE93 /* Assets.xcassets in Resources */,
+				2BC2DB022BB00EEA0005FCCF /* Pretendard-Regular.otf in Resources */,
+				2BC2DB042BB00EEF0005FCCF /* Pretendard-Medium.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2BF5FE082AC6E6C1009BCBD9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BA2AEED2AF00CE30076324A /* GoogleService-Info.plist in Resources */,
+				2B6D55192BAACE7F0084FE93 /* GoogleService-Info.plist in Resources */,
 				2BA2AEE72AEFD4C50076324A /* CategoryData_en.json in Resources */,
 				2BF5FE1A2AC6E6C2009BCBD9 /* LaunchScreen.storyboard in Resources */,
 				2BF5FE5A2AC703F1009BCBD9 /* Pretendard-Bold.otf in Resources */,
@@ -763,6 +931,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2B6D551A2BAACFFF0084FE93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B6D55432BAB08CA0084FE93 /* ChecklistTable.swift in Sources */,
+				2B6D55262BAACFFF0084FE93 /* TempiWidgetBundle.swift in Sources */,
+				2B6D554D2BAB0D540084FE93 /* Provider.swift in Sources */,
+				2B6D55282BAACFFF0084FE93 /* TempiWidget.swift in Sources */,
+				2B6D55412BAB08460084FE93 /* WidgetRealmManager.swift in Sources */,
+				2B6D554A2BAB0BA90084FE93 /* EntryData.swift in Sources */,
+				2B6D55472BAB0B820084FE93 /* EntryView.swift in Sources */,
+				2BC2DB012BB00CFC0005FCCF /* Ex+Font.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2BF5FE062AC6E6C1009BCBD9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -793,7 +976,7 @@
 				2B8105522AD02D0600B50223 /* ChecklistTable.swift in Sources */,
 				2B81053C2ACEFD3700B50223 /* SearchViewController.swift in Sources */,
 				2B63782B2ADBCCEF00203AFA /* CheckItemTableRepository.swift in Sources */,
-				2B81056D2AD5141700B50223 /* DataManager.swift in Sources */,
+				2B81056D2AD5141700B50223 /* JSONDataManager.swift in Sources */,
 				2B8105692AD2C66B00B50223 /* CategoryDefaultModel.swift in Sources */,
 				2B9529D12ACCE6760074D4F2 /* TButton.swift in Sources */,
 				2B6378392ADD72A000203AFA /* EditChecklistNameViewController.swift in Sources */,
@@ -844,6 +1027,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		2B6D552D2BAAD0000084FE93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B6D551D2BAACFFF0084FE93 /* TempiWidgetExtension */;
+			targetProxy = 2B6D552C2BAAD0000084FE93 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		2BF5FE182AC6E6C2009BCBD9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -858,6 +1049,70 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2B6D55302BAAD0000084FE93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TempiWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7T88N7TX7W;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TempiWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TempiWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yerihwang.Tempi.TempiWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		2B6D55312BAAD0000084FE93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TempiWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7T88N7TX7W;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TempiWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TempiWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yerihwang.Tempi.TempiWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		2BF5FE1C2AC6E6C2009BCBD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -982,6 +1237,7 @@
 		2BF5FE1F2AC6E6C2009BCBD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
@@ -1000,7 +1256,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yerihwang.Tempi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1015,6 +1271,7 @@
 		2BF5FE202AC6E6C2009BCBD9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
@@ -1033,7 +1290,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yerihwang.Tempi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1048,6 +1305,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2B6D552F2BAAD0000084FE93 /* Build configuration list for PBXNativeTarget "TempiWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B6D55302BAAD0000084FE93 /* Debug */,
+				2B6D55312BAAD0000084FE93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2BF5FE052AC6E6C1009BCBD9 /* Build configuration list for PBXProject "Tempi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1138,6 +1404,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2B4FEA9E2AFF953800E12B69 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
+		};
+		2B6D55332BAAD5010084FE93 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B8105472AD02A0C00B50223 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		2B6D55352BAAD5040084FE93 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B8105472AD02A0C00B50223 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 		2B8105482AD02A0C00B50223 /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -13,7 +13,7 @@ final class CategoryDetailViewController: BaseViewController {
     
     private var subCategoryList: [String] {
         // categoryName에 해당하는 subCategoryName만 필터링
-        return DataManager.shared.categoryList
+        return JSONDataManager.shared.categoryList
             .filter { $0.categoryName == categoryName }
             .map { $0.subCategoryName }
     }
