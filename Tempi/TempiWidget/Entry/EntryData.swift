@@ -13,8 +13,3 @@ struct ChecklistEntry: TimelineEntry {
     var checklistName: [String]
     var createdAt: [Date]
 }
-
-//struct ChecklistEntry: TimelineEntry {
-//    var checklistName: String
-//    var date: Date
-//}
