@@ -25,8 +25,9 @@ struct Provider: TimelineProvider {
     // 위젯 상태 변경 시점 설정
     func getTimeline(in context: Context, completion: @escaping (Timeline<ChecklistEntry>) -> ()) {
         let checklistEntry = WidgetRealmManager.shared.fetchChecklistData()
-        let timeline = Timeline(entries: [checklistEntry], policy: .atEnd)
+        let nextUpdateDate = Date()
+        let timeline = Timeline(entries: [checklistEntry], policy: .after(nextUpdateDate))
         completion(timeline)
     }
-
+    
 }
