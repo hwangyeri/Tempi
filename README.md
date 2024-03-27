@@ -27,7 +27,7 @@
 
 ## 개발 환경
 - **최소 버전** : iOS 16.0
-- **개발 인원** : 1명
+- **개발 인원** : iOS/디자인/기획/백엔드 1인 개발
 - **개발 기간** : 2023.09.29 ~ 2023.10.31 (4주)
 - **기타** : Dark Mode 및 다국어 지원
 <br/>
@@ -38,7 +38,7 @@
 - `Autolayout`, `Compositional Layout`, `DiffableDataSource`
 - `Realm`, `Snapkit`, `SwiftMessages`
 - `Firebase Analytics`, `Firebase Crashlytics`, `FCM`
-- `Localization`, `Remote Notification`
+- `WidgetKit`, `Localization`, `Remote Notification`
 <br/>
 
 ## 핵심 기술
@@ -49,6 +49,7 @@
 - 다양한 `Custom Cell`을 이용한 다채로운 UI
 - `Firebase Crashlytics, Analytics`를 통해 앱의 안정성 모니터링 및 크래시 추적
 - `FCM`과 `APNs`를 이용한 푸시 알람(Remote Notification) 구현
+- `App Groups`과 연동하여  앱과 `Widget Extension` 간 데이터 공유 및 동기화
 <br/>
 
 ## 문제 해결
@@ -92,7 +93,7 @@
 
 </br>
 
-### 2. 뎁스가 깊은 체크리스트 생성 플로우에서 메모리 누적 문제 발생
+### 2. Depth가 깊은 체크리스트 생성 플로우에서 메모리 누적 문제 발생
 - 문제 상황 : Debug Memory Graph, Instruments 및 deinit을 통해 확인한 결과, 몇 개의 뷰가 메모리에서 해제되지 않고 쌓이는 문제가 발생함.
 - 해결 방법 : 클로저 캡처 목록에 [weak self] 추가해서 메모리의 순환 참조를 방지하고, 메모리 누수를 해결함.
 ```swift
@@ -186,6 +187,19 @@ private var checkItemList: [String] {
 ### v1.0.3
 - 2023.12.10 업데이트
 - `Realm`를 이용한 즐겨찾기 기능 추가
+
+### v1.1.0
+- 2024.1.2 업데이트
+- 설정 화면 추가
+- WebView를 이용한 문의하기, 등 기능 추가
+
+### v1.1.1
+- 2024.3.26 업데이트
+- 불필요한 코드 제거 및 개선
+
+### v1.2.0
+- 2024.3.27 업데이트 (심사중)
+- 위젯 기능 추가
 <br/>
 
 ## Commit Convention
